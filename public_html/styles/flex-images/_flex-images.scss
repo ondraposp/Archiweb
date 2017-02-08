@@ -1,0 +1,26 @@
+/* 
+    Created on : 2.2.2017, 12:54:46
+    Author     : ondra
+*/
+
+.flex-gallery { 
+    overflow: hidden; 
+
+    .item { 
+        float: left;         
+        //margin: calc(#{$gutter} - #{1px});    
+        margin: 4px; 
+        border: 1px solid $greylight;
+        box-sizing: content-box; 
+        overflow: hidden; 
+        position: relative;  
+
+        img { 
+            display: block; 
+            width: auto; 
+            height: 100%; 
+        }
+    }
+}
+
+

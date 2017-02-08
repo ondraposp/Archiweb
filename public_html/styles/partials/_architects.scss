@@ -1,0 +1,44 @@
+/* 
+    Created on : 27.1.2017, 16:55:00
+    Author     : ondra
+*/
+
+.grey-background {
+    background-color: $grey2;
+}
+
+.portrait {
+    margin-bottom: 25px;
+}
+
+.details {
+    margin-bottom: 50px;
+
+    div {
+        margin-bottom: 7px;
+
+        .caption {
+            min-width: 100px;
+            float: left;
+        }
+    }
+}
+
+.leftbar {
+    margin-bottom: 50px;
+
+    .details, .text {
+        margin-right: $marright;
+    }
+}
+
+#tpl_architect_detail, #tpl_atelier_detail {
+    .related {
+        padding-right: 0;
+        margin-bottom: 35px;
+    }    
+}
+
+.traffic {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,73 @@
+/* 
+    Created on : 31.1.2017, 12:16:49
+    Author     : ondra
+*/
+
+#tpl_buildings {
+    .filters_form {
+        margin-right: $marright;
+        margin-bottom: $marbottom;
+    }
+}
+
+#tpl_building_detail {
+    .comments {
+        .chead, .cbody, .call {
+            margin-right: 0;
+        }
+    }    
+
+    .related {
+        padding-right: 0;
+    }   
+}
+
+.map {
+    height: 400px;
+    padding-right: $padright;
+}
+
+.stavba_items {
+    h3 {
+        font-size: 1.5rem;
+        padding-top: 13px;
+        margin-bottom: 17px;
+        font-weight: $fbold;
+    }    
+
+    ul {
+        margin: 0;
+        list-style: none;
+
+        @include hopacity;
+
+        li {
+            &:before {
+                content: "\f054";
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+
+                font-size: 0.5rem;
+                vertical-align: middle;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 64rem) {
+    #tpl_buildings {
+        .filters_form {
+            margin-right: 0;        
+        }
+    }
+
+    .map { 
+        padding-right: 0;
+    }
+}

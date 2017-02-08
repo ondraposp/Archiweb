@@ -1,0 +1,24 @@
+/* 
+    Created on : 20.1.2017, 14:35:23
+    Author     : ondra
+*/
+
+$padright: 40px; /*space between body and rightbar*/
+$marbottom: 10px;
+$marbottom_rbar: 35px;
+$height_topbar: 70px;
+$height_title-bar: 50px;
+$marright: 40px; // space between body and rightbar
+$tot_gutter: 0.714rem;
+$gutter: calc(#{$tot_gutter} / 2);
+$gutter_neg: calc((-1) * #{$gutter});
+$comment_height: 40px;
+$select_height: 2.4375rem;
+$filters_form_pad: 30px;
+$chb_size: 1.2em;
+$chb_outline: 1px;
+$lightbox_padding: 100px;
+$lightbox_description_width: 400px;
+$photobox_description_padding: 25px;
+$lsquare: 50px; //social icno - size
+$type_events_section: 22px;

@@ -1,0 +1,109 @@
+/* 
+    Created on : 27.1.2017, 9:14:01
+    Author     : ondra
+*/
+
+h2 {
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: $fbold;
+    margin-bottom: 1.6rem;
+    margin-top: 1.1rem;
+}
+
+a {
+    color: $violet;
+
+   // @include hopacity;
+
+    &:hover {
+        color: $violet;
+    }
+}
+
+.align-right {
+    text-align: right;
+}
+
+.bold {
+    font-weight: $fbold;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.padright {
+    padding-right: $padright;
+}
+
+.column-block {
+    .project_box {
+        margin-bottom: 0;
+    }
+}
+
+hr {
+    margin-left: $gutter;
+    margin-right: $gutter;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.r_margin {
+    margin-right: $marright;
+}
+
+.r_padding {
+    padding-right: $marright;
+}
+
+.white {
+    color: #FFF;
+
+    a {
+        color: #FFF;
+    }
+}
+
+.grey {
+    color: $grey3;
+}
+
+.bc_black {
+    background-color: #000;
+}
+
+.valign_bottom {
+    position: absolute;
+    left: $gutter;
+    right: $gutter;
+    bottom: 0;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.z9 {
+    z-index: 9;
+}
+
+.flex-gallery {
+    .thumbs {
+        padding-left: calc(#{$gutter} - #{7px});
+        padding-right: calc(#{$gutter} - #{7px});
+    }   
+}
+
+.posrel {
+    position: relative;
+}
+
+@media (max-width: 64em) {
+    .r_padding {
+        padding-right: 0;
+    }
+}

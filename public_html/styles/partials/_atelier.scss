@@ -1,0 +1,118 @@
+/* 
+    Created on : 30.1.2017, 16:10:33
+    Author     : ondra
+*/
+
+.big_header {
+    height: 450px;
+    margin-bottom: 50px;    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+    position: relative;
+
+    .social {
+        ul a li {
+            opacity: 0.7;
+        }    
+
+        &.show-for-small-only {
+            padding-top: $gutter;
+
+            ul {
+                a li {
+                    float: left;
+                }   
+            }
+        }        
+    }
+
+    .valign_bottom {
+        bottom: 35px;
+    }
+
+    .social_inner {
+        right: $gutter;
+    }
+
+    .bottom {
+        height: 100%;
+        position: relative;
+
+        /*h1,*/ .social_inner {
+            position: absolute;
+            bottom: 35px;
+        }
+    }
+
+    h1 {
+        color: #FFF; 
+        margin-bottom: 0;
+    }
+
+    .gradient {
+        position: absolute;
+        bottom: 0;
+        height: 110px;
+        width: 100%;
+
+        @include gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));   
+    }    
+
+    h1, .social {
+        z-index: 9;
+    }
+}
+
+.architects {
+    margin-right: $marright;  
+    margin-bottom: 40px;
+
+    .item {
+        background-color: $grey2;
+        margin-bottom: $tot_gutter;
+        max-height: 120px;
+
+        @include floatfix;
+        @include hopacity;
+
+        img {
+            float: left;
+            padding-right: 20px;
+            height: 100%;
+        }
+
+        .name {
+            color: $violet;
+            margin-bottom: 10px;
+        }
+
+        .text {
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 64em) {
+    .architects {
+        margin-right: initial;
+
+        .item {
+            img {
+                padding-right: 15px;
+            }
+        }
+    }
+
+    .leftbar {
+        .details, .text {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 40em) {
+        .big_header {
+            height: 250px;
+        }
+    }
+}

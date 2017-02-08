@@ -1,0 +1,153 @@
+/* 
+    Created on : 31.1.2017, 11:53:34
+    Author     : ondra
+*/
+
+.filters_form {    
+    padding: $filters_form_pad;
+    padding-bottom: calc(#{$filters_form_pad} - 1rem);
+}
+
+// FONT AWESOME + SELECT FIX
+label.select {    
+    overflow: hidden; 
+    position: relative;
+    display: block;
+    height: $select_height;
+    font-family: inherit;
+    margin: 0 0 1rem;
+
+    @include hopacity;
+
+    &:before {
+        content: inherit;
+        font-family: FontAwesome;
+        color: $violet;
+        padding: 0 8px;
+        position: absolute; right: 0; top: 0;    
+        z-index: 1;
+        text-align: center;    
+        height: 100%;      
+        pointer-events: none;
+        box-sizing: border-box;  
+        line-height: $select_height;    
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+// END FONT AWESOME + SELECT FIX
+
+select, input {
+    border-radius: 0;
+}
+
+select {
+    background-image: url();  
+
+    &:disabled {
+        color: $grey3;
+        background-color: #FFF;
+    }
+}
+
+.floatl {
+    float: left;
+}
+
+/*CHECKBOXES*/
+
+label.checkbox {
+    padding-right: 20px;    
+
+    @include hopacity;
+}
+
+input[type='checkbox']{ 
+    height: 0; 
+    width: 0;
+}
+
+input[type='checkbox'] + label {
+    position: relative;
+    display: flex;
+    margin: .6em 0;
+    margin-left: $chb_outline;
+    align-items: center;
+}
+
+input[type='checkbox'] + label > span{
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+    width: $chb_size;
+    height: $chb_size;
+    background: #FFF;    
+    border-radius: 0;
+    cursor: pointer;  
+    border: calc(#{$chb_size/2}) solid #FFF;    
+    transition: all 250ms cubic-bezier(.4,.0,.23,1);    
+    outline: $chb_outline solid $grey3;
+}
+
+input[type='checkbox']:checked + label > span{
+    border: .3em solid #FFF;
+    transition: all 250ms cubic-bezier(.4,.0,.23,1);
+    background: $violet;
+}
+
+/*END CHECKBOXES*/
+
+/*BUTTONS*/
+
+.button {
+    border-radius: 0;
+    background-color: $violet;
+
+    &:hover, &:focus {
+        background-color: $violet;
+        @include hopacity;
+    }
+
+    i {
+        display: none;
+    }
+
+    &.mapmarker {
+        i {
+            display: inline-block;
+            margin-right: 15px;            
+        }
+    }
+
+}
+
+/* END BUTTONS*/
+
+.clickable {
+    color: $violet;
+    padding-right: 30px;
+    cursor: pointer;
+    line-height: 40px;
+
+    @include hopacity;
+
+    i {
+        margin-right: 10px;    
+    }
+}
+
+.showmore_set {
+    display: none;
+}
+
+.showless {
+    display: none;
+}

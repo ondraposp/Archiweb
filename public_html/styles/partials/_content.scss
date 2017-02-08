@@ -1,0 +1,108 @@
+/* 
+    Created on : 26.1.2017, 12:11:45
+    Author     : ondra
+*/
+
+.content {
+    padding-bottom: 40px;
+
+    h2, h3, h4 {
+        font-weight: bold;    
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        padding-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        padding-top: 13px;
+        margin-bottom: 17px;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        padding-top: 11px;
+        margin-bottom: 13px;
+    }
+
+    cite, .cite {        
+        font-size: initial;
+        margin-bottom: 30px;
+        padding-top: 10px;
+        color: $grey3_5;
+        padding-left: 30px;
+        font-size: 1.1rem;
+        line-height: inherit;
+        font-style: italic;
+
+        &:before {
+            content: none;
+        }
+    }
+
+    figcaption {
+        margin-bottom: 1.3rem;
+        font-size: 0.9rem;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 35px;
+
+        thead {
+            border-bottom: 2px solid #FFF;
+        }
+
+        th {
+            font-weight: $fmedium;
+            text-align: left;
+        }
+
+        tr {
+            &:nth-child(even) {
+                td {
+                    background-color: #FFF;   
+                }                
+            }
+        }
+
+        th, td {
+            padding: 8px 10px;
+        }
+    }
+
+    .survey {
+        margin-bottom: 35px;
+
+        ul {
+            margin: 0;
+            list-style: none;
+
+            .option {
+                .bar {
+                    height: 5px;
+                    background-color: $violet;
+                    border-style: solid;
+                    border-color: #FFF; 
+                    border-top-width: 5px; 
+                    border-bottom-width: 5px;
+                    border-left-width: 5px;                    
+                    border-right-width: 5px;
+                    box-sizing: content-box;
+
+                    @include transition();                    
+                }   
+
+                .caption {
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                    margin-bottom: 1.6rem;
+                }
+            }
+        }        
+    }
+}

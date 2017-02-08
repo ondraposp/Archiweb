@@ -1,0 +1,152 @@
+/* 
+    Created on : 25.1.2017, 13:22:59
+    Author     : ondra
+*/
+
+
+.gallery_slider {    
+    padding-right: calc(#{$marright} + #{$gutter});
+    margin-bottom: 35px;
+
+    .bxslider_gallery {
+        margin: 0;
+    }   
+
+    .bx-wrapper {
+        margin-bottom: 15px;   
+    }
+
+    #bx-pager {
+        white-space: nowrap;
+        overflow-x: auto;
+
+        img {
+            display: inline-block;
+        }
+    }
+}
+
+/*lightbox*/
+
+.fancybox-skin {
+    padding: 0 !important;
+}
+
+.fancybox-nav {
+    //display: none !important;
+
+    span {
+        width: 50px;
+        height: 50px;
+        background-image: none;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;    
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;    
+        font-size: 2em;    
+        color: $violet;
+        background-color: rgba(255,255,255,0.55);
+        text-align: center;
+        line-height: 1.7em;
+    }
+
+    &.fancybox-prev {
+        span {
+            left: 0;
+
+            &:before {
+                content: "\f053";
+            }            
+        }
+    }
+
+    &.fancybox-next {
+        span {
+            right: 0;
+
+            &:before {
+                content: "\f054";                
+            }            
+        }
+    }  
+}
+
+.fancybox-inner {
+    overflow: hidden;
+}
+
+.fancybox-close {
+    background-image: none;    
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;    
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 5px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    font-size: 1em;
+
+    &:before {
+        content: "\f00d";
+    }
+
+    &:hover {
+        color: $violet;
+
+        @include hopacity;
+    }
+}
+
+.fancybox-next {
+    right: 400px;
+}
+
+.photobox {
+    .photo {
+        width: calc(100% - #{$lightbox_description_width});
+        height: 100%;
+        float: left; 
+
+        img {
+            height: 100%;            
+        }
+    }
+
+    .description {
+        width: $lightbox_description_width;
+        float: right;
+        padding: $photobox_description_padding;
+        height: 100%;
+        overflow: auto;
+        position: relative;
+
+        .inner {
+            min-height: calc(100% - #{$photobox_description_padding});
+            position: relative;
+            padding-bottom: $lsquare;
+        }
+
+        .content {
+            //padding-bottom: 2*$photobox_description_padding + 50px;
+            padding-bottom: $photobox_description_padding;
+        }
+
+        .social {
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            //bottom: $photobox_description_padding;
+
+            ul {
+                a {
+                    li {
+                        float: initial;
+                    }
+                }
+            }
+        }
+    }
+}

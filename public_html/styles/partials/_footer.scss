@@ -1,0 +1,84 @@
+/* 
+    Created on : 20.1.2017, 14:49:44
+    Author     : ondra
+*/
+
+.footer {
+    background-color: #000;
+    padding-top: 35px;
+    font-size: .8rem;
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+
+    .copyright {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &, a {
+        color: #FFF;
+    }  
+
+    a:hover {
+        text-decoration: underline;
+    }   
+
+    .newsletter_form {
+        .email {
+            max-width: 70%;
+            float: left;
+            box-shadow: none;
+        }
+
+        .submit {
+            max-width: 30%;
+            width: 150px;
+            background-color: $violet;
+        }
+
+        .email, .submit {
+            border-radius: 0;
+            border: none;
+            height: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 64rem) {
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;   
+
+        .copyright {
+            margin-top: 40px;
+        }
+
+        .fmenu {
+            margin-bottom: 25px;
+        }
+    }    
+}
+
+@media screen and (min-width: 40rem) and (max-width: 64rem) {
+    .footer {
+        .newsletter_form {
+            .email {
+                margin-bottom: 0;
+            }
+
+            .email, .submit {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

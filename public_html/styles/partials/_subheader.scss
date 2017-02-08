@@ -1,0 +1,30 @@
+/* 
+    Created on : 20.1.2017, 14:42:38
+    Author     : ondra
+*/
+
+.body {
+    background: $greylight;
+
+    .subheader {
+        margin-top: 0;
+        padding-top: 30px;
+        margin-bottom: 30px;        
+    }
+}
+
+.title-bar {
+    padding: 0 0.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: $height_title-bar;
+    line-height: $height_title-bar;
+    top: 0;
+}
+
+@media screen and (max-width: 75rem) {  
+    .body {
+        padding-top: $height_title-bar;
+    }
+}

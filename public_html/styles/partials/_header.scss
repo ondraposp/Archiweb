@@ -1,0 +1,140 @@
+/* 
+    Created on : 20.1.2017, 14:41:12
+    Author     : ondra
+*/
+
+.topbar {    
+    height: $height_topbar;
+
+    &>.row {
+        //background: #000;
+
+        .topbarleft {
+            display: table; 
+            height: 100%;
+        }
+    }
+
+    &, & a, & a:hover {
+        color: #FFF;    
+    }
+
+    .mainlogo, .mainmenu {
+        //float: left;
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    .mainmenu, .langmenu, .icons {
+        ul {
+            margin: 0;
+            list-style: none;
+            display: table;
+            height: 100%;
+            position: relative;
+
+            li {
+                height: 100%;
+                display: inline-block;
+                padding: 0 10px;
+                text-transform: uppercase;
+
+                a {
+                    height: 100%;
+                    display: table;
+
+                    div {
+                        height: 100%;
+                        display: table-cell;
+                        vertical-align: middle;
+
+                        .offers {
+                            background-color: $violet;
+                            padding: 10px 7px;                            
+                            margin-left: 5px;
+                            border-radius: 50%;
+                            font-size: 0.75rem;
+                            font-weight: bold;
+                        }
+                    }
+                    
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                &:hover, &.active {
+                    background: $violet;    
+
+                    .offers {
+                        background-color: #FFF;
+                        color: $violet;
+                    }
+                }
+            }    
+        }
+    }
+
+    .langmenu, .icons {
+        float: right;
+    }
+
+    .icons {
+        font-size: 0.8rem;
+        padding: 0 8px;
+    }
+
+    .langmenu {                
+        ul {
+            li {
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;        
+    }
+}
+
+.pretopbar {
+    &.fixed {
+        margin-bottom: $height_topbar;
+    }
+}
+
+.topbanner {
+    margin: 20px 0;
+}
+
+h1 {
+    color: #000;
+    font-weight: $fbold;
+    font-size: 2.6rem;
+    line-height: 3rem;
+}
+
+
+@media screen and (max-width: 75rem) {    
+    .pretopbar {
+        display: none;
+    }
+
+    @media (min-width: 64em) {
+        .topbar {
+            .mainmenu, .langmenu, .icons {
+                ul {
+                    li {
+                        padding: 0 8px;
+                        font-size: 0.9rem;
+                    }
+                }      
+            }           
+        }     
+    }    
+}
+

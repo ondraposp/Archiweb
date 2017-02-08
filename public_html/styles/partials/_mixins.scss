@@ -1,0 +1,57 @@
+/* 
+    Created on : 20.1.2017, 14:35:44
+    Author     : ondra
+*/
+
+@mixin border-title($fontsize: 16px, $color: #FFF) {
+    text-transform: uppercase;
+
+    span {
+        padding: 4px 5px;    
+        border: 1px solid #FFF;
+        color: $color;
+        font-size: $fontsize;
+    }
+}
+
+@mixin hopacity($opacity: 0.85) {
+    &:hover {
+        opacity: $opacity;
+        filter: alpha(opacity=#{$opacity*100});
+        -moz-opacity: $opacity;
+        -khtml-opacity: $opacity;
+    }
+}
+
+@mixin floatfix() {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin transition($timing: 'easeOutExpo', $property: 'all', $duration: .3s) {
+    -o-transition-timing-function: $timing;
+    -webkit-transition-timing-function: $timing;
+    -moz-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+
+    -o-transition-property: $property;
+    -webkit-transition-property: $property;
+    -moz-transition-property: $property;
+    transition-property: $property;
+
+    -o-transition-duration: $duration;
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    transition-duration: $duration;   
+}
+
+@mixin gradient($angle: 0deg, $color1: rgba(0, 0, 0, 0.9), $color2: rgba(0, 0, 0, 0.7), $color3: rgba(255, 255, 255, 0), $breakpoint: 50%) {
+    background-image: -webkit-linear-gradient($angle, $color1, $color2 $breakpoint, $color3); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image:    -moz-linear-gradient($angle, $color1, $color2 $breakpoint, $color3); /* For Firefox (3.6 to 15) */
+    background-image:      -o-linear-gradient($angle, $color1, $color2 $breakpoint, $color3); /* For old Opera (11.1 to 12.0) */ 
+    background-image:         linear-gradient($angle, $color1, $color2 $breakpoint, $color3); /* Standard syntax; must be last */
+}
+

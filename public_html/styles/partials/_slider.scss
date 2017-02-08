@@ -1,0 +1,134 @@
+/* 
+    Created on : 20.1.2017, 14:44:59
+    Author     : ondra
+*/
+
+.slider {
+    height: auto;
+    margin-top:0;   
+    background-color: initial;
+    margin-bottom: 10px;
+
+    .orbit-slide {        
+        .caption {
+            position: absolute;
+            top: 0;
+            color: #FFF;
+            max-width: 40%;
+            padding: 30px 0 30px 30px;
+            height: 100%; 
+            z-index: 9;
+
+            .category {              
+                @include border-title(15px);
+            }
+
+            h2 {
+                margin-top: 20px;
+                font-size: 1.7rem;
+                text-transform: uppercase;
+                font-weight: 900;
+                line-height: 2rem;
+                color: #FFF;
+                margin-bottom: 0.8rem;
+            }
+
+            .introtext {
+                line-height: 1.3rem;
+            }
+
+            .author {
+                padding-bottom: 3px;
+                border-bottom: 2px solid $violet;                   
+            }
+
+            .learnmore {
+                margin-top: 15px;
+                text-transform: uppercase;
+                background: $violet;
+                float: left;
+                clear: both;
+                padding: 1px 4px;
+                color: #FFF;
+                font-size: 0.9rem;
+            }
+
+            .bottom {
+                position: absolute;
+                bottom: 30px;
+                
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }   
+
+        .orbit-image {
+            max-height: 500px;
+        }
+
+        .gradient {
+            width: 45%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+
+            @include gradient(90deg);
+        }
+    }
+
+    .orbit-bullets {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-bottom: 0;
+        margin-right: calc(1.2rem + 40px);
+
+        button {
+            border-radius: 0;
+            font-size: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 5px;
+
+            span {
+                color: #fff;
+            }    
+        }
+
+        button.is-active, button:hover {
+            background-color: #000;
+        }
+    }
+
+    .orbit-container {
+        margin-right: $marright;
+    }
+
+    @include floatfix;
+}
+
+@media screen and (max-width: 64rem) {
+    .slider {
+        .orbit-slide {
+            .caption {
+                padding: 30px 0 30px 30px;
+                max-width: 100%;
+
+                h2 {
+                    font-size: 1.5rem;
+                    line-height: 1.9rem;
+                }
+            }
+        }
+
+        .orbit-container {
+            margin-right: 0;
+        }
+
+        .orbit-bullets {
+            margin-right: 1.2rem;
+        }
+    }
+}
+

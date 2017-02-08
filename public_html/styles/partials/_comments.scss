@@ -1,0 +1,85 @@
+/* 
+    Created on : 25.1.2017, 16:57:03
+    Author     : ondra
+*/
+
+.comments {    
+    overflow: hidden;
+
+    .chead, .cbody, .call {
+        margin-right: $marright;
+    }
+
+    .chead {
+        .num {
+            background-color: #000;            
+            font-weight: $fubold;
+            font-size: 1.1rem;
+            padding-left: 30px;
+        }
+
+        .add {
+            background-color: $violet;            
+            text-align: center;
+
+            @include hopacity;
+        }
+
+        .num, .add {
+
+            height : $comment_height;
+            line-height: $comment_height;
+            color: #FFF;                
+        }
+    }
+
+    .cbody {
+        padding: 20px;
+        background-color: #FFF;
+        color: #000;
+
+        .cheader {
+            font-weight: bold;
+        }
+
+        .ccomment {
+            border-top: 1px solid $grey2;
+
+            .subj {
+                color: $violet;
+            }
+
+            &.re {
+                .subj {
+                    padding-left: 1rem;
+                }
+            }
+        }
+
+        .cheader, .ccomment {
+            height: $comment_height;
+            line-height: $comment_height;
+            padding-left: 20px;
+        }
+    }
+
+    .call {
+        background-color: $violet;
+        color: #FFF;
+        height: $comment_height;
+        line-height: $comment_height;
+        text-align: center;
+
+        @include hopacity;
+    }
+}
+
+@media screen and (max-width: 64rem) {
+    .comments {
+        .chead, .cbody, .call {
+            margin-right: $gutter_neg;
+            //-0.357rem
+        }
+    }    
+}
+

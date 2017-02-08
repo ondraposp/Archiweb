@@ -1,0 +1,33 @@
+/* 
+    Created on : 20.1.2017, 14:47:45
+    Author     : ondra
+*/
+
+.bx-wrapper {
+    margin-bottom: 30px;
+
+    .bx-viewport {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        left: 0;
+    }   
+
+    .bx-pager {
+        display: none;
+    }
+
+    .bx-controls-direction {
+        display: none;   
+    }
+}
+
+
+.companies {
+    .inline-list {
+        margin-left: 0;
+        margin-bottom: 0;
+    }    
+}
+

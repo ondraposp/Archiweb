@@ -1,0 +1,49 @@
+/* 
+    Created on : 20.1.2017, 14:45:52
+    Author     : ondra
+*/
+
+.mproduct {
+    height: 250px;
+    margin-bottom: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 15px;
+    position: relative;
+
+    .title {
+        z-index: 9;
+        position: relative;
+
+        @include border-title(14px);
+    }
+
+    .description {
+        position: absolute;
+        bottom: 0;
+        color: white;
+        font-weight: bold;
+        padding-bottom: 15px;
+        z-index: 9;
+    }
+
+    .gradient {
+        width: 100%;
+        height: 35%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include gradient();
+
+        &.top {            
+            top: 0;
+
+            @include gradient(180deg);
+        }
+    }
+
+    @include hopacity;
+    @include transition();
+}

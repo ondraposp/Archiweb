@@ -1,0 +1,194 @@
+/* 
+    Created on : 24.1.2017, 16:34:39
+    Author     : ondra
+*/
+
+.sitenews, .trending, .related {        
+
+    .new {   
+        color: #000;        
+        padding-bottom: 10px;
+        font-weight: $fmedium;            
+        overflow: hidden;
+
+        .inner {
+            background-color: $grey2;
+            line-height: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
+            //height: 100%;
+            overflow: hidden;
+        }
+
+        .discuss {            
+            color: $violet;          
+
+            i {
+                padding-left: 5px;
+            }
+
+            &.c0 {
+                /*color: $grey3;*/
+                visibility: hidden;
+            }
+        }
+
+        @include hopacity();
+    }     
+}
+
+// novinky - prehled
+.sitenews {
+    margin-right: $padright;
+
+    .new {
+        height: 70px;     
+    }
+}
+
+// souvisejici clanky
+.related {
+    padding-right: $padright;
+
+    .new {
+        height: 70px;     
+    }
+}
+
+.trending {
+    margin-bottom: 35px;
+
+    .new {
+        height: auto;
+
+        .inner {
+            padding-bottom: 15px;
+            padding-top: 15px;        
+
+            .title {
+                line-height: 1.4rem;
+            }
+        }
+    }
+
+}
+
+.longbanner {
+    text-align: center;
+
+    img {
+        margin-bottom: $marbottom;
+    }
+
+    margin: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+}
+
+.tpl_news, #tpl_new_detail {
+    .rightbar {
+        .calendar, .bannerr_small, .bannerr_big {
+            margin-bottom: $marbottom_rbar;   
+        }       
+    }    
+}
+
+.submenu {
+    margin-bottom: $marbottom_rbar;
+
+    ul {
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 2px; 
+            padding: 7px 20px;
+
+            &:hover, &.active {
+                background-color: #000;
+
+                a {
+                    color: #FFF;   
+                }                
+            }
+
+            a {
+                color: $violet;
+            }
+        }
+    }
+
+    .items li {
+        background-color: #FFF;
+    }
+
+    .other li {
+        background-color: $grey2;
+    }
+}
+
+#tpl_new_detail {
+    h1 {
+        min-height: 120px; 
+        margin-bottom: 0;
+    }    
+}
+
+.parameters {
+    color: $grey4;
+
+    .par {
+        margin-bottom: 15px;
+
+        .val {
+            .tag {
+                color: $violet;
+            }
+        }
+
+        a {
+            color: $violet;
+        }
+    }
+}
+
+.maintext {
+    .introtext, .content {
+        margin-right: $marright;
+    }
+
+    .introtext {
+        color: $grey4;
+        font-size: 1.1rem;
+    }
+
+    .content {
+        color: #000;
+    }
+}
+
+.related_objects {
+    padding-right: $marright;
+}
+
+@media screen and (max-width: 64rem) {
+    .sitenews, .trending {
+        margin-right: 0;    
+    }   
+
+    #tpl_new_detail {
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .gallery_slider, .maintext, .comments, .related {
+        padding-right: 0;
+    }
+
+    .related {
+        margin-bottom: 45px;
+    }
+}

@@ -1,0 +1,48 @@
+/* 
+    Created on : 20.1.2017, 14:24:22
+    Author     : ondra
+*/
+
+/*DECLARATIONS*/
+@import 'partials/variables';
+@import 'partials/fonts';
+@import 'partials/colors';
+@import 'partials/mixins';
+@import 'partials/global';
+
+/*LIBRARIES*/
+@import 'foundation/foundation.css'; 
+@import 'bxslider/jquery.bxslider.css';
+@import 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
+@import 'flex-images/flex-images';
+
+/*PARTIALS*/
+@import 'partials/header';
+@import 'partials/subheader';
+@import 'partials/slider';
+@import 'partials/monthproduct';
+@import 'partials/calendar';
+@import 'partials/companies';
+@import 'partials/homepage';
+@import 'partials/rightbar';
+@import 'partials/footer';
+@import 'partials/comments';
+@import 'partials/social';
+@import 'partials/content';
+@import 'partials/architects';
+@import 'partials/atelier';
+@import 'partials/form';
+@import 'partials/buildings';
+@import 'partials/keyframes';
+
+
+/*HOMEPAGE*/
+@import 'partials/homepage';
+
+/*NEWS*/
+@import 'partials/news';
+@import 'partials/gallery_slider';
+
+/*OFF CANVAS*/
+@import 'partials/offcanvas';
+

@@ -1,0 +1,159 @@
+/* 
+    Created on : 20.1.2017, 14:47:05
+    Author     : ondra
+*/
+
+.calendar {
+    height: 240px;
+
+    $mtitle_lheight: 2.8rem;
+
+    .monthtitle {
+        background-color: $grey3;
+        color: #FFF;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: $mtitle_lheight;
+        margin-bottom: 0;
+
+        .month_prev {
+            float: left;
+            padding-left: 20px;           
+        }
+
+        .month_next {
+            float: right;
+            padding-right: 20px;            
+        }
+
+        .month_prev, .month_next {
+            line-height: $mtitle_lheight;
+            color: #FFF;
+        }
+    }
+
+    .calbody {
+        padding: 20px;
+        height: calc(100% - 2.8rem);
+        background-color: #FFF;
+
+        .day {           
+            width: calc(100% / 7);
+            height: 20%;
+            float: left;
+            color: $grey2;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+
+            border: {
+                right: {
+                    width: 1px;
+                    style: solid;
+                    color: $grey2;
+                }
+
+                bottom: {
+                    width: 1px;
+                    style: solid;
+                    color: $grey2;
+                }
+            }
+
+            cursor: pointer;
+            padding: 4px 0;
+
+            &:hover {
+                background-color: $grey2;
+                color: #FFF;
+            }
+
+            &:nth-child(7n+0) {
+                border-right: none;
+            }
+
+            @for $i from 29 to 36 {
+                &:nth-child(#{$i}) {
+                    border-bottom: none;
+                }
+            }
+
+
+            &.thismonth {
+                color: #000;
+            }
+
+            &.event {
+                color: #FFF;
+                background-color: $violet;
+            }
+        }
+    }
+}
+
+/*CALENDAR SITE*/
+
+.cal_day_header {
+    color: white;
+    background-color: black;
+    padding: 11px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: $tot_gutter;
+
+    a {
+        &:hover {
+            i {
+                color: #FFF;
+            } 
+        }
+    }
+
+    .lday, .rday {
+        padding-top: 5px;        
+    }
+
+    .lday {
+        float: left;        
+    }
+
+    .rday {
+        float: right;
+    }
+}
+
+.type_events_section {
+    background-color: #FFF;
+    padding: $type_events_section;
+    position: relative;
+    margin-bottom: $tot_gutter;
+
+    .showall {
+        position: absolute;
+        top: $type_events_section;
+        right: $type_events_section;
+    }
+
+    .item {
+        margin-bottom: 15px;        
+
+        .title {
+            color: $violet;
+            font-size: 1.2rem;
+            font-weight: $fbold;
+        }
+
+        .subtitle {
+            color: #000;
+        }
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 64rem) {
+    .calendar {
+        height: 250px;
+    }
+}
