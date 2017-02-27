@@ -8,5 +8,73 @@
 }
 
 .bannerr_big, .bannerr_small {
+    margin-bottom: $marbottom;
+}
+
+.submenu {
+    $submenu_item_padding: 7px 20px;
+    $submenu_item_margin-bottom: 2px;
+
     margin-bottom: $marbottom_rbar;
+
+    h4 {
+        color: #FFF;
+        background-color: #000;
+        margin-bottom: $submenu_item_margin-bottom;
+        padding: $submenu_item_padding;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    h5 {
+        color: $violet;
+        background-color: $grey2;
+        margin-bottom: $submenu_item_margin-bottom;
+        padding: $submenu_item_padding;
+        font-size: 1rem;
+        line-height: 1.8rem;
+
+        &:hover, &.active {
+            background-color: #000; 
+            color: #FFF; 
+        }
+    }
+
+    ul {
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: $submenu_item_margin-bottom; 
+            padding: $submenu_item_padding;
+
+            &:hover, &.active {
+                background-color: #000;
+
+                a {
+                    color: #FFF;   
+                }                
+            }
+
+            a {
+                color: $violet;
+            }
+        }
+    }
+
+    .items li {
+        background-color: #FFF;
+    }
+
+    .other li, li.section {
+        background-color: $grey2;
+    }
+}
+
+.sidebar {
+    h5 {
+        color: $black;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
 }

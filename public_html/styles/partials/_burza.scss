@@ -1,0 +1,83 @@
+/* 
+    Created on : 15.2.2017, 14:59:00
+    Author     : ondra
+*/
+
+.js_menu {
+    margin-bottom: 20px;
+
+    &>div {
+        padding-left: $gutter;
+    }
+
+    .item {
+        color: #FFF;
+        background-color: $violet;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-right: 1px;
+        line-height: 50px;
+        text-align: center;
+        font-weight: $fbold;
+        cursor: pointer;
+
+        &.active {
+            color: $grey4;
+            background-color: $grey2;
+        }
+
+        @include hopacity;
+    }
+
+    .wrapper {
+        &:first-child {
+            .item {
+                margin-left: 0;
+            }
+        }
+
+        &:last-child {
+            .item {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.inzeraty {
+    .cat {
+        &>div {
+            padding-right: $padright;
+        }        
+
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+
+    .item {
+        background-color: #FFF;
+        margin-bottom: $marbottom;
+        padding: 15px;   
+
+        @include hopacity;
+
+        .title {
+            color: #000;
+            font-weight: $fbold;
+        }
+
+        .info {
+            color: $grey4;
+        }
+    }
+}
+
+.reply_inzerat {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+

@@ -4,8 +4,9 @@
 */
 
 .calendar {
-    height: 240px;
-
+    //height: 240px;
+    margin-bottom: $marbottom;
+    
     $mtitle_lheight: 2.8rem;
 
     .monthtitle {
@@ -14,7 +15,7 @@
         font-weight: bold;
         text-transform: uppercase;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: $mtitle_lheight;
         margin-bottom: 0;
 
@@ -36,12 +37,14 @@
 
     .calbody {
         padding: 20px;
-        height: calc(100% - 2.8rem);
+        //height: calc(100% - 2.8rem);
         background-color: #FFF;
+        
+        @include floatfix;
 
         .day {           
             width: calc(100% / 7);
-            height: 20%;
+            height: 31px;
             float: left;
             color: $grey2;
             display: table-cell;
@@ -88,6 +91,10 @@
             &.event {
                 color: #FFF;
                 background-color: $violet;
+            }
+            
+            &.today {
+                background-color: $grey3;
             }
         }
     }
@@ -150,6 +157,13 @@
             color: #000;
         }
     }
+}
+
+.add_event {
+    padding: 11px;
+    font-size: 1.3rem;
+    margin-bottom: $tot_gutter;   
+    //font-weight: 
 }
 
 @media screen and (min-width: 40em) and (max-width: 64rem) {

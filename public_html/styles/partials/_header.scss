@@ -26,6 +26,12 @@
         height: 100%;
     }
 
+    .mainlogo {
+        padding-left: $slider_padding;
+        padding-right: 20px;
+        padding-bottom: 3px;
+    }
+
     .mainmenu, .langmenu, .icons {
         ul {
             margin: 0;
@@ -40,9 +46,10 @@
                 padding: 0 10px;
                 text-transform: uppercase;
 
-                a {
+                a, div {
                     height: 100%;
                     display: table;
+                    cursor: pointer;
 
                     div {
                         height: 100%;
@@ -58,11 +65,15 @@
                             font-weight: bold;
                         }
                     }
-                    
+
                     &:hover {
                         opacity: 1;
                     }
                 }
+
+                /*&>div {
+                    
+                }*/
 
                 &:hover, &.active {
                     background: $violet;    
@@ -85,19 +96,23 @@
         padding: 0 8px;
     }
 
-    .langmenu {                
-        ul {
-            li {
-                text-transform: lowercase;
-            }
-        }
-    }
+    /* .langmenu {                
+         ul {
+             li {
+                 text-transform: lowercase;
+             }
+         }
+     }*/
 
     &.fixed {
         position: fixed;
         top: 0;
         z-index: 10;
-        width: 100%;        
+        width: 100%;   
+
+        &.bc_black {
+            background-color: rgba($black,0.8);
+        }
     }
 }
 
@@ -111,6 +126,19 @@
     margin: 20px 0;
 }
 
+.subtopbar {
+    background-color: $grey2;
+    //height: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: none;
+
+    .chboxCenter {
+        margin: .6em 02;
+        display: flex;
+    }
+}
+
 h1 {
     color: #000;
     font-weight: $fbold;
@@ -120,9 +148,9 @@ h1 {
 
 
 @media screen and (max-width: 75rem) {    
-    .pretopbar {
-        display: none;
-    }
+    /* .pretopbar {
+         display: none;
+     }*/
 
     @media (min-width: 64em) {
         .topbar {
@@ -136,5 +164,11 @@ h1 {
             }           
         }     
     }    
+
+    @media (max-width: 64em) {
+        .pretopbar {
+            padding-top: $height_title-bar;
+        }
+    }
 }
 

@@ -14,7 +14,7 @@ h2 {
 a {
     color: $violet;
 
-   // @include hopacity;
+    // @include hopacity;
 
     &:hover {
         color: $violet;
@@ -33,7 +33,7 @@ a {
     padding: 20px;
 }
 
-.padright {
+.padright, .r_padding {
     padding-right: $padright;
 }
 
@@ -56,9 +56,9 @@ hr {
     margin-right: $marright;
 }
 
-.r_padding {
+/*.r_padding {
     padding-right: $marright;
-}
+}*/
 
 .white {
     color: #FFF;
@@ -73,7 +73,7 @@ hr {
 }
 
 .bc_black {
-    background-color: #000;
+    background-color: $black;
 }
 
 .valign_bottom {
@@ -102,8 +102,57 @@ hr {
     position: relative;
 }
 
+.pretopbar {
+    background-color: $grey3_5;
+}
+
+/*LOAD MORE*/
+
+$lm_height: 45px;
+
+.load_more, .add_event {
+    background-color: $violet;
+    color: #FFF;        
+    cursor: pointer;
+    text-align: center;         
+    margin-bottom: 35px;
+
+    @include hopacity();
+}
+
+.load_more {
+    margin-right: $padright;
+    height: $lm_height;
+    line-height: $lm_height;
+    font-weight: bold;   
+}
+
+.fix_top_height {
+    height: 50px;
+    margin-bottom: 25px;
+
+    &.social {
+        height: 50px;
+    }
+}
+
+.column-block {
+    .project_box {
+        margin-bottom: 0;
+    }
+}
+
+.violet, .blue {
+    color: $violet;
+}
+
+
 @media (max-width: 64em) {
-    .r_padding {
+    .padright, .r_padding {
         padding-right: 0;
+    }
+
+    .bannerr_small, .bannerr_big {
+        text-align: center;
     }
 }

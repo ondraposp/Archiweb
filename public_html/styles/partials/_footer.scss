@@ -8,6 +8,11 @@
     padding-top: 35px;
     font-size: .8rem;
 
+    .logo {
+        max-width: 120px;
+        margin-bottom: 5px;
+    }
+
     h4 {
         text-transform: uppercase;
         font-size: 1rem;
@@ -49,6 +54,16 @@
             border-radius: 0;
             border: none;
             height: 40px;
+        }
+    }
+
+    .social {
+        ul {
+            a {
+                li{
+                    float: left;
+                }
+            }
         }
     }
 }

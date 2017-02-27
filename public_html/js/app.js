@@ -13,6 +13,7 @@ $(document).ready(function () {
         pagerCustom: '#bx-pager'
     });
 
+    // top bar with menu - fixed
     function checkWidth(winwidth) {
 
         $(window).scroll(function () {
@@ -27,10 +28,59 @@ $(document).ready(function () {
         });
     }
 
+
+    // partners bar - fixed
+    /*function fixPartners(winwidth) {
+     $(window).scroll(function () {
+     var p = $('.pretopbar').height();
+     var t = $('.topbar').height();
+     var b = $('.body').height();
+     var ps = $('.partners').height();
+     //var w = $(window).height();
+     var w = window.innerHeight;
+     
+     var o = $(window).scrollTop();
+     
+     
+     if (o > p + t + b - w) {
+     $(".partners").removeClass('fixed');
+     } else {
+     $(".partners").addClass('fixed');
+     }
+     });
+     }*/
+
     checkWidth($(window).width());
+    //fixPartners($(window).width());
+
     $(window).resize(function () {
         checkWidth($(window).width());
+        //fixPartners($(window).width());
     });
+
+
+
+
+    var footTop, windowBottom, st, h;
+    //var partnersh = $('#tpl_homepage .partners').outerHeight();
+    $('#tpl_homepage .footer').css('margin-top', 165); //hardcoded
+
+    $(window).scroll(function () {
+        footTop = $('#tpl_homepage .footer').offset().top;
+
+        st = $(this).scrollTop();
+        //h = $(this).height();
+        h = window.innerHeight;
+
+        windowBottom = st + h;
+        if (footTop <= windowBottom) {
+            $("#tpl_homepage .partners").css('bottom', windowBottom - footTop);
+        } else {
+            $("#tpl_homepage .partners").css('bottom', 0);
+        }
+    });
+
+
 
 
     var max = 0;
@@ -115,5 +165,58 @@ $(document).ready(function () {
         closeClick: false,
         openEffect: 'none',
         closeEffect: 'none'
+    });
+
+    $('.js_menu .item').bind("click", function () {
+        var menuitem = $(this);
+        $('.js_menu .item').removeClass('active');
+
+        if (!menuitem.hasClass('active')) {
+            $('.inzeraty .cat.open').slideUp(400, 'easeOutQuad', function () {
+                $(this).removeClass('open');
+                $('[data-cat_list="' + menuitem.data("cat") + '"]').slideDown(400, 'easeInQuad');
+                $('[data-cat_list="' + menuitem.data("cat") + '"]').addClass('open');
+            });
+        }
+
+        menuitem.addClass('active');
+    });
+
+
+    $('.topbar .icon').bind("click", function () {
+        toggleSubmenubar($(this));
+    });
+
+
+
+
+
+
+    /*$('.topbar .icon').bind("click", function() {
+     if ($(this).hasClass('active')) {
+     $(this).removeClass('active');
+     }
+     
+     
+     });*/
+
+
+    function toggleSubmenubar(bar) {
+
+        if (!bar.hasClass('active')) {
+            $('.topbar .icon').removeClass('active');
+            $('.subtopbar').slideUp(500);
+            $('.' + bar.data('bar')).slideDown(500);
+            bar.addClass('active');
+        } else {
+            $('.topbar .icon').removeClass('active');
+            $('.subtopbar').slideUp(500);
+            bar.removeClass('active');
+        }
+    }
+
+
+    $(".ddd").dotdotdot({
+        watch: true
     });
 });

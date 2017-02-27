@@ -23,8 +23,8 @@
     top: 0;
 }
 
-@media screen and (max-width: 75rem) {  
+@media screen and (max-width: 64rem) {  
     .body {
-        padding-top: $height_title-bar;
+        //padding-top: $height_title-bar;
     }
 }

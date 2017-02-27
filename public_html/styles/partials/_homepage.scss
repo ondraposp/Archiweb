@@ -16,6 +16,7 @@
         position: absolute;
         bottom: 0;
         margin-left: 15px;
+        margin-right: 15px;
         margin-bottom: 12px;
         color: #FFF;  
         z-index: 9;
@@ -58,7 +59,7 @@
                 background-color: $grey2;
                 line-height: ((250px / 6) - 10px);
                 padding-left: 15px;
-                padding-right: 60px;
+                padding-right: 68px;
                 position: relative;
                 height: 100%;
                 overflow: hidden;
@@ -83,13 +84,41 @@
             }
 
             @include hopacity();
+            
+            &.today {
+                .inner {
+                    background-color: $white;
+                }
+            }
+            
+             &.pr {
+                .inner {
+                    background-color: $grey3;
+                }
+            }
         } 
     }     
 }
 
-.project_box, .midbanner, .facebook, .bannerr_small, .bannerr_big, .facebook_plugin {
+.midbanner, .facebook, .bannerr_big, .facebook_plugin {
     //margin-bottom: $marbottom;
     margin-bottom: $marbottom_rbar;
+}
+
+#tpl_homepage {
+    .midbanner, .project_box {
+        margin-bottom: $marbottom;
+    }
+
+    .partners {
+        // &.fixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        background: $greylight;
+        //  }
+    }
 }
 
 .midbanner {    
@@ -100,30 +129,13 @@
     background-position: center;
 }
 
-/*LOAD MORE*/
-
-$lm_height: 60px;
-
-.load_more {
-    background-color: $violet;
-    color: #FFF;
-    height: $lm_height;
-    line-height: $lm_height;
-    cursor: pointer;
-    text-align: center;
-    font-weight: bold;    
-    margin-right: $padright;
-    margin-bottom: 35px;
-
-    @include hopacity();
-}
-
 /*PARTNERS*/
 
 .partners {
     h3 {
         font-size: 1.4rem;
         text-transform: uppercase;
+        margin-top: 13px;
     }    
 }
 

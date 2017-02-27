@@ -8,7 +8,7 @@ $marbottom: 10px;
 $marbottom_rbar: 35px;
 $height_topbar: 70px;
 $height_title-bar: 50px;
-$marright: 40px; // space between body and rightbar
+$marright: $padright; // space between body and rightbar
 $tot_gutter: 0.714rem;
 $gutter: calc(#{$tot_gutter} / 2);
 $gutter_neg: calc((-1) * #{$gutter});
@@ -22,3 +22,4 @@ $lightbox_description_width: 400px;
 $photobox_description_padding: 25px;
 $lsquare: 50px; //social icno - size
 $type_events_section: 22px;
+$slider_padding: 30px;

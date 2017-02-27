@@ -43,7 +43,7 @@ select {
 // END FONT AWESOME + SELECT FIX
 
 select, input {
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 
 select {
@@ -151,3 +151,34 @@ input[type='checkbox']:checked + label > span{
 .showless {
     display: none;
 }
+
+.subtopbar {
+    $label_height: 25px;
+
+    .col {
+        float: left;  
+        padding-right: $marbottom;
+    }
+
+    .w40p {
+        width: 40%; 
+    }
+
+    .w20p {
+        width: 20%;
+    }
+
+    label{        
+        float: left;
+        padding-right: $marbottom;
+        height: $label_height;
+    }   
+
+    .button {
+        width: 100%;
+        margin-top: $label_height;
+        height: 2.437rem;
+    }
+}
+
+

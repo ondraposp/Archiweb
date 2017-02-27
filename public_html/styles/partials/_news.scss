@@ -95,39 +95,6 @@
     }    
 }
 
-.submenu {
-    margin-bottom: $marbottom_rbar;
-
-    ul {
-        margin: 0;
-        list-style: none;
-
-        li {
-            margin-bottom: 2px; 
-            padding: 7px 20px;
-
-            &:hover, &.active {
-                background-color: #000;
-
-                a {
-                    color: #FFF;   
-                }                
-            }
-
-            a {
-                color: $violet;
-            }
-        }
-    }
-
-    .items li {
-        background-color: #FFF;
-    }
-
-    .other li {
-        background-color: $grey2;
-    }
-}
 
 #tpl_new_detail {
     h1 {

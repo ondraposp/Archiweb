@@ -1,0 +1,52 @@
+/* 
+    Created on : 15.2.2017, 11:36:34
+    Author     : ondra
+*/
+
+.catalog_submenu {
+    $height_catalog_item: 43px;
+    $margin_bottom_catalog_item: 2px;
+    $padding-left_catalog_item: 20px;
+    $font-size_catalog_item: 1.1rem;
+
+    margin-bottom: 35px;
+
+    .subcategory {
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        color: #FFF;
+        background-color: #000;
+        height: $height_catalog_item;
+        margin-bottom: $margin_bottom_catalog_item;
+        padding-left: $padding-left_catalog_item;
+        font-size: $font-size_catalog_item;
+        line-height: $height_catalog_item;
+        font-weight: $fbold;
+    }
+
+    ul {
+        margin: 0;
+        list-style: none;
+
+        li {
+            background-color: #FFF;
+            margin-bottom: $margin_bottom_catalog_item;
+            padding-left: $padding-left_catalog_item;
+            font-size: $font-size_catalog_item;
+            line-height: $height_catalog_item;
+
+            &:hover {
+                background-color: #000;
+                color: #FFF;
+            }
+
+            a {
+                color: $violet;   
+            }            
+        }
+    }
+}
+
+

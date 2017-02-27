@@ -15,7 +15,7 @@
             top: 0;
             color: #FFF;
             max-width: 40%;
-            padding: 30px 0 30px 30px;
+            padding: $slider_padding 0 $slider_padding $slider_padding;
             height: 100%; 
             z-index: 9;
 
@@ -37,10 +37,10 @@
                 line-height: 1.3rem;
             }
 
-            .author {
+            /*.author {
                 padding-bottom: 3px;
                 border-bottom: 2px solid $violet;                   
-            }
+            }*/
 
             .learnmore {
                 margin-top: 15px;
