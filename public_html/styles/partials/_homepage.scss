@@ -84,18 +84,18 @@
             }
 
             @include hopacity();
-            
+
             &.today {
                 .inner {
                     background-color: $white;
                 }
             }
-            
-             &.pr {
-                .inner {
-                    background-color: $grey3;
-                }
-            }
+
+            /*  &.pr {
+                 .inner {
+                     background-color: $grey3;
+                 }
+             }*/
         } 
     }     
 }
@@ -118,6 +118,20 @@
         z-index: 10;
         background: $greylight;
         //  }
+
+        li {
+            display: table;
+            height: 100%;
+
+
+            a {
+                vertical-align: middle;
+                display: table-cell;
+            }
+            /*img {
+                display: table-cell;
+            }*/
+        }
     }
 }
 

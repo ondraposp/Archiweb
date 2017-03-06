@@ -118,8 +118,8 @@ hr {
 
 .load_more {
   margin-right: 40px;
-  height: 45px;
-  line-height: 45px;
+  height: 30px;
+  line-height: 30px;
   font-weight: bold; }
 
 .fix_top_height {
@@ -186,6 +186,8 @@ hr {
     padding-left: 30px;
     padding-right: 20px;
     padding-bottom: 3px; }
+  .topbar .mainmenu ul {
+    font-size: 1.1rem; }
   .topbar .mainmenu ul, .topbar .langmenu ul, .topbar .icons ul {
     margin: 0;
     list-style: none;
@@ -339,27 +341,26 @@ h1 {
       bottom: 30px; }
       .slider .orbit-slide .caption .bottom p {
         margin-bottom: 0; }
-  .slider .orbit-slide .orbit-image {
-    max-height: 500px; }
   .slider .orbit-slide .gradient {
     width: 45%;
     height: 100%;
     position: absolute;
     top: 0;
-    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* For Firefox (3.6 to 15) */
-    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* For old Opera (11.1 to 12.0) */
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* Standard syntax; must be last */ }
   .slider .orbit-bullets {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
-    margin-bottom: 0;
-    margin-right: calc(1.2rem + 40px); }
+    margin-top: 0;
+    margin-right: calc(1.2rem + 40px);
+    max-width: 60%; }
     .slider .orbit-bullets button {
       border-radius: 0;
       font-size: 1rem;
@@ -377,9 +378,12 @@ h1 {
     display: block;
     clear: both; }
 
+@media screen and (max-width: 72rem) {
+  .slider .orbit-slide .caption {
+    max-width: 50%; } }
 @media screen and (max-width: 64rem) {
   .slider .orbit-slide .caption {
-    padding: 30px 0 30px 30px;
+    padding: 30px;
     max-width: 100%; }
     .slider .orbit-slide .caption h2 {
       font-size: 1.5rem;
@@ -462,15 +466,25 @@ h1 {
     Created on : 20.1.2017, 14:47:05
     Author     : ondra
 */
+.caltitle {
+  margin-bottom: 0;
+  color: #FFF;
+  padding: 10px 5px 5px 5px;
+  background-color: #000;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.8;
+  text-transform: uppercase; }
+
 .calendar {
-  margin-bottom: 10px; }
+  margin-bottom: 0; }
   .calendar .monthtitle {
-    background-color: #b9b9b9;
+    background-color: #000;
     color: #FFF;
-    font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 2.8rem;
     margin-bottom: 0; }
     .calendar .monthtitle .month_prev {
@@ -570,8 +584,10 @@ h1 {
 
 .add_event {
   padding: 11px;
-  font-size: 1.3rem;
-  margin-bottom: 0.714rem; }
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.714rem;
+  text-transform: uppercase; }
 
 @media screen and (min-width: 40em) and (max-width: 64rem) {
   .calendar {
@@ -659,7 +675,12 @@ h1 {
   padding-bottom: 10px;
   font-weight: 500;
   margin-right: 40px;
-  overflow: hidden; }
+  overflow: hidden;
+  /*  &.pr {
+       .inner {
+           background-color: $grey3;
+       }
+   }*/ }
   .homepage .news .new .inner {
     background-color: #e6e6e6;
     line-height: 31.66667px;
@@ -687,8 +708,6 @@ h1 {
     -khtml-opacity: 0.85; }
   .homepage .news .new.today .inner {
     background-color: #FFF; }
-  .homepage .news .new.pr .inner {
-    background-color: #b9b9b9; }
 
 .midbanner, .facebook, .bannerr_big, .facebook_plugin {
   margin-bottom: 35px; }
@@ -701,6 +720,15 @@ h1 {
   width: 100%;
   z-index: 10;
   background: #f5f5f7; }
+  #tpl_homepage .partners li {
+    display: table;
+    height: 100%;
+    /*img {
+        display: table-cell;
+    }*/ }
+    #tpl_homepage .partners li a {
+      vertical-align: middle;
+      display: table-cell; }
 
 .midbanner {
   margin-right: 40px;
@@ -782,7 +810,7 @@ h1 {
 .footer {
   background-color: #000;
   padding-top: 35px;
-  font-size: .8rem; }
+  font-size: .9rem; }
   .footer .logo {
     max-width: 120px;
     margin-bottom: 5px; }
@@ -1498,7 +1526,12 @@ input[type='checkbox']:checked + label > span {
   padding-bottom: 10px;
   font-weight: 500;
   margin-right: 40px;
-  overflow: hidden; }
+  overflow: hidden;
+  /*  &.pr {
+       .inner {
+           background-color: $grey3;
+       }
+   }*/ }
   .homepage .news .new .inner {
     background-color: #e6e6e6;
     line-height: 31.66667px;
@@ -1526,8 +1559,6 @@ input[type='checkbox']:checked + label > span {
     -khtml-opacity: 0.85; }
   .homepage .news .new.today .inner {
     background-color: #FFF; }
-  .homepage .news .new.pr .inner {
-    background-color: #b9b9b9; }
 
 .midbanner, .facebook, .bannerr_big, .facebook_plugin {
   margin-bottom: 35px; }
@@ -1540,6 +1571,15 @@ input[type='checkbox']:checked + label > span {
   width: 100%;
   z-index: 10;
   background: #f5f5f7; }
+  #tpl_homepage .partners li {
+    display: table;
+    height: 100%;
+    /*img {
+        display: table-cell;
+    }*/ }
+    #tpl_homepage .partners li a {
+      vertical-align: middle;
+      display: table-cell; }
 
 .midbanner {
   margin-right: 40px;
