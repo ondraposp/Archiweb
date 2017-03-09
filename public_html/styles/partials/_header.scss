@@ -73,13 +73,11 @@
                     }
 
                     &:hover {
-                        opacity: 1;
+                        opacity: 1;                                                
                     }
                 }
 
-                /*&>div {
-                    
-                }*/
+                @include transition();
 
                 &:hover, &.active {
                     background: $violet;    
@@ -88,6 +86,8 @@
                         background-color: #FFF;
                         color: $violet;
                     }
+
+
                 }
             }    
         }
@@ -129,7 +129,7 @@
 }
 
 .topbanner {
-    margin: 20px 0;
+    margin: $topbanner_margin 0;
 }
 
 .subtopbar {

@@ -16,7 +16,7 @@
         z-index: 9;
         position: relative;
 
-        @include border-title(14px);
+        @include border-title(.88rem);
     }
 
     .description {

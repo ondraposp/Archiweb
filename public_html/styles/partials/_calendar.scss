@@ -6,7 +6,7 @@
 .caltitle {
     margin-bottom: 0;
     color: $white;
-    padding: 10px 5px 5px 5px;
+    padding: 10px 5px;
     background-color: $black;
     font-size: 1.1rem;
     text-align: center;
@@ -15,39 +15,54 @@
     text-transform: uppercase;
 }
 
-.calendar {
-    //height: 240px;
+.calendar {    
     margin-bottom: 0;
 
     .monthtitle {
         background-color: $grey3;
-        color: #FFF;
-        //font-weight: bold;
+        color: #FFF;        
         text-transform: uppercase;
         text-align: center;
         font-size: 1rem;
         line-height: $mtitle_lheight;
         margin-bottom: 0;
+        position: relative;        
 
-        .month_prev {
-            float: left;
-            padding-left: 20px;           
-        }
+        /*  .month_prev {
+              float: left;
+              padding-left: 20px;           
+          }
+  
+          .month_next {
+              float: right;
+              padding-right: 20px;            
+          }
+  
+          .month_prev, .month_next {
+              line-height: $mtitle_lheight;
+              color: #FFF;
+          }*/
 
-        .month_next {
-            float: right;
-            padding-right: 20px;            
-        }
+        img {
+            position: absolute;
+            top: calc((#{$mtitle_lheight} - #{$arr_height}) / 2);
+            height: $arr_height;         
 
-        .month_prev, .month_next {
-            line-height: $mtitle_lheight;
-            color: #FFF;
+            //            top: calc(#{$mtitle_lheight} )
+
+
+            &.l {                
+                left: $arr_margin;
+            }
+
+            &.r {                
+                right: $arr_margin;
+            }
         }
     }
 
     .calbody {
-        padding: 20px;
-        //height: calc(100% - 2.8rem);
+        padding: 10px 20px;        
         background-color: #FFF;
 
         @include floatfix;

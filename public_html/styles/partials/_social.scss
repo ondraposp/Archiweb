@@ -9,6 +9,11 @@
 
 .social {
     height: 120px; 
+
+    .footer & {
+        height: initial;
+    }
+
     ul {
         margin: 0;
         list-style: none;

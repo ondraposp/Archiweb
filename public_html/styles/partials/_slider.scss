@@ -20,7 +20,7 @@
             z-index: 9;
 
             .category {              
-                @include border-title(15px);
+                @include border-title(.94rem);
             }
 
             h2 {
@@ -35,6 +35,7 @@
 
             .introtext {
                 line-height: 1.3rem;
+                font-weight: $fmedium;
             }
 
             /*.author {
@@ -73,7 +74,13 @@
             position: absolute;
             top: 0;
 
-            @include gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));                
+            @include gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));               
+        }
+
+        &.light {
+            .gradient {
+                @include gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.55));   
+            }
         }
     }
 
@@ -82,7 +89,8 @@
         bottom: 0;
         right: 0;
         margin-top: 0;
-        margin-right: calc(1.2rem + 40px);
+        margin-right: calc(#{$padright} + #{$slider_padding});
+        margin-bottom: $slider_padding;
         max-width: 100%-$caption_width;
 
         button {
@@ -91,6 +99,7 @@
             width: 1.5rem;
             height: 1.5rem;
             margin-left: 5px;
+            opacity: 0.8;
 
             span {
                 color: #fff;
