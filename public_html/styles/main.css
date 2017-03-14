@@ -302,85 +302,184 @@ h1 {
     Created on : 20.1.2017, 14:44:59
     Author     : ondra
 */
-.slider {
+.mainslider {
   height: auto;
   margin-top: 0;
   background-color: initial;
-  margin-bottom: 10px; }
-  .slider .orbit-slide .caption {
+  margin-bottom: 0.714rem;
+  position: relative;
+  padding: 0;
+  z-index: 1;
+  /*
+      .control {
+          position: absolute;
+          top: 0;
+          margin: 0;
+          width: 8%;
+          height: 200px;
+          cursor: pointer;
+          font-size: 0px;
+          opacity: 0.6;
+          color: #fff;
+          text-decoration: none;
+          z-index: 10;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          img {
+              height: 50px;
+              display: block;
+          }
+  
+          &.control_prev {
+              left: 0;
+          }
+  
+          &.control_next {
+              right: 0;
+          }
+      }*/
+    /*.orbit-bullets {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-top: 0;
+        margin-right: calc(calc(calc(40px + 0.714rem)/2 - 0.714rem) + 30px);
+        margin-bottom: $slider_padding;
+        max-width: 100%-$caption_width;
+
+        button {
+            border-radius: 0;
+            font-size: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 5px;
+            opacity: 0.6;
+            margin-bottom: 0;
+            background-color: $black;
+            cursor: pointer;
+
+
+            span {
+                color: #fff;
+            }    
+        }
+
+        button.is-active, button:hover {
+            background-color: #000;
+            opacity: 1;
+        }
+    }*/
+  /*.orbit-container {
+      //margin-right: $marright;
+      margin-right: $space_l_wtht_gutter;
+  }*/ }
+  .mainslider .carousel {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
+    overflow: hidden; }
+  .mainslider .slide {
     position: absolute;
-    top: 0;
-    color: #FFF;
-    max-width: 40%;
-    padding: 30px 0 30px 30px;
-    height: 100%;
-    z-index: 9;
-    /*.author {
-        padding-bottom: 3px;
-        border-bottom: 2px solid $violet;                   
-    }*/ }
-    .slider .orbit-slide .caption .category {
-      text-transform: uppercase; }
-      .slider .orbit-slide .caption .category span {
-        padding: 4px 5px;
-        border: 1px solid #FFF;
-        color: #FFF;
-        font-size: 0.94rem; }
-    .slider .orbit-slide .caption h2 {
-      margin-top: 20px;
-      font-size: 1.7rem;
-      text-transform: uppercase;
-      font-weight: 900;
-      line-height: 2rem;
-      color: #FFF;
-      margin-bottom: 0.8rem; }
-    .slider .orbit-slide .caption .introtext {
-      line-height: 1.3rem; }
-    .slider .orbit-slide .caption .learnmore {
-      margin-top: 15px;
-      text-transform: uppercase;
-      background: #0279ce;
-      float: left;
-      clear: both;
-      padding: 2px 9px;
-      color: #FFF;
-      font-size: 0.9rem; }
-    .slider .orbit-slide .caption .bottom {
+    height: inherit;
+    width: 100%;
+    color: #fff; }
+    .mainslider .slide.active {
+      position: relative; }
+    .mainslider .slide .caption {
       position: absolute;
-      bottom: 30px; }
-      .slider .orbit-slide .caption .bottom p {
-        margin-bottom: 0; }
-  .slider .orbit-slide .gradient {
-    width: 45%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
-    /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
-    /* For Firefox (3.6 to 15) */
-    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
-    /* For old Opera (11.1 to 12.0) */
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
-    /* Standard syntax; must be last */ }
-  .slider .orbit-slide.light .gradient {
-    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
-    /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
-    /* For Firefox (3.6 to 15) */
-    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
-    /* For old Opera (11.1 to 12.0) */
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
-    /* Standard syntax; must be last */ }
-  .slider .orbit-bullets {
+      top: 0;
+      color: #FFF;
+      max-width: 40%;
+      padding: 30px 0 30px 30px;
+      height: 100%;
+      z-index: 9;
+      /*.author {
+          padding-bottom: 3px;
+          border-bottom: 2px solid $violet;                   
+      }*/ }
+      .mainslider .slide .caption .category {
+        text-transform: uppercase; }
+        .mainslider .slide .caption .category span {
+          padding: 4px 5px;
+          border: 1px solid #FFF;
+          color: #FFF;
+          font-size: 0.94rem; }
+      .mainslider .slide .caption h2 {
+        margin-top: 20px;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 2rem;
+        color: #FFF;
+        margin-bottom: 0.8rem; }
+      .mainslider .slide .caption .introtext {
+        line-height: 1.3rem; }
+      .mainslider .slide .caption .learnmore {
+        margin-top: 15px;
+        text-transform: uppercase;
+        background: #0279ce;
+        float: left;
+        clear: both;
+        padding: 2px 9px;
+        color: #FFF;
+        font-size: 0.9rem; }
+      .mainslider .slide .caption .bottom {
+        position: absolute;
+        bottom: 30px; }
+        .mainslider .slide .caption .bottom p {
+          margin-bottom: 0; }
+    .mainslider .slide .gradient {
+      width: 45%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
+      /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+      background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
+      /* For Firefox (3.6 to 15) */
+      background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
+      /* For old Opera (11.1 to 12.0) */
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
+      /* Standard syntax; must be last */ }
+    .mainslider .slide.light .gradient {
+      background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
+      /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+      background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
+      /* For Firefox (3.6 to 15) */
+      background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
+      /* For old Opera (11.1 to 12.0) */
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
+      /* Standard syntax; must be last */ }
+  .mainslider .carousel-tab {
+    /*  position: relative;
+      z-index: 10;
+      list-style-type: none;
+      bottom: 30px;
+      left: 49%;
+      transform: translate(-50%);
+      width: 130px;
+      text-align: center;*/
     position: absolute;
     bottom: 0;
     right: 0;
     margin-top: 0;
     margin-right: calc(calc(calc(40px + 0.714rem)/2 - 0.714rem) + 30px);
     margin-bottom: 30px;
-    max-width: 60%; }
-    .slider .orbit-bullets button {
+    max-width: 60%;
+    z-index: 9; }
+    .mainslider .carousel-tab li {
+      /*  width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: #fff;
+        float: left;
+        margin-right: 10px;
+        cursor: pointer;*/
       border-radius: 0;
       font-size: 1rem;
       width: 1.5rem;
@@ -389,33 +488,32 @@ h1 {
       opacity: 0.6;
       margin-bottom: 0;
       background-color: #000;
-      cursor: pointer; }
-      .slider .orbit-bullets button span {
-        color: #fff; }
-    .slider .orbit-bullets button.is-active, .slider .orbit-bullets button:hover {
-      background-color: #000;
-      opacity: 1; }
-  .slider .orbit-container {
-    margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem); }
-  .slider:after {
+      cursor: pointer;
+      color: #fff;
+      display: inline-block;
+      text-align: center; }
+      .mainslider .carousel-tab li.active, .mainslider .carousel-tab li:hover {
+        background-color: #000;
+        opacity: 1; }
+  .mainslider:after {
     content: '';
     display: block;
     clear: both; }
 
 @media screen and (max-width: 72rem) {
-  .slider .orbit-slide .caption {
+  .mainslider .slide .caption {
     max-width: 50%; } }
 @media screen and (max-width: 64rem) {
-  .slider .orbit-slide .caption {
+  .mainslider .slide .caption {
     padding: 30px;
     max-width: 100%; }
-    .slider .orbit-slide .caption h2 {
+    .mainslider .slide .caption h2 {
       font-size: 1.5rem;
       line-height: 1.9rem; }
-  .slider .orbit-container {
+  .mainslider .carousel {
     margin-right: 0; }
-  .slider .orbit-bullets {
-    margin-right: 1.2rem; } }
+  .mainslider .carousel-tab {
+    margin-right: 30px; } }
 /* 
     Created on : 20.1.2017, 14:45:52
     Author     : ondra

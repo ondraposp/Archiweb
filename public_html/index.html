@@ -294,10 +294,9 @@
                                 <div class="row subheader">
                                     <div class="large-9 medium-12 columns main homepage" >   
                                         <main role="main">
-                                            <!--start slider-->                                            
-                                            <div class="slider orbit" data-orbit data-swipe="false" data-use-m-u-i="true" data-options="timerDelay: 5000; animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-                                                <ul class="orbit-container">                                                
-                                                    <li class="is-active orbit-slide">
+                                            <div class="mainslider">
+                                                <div class="carousel">
+                                                    <div class="active slide" nr-slide="0">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 1" /> 
                                                         <div class="caption">
                                                             <div class="category"><span>Kategorie</span></div> 
@@ -311,54 +310,58 @@
                                                             </div>
                                                         </div>
                                                         <div class="gradient"></div>                                                    
-                                                    </li>                           
-                                                    <!-- svetly obrazek: trida light-->
-                                                    <li class="orbit-slide light">
+                                                    </div>      
+                                                    <div class="slide light" nr-slide="1">
                                                         <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 2" />
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                    <li class="orbit-slide">
+                                                    </div>
+                                                    <div class="slide" nr-slide="2">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 3" />                                                
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                    <li class="orbit-slide light">
-                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 4" />                                                
+                                                    </div>
+                                                    <div class="slide light" nr-slide="3">
+                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 4" />
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                    <li class="orbit-slide light">
+                                                    </div>
+                                                    <div class="slide" nr-slide="4">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 5" />                                                
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                    <li class="orbit-slide">
-                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 6" />                                                
+                                                    </div>
+                                                    <div class="slide light" nr-slide="5">
+                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 6" />
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                    <li class="orbit-slide">
+                                                    </div>
+                                                    <div class="slide" nr-slide="6">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 7" />                                                
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                    <li class="orbit-slide">
-                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 8" />                                                
+                                                    </div>                                                    
+                                                    <div class="slide light" nr-slide="7">
+                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 8" />
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                    <li class="orbit-slide">
+                                                    </div>
+                                                    <div class="slide" nr-slide="8">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 9" />                                                
                                                         <div class="gradient"></div>
-                                                    </li>
-                                                </ul>
-                                                <nav class="orbit-bullets">
-                                                    <button class="is-active" data-slide="0"><span>1</span><span class="show-for-sr">1</span><span class="show-for-sr">Current Slide</span></button>
-                                                    <button data-slide="1"><span>2</span><span class="show-for-sr">2</span></button>
-                                                    <button data-slide="2"><span>3</span><span class="show-for-sr">3</span></button>                                        
-                                                    <button data-slide="3"><span>4</span><span class="show-for-sr">4</span></button>                                        
-                                                    <button data-slide="4"><span>5</span><span class="show-for-sr">5</span></button>                                        
-                                                    <button data-slide="5"><span>6</span><span class="show-for-sr">6</span></button>                                        
-                                                    <button data-slide="6"><span>7</span><span class="show-for-sr">7</span></button>                                        
-                                                    <button data-slide="7"><span>8</span><span class="show-for-sr">8</span></button>                                        
-                                                    <button data-slide="8"><span>9</span><span class="show-for-sr">9</span></button>                                        
-                                                </nav>  
+                                                    </div>
+                                                    <div >
+                                                    </div>
+                                                </div>
+                                                <ol class="carousel-tab">
+                                                    <li data-slide-to="0" class="active">1</li>
+                                                    <li data-slide-to="1">2</li>
+                                                    <li data-slide-to="2">3</li>
+                                                    <li data-slide-to="3">4</li>
+                                                    <li data-slide-to="4">5</li>
+                                                    <li data-slide-to="5">6</li>
+                                                    <li data-slide-to="6">7</li>
+                                                    <li data-slide-to="7">8</li>
+                                                    <li data-slide-to="8">9</li>
+                                                </ol>
+                                               <!-- <a class="control_prev control"><img src="http://kacha.com.pl/wp-content/uploads/2017/01/prev.png" alt="see previous slide" /></a>
+                                                <a class="control_next control"><img src="http://kacha.com.pl/wp-content/uploads/2017/01/next.png" alt="see next slide" /></a>-->
                                             </div>
-                                            <!--end slider-->
+
+
                                             <!--start main content-->
                                             <div class="row">
                                                 <div class="large-4 medium-6 columns projects">
