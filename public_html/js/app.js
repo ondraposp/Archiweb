@@ -187,8 +187,107 @@ $(document).ready(function () {
         toggleSubmenubar($(this));
     });
 
+    $('.topbar .icon').bind("mouseenter", function () {
+        toggleSubmenubar($(this));
+    });
+
+    $('.topbar .icon').bind("mouseleave", function () {
+        if ($('.subtopbar:hover').length == 0) {
+            toggleSubmenubar($(this));
+        }
+    });
+
+    /*
+     var myOrbit;
+     
+     $(".orbit").orbit({
+     afterLoadComplete: function() {
+     myOrbit = this;
+     }
+     });
+     
+     */
 
 
+    //$('.slider.orbit').foundation();
+    /*
+     $('.orbit-bullets').bind('mouseenter', function () {
+     //$(this).foundation('_reset');
+     $('.orbit').data('use-m-u-i', 'false');
+     });
+     
+     $('.orbit-bullets').bind('mouseleave', function () {
+     //$(this).foundation('_reset');
+     $('.orbit').data('use-m-u-i', 'true');
+     });*/
+
+    var timeout;
+
+    var slideId;
+    var el;
+
+    $('.orbit-bullets button').bind('mouseenter', function () {
+
+
+
+
+
+        /* timeout = setTimeout(function () {
+         var but = $(this);
+         var slideId = $(this).data('slide');
+         var el = $('.orbit-slide[data-slide="' + slideId + '"]');
+         $('.orbit').foundation('changeSlide', true, el, slideId);
+         }, 2000);
+         */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var but = $(this);
+
+
+        slideId = but.data('slide');
+
+
+        timeout = setTimeout(function () {
+            el = $('.orbit-slide[data-slide="' + slideId + '"]');
+            console.log('slide id: ' + slideId + '  -  ' + timeout);
+            //if (!but.hasClass('is-active')) {
+
+            if ($('.orbit-slide.is-active').length) {
+
+                $('.orbit').foundation('changeSlide', true, el, slideId);
+            }
+
+            // clearTimeout();
+
+
+            for (i = 0; i < 100; i++)
+            {
+                window.clearTimeout(i);
+            }
+
+        }, 500);
+
+
+
+
+
+    }/*, function () {
+     clearTimeout(timeout);
+     // do stuff when hover off
+     }*/);
 
 
 

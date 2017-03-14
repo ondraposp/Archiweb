@@ -101,7 +101,7 @@ hr {
   position: relative; }
 
 .pretopbar {
-  background-color: #828282; }
+  background-color: #6e6e6e; }
 
 /*LOAD MORE*/
 .load_more, .add_event {
@@ -117,7 +117,7 @@ hr {
     -khtml-opacity: 0.85; }
 
 .load_more {
-  margin-right: 40px;
+  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
   height: 30px;
   line-height: 30px;
   font-weight: bold; }
@@ -335,15 +335,14 @@ h1 {
       color: #FFF;
       margin-bottom: 0.8rem; }
     .slider .orbit-slide .caption .introtext {
-      line-height: 1.3rem;
-      font-weight: 500; }
+      line-height: 1.3rem; }
     .slider .orbit-slide .caption .learnmore {
       margin-top: 15px;
       text-transform: uppercase;
       background: #0279ce;
       float: left;
       clear: both;
-      padding: 1px 4px;
+      padding: 2px 9px;
       color: #FFF;
       font-size: 0.9rem; }
     .slider .orbit-slide .caption .bottom {
@@ -378,7 +377,7 @@ h1 {
     bottom: 0;
     right: 0;
     margin-top: 0;
-    margin-right: calc(40px + 30px);
+    margin-right: calc(calc(calc(40px + 0.714rem)/2 - 0.714rem) + 30px);
     margin-bottom: 30px;
     max-width: 60%; }
     .slider .orbit-bullets button {
@@ -387,13 +386,17 @@ h1 {
       width: 1.5rem;
       height: 1.5rem;
       margin-left: 5px;
-      opacity: 0.8; }
+      opacity: 0.6;
+      margin-bottom: 0;
+      background-color: #000;
+      cursor: pointer; }
       .slider .orbit-bullets button span {
         color: #fff; }
     .slider .orbit-bullets button.is-active, .slider .orbit-bullets button:hover {
-      background-color: #000; }
+      background-color: #000;
+      opacity: 1; }
   .slider .orbit-container {
-    margin-right: 40px; }
+    margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem); }
   .slider:after {
     content: '';
     display: block;
@@ -419,7 +422,7 @@ h1 {
 */
 .mproduct {
   height: 250px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -501,11 +504,11 @@ h1 {
 .calendar {
   margin-bottom: 0; }
   .calendar .monthtitle {
-    background-color: #b9b9b9;
+    background-color: #6e6e6e;
     color: #FFF;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1rem;
+    font-size: .88rem;
     line-height: 2.8rem;
     margin-bottom: 0;
     position: relative;
@@ -621,7 +624,7 @@ h1 {
   padding: 11px;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.714rem;
+  margin-bottom: 20px;
   text-transform: uppercase; }
 
 @media screen and (min-width: 40em) and (max-width: 64rem) {
@@ -706,14 +709,14 @@ h1 {
 /*NEWS*/
 .homepage .news .new {
   color: #000;
-  height: 41.66667px;
-  padding-bottom: 10px;
+  height: calc((240px + 0.714rem) / 6);
+  padding-bottom: 0.714rem;
   font-weight: 500;
-  margin-right: 40px;
+  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
   overflow: hidden; }
   .homepage .news .new .inner {
     background-color: #e6e6e6;
-    line-height: 31.66667px;
+    line-height: calc(((240px + 0.714rem) / 6) - 0.714rem);
     padding-left: 15px;
     padding-right: 68px;
     position: relative;
@@ -747,10 +750,10 @@ h1 {
       color: #FFF; }
 
 .midbanner, .facebook, .bannerr_big, .facebook_plugin {
-  margin-bottom: 35px; }
+  margin-bottom: 20px; }
 
 #tpl_homepage .midbanner, #tpl_homepage .project_box {
-  margin-bottom: 10px; }
+  margin-bottom: 0.714rem; }
 #tpl_homepage .partners {
   position: fixed;
   bottom: 0;
@@ -765,11 +768,11 @@ h1 {
       display: table-cell; }
 
 .midbanner {
-  margin-right: 40px;
+  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
   height: 240px;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  background-size: contain;
+  background-position: left top; }
 
 /*PARTNERS*/
 .partners h3 {
@@ -791,6 +794,12 @@ h1 {
     color: #000; }
 .partners .bx-wrapper {
   margin-bottom: 15px; }
+  .partners .bx-wrapper .bx-viewport {
+    max-height: 107px; }
+    .partners .bx-wrapper .bx-viewport .bxslider {
+      position: relative;
+      min-height: 100%;
+      height: 100%; }
 
 @media screen and (max-width: 64rem) {
   .homepage .news .new {
@@ -809,7 +818,7 @@ h1 {
   height: 240px; }
 
 .bannerr_big, .bannerr_small {
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
 
 .submenu {
   margin-bottom: 35px; }
@@ -891,6 +900,9 @@ h1 {
     height: 40px; }
   .footer .social ul a li {
     float: left; }
+  .footer .become {
+    float: right;
+    border-bottom: 1px solid #FFF; }
 
 @media screen and (max-width: 64rem) {
   .footer {
@@ -1346,11 +1358,13 @@ input[type='checkbox']:checked + label > span {
 .subtopbar label {
   float: left;
   padding-right: 10px;
-  height: 25px; }
+  height: 25px;
+  text-transform: uppercase; }
 .subtopbar .button {
   width: 100%;
   margin-top: 25px;
-  height: 2.437rem; }
+  height: 2.437rem;
+  text-transform: uppercase; }
 
 /* 
     Created on : 31.1.2017, 12:16:49
@@ -1572,14 +1586,14 @@ input[type='checkbox']:checked + label > span {
 /*NEWS*/
 .homepage .news .new {
   color: #000;
-  height: 41.66667px;
-  padding-bottom: 10px;
+  height: calc((240px + 0.714rem) / 6);
+  padding-bottom: 0.714rem;
   font-weight: 500;
-  margin-right: 40px;
+  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
   overflow: hidden; }
   .homepage .news .new .inner {
     background-color: #e6e6e6;
-    line-height: 31.66667px;
+    line-height: calc(((240px + 0.714rem) / 6) - 0.714rem);
     padding-left: 15px;
     padding-right: 68px;
     position: relative;
@@ -1613,10 +1627,10 @@ input[type='checkbox']:checked + label > span {
       color: #FFF; }
 
 .midbanner, .facebook, .bannerr_big, .facebook_plugin {
-  margin-bottom: 35px; }
+  margin-bottom: 20px; }
 
 #tpl_homepage .midbanner, #tpl_homepage .project_box {
-  margin-bottom: 10px; }
+  margin-bottom: 0.714rem; }
 #tpl_homepage .partners {
   position: fixed;
   bottom: 0;
@@ -1631,11 +1645,11 @@ input[type='checkbox']:checked + label > span {
       display: table-cell; }
 
 .midbanner {
-  margin-right: 40px;
+  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
   height: 240px;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  background-size: contain;
+  background-position: left top; }
 
 /*PARTNERS*/
 .partners h3 {
@@ -1657,6 +1671,12 @@ input[type='checkbox']:checked + label > span {
     color: #000; }
 .partners .bx-wrapper {
   margin-bottom: 15px; }
+  .partners .bx-wrapper .bx-viewport {
+    max-height: 107px; }
+    .partners .bx-wrapper .bx-viewport .bxslider {
+      position: relative;
+      min-height: 100%;
+      height: 100%; }
 
 @media screen and (max-width: 64rem) {
   .homepage .news .new {

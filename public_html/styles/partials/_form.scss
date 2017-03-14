@@ -170,12 +170,14 @@ input[type='checkbox']:checked + label > span{
         float: left;
         padding-right: $marbottom;
         height: $label_height;
+        text-transform: uppercase;
     }   
 
     .button {
         width: 100%;
         margin-top: $label_height;
         height: 2.437rem;
+        text-transform: uppercase;
     }
 }
 

@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp64/www/Archiweb/public_html/zprava_detail.html</file>
+            <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_gallery_slider.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_rightbar.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/burza_prace.html</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/architekti.html</file>
@@ -12,10 +13,13 @@
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_footer.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_architects.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/atelier.html</file>
+            <file>file:/C:/wamp64/www/Archiweb/public_html/js/vendor/foundation.js</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/architekt.html</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_header.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/kalendar.html</file>
+            <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_fonts.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_calendar.scss</file>
+            <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_content.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/zpravy_domaci.html</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_homepage.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/stavba_detail.html</file>
@@ -27,6 +31,8 @@
             <file>file:/C:/wamp64/www/Archiweb/public_html/zpravy.html</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_form.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/js/app.js</file>
+            <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_monthproduct.scss</file>
+            <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_social.scss</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/katalog_section.html</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/katalog.html</file>
             <file>file:/C:/wamp64/www/Archiweb/public_html/styles/partials/_colors.scss</file>

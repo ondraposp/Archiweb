@@ -49,15 +49,16 @@
     .news {
         .new {   
             color: #000;
-            height: (250px / 6);     
-            padding-bottom: 10px;
+            height: calc((240px + #{$space_s}) / 6);     
+            padding-bottom: $space_s;
             font-weight: $fmedium;    
-            margin-right: $padright;
+            //margin-right: $padright;
+            margin-right: $space_l_wtht_gutter;
             overflow: hidden;
 
             .inner {
                 background-color: $grey2;
-                line-height: ((250px / 6) - 10px);
+                line-height: calc(((240px + #{$space_s}) / 6) - #{$space_s});
                 padding-left: 15px;
                 padding-right: 68px;
                 position: relative;
@@ -109,12 +110,12 @@
 
 .midbanner, .facebook, .bannerr_big, .facebook_plugin {
     //margin-bottom: $marbottom;
-    margin-bottom: $marbottom_rbar;
+    margin-bottom: $space_m;
 }
 
 #tpl_homepage {
     .midbanner, .project_box {
-        margin-bottom: $marbottom;
+        margin-bottom: $space_s;
     }
 
     .partners {        
@@ -128,7 +129,6 @@
             display: table;
             height: 100%;
 
-
             a {
                 vertical-align: middle;
                 display: table-cell;
@@ -138,11 +138,12 @@
 }
 
 .midbanner {    
-    margin-right: $padright;
+    //margin-right: $padright;
+    margin-right: $space_l_wtht_gutter;
     height: 240px;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: left top;
 }
 
 /*PARTNERS*/
@@ -170,7 +171,17 @@
     }
 
     .bx-wrapper {
-        margin-bottom: 15px;
+        margin-bottom: 15px;        
+
+        .bx-viewport {
+            max-height: 107px; //trochu prasarnicka pro IE
+
+            .bxslider {
+                position: relative;
+                min-height: 100%;
+                height: 100%
+            }
+        }                
     }
 }
 

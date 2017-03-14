@@ -101,7 +101,7 @@ hr {
 }
 
 .pretopbar {
-    background-color: $grey3_5;
+    background-color: $grey3_7;
 }
 
 /*LOAD MORE*/
@@ -117,7 +117,8 @@ hr {
 }
 
 .load_more {
-    margin-right: $padright;
+    //margin-right: $padright;
+    margin-right: $space_l_wtht_gutter;
     height: $lm_height;
     line-height: $lm_height;
     font-weight: bold;   

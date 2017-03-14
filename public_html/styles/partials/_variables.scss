@@ -4,13 +4,21 @@
 */
 
 //layout
+
+$tot_gutter: 0.714rem;
+$gutter: calc(#{$tot_gutter} / 2);
+$gutter_neg: calc((-1) * #{$gutter});
 $padright: 40px; /*space between body and rightbar*/
 $marbottom: 10px;
 $marbottom_rbar: 35px;
 $marright: $padright; // space between body and rightbar
-$tot_gutter: 0.714rem;
-$gutter: calc(#{$tot_gutter} / 2);
-$gutter_neg: calc((-1) * #{$gutter});
+
+
+$space_s: $tot_gutter;
+$space_m: 20px;
+$space_l: calc(#{40px} + #{$tot_gutter}) / 2;
+$space_l_wtht_gutter: calc(#{$space_l} - #{$tot_gutter});
+
 
 //header
 

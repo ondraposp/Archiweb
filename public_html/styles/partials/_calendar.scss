@@ -19,11 +19,11 @@
     margin-bottom: 0;
 
     .monthtitle {
-        background-color: $grey3;
+        background-color: $grey3_7;
         color: #FFF;        
         text-transform: uppercase;
         text-align: center;
-        font-size: 1rem;
+        font-size: .88rem;
         line-height: $mtitle_lheight;
         margin-bottom: 0;
         position: relative;        
@@ -188,7 +188,7 @@
     padding: 11px;
     font-size: 1rem;
     font-weight: $fbold;
-    margin-bottom: $tot_gutter;   
+    margin-bottom: $space_m;   
     text-transform: uppercase;
 }
 
