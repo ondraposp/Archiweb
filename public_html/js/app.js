@@ -314,7 +314,7 @@ $(document).ready(function () {
             dots: true,
             control: true,
             autoplay: true,
-            movtime: 500
+            movtime: 1000
         }, options);
 
         var mySlider = this;
