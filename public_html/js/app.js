@@ -63,7 +63,7 @@ $(document).ready(function () {
 
     var footTop, windowBottom, st, h;
     //var partnersh = $('#tpl_homepage .partners').outerHeight();
-    $('#tpl_homepage .footer').css('margin-top', 165); //hardcoded
+    $('#tpl_homepage .footer').css('margin-top', 140); //hardcoded
 
     $(window).scroll(function () {
         footTop = $('#tpl_homepage .footer').offset().top;
@@ -293,11 +293,11 @@ $(document).ready(function () {
             $('.subtopbar').slideUp(500);
             $('.' + bar.data('bar')).slideDown(500);
             bar.addClass('active');
-        } else {
-            $('.topbar .icon').removeClass('active');
-            $('.subtopbar').slideUp(500);
-            bar.removeClass('active');
-        }
+        } /*else {
+         $('.topbar .icon').removeClass('active');
+         $('.subtopbar').slideUp(500);
+         bar.removeClass('active');
+         }*/
     }
 
 
@@ -341,6 +341,8 @@ $(document).ready(function () {
 
         function doTransition() {
 
+
+
             $('.carousel').addClass('moving');
 
             setTimeout(function () {
@@ -358,12 +360,39 @@ $(document).ready(function () {
             });
         }
 
-        function pushSlide() {
-            $(nowSlide).removeClass("active");
-            $(nextSlide).addClass("active");
+        function doTransitionReverse() {
+
+            $('.carousel').addClass('moving');
+
+            $(nextSlide).fadeIn(settings.movtime);
+            $(nowSlide).fadeOut(settings.movtime);
             currentInd.removeClass('active');
             $(nextInd).addClass("active");
-            doTransition();
+
+
+            setTimeout(function () {
+
+                $(nowSlide).removeClass("active");
+                $(nextSlide).addClass("active");
+
+                $('.carousel').removeClass('moving');
+            }, settings.movtime);
+        }
+
+        function pushSlide() {
+
+            console.log($(nowSlide).index() + '    -    ' + $(nextSlide).index());
+
+            if ($(nowSlide).index() > $(nextSlide).index()) {
+                doTransitionReverse();
+            } else {
+
+                $(nowSlide).removeClass("active");
+                $(nextSlide).addClass("active");
+                currentInd.removeClass('active');
+                $(nextInd).addClass("active");
+                doTransition();
+            }
         }
 
         function slide() {
@@ -412,7 +441,9 @@ $(document).ready(function () {
 
                     if (settings.dots == true) {
 
-                        mySlider.find('.carousel .slide.active').hide();
+                        var actualSlide = mySlider.find('.carousel .slide.active');
+
+                        actualSlide.fadeOut(settings.movtime);
                         clearInterval(slideTimer);
                         slideTimer = window.setInterval(slide, settings.time);
                         var $this = $(this);
@@ -424,19 +455,36 @@ $(document).ready(function () {
                         if ($target.length) {
                             e.preventDefault();
 
-                            $this.siblings('li').removeClass('active');
 
-                            $this.addClass('active');
+                            if ($this.index() > actualSlide.index()) {
+                                $this.siblings('li').removeClass('active');
+                                $this.addClass('active');
+                                $target.siblings('.slide').removeClass('active');
 
-                            $target.siblings('.slide').removeClass('active');
+                                $('.carousel').addClass('moving');
 
-                            $('.carousel').addClass('moving');
+                                setTimeout(function () {
+                                    $('.carousel').removeClass('moving');
+                                }, settings.movtime);
 
-                            setTimeout(function () {
-                                $('.carousel').removeClass('moving');
-                            }, settings.movtime);
+                                $target.addClass('active').fadeIn(settings.movtime);
 
-                            $target.addClass('active').fadeIn(settings.movtime);
+                            } else {
+                                $('.carousel').addClass('moving');
+
+                                $target.fadeIn(settings.movtime);
+
+                                setTimeout(function () {
+                                    $this.siblings('li').removeClass('active');
+                                    $this.addClass('active');
+                                    $target.siblings('.slide').removeClass('active');
+
+                                    $('.carousel').removeClass('moving');
+
+                                    $target.addClass('active');
+                                }, settings.movtime);
+                            }
+
                         }
                     }
                 }

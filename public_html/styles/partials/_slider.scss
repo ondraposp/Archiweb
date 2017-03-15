@@ -20,6 +20,12 @@
         z-index: 1;
         margin-right: $space_l_wtht_gutter;
         overflow: hidden;
+        
+        &.moving {
+            .slide.active {
+                z-index: 9;
+            }
+        }
     }
 
     .slide {        

@@ -383,6 +383,8 @@ h1 {
     z-index: 1;
     margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
     overflow: hidden; }
+    .mainslider .carousel.moving .slide.active {
+      z-index: 9; }
   .mainslider .slide {
     position: absolute;
     height: inherit;
@@ -606,7 +608,7 @@ h1 {
     color: #FFF;
     text-transform: uppercase;
     text-align: center;
-    font-size: .88rem;
+    font-size: 1.1rem;
     line-height: 2.8rem;
     margin-bottom: 0;
     position: relative;
@@ -885,12 +887,19 @@ h1 {
     border: 1px solid #000;
     color: #000;
     font-size: 0.9rem; }
+.partners .title {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  align-items: center; }
 .partners .become {
   font-size: .9rem;
   text-align: right; }
   .partners .become a {
     color: #000; }
 .partners .bx-wrapper {
+  margin-top: 15px;
   margin-bottom: 15px; }
   .partners .bx-wrapper .bx-viewport {
     max-height: 107px; }
@@ -966,7 +975,12 @@ h1 {
 .footer {
   background-color: #000;
   padding-top: 35px;
-  font-size: .9rem; }
+  font-size: .9rem;
+  /*.become {
+      float: right;
+      //text-decoration: underline;
+      border-bottom: 1px solid $white;
+  }*/ }
   .footer .logo {
     max-width: 120px;
     margin-bottom: 5px; }
@@ -998,9 +1012,6 @@ h1 {
     height: 40px; }
   .footer .social ul a li {
     float: left; }
-  .footer .become {
-    float: right;
-    border-bottom: 1px solid #FFF; }
 
 @media screen and (max-width: 64rem) {
   .footer {
@@ -1762,12 +1773,19 @@ input[type='checkbox']:checked + label > span {
     border: 1px solid #000;
     color: #000;
     font-size: 0.9rem; }
+.partners .title {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  align-items: center; }
 .partners .become {
   font-size: .9rem;
   text-align: right; }
   .partners .become a {
     color: #000; }
 .partners .bx-wrapper {
+  margin-top: 15px;
   margin-bottom: 15px; }
   .partners .bx-wrapper .bx-viewport {
     max-height: 107px; }
