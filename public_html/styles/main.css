@@ -199,6 +199,7 @@ hr {
       display: inline-block;
       padding: 0 10px;
       text-transform: uppercase;
+      float: left;
       -o-transition-timing-function: "easeOutExpo";
       -webkit-transition-timing-function: "easeOutExpo";
       -moz-transition-timing-function: "easeOutExpo";
@@ -916,7 +917,10 @@ h1 {
     margin-right: 0; }
 
   .load_more {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+
+  .partners .title {
+    position: relative; } }
 /* 
     Created on : 20.1.2017, 16:07:18
     Author     : ondra
@@ -1389,6 +1393,7 @@ label.checkbox {
     -khtml-opacity: 0.85; }
 
 input[type='checkbox'] {
+  display: none;
   height: 0;
   width: 0; }
 
@@ -1802,7 +1807,10 @@ input[type='checkbox']:checked + label > span {
     margin-right: 0; }
 
   .load_more {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+
+  .partners .title {
+    position: relative; } }
 /*NEWS*/
 /* 
     Created on : 24.1.2017, 16:34:39

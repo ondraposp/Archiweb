@@ -19,7 +19,7 @@
         }
 
         .add {
-            background-color: $violet;            
+            background-color: $basecolor;            
             text-align: center;
 
             @include hopacity;
@@ -46,7 +46,7 @@
             border-top: 1px solid $grey2;
 
             .subj {
-                color: $violet;
+                color: $basecolor;
             }
 
             &.re {
@@ -64,7 +64,7 @@
     }
 
     .call {
-        background-color: $violet;
+        background-color: $basecolor;
         color: #FFF;
         height: $comment_height;
         line-height: $comment_height;

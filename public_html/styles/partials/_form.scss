@@ -22,7 +22,7 @@ label.select {
     &:before {
         content: inherit;
         font-family: FontAwesome;
-        color: $violet;
+        color: $basecolor;
         padding: 0 8px;
         position: absolute; right: 0; top: 0;    
         z-index: 1;
@@ -68,6 +68,7 @@ label.checkbox {
 }
 
 input[type='checkbox']{ 
+    display: none;
     height: 0; 
     width: 0;
 }
@@ -100,17 +101,17 @@ input[type='checkbox'] + label > span{
 input[type='checkbox']:checked + label > span{
     border: .3em solid #FFF;
     transition: all 250ms cubic-bezier(.4,.0,.23,1);
-    background: $violet;
+    background: $basecolor;
 }
 
 /*BUTTONS*/
 
 .button {
     border-radius: 0;
-    background-color: $violet;
+    background-color: $basecolor;
 
     &:hover, &:focus {
-        background-color: $violet;
+        background-color: $basecolor;
         @include hopacity;
     }
 
@@ -130,7 +131,7 @@ input[type='checkbox']:checked + label > span{
 /* END BUTTONS*/
 
 .clickable {
-    color: $violet;
+    color: $basecolor;
     padding-right: 30px;
     cursor: pointer;
     line-height: 40px;

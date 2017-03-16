@@ -51,6 +51,7 @@
                 display: inline-block;
                 padding: 0 10px;
                 text-transform: uppercase;
+                float: left;
 
                 a, div {
                     height: 100%;
@@ -63,7 +64,7 @@
                         vertical-align: middle;
 
                         .offers {
-                            background-color: $violet;
+                            background-color: $basecolor;
                             padding: 10px 7px;                            
                             margin-left: 5px;
                             border-radius: 50%;
@@ -80,11 +81,11 @@
                 @include transition();
 
                 &:hover, &.active {
-                    background: $violet;    
+                    background: $basecolor;    
 
                     .offers {
                         background-color: #FFF;
-                        color: $violet;
+                        color: $basecolor;
                     }
 
 

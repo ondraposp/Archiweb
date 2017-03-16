@@ -115,7 +115,7 @@
 
             &.event {
                 color: #FFF;
-                background-color: $violet;
+                background-color: $basecolor;
             }
 
             &.today {
@@ -173,7 +173,7 @@
         margin-bottom: 15px;        
 
         .title {
-            color: $violet;
+            color: $basecolor;
             font-size: 1.2rem;
             font-weight: $fbold;
         }

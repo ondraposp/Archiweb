@@ -6,9 +6,10 @@
         <!--[if gt IE 8]><!--> <html class="no-js" lang="cs"> <!--<![endif]-->
             <head>
                 <title>Archiweb</title>
-                <meta charset="UTF-8"></meta>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-                <!--  <base href=""></base>-->
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />                
+                <meta name="application-name" content="Archiweb" />
+                <meta name="description" content="Internetový portál do světa moderní architektury. Každý den přináší informace o všem důležitém, co se v oblasti domácí a světové architektury odehrává"/>
 
                 <!--
         Narodni knihovna CR - archivace online zdroju
@@ -45,18 +46,40 @@
                 <meta name="DC.Rights" content="archiweb.cz 1997-2005" />
                 <!-- == END ==  -->
 
-                <!--<link rel="stylesheet" href="styles/foundation.min.css" />                -->
-                <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />-->
-                <!-- bxSlider CSS file -->
-                <!--<link href="styles/jquery.bxslider.css" rel="stylesheet" />-->
-                <!--<link rel="stylesheet" href="styles/style.css" />-->
-                <link rel="stylesheet" href="styles/main.css" />
-                <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-                <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+                <!-- facebook opengraph -->
+                <meta property="og:image" content="http://archiweb.cz/" /> <!-- doplnit, min 200x200, ale cim vetsi, tim lepsi-->
+                <meta property="og:title" content="Archiweb" />
+                <meta property="og:description" content="Internetový portál do světa moderní architektury. Každý den přináší informace o všem důležitém, co se v oblasti domácí a světové architektury odehrává" />
+                <meta property="og:url" content="http://archiweb.cz/" />
+                <!-- end facebook opengraph -->
 
+                <!-- twitter cards -->
+                <meta name="twitter:card" content="summary" />
+                <!-- end twitter cards -->
+
+                <!-- main styles -->
+                <link rel="stylesheet" href="styles/main.css" />
+
+                <!--icons favicons colors-->
+                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                <link rel="icon" href="favicon.ico" type="image/x-icon" />
+                <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
+                <link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194" />
+                <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192" />
+                <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
+                <link rel="manifest" href="favicons/manifest.json" />
+                <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#0279ce" />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png" />
+                <meta name="theme-color" content="#0279ce" />                
+                <!--end icons favicons colors-->
+
+                <!-- jquery -->
                 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
                 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+                <!-- fonts -->
                 <script src="https://use.typekit.net/iqa6ict.js"></script>
                 <script>try {
                         Typekit.load({async: true});
@@ -65,18 +88,6 @@
 
             </head>
             <body id="tpl_homepage">
-                <!-- facebook plugin -->
-                <div id="fb-root"></div>
-                <script>(function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id))
-                            return;
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "//connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v2.8";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
-                <!-- end facebook plugin -->
                 <div class="off-canvas-wrapper">
                     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
                         <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
@@ -357,8 +368,8 @@
                                                     <li data-slide-to="7">8</li>
                                                     <li data-slide-to="8">9</li>
                                                 </ol>
-                                               <!-- <a class="control_prev control"><img src="http://kacha.com.pl/wp-content/uploads/2017/01/prev.png" alt="see previous slide" /></a>
-                                                <a class="control_next control"><img src="http://kacha.com.pl/wp-content/uploads/2017/01/next.png" alt="see next slide" /></a>-->
+                                                <!-- <a class="control_prev control"><img src="http://kacha.com.pl/wp-content/uploads/2017/01/prev.png" alt="see previous slide" /></a>
+                                                 <a class="control_next control"><img src="http://kacha.com.pl/wp-content/uploads/2017/01/next.png" alt="see next slide" /></a>-->
                                             </div>
 
 
@@ -426,7 +437,7 @@
                                                         <div class="new today pr">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">dnes</span> | <span class="title">Toto je velmi dlouhý titulek: Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">dnes</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Toto je velmi dlouhý titulek: Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -434,7 +445,7 @@
                                                         <div class="new today pr">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c0">0 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">dnes</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">dnes</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -442,7 +453,7 @@
                                                         <div class="new pr">  
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -450,7 +461,7 @@
                                                         <div class="new pr">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -458,7 +469,7 @@
                                                         <div class="new today">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c0">0 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">dnes</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">dnes</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>                                                  
@@ -466,7 +477,7 @@
                                                         <div class="new today">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c2">2 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">dnes</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">dnes</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -474,7 +485,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c6">6 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -482,7 +493,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c0">0 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Toto je velmi velmi dlouhý tituek: Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Toto je velmi velmi dlouhý tituek: Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>                                                   
@@ -490,7 +501,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -498,7 +509,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -506,7 +517,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -514,7 +525,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -525,7 +536,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -533,7 +544,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c0">0 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -541,7 +552,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c0">0 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -549,7 +560,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c2">2 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -557,7 +568,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c6">6 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -565,7 +576,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c0">0 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -573,7 +584,7 @@
                                                         <div class="new">  
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -581,7 +592,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -589,7 +600,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -597,7 +608,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -605,7 +616,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -613,7 +624,7 @@
                                                         <div class="new">
                                                             <div class="inner ddd">
                                                                 <span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                                <span class="date">12. 5.</span> | <span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
+                                                                <span class="date">12. 5.</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="title">Rekonstrukce bývalé textilní továrny</span>                                                            
                                                             </div>
                                                         </div>
                                                     </a>
@@ -766,10 +777,10 @@
                                                 <div class="large-4 medium-12 columns fmenu">
                                                     <h4>Inzerce</h4>
                                                     <nav>
-                                                        <ul>
+                                                        <ul>                                                            
                                                             <li><a href="">Mediakit 2017</a></li>
-                                                            <li><a href="">Kontakt</a></li>                                            
-                                                            <li><a href="">Staňte se partnerem</a></li>                                            
+                                                            <li><a href="">Staňte se partnerem</a></li>                                                                                                        
+                                                            <li><a href="">Kontakt</a></li>                                                                                                        
                                                         </ul>
                                                     </nav>
                                                 </div>
@@ -824,6 +835,21 @@
                     </div>
                 </div>
             </body>
+
+            <!-- facebook plugin -->
+            <div id="fb-root"></div>
+            <script>(function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id))
+                        return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v2.8";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+            <!-- end facebook plugin -->
+
+
             <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/plugins/foundation.offcanvas.js"></script>-->
             <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
             <script src="js/vendor/foundation.js"></script>
@@ -832,7 +858,7 @@
             <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.6"></script>
 
             <script>
-                    $(document).foundation();
+                $(document).foundation();
             </script>
 
             <!-- bxSlider Javascript file -->

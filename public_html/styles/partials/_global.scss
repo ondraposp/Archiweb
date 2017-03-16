@@ -12,10 +12,10 @@ h2 {
 }
 
 a {
-    color: $violet;
+    color: $basecolor;
 
     &:hover {
-        color: $violet;
+        color: $basecolor;
     }
 }
 
@@ -107,7 +107,7 @@ hr {
 /*LOAD MORE*/
 
 .load_more, .add_event {
-    background-color: $violet;
+    background-color: $basecolor;
     color: #FFF;        
     cursor: pointer;
     text-align: center;         
@@ -140,7 +140,7 @@ hr {
 }
 
 .violet, .blue {
-    color: $violet;
+    color: $basecolor;
 }
 
 

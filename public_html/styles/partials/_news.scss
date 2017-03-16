@@ -22,7 +22,7 @@
         }
 
         .discuss {            
-            color: $violet;          
+            color: $basecolor;          
 
             i {
                 padding-left: 5px;
@@ -111,12 +111,12 @@
 
         .val {
             .tag {
-                color: $violet;
+                color: $basecolor;
             }
         }
 
         a {
-            color: $violet;
+            color: $basecolor;
         }
     }
 }

@@ -69,7 +69,7 @@
             .discuss {
                 float: right;
                 padding-right: 15px;
-                color: $violet;
+                color: $basecolor;
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -96,7 +96,7 @@
                 color: $white;
 
                 .inner {
-                    background-color: $violet;
+                    background-color: $basecolor;
                     color: $white;
                 }
 
@@ -208,5 +208,11 @@
 
     .load_more {
         margin-bottom: 10px;
+    }
+
+    .partners {
+        .title {
+            position: relative;
+        }
     }
 }
