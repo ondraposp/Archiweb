@@ -385,9 +385,11 @@ $(document).ready(function () {
 
                                     $target.fadeIn(settings.movtime);
 
+                                    $this.siblings('li').removeClass('active');
+                                    $this.addClass('active');
+
+
                                     setTimeout(function () {
-                                        $this.siblings('li').removeClass('active');
-                                        $this.addClass('active');
                                         $target.siblings('.slide').removeClass('active');
 
                                         $('.carousel').removeClass('moving');
