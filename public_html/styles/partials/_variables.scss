@@ -6,7 +6,6 @@
 //layout
 
 $tot_gutter: 0.714rem;
-//$gutter: calc(#{$tot_gutter} / 2);
 $gutter: ($tot_gutter / 2);
 $gutter_neg: ((-1) * $gutter);
 $padright: 40px; /*space between body and rightbar*/

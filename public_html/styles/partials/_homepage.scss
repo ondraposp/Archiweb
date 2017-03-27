@@ -21,11 +21,11 @@
         color: #FFF;  
         z-index: 9;
 
-        h4, p {
+        h3, p {
             margin-bottom: 0;
         }
 
-        h4 {
+        h3 {
             font-size: 1rem;
             font-weight: bold;    
         }    
@@ -149,10 +149,12 @@
 /*PARTNERS*/
 
 .partners {
-    h3 {
+    h2 {
         font-size: 1.4rem;
         text-transform: uppercase;
         margin-top: 13px;
+        font-weight: $fmedium;
+        margin-bottom: 0.5rem;
 
         span {
             border: none !important;

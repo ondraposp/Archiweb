@@ -93,7 +93,7 @@
         content: "\f00d";
     }
 
-    &:hover {
+    &:hover, &:active, &:focus {
         color: $basecolor;
 
         @include hopacity;

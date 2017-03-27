@@ -15,7 +15,7 @@
         }
     }
 
-    &, & a, & a:hover {
+    &, & a, & a:hover, & a:active, & a:focus {
         color: #FFF;    
     }
 
@@ -73,14 +73,14 @@
                         }
                     }
 
-                    &:hover {
+                    &:hover, &:active, &:focus {
                         opacity: 1;                                                
                     }
                 }
 
                 @include transition();
 
-                &:hover, &.active {
+                &:hover, &:active, &:focus, &.active {
                     background: $basecolor;    
 
                     .offers {

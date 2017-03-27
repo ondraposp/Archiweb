@@ -93,7 +93,7 @@
             cursor: pointer;
             padding: 4px 0;
 
-            &:hover {
+            &:hover, &:active, &:focus {
                 background-color: $grey2;
                 color: #FFF;
             }
@@ -137,7 +137,7 @@
     margin-bottom: $tot_gutter;
 
     a {
-        &:hover {
+        &:hover, &:active, &:focus {
             i {
                 color: #FFF;
             } 

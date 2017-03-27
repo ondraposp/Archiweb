@@ -8,6 +8,10 @@
     Author     : ondra
 */
 /* 
+    Created on : 27.3.2017, 12:18:53
+    Author     : ondra
+*/
+/* 
     Created on : 20.1.2017, 14:35:23
     Author     : ondra
 */
@@ -39,7 +43,7 @@ h2 {
 
 a {
   color: #0279ce; }
-  a:hover {
+  a:hover, a:active, a:focus {
     color: #0279ce; }
 
 .align-right {
@@ -110,7 +114,7 @@ hr {
   cursor: pointer;
   text-align: center;
   margin-bottom: 35px; }
-  .load_more:hover, .add_event:hover {
+  .load_more:hover, .load_more:active, .load_more:focus, .add_event:hover, .add_event:active, .add_event:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -134,12 +138,70 @@ hr {
 .violet, .blue {
   color: #0279ce; }
 
+.seo-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.printonly {
+  display: none; }
+
 @media (max-width: 64em) {
   .padright, .r_padding {
     padding-right: 0; }
 
   .bannerr_small, .bannerr_big {
     text-align: center; } }
+@media print {
+  .noprint {
+    display: none; }
+
+  .printonly {
+    display: block; }
+
+  a[href]:after {
+    content: none; }
+
+  .topbar {
+    position: relative; }
+    .topbar .mainlogo {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: 0 !important; }
+    .topbar.fixed {
+      position: relative !important; }
+
+  #tpl_homepage .midbanner {
+    display: none; }
+
+  .project_box {
+    -webkit-print-color-adjust: exact;
+    background: initial !important;
+    height: 70px !important; }
+
+  .h100 {
+    height: initial; }
+
+  .topbar .mainmenu ul {
+    list-style: initial !important; }
+    .topbar .mainmenu ul li {
+      display: block !important;
+      float: initial !important; }
+      .topbar .mainmenu ul li a div .offers:before {
+        content: '('; }
+      .topbar .mainmenu ul li a div .offers:after {
+        content: ')'; }
+
+  .mproduct {
+    height: initial !important; }
+    .mproduct .title span {
+      padding: 4px 5px 4px 0; }
+    .mproduct .description {
+      position: relative !important; } }
 /*LIBRARIES*/
 /* 
     Created on : 2.2.2017, 12:54:46
@@ -176,7 +238,7 @@ hr {
   .topbar > .row .topbarleft {
     display: table;
     height: 100%; }
-  .topbar, .topbar a, .topbar a:hover {
+  .topbar, .topbar a, .topbar a:hover, .topbar a:active, .topbar a:focus {
     color: #FFF; }
   .topbar .mainlogo, .topbar .mainmenu {
     display: table-cell;
@@ -227,11 +289,11 @@ hr {
             border-radius: 50%;
             font-size: 0.75rem;
             font-weight: bold; }
-        .topbar .mainmenu ul li a:hover, .topbar .mainmenu ul li div:hover, .topbar .langmenu ul li a:hover, .topbar .langmenu ul li div:hover, .topbar .icons ul li a:hover, .topbar .icons ul li div:hover {
+        .topbar .mainmenu ul li a:hover, .topbar .mainmenu ul li a:active, .topbar .mainmenu ul li a:focus, .topbar .mainmenu ul li div:hover, .topbar .mainmenu ul li div:active, .topbar .mainmenu ul li div:focus, .topbar .langmenu ul li a:hover, .topbar .langmenu ul li a:active, .topbar .langmenu ul li a:focus, .topbar .langmenu ul li div:hover, .topbar .langmenu ul li div:active, .topbar .langmenu ul li div:focus, .topbar .icons ul li a:hover, .topbar .icons ul li a:active, .topbar .icons ul li a:focus, .topbar .icons ul li div:hover, .topbar .icons ul li div:active, .topbar .icons ul li div:focus {
           opacity: 1; }
-      .topbar .mainmenu ul li:hover, .topbar .mainmenu ul li.active, .topbar .langmenu ul li:hover, .topbar .langmenu ul li.active, .topbar .icons ul li:hover, .topbar .icons ul li.active {
+      .topbar .mainmenu ul li:hover, .topbar .mainmenu ul li:active, .topbar .mainmenu ul li:focus, .topbar .mainmenu ul li.active, .topbar .langmenu ul li:hover, .topbar .langmenu ul li:active, .topbar .langmenu ul li:focus, .topbar .langmenu ul li.active, .topbar .icons ul li:hover, .topbar .icons ul li:active, .topbar .icons ul li:focus, .topbar .icons ul li.active {
         background: #0279ce; }
-        .topbar .mainmenu ul li:hover .offers, .topbar .mainmenu ul li.active .offers, .topbar .langmenu ul li:hover .offers, .topbar .langmenu ul li.active .offers, .topbar .icons ul li:hover .offers, .topbar .icons ul li.active .offers {
+        .topbar .mainmenu ul li:hover .offers, .topbar .mainmenu ul li:active .offers, .topbar .mainmenu ul li:focus .offers, .topbar .mainmenu ul li.active .offers, .topbar .langmenu ul li:hover .offers, .topbar .langmenu ul li:active .offers, .topbar .langmenu ul li:focus .offers, .topbar .langmenu ul li.active .offers, .topbar .icons ul li:hover .offers, .topbar .icons ul li:active .offers, .topbar .icons ul li:focus .offers, .topbar .icons ul li.active .offers {
           background-color: #FFF;
           color: #0279ce; }
   .topbar .langmenu, .topbar .icons {
@@ -429,7 +491,7 @@ h1 {
           border: 1px solid #FFF;
           color: #FFF;
           font-size: 0.94rem; }
-      .mainslider .slide .caption h2 {
+      .mainslider .slide .caption h3 {
         margin-top: 20px;
         font-size: 1.7rem;
         text-transform: uppercase;
@@ -599,7 +661,7 @@ h1 {
       /* For old Opera (11.1 to 12.0) */
       background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
       /* Standard syntax; must be last */ }
-  .mproduct:hover {
+  .mproduct:hover, .mproduct:active, .mproduct:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -676,7 +738,7 @@ h1 {
       border-bottom-color: #e6e6e6;
       cursor: pointer;
       padding: 4px 0; }
-      .calendar .calbody .day:hover {
+      .calendar .calbody .day:hover, .calendar .calbody .day:active, .calendar .calbody .day:focus {
         background-color: #e6e6e6;
         color: #FFF; }
       .calendar .calbody .day:nth-child(7n+0) {
@@ -712,7 +774,7 @@ h1 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0.714rem; }
-  .cal_day_header a:hover i {
+  .cal_day_header a:hover i, .cal_day_header a:active i, .cal_day_header a:focus i {
     color: #FFF; }
   .cal_day_header .lday, .cal_day_header .rday {
     padding-top: 5px; }
@@ -801,9 +863,9 @@ h1 {
     margin-bottom: 10px;
     color: #FFF;
     z-index: 9; }
-    .project_box .description h4, .project_box .description p {
+    .project_box .description h3, .project_box .description p {
       margin-bottom: 0; }
-    .project_box .description h4 {
+    .project_box .description h3 {
       font-size: 1rem;
       font-weight: bold; }
   .project_box .gradient {
@@ -819,7 +881,7 @@ h1 {
     /* For old Opera (11.1 to 12.0) */
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
     /* Standard syntax; must be last */ }
-  .project_box:hover {
+  .project_box:hover, .project_box:active, .project_box:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -853,7 +915,7 @@ h1 {
     .homepage .news .new .discuss.c0 {
       /*color: $grey3;*/
       visibility: hidden; }
-  .homepage .news .new:hover {
+  .homepage .news .new:hover, .homepage .news .new:active, .homepage .news .new:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -894,14 +956,16 @@ h1 {
   background-position: left top; }
 
 /*PARTNERS*/
-.partners h3 {
+.partners h2 {
   font-size: 1.4rem;
   text-transform: uppercase;
   margin-top: 13px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
   text-transform: uppercase; }
-  .partners h3 span {
+  .partners h2 span {
     border: none !important; }
-  .partners h3 span {
+  .partners h2 span {
     padding: 4px 5px;
     border: 1px solid #000;
     color: #000;
@@ -965,7 +1029,7 @@ h1 {
     padding: 7px 20px;
     font-size: 1rem;
     line-height: 1.8rem; }
-    .submenu h5:hover, .submenu h5.active {
+    .submenu h5:hover, .submenu h5:active, .submenu h5:focus, .submenu h5.active {
       background-color: #000;
       color: #FFF; }
   .submenu ul {
@@ -974,9 +1038,9 @@ h1 {
     .submenu ul li {
       margin-bottom: 2px;
       padding: 7px 20px; }
-      .submenu ul li:hover, .submenu ul li.active {
+      .submenu ul li:hover, .submenu ul li:active, .submenu ul li:focus, .submenu ul li.active {
         background-color: #000; }
-        .submenu ul li:hover a, .submenu ul li.active a {
+        .submenu ul li:hover a, .submenu ul li:active a, .submenu ul li:focus a, .submenu ul li.active a {
           color: #FFF; }
       .submenu ul li a {
         color: #0279ce; }
@@ -1006,7 +1070,7 @@ h1 {
   .footer .logo {
     max-width: 120px;
     margin-bottom: 5px; }
-  .footer h4 {
+  .footer h3 {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold; }
@@ -1018,7 +1082,7 @@ h1 {
     margin-bottom: 40px; }
   .footer, .footer a {
     color: #FFF; }
-  .footer a:hover {
+  .footer a:hover, .footer:active, .footer:focus {
     text-decoration: underline; }
   .footer .newsletter_form .email {
     max-width: 70%;
@@ -1032,7 +1096,7 @@ h1 {
     border-radius: 0;
     border: none;
     height: 40px; }
-  .footer .social ul a li {
+  .footer .social ul li {
     float: left; }
 
 @media screen and (max-width: 64rem) {
@@ -1065,7 +1129,7 @@ h1 {
   .comments .chead .add {
     background-color: #0279ce;
     text-align: center; }
-    .comments .chead .add:hover {
+    .comments .chead .add:hover, .comments .chead .add:active, .comments .chead .add:focus {
       opacity: 0.85;
       filter: alpha(opacity=85);
       -moz-opacity: 0.85;
@@ -1096,7 +1160,7 @@ h1 {
     height: 40px;
     line-height: 40px;
     text-align: center; }
-    .comments .call:hover {
+    .comments .call:hover, .comments .call:active, .comments .call:focus {
       opacity: 0.85;
       filter: alpha(opacity=85);
       -moz-opacity: 0.85;
@@ -1117,7 +1181,7 @@ h1 {
   .social ul {
     margin: 0;
     list-style: none; }
-    .social ul a li {
+    .social ul li {
       display: inline-block;
       float: right;
       background-color: #828282;
@@ -1137,7 +1201,7 @@ h1 {
       -webkit-transition-duration: 0.3s;
       -moz-transition-duration: 0.3s;
       transition-duration: 0.3s; }
-      .social ul a li:hover {
+      .social ul li:hover, .social ul li:active, .social ul li:focus {
         background-color: #0279ce;
         -o-transition-timing-function: "easeOutExpo";
         -webkit-transition-timing-function: "easeOutExpo";
@@ -1151,7 +1215,7 @@ h1 {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         transition-duration: 0.3s; }
-      .social ul a li i {
+      .social ul li i {
         line-height: 50px;
         color: white;
         font-size: 1.6rem; }
@@ -1323,7 +1387,7 @@ h1 {
       content: '';
       display: block;
       clear: both; }
-    .architects .item:hover {
+    .architects .item:hover, .architects .item:active, .architects .item:focus {
       opacity: 0.85;
       filter: alpha(opacity=85);
       -moz-opacity: 0.85;
@@ -1364,7 +1428,7 @@ label.select {
   height: 2.4375rem;
   font-family: inherit;
   margin: 0 0 1rem; }
-  label.select:hover {
+  label.select:hover, label.select:active, label.select:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1404,7 +1468,7 @@ select {
 /*CHECKBOXES*/
 label.checkbox {
   padding-right: 20px; }
-  label.checkbox:hover {
+  label.checkbox:hover, label.checkbox:active, label.checkbox:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1447,9 +1511,9 @@ input[type='checkbox']:checked + label > span {
 .button {
   border-radius: 0;
   background-color: #0279ce; }
-  .button:hover, .button:focus {
+  .button:hover, .button:focus, .button:active {
     background-color: #0279ce; }
-    .button:hover:hover, .button:focus:hover {
+    .button:hover:hover, .button:hover:active, .button:hover:focus, .button:focus:hover, .button:focus:active, .button:focus:focus, .button:active:hover, .button:active:active, .button:active:focus {
       opacity: 0.85;
       filter: alpha(opacity=85);
       -moz-opacity: 0.85;
@@ -1466,7 +1530,7 @@ input[type='checkbox']:checked + label > span {
   padding-right: 30px;
   cursor: pointer;
   line-height: 40px; }
-  .clickable:hover {
+  .clickable:hover, .clickable:active, .clickable:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1529,7 +1593,7 @@ input[type='checkbox']:checked + label > span {
 .stavba_items ul {
   margin: 0;
   list-style: none; }
-  .stavba_items ul:hover {
+  .stavba_items ul:hover, .stavba_items ul:active, .stavba_items ul:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1604,7 +1668,7 @@ input[type='checkbox']:checked + label > span {
     .js_menu .item.active {
       color: #4b4b4b;
       background-color: #e6e6e6; }
-    .js_menu .item:hover {
+    .js_menu .item:hover, .js_menu .item:active, .js_menu .item:focus {
       opacity: 0.85;
       filter: alpha(opacity=85);
       -moz-opacity: 0.85;
@@ -1624,7 +1688,7 @@ input[type='checkbox']:checked + label > span {
   background-color: #FFF;
   margin-bottom: 10px;
   padding: 15px; }
-  .inzeraty .item:hover {
+  .inzeraty .item:hover, .inzeraty .item:active, .inzeraty .item:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1697,9 +1761,9 @@ input[type='checkbox']:checked + label > span {
     margin-bottom: 10px;
     color: #FFF;
     z-index: 9; }
-    .project_box .description h4, .project_box .description p {
+    .project_box .description h3, .project_box .description p {
       margin-bottom: 0; }
-    .project_box .description h4 {
+    .project_box .description h3 {
       font-size: 1rem;
       font-weight: bold; }
   .project_box .gradient {
@@ -1715,7 +1779,7 @@ input[type='checkbox']:checked + label > span {
     /* For old Opera (11.1 to 12.0) */
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
     /* Standard syntax; must be last */ }
-  .project_box:hover {
+  .project_box:hover, .project_box:active, .project_box:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1749,7 +1813,7 @@ input[type='checkbox']:checked + label > span {
     .homepage .news .new .discuss.c0 {
       /*color: $grey3;*/
       visibility: hidden; }
-  .homepage .news .new:hover {
+  .homepage .news .new:hover, .homepage .news .new:active, .homepage .news .new:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1790,14 +1854,16 @@ input[type='checkbox']:checked + label > span {
   background-position: left top; }
 
 /*PARTNERS*/
-.partners h3 {
+.partners h2 {
   font-size: 1.4rem;
   text-transform: uppercase;
   margin-top: 13px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
   text-transform: uppercase; }
-  .partners h3 span {
+  .partners h2 span {
     border: none !important; }
-  .partners h3 span {
+  .partners h2 span {
     padding: 4px 5px;
     border: 1px solid #000;
     color: #000;
@@ -1859,7 +1925,7 @@ input[type='checkbox']:checked + label > span {
     .sitenews .new .discuss.c0, .trending .new .discuss.c0, .related .new .discuss.c0 {
       /*color: $grey3;*/
       visibility: hidden; }
-  .sitenews .new:hover, .trending .new:hover, .related .new:hover {
+  .sitenews .new:hover, .sitenews .new:active, .sitenews .new:focus, .trending .new:hover, .trending .new:active, .trending .new:focus, .related .new:hover, .related .new:active, .related .new:focus {
     opacity: 0.85;
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
@@ -1992,9 +2058,9 @@ input[type='checkbox']:checked + label > span {
   font-size: 1em; }
   .fancybox-close:before {
     content: "\f00d"; }
-  .fancybox-close:hover {
+  .fancybox-close:hover, .fancybox-close:active, .fancybox-close:focus {
     color: #0279ce; }
-    .fancybox-close:hover:hover {
+    .fancybox-close:hover:hover, .fancybox-close:hover:active, .fancybox-close:hover:focus, .fancybox-close:active:hover, .fancybox-close:active:active, .fancybox-close:active:focus, .fancybox-close:focus:hover, .fancybox-close:focus:active, .fancybox-close:focus:focus {
       opacity: 0.85;
       filter: alpha(opacity=85);
       -moz-opacity: 0.85;
@@ -2056,7 +2122,7 @@ input[type='checkbox']:checked + label > span {
           padding: 10px;
           vertical-align: middle;
           width: 100%; }
-          .off-canvas ul li a div:hover {
+          .off-canvas ul li a div:hover, .off-canvas ul li a div:active, .off-canvas ul li a div:focus {
             background-color: #0279ce; }
     .off-canvas ul:last-child {
       border-bottom: none; }

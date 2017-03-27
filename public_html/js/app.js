@@ -29,47 +29,22 @@ $(document).ready(function () {
     }
 
 
-    // partners bar - fixed
-    /*function fixPartners(winwidth) {
-     $(window).scroll(function () {
-     var p = $('.pretopbar').height();
-     var t = $('.topbar').height();
-     var b = $('.body').height();
-     var ps = $('.partners').height();
-     //var w = $(window).height();
-     var w = window.innerHeight;
-     
-     var o = $(window).scrollTop();
-     
-     
-     if (o > p + t + b - w) {
-     $(".partners").removeClass('fixed');
-     } else {
-     $(".partners").addClass('fixed');
-     }
-     });
-     }*/
-
     checkWidth($(window).width());
-    //fixPartners($(window).width());
 
     $(window).resize(function () {
         checkWidth($(window).width());
-        //fixPartners($(window).width());
     });
 
 
 
 
     var footTop, windowBottom, st, h;
-    //var partnersh = $('#tpl_homepage .partners').outerHeight();
     $('#tpl_homepage .footer').css('margin-top', 140); //hardcoded
 
     $(window).scroll(function () {
         footTop = $('#tpl_homepage .footer').offset().top;
 
         st = $(this).scrollTop();
-        //h = $(this).height();
         h = window.innerHeight;
 
         windowBottom = st + h;
@@ -198,22 +173,16 @@ $(document).ready(function () {
     });
 
     function toggleSubmenubar(bar) {
-        
-        
-        //if (!bar.hasClass('cal')) {
+
         if (!bar.hasClass('active')) {
             $('.topbar .icon').removeClass('active');
-$('.subtopbar').height();
-
-            //$('.subtopbar').slideUp(500);
-            //$('.' + bar.data('bar')).slideDown(500);
+            $('.subtopbar').height();
 
             $('.subtopbar').removeClass('open');
             $('.' + bar.data('bar')).addClass('open');
 
             bar.addClass('active');
         }
-        //}
     }
 
     //SLIDER
@@ -222,9 +191,6 @@ $('.subtopbar').height();
         time: 5000,
         control: false
     });
-
-
-
 
 
     $(".ddd").dotdotdot({
@@ -273,21 +239,6 @@ $('.subtopbar').height();
                 $('.carousel').removeClass('moving');
             }, settings.movtime);
 
-            //  mySlider.find(".carousel .slide").each(function () {
-            /* if ($(this).hasClass("active")) {
-             $(this).fadeIn(settings.movtime);
-             }*//* else {
-              $(this).fadeOut(settings.movtime);
-              //$(this).fadeOut(0);
-              }*/
-
-            /*  setTimeout(function () {
-             $('.carousel .slide:not(.active)').hide();
-             }, settings.movtime);*/
-
-
-            //  });
-
             mySlider.find(".carousel .slide.active").fadeIn(settings.movtime);
 
 
@@ -302,12 +253,6 @@ $('.subtopbar').height();
         function doTransitionReverse() {
 
             $('.carousel').addClass('moving');
-
-            /* $(nextSlide).fadeIn(settings.movtime);
-             
-             setTimeout(function () {
-             $(nowSlide).hide();
-             }, settings.movtime);*/
 
             $(nextSlide).show();
             $(nowSlide).fadeOut(settings.movtime);
@@ -388,14 +333,14 @@ $('.subtopbar').height();
                         var $this = $(this);
 
                         if ($this.index() != actualSlide.index()) {
-                            //actualSlide.fadeOut(settings.movtime);
+
                             clearInterval(slideTimer);
                             slideTimer = window.setInterval(slide, settings.time);
 
 
                             var href = $this.attr('data-slide-to');
 
-                            var $target = mySlider.find(".carousel").find('[nr-slide="' + href + '"]');
+                            var $target = mySlider.find(".carousel").find('[data-slide="' + href + '"]');
 
                             if ($target.length) {
                                 e.preventDefault();
@@ -418,20 +363,12 @@ $('.subtopbar').height();
                                 } else if ($this.index() < actualSlide.index()) {
                                     $('.carousel').addClass('moving');
 
-                                    //                     $target.fadeIn(settings.movtime);
-
                                     $target.show();
-
 
                                     $this.siblings('li').removeClass('active');
                                     $this.addClass('active');
 
-
-
-
                                     actualSlide.fadeOut(settings.movtime);
-
-
 
                                     setTimeout(function () {
                                         $target.siblings('.slide').removeClass('active');
@@ -440,7 +377,6 @@ $('.subtopbar').height();
 
                                         $target.addClass('active');
 
-                                        //actualSlide.hide();
                                     }, settings.movtime);
                                 }
 
@@ -451,8 +387,6 @@ $('.subtopbar').height();
 
             });
         });
-
-
 
         $(document).ready(function () {
             index = 0;

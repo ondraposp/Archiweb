@@ -110,7 +110,7 @@ input[type='checkbox']:checked + label > span{
     border-radius: 0;
     background-color: $basecolor;
 
-    &:hover, &:focus {
+    &:hover, &:focus, &:active {
         background-color: $basecolor;
         @include hopacity;
     }

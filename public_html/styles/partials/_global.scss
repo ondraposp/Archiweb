@@ -14,7 +14,7 @@ h2 {
 a {
     color: $basecolor;
 
-    &:hover {
+    &:hover, &:active, &:focus {
         color: $basecolor;
     }
 }
@@ -143,6 +143,19 @@ hr {
     color: $basecolor;
 }
 
+.seo-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.printonly {
+    display: none;
+}
 
 @media (max-width: 64em) {
     .padright, .r_padding {
@@ -152,4 +165,83 @@ hr {
     .bannerr_small, .bannerr_big {
         text-align: center;
     }
+}
+
+@media print {
+    .noprint {display: none}  
+
+    .printonly {
+        display: block;
+    } 
+
+    a[href]:after {
+        content: none;
+    }
+
+    .topbar {
+        position: relative;
+
+        .mainlogo {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        &.fixed {
+            position: relative !important;
+        }
+    }
+
+    #tpl_homepage {
+        .midbanner {
+            display: none;       
+        }   
+    }
+
+    .project_box {
+        -webkit-print-color-adjust:exact;
+        background: initial !important;
+        height: 70px !important;
+    }    
+
+    .h100 {
+        height: initial;
+    }
+
+    .topbar {
+        .mainmenu {
+            ul {
+                list-style: initial !important;
+                li{
+                    display: block !important;
+                    float: initial !important;      
+
+                    a div .offers {
+                        &:before {
+                            content: '(';
+                        }
+
+                        &:after {
+                            content: ')';
+                        }
+                    }
+                }   
+            }
+        }
+    }        
+
+    .mproduct {
+        height: initial !important;
+
+        .title {
+            span {
+                padding: 4px 5px 4px 0;
+            }
+        }
+
+        .description {
+            position: relative !important;
+        }
+    }
+
 }

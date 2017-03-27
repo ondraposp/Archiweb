@@ -15,7 +15,7 @@
 }
 
 @mixin hopacity($opacity: 0.85) {
-    &:hover {
+    &:hover, &:active, &:focus {
         opacity: $opacity;
         filter: alpha(opacity=#{$opacity*100});
         -moz-opacity: $opacity;
@@ -55,7 +55,3 @@
     background-image:         linear-gradient($angle, $color1, $color2 $breakpoint, $color3); /* Standard syntax; must be last */
 }
 
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    @return $remSize * 1rem;
-}

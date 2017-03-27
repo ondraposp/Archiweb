@@ -35,7 +35,7 @@
                     vertical-align: middle;
                     width: 100%;
 
-                    &:hover {
+                    &:hover, &:active, &:focus {
                         background-color: $basecolor;
                     }   
                 }

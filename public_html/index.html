@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+    <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
         <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
         <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
         <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
@@ -164,11 +164,11 @@
                             </div> 
                             <!-- end off canvas -->
                             <div class="pretopbar">
-                                <header role="banner">
+                                <header role="banner" class="noprint">
                                     <div class="row">
                                         <a href="">
                                             <div class="columns large-12">
-                                                <img src="http://placehold.it/728x90/000000/ffffff" class="banner topbanner"/>
+                                                <img src="http://placehold.it/728x90/000000/ffffff" alt="top banner" class="banner topbanner"/>
                                             </div>
                                         </a>
                                     </div>
@@ -180,7 +180,10 @@
                                         <div class="h100">
                                             <div class="topbarleft float-left">
                                                 <div class="mainlogo">
-                                                    <img src="images/archiweb-logo_bila.png" width="160" />
+                                                    <img src="images/archiweb-logo_bila.png" alt="Logo Archiweb" class="noprint" width="160" />
+                                                </div>                                                
+                                                <div class="mainlogo">
+                                                    <img src="images/archiweb.jpg" alt="Logo Archiweb" class="printonly" width="160" />
                                                 </div>                                                
                                                 <nav class="mainmenu" role="navigation">                                                    
                                                     <ul>                                    
@@ -243,15 +246,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="searchbar subtopbar">
+                            <div class="searchbar subtopbar noprint">
                                 <div class="row">
                                     <div class="large-12 columns">
-                                        <form role="search">
+                                        <form role="search" action="">
                                             <div class="w40p col">                                                
-                                                <input type="text" name="" placeholder="hledej"/>
+                                                <input type="text" title="hledej" name="" placeholder="hledej"/>
                                             </div>
                                             <div class="w40p col">                                                
-                                                <select>
+                                                <select title="oblast">
                                                     <option>celý web</option>
                                                     <option>zprávy / salon</option>
                                                     <option>architekti / ateliéry</option>
@@ -268,15 +271,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="loginbar subtopbar">
+                            <div class="loginbar subtopbar noprint">
                                 <div class="row">
                                     <form>                                        
                                         <div class="large-12 columns">
                                             <div class="w40p col">                                                
-                                                <input type="text" placeholder="uživatel" name=""/>
+                                                <input type="text" title="uživatel" placeholder="uživatel" name=""/>
                                             </div>
                                             <div class="w40p col">                                                
-                                                <input type="password" placeholder="heslo" name=""/>
+                                                <input type="password" title="heslo" placeholder="heslo" name=""/>
                                             </div>
                                             <div class="w20p col">
                                                 <input type="submit" class="button" value="Přihlásit">
@@ -300,13 +303,14 @@
                                 <div class="row subheader">
                                     <div class="large-9 medium-12 columns main homepage" >   
                                         <main role="main">
-                                            <div class="mainslider">
+                                            <div class="mainslider noprint">
+                                                <h2 class="seo-only">Slider</h2>
                                                 <div class="carousel">
-                                                    <div class="active slide" nr-slide="0">
+                                                    <div class="active slide" data-slide="0">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 1" /> 
                                                         <div class="caption">
                                                             <div class="category"><span>Kategorie</span></div> 
-                                                            <h2>Kaskádové zahrady na nejprestižnějším londýnském veletrhu Ecobuild</h2>
+                                                            <h3>Kaskádové zahrady na nejprestižnějším londýnském veletrhu Ecobuild</h3>
                                                             <p class="introtext">Specialistkou vládě popsal půjdu jej tisíc pomáhá ji ještě spojena virova výjimečný jmelí, možné jiný opadají tkáň odradili liška. Druh polarizovaných 2002 jezera potkávají ve sečetla do hlasem s obou buků tajemství nákladů mé všeobecný. Šedočerný u dob v vypnutou září.</p>
                                                             <div class="bottom">
                                                                 <p><span class="date">12.5.2017</span> | <span class="author">Autor příspěvku</span></p>
@@ -317,11 +321,11 @@
                                                         </div>
                                                         <div class="gradient"></div>                                                    
                                                     </div>      
-                                                    <div class="slide light" nr-slide="1">
+                                                    <div class="slide light" data-slide="1">
                                                         <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 2" />
                                                         <div class="caption">
                                                             <div class="category"><span>Kategorie</span></div> 
-                                                            <h2>Nový obchodní dům Central v Jablonci přivítá první zákazníky</h2>
+                                                            <h3>Nový obchodní dům Central v Jablonci přivítá první zákazníky</h3>
                                                             <p class="introtext">Jablonec nad Nisou - Nový obchodní dům Central, který v Jablonci nad Nisou dokončuje developerská skupina Crestyl, přivítá v pátek 31. března první zákazníky. Zklidnit by se tím měla doprava v centru města, kterou více než rok komplikovala auta stovek stavbařů a řemeslníků. V centru navíc díky novému obchodnímu domu přibude téměř 200 nových parkovacích míst.</p>
                                                             <div class="bottom">
                                                                 <p><span class="date">26.3.2017</span> | <span class="author">ČTK</span></p>
@@ -332,31 +336,31 @@
                                                         </div>
                                                         <div class="gradient"></div>
                                                     </div>
-                                                    <div class="slide" nr-slide="2">
+                                                    <div class="slide" data-slide="2">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 3" />                                                
                                                         <div class="gradient"></div>
                                                     </div>
-                                                    <div class="slide light" nr-slide="3">
+                                                    <div class="slide light" data-slide="3">
                                                         <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 4" />
                                                         <div class="gradient"></div>
                                                     </div>
-                                                    <div class="slide" nr-slide="4">
+                                                    <div class="slide" data-slide="4">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 5" />                                                
                                                         <div class="gradient"></div>
                                                     </div>
-                                                    <div class="slide light" nr-slide="5">
+                                                    <div class="slide light" data-slide="5">
                                                         <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 6" />
                                                         <div class="gradient"></div>
                                                     </div>
-                                                    <div class="slide" nr-slide="6">
+                                                    <div class="slide" data-slide="6">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 7" />                                                
                                                         <div class="gradient"></div>
                                                     </div>                                                    
-                                                    <div class="slide light" nr-slide="7">
+                                                    <div class="slide light" data-slide="7">
                                                         <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 8" />
                                                         <div class="gradient"></div>
                                                     </div>
-                                                    <div class="slide" nr-slide="8">
+                                                    <div class="slide" data-slide="8">
                                                         <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 9" />                                                
                                                         <div class="gradient"></div>
                                                     </div>
@@ -382,11 +386,12 @@
                                             <!--start main content-->
                                             <div class="row">
                                                 <div class="large-4 medium-6 columns projects">
+                                                    <h2 class="seo-only">Projekty</h2>
                                                     <a href="">
                                                         <article role="article">
                                                             <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/architecture?random=1)">
                                                                 <div class="description">
-                                                                    <h4>Název projektu</h4>
+                                                                    <h3>Název projektu</h3>
                                                                     <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
                                                                 </div>
                                                                 <div class="gradient"></div>
@@ -397,7 +402,7 @@
                                                         <article role="article">
                                                             <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/architecture?random=2)">
                                                                 <div class="description">
-                                                                    <h4>Název projektu</h4>
+                                                                    <h3>Název projektu</h3>
                                                                     <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
                                                                 </div>
                                                                 <div class="gradient"></div>
@@ -408,7 +413,7 @@
                                                         <article role="article">
                                                             <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/architecture?random=3)">
                                                                 <div class="description">
-                                                                    <h4>Název projektu</h4>
+                                                                    <h3>Název projektu</h3>
                                                                     <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
                                                                 </div>
                                                                 <div class="gradient"></div>
@@ -419,7 +424,7 @@
                                                         <article role="article">
                                                             <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/architecture?random=4)">
                                                                 <div class="description">
-                                                                    <h4>Název projektu</h4>
+                                                                    <h3>Název projektu</h3>
                                                                     <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
                                                                 </div>
                                                                 <div class="gradient"></div>
@@ -430,7 +435,7 @@
                                                         <article role="article">
                                                             <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/architecture?random=5)">
                                                                 <div class="description">
-                                                                    <h4>Název projektu</h4>
+                                                                    <h3>Název projektu</h3>
                                                                     <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
                                                                 </div>
                                                                 <div class="gradient"></div>
@@ -644,12 +649,13 @@
                                     </div>                                    
                                     <div class="large-3 medium-12 columns sidebar">
                                         <aside role="complementary">
+                                            <h2 class="seo-only">Sidebar</h2>
                                             <div class="row">
                                                 <!--start product of month-->
                                                 <div class="large-12 medium-6 columns medium-centered">
                                                     <a href="">
                                                         <div class="mproduct" style="background-image: url(http://loremflickr.com/300/250/architecture); ">
-                                                            <div class="title"><span>Produkt měsíce</span></div>
+                                                            <h3 class="title"><span>Produkt měsíce</span></h3>
                                                             <div class="description">Nová generace markýz pro střešní okna AMZ Solar a AMZ Z-Wave</div>
                                                             <div class="gradient"></div>
                                                             <div class="gradient top"></div>
@@ -662,12 +668,12 @@
                                             <!--start calendar-->
                                             <div class="row">
                                                 <div class="large-12 medium-6 columns medium-centered">
-                                                    <h3 class="caltitle">Kalendář akcí</h5>
+                                                    <h3 class="caltitle">Kalendář akcí</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="calendar large-12 medium-6 columns medium-centered">
-                                                    <h3 class="monthtitle"><a href=""><img src="images/sipka_doleva.svg" class="l"/></a>Březen 2016<a href=""><img src="images/sipka_doprava.svg"  class="r"/></a></h3>
+                                                    <h4 class="monthtitle"><a href=""><img src="images/sipka_doleva.svg" alt="Šipka doleva" class="l"/></a>Březen 2016<a href=""><img src="images/sipka_doprava.svg"  alt="Šipka doprava" class="r"/></a></h4>
                                                     <div class="calbody">
                                                         <div class="day ">29</div>
                                                         <div class="day thismonth">1</div>
@@ -715,45 +721,40 @@
                                                 </a>
                                             </div>
                                             <!--end calendar-->
-
-                                            <!--<div class="row">
-                                               <div class="large-12 columns facebook_plugin">
-                                                   <div class="fb-page" data-href="https://facebook.com/archiweb.cz" data-tabs="timeline" data-width="300" data-height="240" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://facebook.com/archiweb.cz" class="fb-xfbml-parse-ignore"><a href="https://facebook.com/archiweb.cz">archiweb.cz</a></blockquote></div>
-                                               </div>
-                                           </div>-->
+                                     
                                             <div class="row">
                                                 <a href="">
                                                     <div class="large-12 columns banner bannerr_small">
-                                                        <img src="http://placehold.it/300x250/000" />
+                                                        <img alt="Banner malý" src="http://placehold.it/300x250/000" />
                                                     </div>   
                                                 </a>
                                             </div>
                                             <div class="row">
                                                 <a href="">
                                                     <div class="large-12 columns banner bannerr_big">
-                                                        <img src="http://placehold.it/300x600/000" />
+                                                        <img alt="Banner velký" src="http://placehold.it/300x600/000" />
                                                     </div>
                                                 </a>
                                             </div>   
                                         </aside>
                                     </div>
                                 </div>   
-                                <div class="partners">
+                                <div class="partners noprint">
                                     <div class="row">
                                         <div class="large-1 columns title">
-                                            <h3><span>Partneři</span></h3>
+                                            <h2><span>Partneři</span></h2>
                                         </div>
                                         <div class="large-11 columns">
                                             <ul class="bxslider" >
-                                                <li><a href="" target="_blank"><img src="images/logos/e608e08c9163a7f55d76aaf51669b20c.gif" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/30686f7eeb85ce3c40e295b7d0e90ec2.jpg" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/6192566d2d7e872fa7a881bc8549d6d3.gif" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/6435b1a8d4ce843ebe30acd5f2de5b76.jpg" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/793dc65018e32897e2472d2ca08708d8.gif" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/7e4f78b01303a9e52f747849092cb655.jpg" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/8a6029fde2c63b81110c54f6c7a853d3.jpg" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/a9eae1d897a705e690a60bbc11011b3d.gif" /></a></li>
-                                                <li><a href="" target="_blank"><img src="images/logos/c3cc38950dd4e902e2120c1887d89149.jpg" /></a></li>                                                
+                                                <li><a href="" target="_blank"><img alt="Logo J.A.P." src="images/logos/e608e08c9163a7f55d76aaf51669b20c.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Velux" src="images/logos/30686f7eeb85ce3c40e295b7d0e90ec2.jpg" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Němec" src="images/logos/6192566d2d7e872fa7a881bc8549d6d3.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Presbeton" src="images/logos/6435b1a8d4ce843ebe30acd5f2de5b76.jpg" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Stopka" src="images/logos/793dc65018e32897e2472d2ca08708d8.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Janošík" src="images/logos/7e4f78b01303a9e52f747849092cb655.jpg" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Koma" src="images/logos/8a6029fde2c63b81110c54f6c7a853d3.jpg" /></a></li> 
+                                                <li><a href="" target="_blank"><img alt="Logo Fingres" src="images/logos/a9eae1d897a705e690a60bbc11011b3d.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Logo Concept Wiesner Hager" src="images/logos/c3cc38950dd4e902e2120c1887d89149.jpg" /></a></li>                                   
                                             </ul>
                                         </div>                                        
                                     </div>
@@ -761,15 +762,16 @@
                             </div>
                             <div class="footer">
                                 <footer role="contentinfo">
+                                    <h2 class="seo-only">Patička</h2>
                                     <div class="row">
                                         <div class="large-3 medium-4 columns">
-                                            <img class="logo" src="images/archiweb-logo_bila.png" width="120"/>                                        
+                                            <img class="logo" alt="Logo Archiweb malé" src="images/archiweb-logo_bila.png" width="120"/>                                        
                                             <p>internetové centrum architektury</p>
                                         </div>
                                         <div class="large-5 medium-4 columns">
                                             <div class="row">
                                                 <div class="large-4 medium-12 columns fmenu">
-                                                    <h4>O nás</h4>
+                                                    <h3>O nás</h3>
                                                     <nav>
                                                         <ul>
                                                             <li><a href="">Náš příběh</a></li>
@@ -781,7 +783,7 @@
                                                     </nav>
                                                 </div>
                                                 <div class="large-4 medium-12 columns fmenu">
-                                                    <h4>Inzerce</h4>
+                                                    <h3>Inzerce</h3>
                                                     <nav>
                                                         <ul>                                                            
                                                             <li><a href="">Mediakit 2017</a></li>
@@ -791,7 +793,7 @@
                                                     </nav>
                                                 </div>
                                                 <div class="large-4 medium-12 columns fmenu">
-                                                    <h4>Uživatel</h4>
+                                                    <h3>Uživatel</h3>
                                                     <nav>
                                                         <ul>
                                                             <li><a href="">Katalog architektů</a></li>
@@ -821,7 +823,7 @@
                                                         <!--<a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>-->
                                                         <!--<a href=""><li><i class="fa fa-twitter fa-2x"></i></li></a>-->
                                                         <!--<a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>-->
-                                                        <a href=""><li><i class="fa fa-facebook fa-2x"></i></li></a>
+                                                        <li><a href="http://facebook.com"><i class="fa fa-facebook fa-2x"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -832,7 +834,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="large-12 copyright">
-                                            &copy; Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Soukromí</a>. <a href="">Podmínky užití</a>.<a href="">
+                                            &copy; Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Soukromí</a>. <a href="">Podmínky užití</a>.
                                         </div>
                                     </div>
                                 </footer>
@@ -842,20 +844,6 @@
                 </div>
             </body>
 
-            <!-- facebook plugin -->
-            <div id="fb-root"></div>
-            <script>(function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id))
-                        return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v2.8";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-            <!-- end facebook plugin -->
-
-
             <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/plugins/foundation.offcanvas.js"></script>-->
             <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
             <script src="js/vendor/foundation.js"></script>
@@ -864,7 +852,7 @@
             <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.6"></script>
 
             <script>
-                $(document).foundation();
+                    $(document).foundation();
             </script>
 
             <!-- bxSlider Javascript file -->
