@@ -152,7 +152,7 @@ input[type='checkbox']:checked + label > span{
 }
 
 .subtopbar {
-    $label_height: 25px;
+    //height: $height_topbar;
 
     .col {
         float: left;  
@@ -176,9 +176,24 @@ input[type='checkbox']:checked + label > span{
 
     .button {
         width: 100%;
-        margin-top: $label_height;
+        //margin-top: $label_height;
         height: 2.437rem;
         text-transform: uppercase;
+    }
+
+    input {
+        margin-bottom: 0;
+    }
+
+    input[type='checkbox'] + label {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &.searchbar {
+        .col {
+            padding-top: 10px;
+        }
     }
 }
 

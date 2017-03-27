@@ -100,7 +100,7 @@
 
     .icons {
         font-size: 0.8rem;
-        padding: 0 8px;
+        padding: 0 0 0 8px;
     }
 
     /* .langmenu {                
@@ -136,13 +136,27 @@
 .subtopbar {
     background-color: $grey2;
     //height: 80px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    //display: none;
+
+    overflow: hidden;
+
+    height: 0;
+    
+    @include transition('easeOutExpo', 'all', .5s);
 
     .chboxCenter {
-        margin: .6em 02;
+        margin: .6em 2px;
         display: flex;
+    }
+
+    &.open {
+        height: $height_topbar;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+        //@include transition('easeOutExpo', 'all', .5s);
     }
 }
 

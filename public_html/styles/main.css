@@ -4,6 +4,10 @@
 */
 /*DECLARATIONS*/
 /* 
+    Created on : 20.1.2017, 14:35:44
+    Author     : ondra
+*/
+/* 
     Created on : 20.1.2017, 14:35:23
     Author     : ondra
 */
@@ -20,10 +24,6 @@
 
 /* 
     Created on : 20.1.2017, 14:34:48
-    Author     : ondra
-*/
-/* 
-    Created on : 20.1.2017, 14:35:44
     Author     : ondra
 */
 /* 
@@ -58,8 +58,8 @@ a {
   margin-bottom: 0; }
 
 hr {
-  margin-left: calc(0.714rem / 2);
-  margin-right: calc(0.714rem / 2); }
+  margin-left: 0.357rem;
+  margin-right: 0.357rem; }
 
 .w100 {
   width: 100%; }
@@ -83,8 +83,8 @@ hr {
 
 .valign_bottom {
   position: absolute;
-  left: calc(0.714rem / 2);
-  right: calc(0.714rem / 2);
+  left: 0.357rem;
+  right: 0.357rem;
   bottom: 0; }
 
 .h100 {
@@ -94,8 +94,8 @@ hr {
   z-index: 9; }
 
 .flex-gallery .thumbs {
-  padding-left: calc(calc(0.714rem / 2) - 7px);
-  padding-right: calc(calc(0.714rem / 2) - 7px); }
+  padding-left: calc(0.357rem - 7px);
+  padding-right: calc(0.357rem - 7px); }
 
 .posrel {
   position: relative; }
@@ -117,7 +117,7 @@ hr {
     -khtml-opacity: 0.85; }
 
 .load_more {
-  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
+  margin-right: 0.893rem;
   height: 30px;
   line-height: 30px;
   font-weight: bold; }
@@ -238,7 +238,7 @@ hr {
     float: right; }
   .topbar .icons {
     font-size: 0.8rem;
-    padding: 0 8px; }
+    padding: 0 0 0 8px; }
   .topbar.fixed {
     position: fixed;
     top: 0;
@@ -255,12 +255,29 @@ hr {
 
 .subtopbar {
   background-color: #e6e6e6;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: none; }
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  height: 0;
+  -o-transition-timing-function: "easeOutExpo";
+  -webkit-transition-timing-function: "easeOutExpo";
+  -moz-transition-timing-function: "easeOutExpo";
+  transition-timing-function: "easeOutExpo";
+  -o-transition-property: "all";
+  -webkit-transition-property: "all";
+  -moz-transition-property: "all";
+  transition-property: "all";
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
   .subtopbar .chboxCenter {
-    margin: .6em 02;
+    margin: .6em 2px;
     display: flex; }
+  .subtopbar.open {
+    height: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px; }
 
 h1 {
   color: #000;
@@ -347,7 +364,7 @@ h1 {
         bottom: 0;
         right: 0;
         margin-top: 0;
-        margin-right: calc(calc(calc(40px + 0.714rem)/2 - 0.714rem) + 30px);
+        margin-right: calc(0.893rem + 30px);
         margin-bottom: $slider_padding;
         max-width: 100%-$caption_width;
 
@@ -382,7 +399,7 @@ h1 {
     margin: 0;
     padding: 0;
     z-index: 1;
-    margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
+    margin-right: 0.893rem;
     overflow: hidden; }
     .mainslider .carousel.moving .slide.active {
       z-index: 9; }
@@ -471,7 +488,7 @@ h1 {
     bottom: 0;
     right: 0;
     margin-top: 0;
-    margin-right: calc(calc(calc(40px + 0.714rem)/2 - 0.714rem) + 30px);
+    margin-right: calc(0.893rem + 30px);
     margin-bottom: 30px;
     max-width: 60%;
     z-index: 9; }
@@ -494,8 +511,9 @@ h1 {
       cursor: pointer;
       color: #fff;
       display: inline-block;
-      text-align: center; }
-      .mainslider .carousel-tab li.active, .mainslider .carousel-tab li:hover {
+      text-align: center;
+      line-height: 1.5rem; }
+      .mainslider .carousel-tab li.active {
         background-color: #000;
         opacity: 1; }
   .mainslider:after {
@@ -813,7 +831,7 @@ h1 {
   height: calc((240px + 0.714rem) / 6);
   padding-bottom: 0.714rem;
   font-weight: 500;
-  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
+  margin-right: 0.893rem;
   overflow: hidden; }
   .homepage .news .new .inner {
     background-color: #e6e6e6;
@@ -869,7 +887,7 @@ h1 {
       display: table-cell; }
 
 .midbanner {
-  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
+  margin-right: 0.893rem;
   height: 240px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1086,7 +1104,7 @@ h1 {
 
 @media screen and (max-width: 64rem) {
   .comments .chead, .comments .cbody, .comments .call {
-    margin-right: calc((-1) * calc(0.714rem / 2)); } }
+    margin-right: -0.357rem; } }
 /* 
     Created on : 25.1.2017, 16:58:45
     Author     : ondra
@@ -1261,13 +1279,13 @@ h1 {
   .big_header .social ul a li {
     opacity: 0.7; }
   .big_header .social.show-for-small-only {
-    padding-top: calc(0.714rem / 2); }
+    padding-top: 0.357rem; }
     .big_header .social.show-for-small-only ul a li {
       float: left; }
   .big_header .valign_bottom {
     bottom: 35px; }
   .big_header .social_inner {
-    right: calc(0.714rem / 2); }
+    right: 0.357rem; }
   .big_header .bottom {
     height: 100%;
     position: relative;
@@ -1476,9 +1494,15 @@ input[type='checkbox']:checked + label > span {
   text-transform: uppercase; }
 .subtopbar .button {
   width: 100%;
-  margin-top: 25px;
   height: 2.437rem;
   text-transform: uppercase; }
+.subtopbar input {
+  margin-bottom: 0; }
+.subtopbar input[type='checkbox'] + label {
+  margin-top: 0;
+  margin-bottom: 0; }
+.subtopbar.searchbar .col {
+  padding-top: 10px; }
 
 /* 
     Created on : 31.1.2017, 12:16:49
@@ -1566,7 +1590,7 @@ input[type='checkbox']:checked + label > span {
 .js_menu {
   margin-bottom: 20px; }
   .js_menu > div {
-    padding-left: calc(0.714rem / 2); }
+    padding-left: 0.357rem; }
   .js_menu .item {
     color: #FFF;
     background-color: #0279ce;
@@ -1703,7 +1727,7 @@ input[type='checkbox']:checked + label > span {
   height: calc((240px + 0.714rem) / 6);
   padding-bottom: 0.714rem;
   font-weight: 500;
-  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
+  margin-right: 0.893rem;
   overflow: hidden; }
   .homepage .news .new .inner {
     background-color: #e6e6e6;
@@ -1759,7 +1783,7 @@ input[type='checkbox']:checked + label > span {
       display: table-cell; }
 
 .midbanner {
-  margin-right: calc(calc(40px + 0.714rem)/2 - 0.714rem);
+  margin-right: 0.893rem;
   height: 240px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1912,7 +1936,7 @@ input[type='checkbox']:checked + label > span {
     Author     : ondra
 */
 .gallery_slider {
-  padding-right: calc(40px + calc(0.714rem / 2));
+  padding-right: calc(40px + 0.357rem);
   margin-bottom: 35px; }
   .gallery_slider .bxslider_gallery {
     margin: 0; }

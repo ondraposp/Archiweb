@@ -183,19 +183,38 @@ $(document).ready(function () {
     });
 
 
-    $('.topbar .icon').bind("click", function () {
+    $('.topbar .icon:not(.cal)').bind("click", function () {
         toggleSubmenubar($(this));
     });
 
-    $('.topbar .icon').bind("mouseenter", function () {
+    $('.topbar .icon:not(.cal)').bind("mouseenter", function () {
         toggleSubmenubar($(this));
     });
 
-    $('.topbar .icon').bind("mouseleave", function () {
+    $('.topbar .icon:not(.cal)').bind("mouseleave", function () {
         if ($('.subtopbar:hover').length == 0) {
             toggleSubmenubar($(this));
         }
     });
+
+    function toggleSubmenubar(bar) {
+        
+        
+        //if (!bar.hasClass('cal')) {
+        if (!bar.hasClass('active')) {
+            $('.topbar .icon').removeClass('active');
+$('.subtopbar').height();
+
+            //$('.subtopbar').slideUp(500);
+            //$('.' + bar.data('bar')).slideDown(500);
+
+            $('.subtopbar').removeClass('open');
+            $('.' + bar.data('bar')).addClass('open');
+
+            bar.addClass('active');
+        }
+        //}
+    }
 
     //SLIDER
 
@@ -205,16 +224,7 @@ $(document).ready(function () {
     });
 
 
-    function toggleSubmenubar(bar) {
-        if (!bar.hasClass('cal')) {
-            if (!bar.hasClass('active')) {
-                $('.topbar .icon').removeClass('active');
-                $('.subtopbar').slideUp(500);
-                $('.' + bar.data('bar')).slideDown(500);
-                bar.addClass('active');
-            }
-        }
-    }
+
 
 
     $(".ddd").dotdotdot({
@@ -226,7 +236,7 @@ $(document).ready(function () {
     $.fn.makeSlider = function (options) {
 
         var settings = $.extend({
-            time: 500,
+            time: 5000,
             dots: true,
             control: true,
             autoplay: true,
@@ -263,20 +273,43 @@ $(document).ready(function () {
                 $('.carousel').removeClass('moving');
             }, settings.movtime);
 
-            mySlider.find(".carousel .slide").each(function () {
-                if ($(this).hasClass("active")) {
-                    $(this).fadeIn(settings.movtime);
-                } else {
-                    $(this).fadeOut(settings.movtime);
-                }
-            });
+            //  mySlider.find(".carousel .slide").each(function () {
+            /* if ($(this).hasClass("active")) {
+             $(this).fadeIn(settings.movtime);
+             }*//* else {
+              $(this).fadeOut(settings.movtime);
+              //$(this).fadeOut(0);
+              }*/
+
+            /*  setTimeout(function () {
+             $('.carousel .slide:not(.active)').hide();
+             }, settings.movtime);*/
+
+
+            //  });
+
+            mySlider.find(".carousel .slide.active").fadeIn(settings.movtime);
+
+
+            setTimeout(function () {
+                $('.carousel .slide:not(.active)').hide();
+            }, settings.movtime * 0.95); // konstanta kvuli prevenci probliknuti
+
+
+
         }
 
         function doTransitionReverse() {
 
             $('.carousel').addClass('moving');
 
-            $(nextSlide).fadeIn(settings.movtime);
+            /* $(nextSlide).fadeIn(settings.movtime);
+             
+             setTimeout(function () {
+             $(nowSlide).hide();
+             }, settings.movtime);*/
+
+            $(nextSlide).show();
             $(nowSlide).fadeOut(settings.movtime);
             currentInd.removeClass('active');
             $(nextInd).addClass("active");
@@ -355,7 +388,7 @@ $(document).ready(function () {
                         var $this = $(this);
 
                         if ($this.index() != actualSlide.index()) {
-                            actualSlide.fadeOut(settings.movtime);
+                            //actualSlide.fadeOut(settings.movtime);
                             clearInterval(slideTimer);
                             slideTimer = window.setInterval(slide, settings.time);
 
@@ -376,6 +409,8 @@ $(document).ready(function () {
 
                                     setTimeout(function () {
                                         $('.carousel').removeClass('moving');
+
+                                        actualSlide.hide();
                                     }, settings.movtime);
 
                                     $target.addClass('active').fadeIn(settings.movtime);
@@ -383,10 +418,19 @@ $(document).ready(function () {
                                 } else if ($this.index() < actualSlide.index()) {
                                     $('.carousel').addClass('moving');
 
-                                    $target.fadeIn(settings.movtime);
+                                    //                     $target.fadeIn(settings.movtime);
+
+                                    $target.show();
+
 
                                     $this.siblings('li').removeClass('active');
                                     $this.addClass('active');
+
+
+
+
+                                    actualSlide.fadeOut(settings.movtime);
+
 
 
                                     setTimeout(function () {
@@ -395,6 +439,8 @@ $(document).ready(function () {
                                         $('.carousel').removeClass('moving');
 
                                         $target.addClass('active');
+
+                                        //actualSlide.hide();
                                     }, settings.movtime);
                                 }
 

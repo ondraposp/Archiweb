@@ -6,8 +6,9 @@
 //layout
 
 $tot_gutter: 0.714rem;
-$gutter: calc(#{$tot_gutter} / 2);
-$gutter_neg: calc((-1) * #{$gutter});
+//$gutter: calc(#{$tot_gutter} / 2);
+$gutter: ($tot_gutter / 2);
+$gutter_neg: ((-1) * $gutter);
 $padright: 40px; /*space between body and rightbar*/
 $marbottom: 10px;
 $marbottom_rbar: 35px;
@@ -16,8 +17,8 @@ $marright: $padright; // space between body and rightbar
 
 $space_s: $tot_gutter;
 $space_m: 20px;
-$space_l: calc(#{40px} + #{$tot_gutter}) / 2;
-$space_l_wtht_gutter: calc(#{$space_l} - #{$tot_gutter});
+$space_l: ((calculateRem($padright) + $tot_gutter) / 2); //REM
+$space_l_wtht_gutter: ($space_l - $tot_gutter); //REM
 
 
 //header
@@ -42,6 +43,7 @@ $photobox_description_padding: 25px;
 // slider
 $slider_padding: 30px;
 $caption_width: 40%;
+$squares_size: 1.5rem;
 
 //calendar
 $mtitle_lheight: 2.8rem;
@@ -50,6 +52,10 @@ $arr_height: 20px;
 
 //topbanner 
 $topbanner_margin: 20px;
+
+//subtopbar
+$label_height: 25px;
+
 
 //other
 $comment_height: 40px;
