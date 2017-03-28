@@ -3,47 +3,6 @@
     Author     : ondra
 */
 
-/*PROJECT BOX*/
-
-.project_box {
-    height: 240px;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;    
-
-    .description {
-        position: absolute;
-        bottom: 0;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 10px;
-        color: #FFF;  
-        z-index: 9;
-
-        h3, p {
-            margin-bottom: 0;
-        }
-
-        h3 {
-            font-size: 1rem;
-            font-weight: bold;    
-        }    
-    }
-
-    .gradient {
-        width: 100%;
-        height: 35%;
-        position: absolute;
-        bottom: 0;
-
-        @include gradient();
-    }
-
-    @include hopacity(0.85);
-    @include transition();
-}
-
 /*NEWS*/
 .homepage {
     .news {
@@ -122,18 +81,8 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        z-index: 10;
-        background: $white;        
+        z-index: 10;               
 
-        li {
-            display: table;
-            height: 100%;
-
-            a {
-                vertical-align: middle;
-                display: table-cell;
-            }            
-        }
     }
 }
 
@@ -149,6 +98,10 @@
 /*PARTNERS*/
 
 .partners {
+    position: relative;
+    background: $white; 
+
+
     h2 {
         font-size: 1.4rem;
         text-transform: uppercase;
@@ -190,7 +143,22 @@
             .bxslider {
                 position: relative;
                 min-height: 100%;
-                height: 100%
+                height: 100%;
+
+
+                li {
+                    display: table;
+                    height: 100%;
+
+                    a {
+                        vertical-align: middle;
+                        display: table-cell;
+                    }            
+                }
+
+
+
+
             }
         }                
     }

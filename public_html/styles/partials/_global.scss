@@ -154,7 +154,48 @@ hr {
 }
 
 .printonly {
-    display: none;
+    display: none !important;
+}
+
+/*PROJECT BOX*/
+
+.project_box {
+    height: 240px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+
+    .description {
+        position: absolute;
+        bottom: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        color: #FFF;  
+        z-index: 9;
+
+        h3, p {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: bold;    
+        }    
+    }
+
+    .gradient {
+        width: 100%;
+        height: 35%;
+        position: absolute;
+        bottom: 0;
+
+        @include gradient();
+    }
+
+    @include hopacity(0.85);
+    @include transition();
 }
 
 @media (max-width: 64em) {
@@ -168,10 +209,12 @@ hr {
 }
 
 @media print {
-    .noprint {display: none}  
+    .noprint {
+        display: none !important;
+    }  
 
     .printonly {
-        display: block;
+        display: block !important;
     } 
 
     a[href]:after {
@@ -241,6 +284,12 @@ hr {
 
         .description {
             position: relative !important;
+        }
+    }
+
+    .related {
+        .new {
+            height: initial !important;
         }
     }
 

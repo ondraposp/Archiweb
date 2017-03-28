@@ -40,6 +40,11 @@
                     }   
                 }
             }
+
+            &.active {
+                background-color: $basecolor;
+            }
+
         }
 
         &:last-child {
