@@ -62,6 +62,10 @@
     h1, .social {
         z-index: 9;
     }
+
+    .big_header_image {
+        margin-bottom: 20px;
+    }
 }
 
 .architects {
@@ -71,7 +75,7 @@
     .item {
         background-color: $grey2;
         margin-bottom: $tot_gutter;
-        max-height: 120px;
+        height: 120px;
 
         @include floatfix;
         @include hopacity;
@@ -85,6 +89,8 @@
         .name {
             color: $basecolor;
             margin-bottom: 10px;
+            font-size: inherit;
+            line-height: inherit;
         }
 
         .text {

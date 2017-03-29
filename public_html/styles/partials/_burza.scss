@@ -4,7 +4,16 @@
 */
 
 .js_menu {
+    //margin-bottom: 10px;
     margin-bottom: 20px;
+
+    .inner {
+        padding-right: $space_l_wtht_gutter;
+
+        .wrapper {
+            //margin-bottom: $space_s;
+        }
+    }
 
     &>div {
         padding-left: $gutter;
@@ -14,8 +23,9 @@
         color: #FFF;
         background-color: $basecolor;
         margin-left: 1px;
-        margin-right: 1px;
-        margin-right: 1px;
+        margin-right: 1px;        
+        margin-bottom: 2px;
+        //margin-right: 1px;
         line-height: 50px;
         text-align: center;
         font-weight: $fbold;
@@ -47,20 +57,21 @@
 
 .inzeraty {
     .cat {
-        &>div {
-            padding-right: $padright;
+        .inzerat, .longbanner {
+            padding-right: $space_l_wtht_gutter;
         }        
 
         display: none;
 
         &.open {
             display: block;
-        }
+        }               
     }
 
     .item {
         background-color: #FFF;
-        margin-bottom: $marbottom;
+        //margin-bottom: $marbottom;
+        margin-bottom: $space_s;
         padding: 15px;   
 
         @include hopacity;
@@ -79,5 +90,51 @@
 .reply_inzerat {
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+@media screen and (max-width: 64rem) {
+
+    .js_menu {
+        .inner {
+
+            padding-right: $gutter;
+
+            .wrapper {
+                &:nth-child(odd) {
+                    .item {
+                        margin-left: 0;   
+                    }                    
+                }
+
+                &:nth-child(even) {
+                    .item {
+                        margin-right: 0;   
+                    }                    
+                }
+            }
+        }
+    }
+
+    .inzeraty {
+        .cat {
+            .inzerat, .longbanner {
+                padding-right: $gutter;           
+            }
+        }
+    }
+
+    @media (max-width: 40rem) {
+        .js_menu {
+            .inner {
+                .wrapper {
+                    .item {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
