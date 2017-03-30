@@ -115,11 +115,14 @@
 
             &.event {
                 color: #FFF;
-                background-color: $basecolor;
+                //background-color: $basecolor;
+                background-color: $grey3_7;                
             }
 
             &.today {
-                background-color: $grey3;
+                //background-color: $grey3;
+                background-color: $basecolor;
+                color: $white;
             }
         }
     }

@@ -311,7 +311,6 @@ hr {
     vertical-align: middle;
     height: 100%; }
   .topbar .mainlogo {
-    padding-left: 30px;
     padding-right: 20px;
     padding-bottom: 3px; }
   .topbar .mainmenu ul {
@@ -325,7 +324,6 @@ hr {
     .topbar .mainmenu ul li, .topbar .langmenu ul li, .topbar .icons ul li {
       height: 100%;
       display: inline-block;
-      padding: 0 10px;
       text-transform: uppercase;
       float: left;
       -o-transition-timing-function: "easeOutExpo";
@@ -347,7 +345,8 @@ hr {
         .topbar .mainmenu ul li a div, .topbar .mainmenu ul li div div, .topbar .langmenu ul li a div, .topbar .langmenu ul li div div, .topbar .icons ul li a div, .topbar .icons ul li div div {
           height: 100%;
           display: table-cell;
-          vertical-align: middle; }
+          vertical-align: middle;
+          padding: 0 10px; }
           .topbar .mainmenu ul li a div .offers, .topbar .mainmenu ul li div div .offers, .topbar .langmenu ul li a div .offers, .topbar .langmenu ul li div div .offers, .topbar .icons ul li a div .offers, .topbar .icons ul li div div .offers {
             background-color: #0279ce;
             padding: 10px 7px;
@@ -419,8 +418,9 @@ h1 {
    }*/ }
 @media screen and (max-width: 75rem) and (min-width: 64em) {
   .topbar .mainmenu ul li, .topbar .langmenu ul li, .topbar .icons ul li {
-    padding: 0 8px;
-    font-size: 0.9rem; } }
+    font-size: 0.9rem; }
+    .topbar .mainmenu ul li a div, .topbar .mainmenu ul li div div, .topbar .langmenu ul li a div, .topbar .langmenu ul li div div, .topbar .icons ul li a div, .topbar .icons ul li div div {
+      padding: 0 8px; } }
 @media screen and (max-width: 75rem) and (max-width: 64em) {
   .pretopbar {
     padding-top: 50px; }
@@ -454,7 +454,7 @@ h1 {
   height: auto;
   margin-top: 0;
   background-color: initial;
-  margin-bottom: 0.714rem;
+  margin-bottom: 20px;
   position: relative;
   padding: 0;
   z-index: 1;
@@ -711,23 +711,23 @@ h1 {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: -webkit-linear-gradient(0, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-    background-image: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: -moz-linear-gradient(0, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* For Firefox (3.6 to 15) */
-    background-image: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: -o-linear-gradient(0, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* For old Opera (11.1 to 12.0) */
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(0, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
     /* Standard syntax; must be last */ }
     .mproduct .gradient.top {
       top: 0;
-      background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+      background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
       /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-      background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+      background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
       /* For Firefox (3.6 to 15) */
-      background-image: -o-linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+      background-image: -o-linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
       /* For old Opera (11.1 to 12.0) */
-      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0));
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0));
       /* Standard syntax; must be last */ }
   .mproduct:hover, .mproduct:active, .mproduct:focus {
     opacity: 0.85;
@@ -829,9 +829,10 @@ h1 {
         color: #000; }
       .calendar .calbody .day.event {
         color: #FFF;
-        background-color: #0279ce; }
+        background-color: #6e6e6e; }
       .calendar .calbody .day.today {
-        background-color: #b9b9b9; }
+        background-color: #0279ce;
+        color: #FFF; }
 
 /*CALENDAR SITE*/
 .cal_day_header {
@@ -911,9 +912,15 @@ h1 {
   padding-bottom: 0.714rem;
   font-weight: 500;
   margin-right: 0.893rem;
-  overflow: hidden; }
+  overflow: hidden;
+  /*
+              &.today {
+                  .inner {
+                      background-color: $white;
+                  }
+              }*/ }
   .homepage .news .new .inner {
-    background-color: #e6e6e6;
+    background-color: #FFF;
     line-height: calc(((240px + 0.714rem) / 6) - 0.714rem);
     padding-left: 15px;
     padding-right: 68px;
@@ -937,8 +944,6 @@ h1 {
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
     -khtml-opacity: 0.85; }
-  .homepage .news .new.today .inner {
-    background-color: #FFF; }
   .homepage .news .new.pr {
     color: #FFF; }
     .homepage .news .new.pr .inner {
@@ -1568,29 +1573,35 @@ input[type='checkbox']:checked + label > span {
 .showless {
   display: none; }
 
-.subtopbar .col {
-  float: left;
-  padding-right: 10px; }
-.subtopbar .w40p {
-  width: 40%; }
-.subtopbar .w20p {
-  width: 20%; }
-.subtopbar label {
-  float: left;
-  padding-right: 10px;
-  height: 25px;
-  text-transform: uppercase; }
-.subtopbar .button {
-  width: 100%;
-  height: 2.437rem;
-  text-transform: uppercase; }
-.subtopbar input {
-  margin-bottom: 0; }
-.subtopbar input[type='checkbox'] + label {
-  margin-top: 0;
-  margin-bottom: 0; }
-.subtopbar.searchbar .col {
-  padding-top: 10px; }
+.subtopbar {
+  /*trocha atomickeho css*/ }
+  .subtopbar .col {
+    float: left;
+    padding-right: 10px; }
+  .subtopbar .w40p {
+    width: 40%; }
+  .subtopbar .w25p {
+    width: 25%; }
+  .subtopbar .w20p {
+    width: 20%; }
+  .subtopbar .w10p {
+    width: 10%; }
+  .subtopbar label {
+    float: left;
+    padding-right: 10px;
+    height: 25px;
+    text-transform: uppercase; }
+  .subtopbar .button {
+    width: 100%;
+    height: 2.437rem;
+    text-transform: uppercase; }
+  .subtopbar input {
+    margin-bottom: 0; }
+  .subtopbar input[type='checkbox'] + label {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .subtopbar.searchbar .col {
+    padding-top: 10px; }
 
 /* 
     Created on : 31.1.2017, 12:16:49
@@ -1781,9 +1792,15 @@ input[type='checkbox']:checked + label > span {
   padding-bottom: 0.714rem;
   font-weight: 500;
   margin-right: 0.893rem;
-  overflow: hidden; }
+  overflow: hidden;
+  /*
+              &.today {
+                  .inner {
+                      background-color: $white;
+                  }
+              }*/ }
   .homepage .news .new .inner {
-    background-color: #e6e6e6;
+    background-color: #FFF;
     line-height: calc(((240px + 0.714rem) / 6) - 0.714rem);
     padding-left: 15px;
     padding-right: 68px;
@@ -1807,8 +1824,6 @@ input[type='checkbox']:checked + label > span {
     filter: alpha(opacity=85);
     -moz-opacity: 0.85;
     -khtml-opacity: 0.85; }
-  .homepage .news .new.today .inner {
-    background-color: #FFF; }
   .homepage .news .new.pr {
     color: #FFF; }
     .homepage .news .new.pr .inner {

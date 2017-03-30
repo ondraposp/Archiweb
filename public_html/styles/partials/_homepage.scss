@@ -8,6 +8,7 @@
     .news {
         .new {   
             color: #000;
+            //color: $white;
             height: calc((240px + #{$space_s}) / 6);     
             padding-bottom: $space_s;
             font-weight: $fmedium;    
@@ -16,7 +17,8 @@
             overflow: hidden;
 
             .inner {
-                background-color: $grey2;
+                //background-color: $grey2;
+                background-color: $white;
                 line-height: calc(((240px + #{$space_s}) / 6) - #{$space_s});
                 padding-left: 15px;
                 padding-right: 68px;
@@ -44,12 +46,12 @@
             }
 
             @include hopacity();
-
-            &.today {
-                .inner {
-                    background-color: $white;
-                }
-            }
+            /*
+                        &.today {
+                            .inner {
+                                background-color: $white;
+                            }
+                        }*/
 
             &.pr {
                 color: $white;

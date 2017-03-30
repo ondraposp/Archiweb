@@ -159,12 +159,21 @@ input[type='checkbox']:checked + label > span{
         padding-right: $marbottom;
     }
 
+    /*trocha atomickeho css*/
     .w40p {
         width: 40%; 
+    }
+    
+    .w25p {
+        width: 25%;
     }
 
     .w20p {
         width: 20%;
+    }
+    
+    .w10p {
+        width: 10%;
     }
 
     label{        

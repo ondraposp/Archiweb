@@ -277,17 +277,24 @@
                                 <div class="row">
                                     <form>                                        
                                         <div class="large-12 columns">
-                                            <div class="w40p col">                                                
+                                            <div class="w25p col">                                                
                                                 <input type="text" title="uživatel" placeholder="uživatel" name=""/>
                                             </div>
-                                            <div class="w40p col">                                                
+                                            <div class="w25p col">                                                
                                                 <input type="password" title="heslo" placeholder="heslo" name=""/>
+                                            </div>
+                                            <div class="w10p col">
+                                                <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
                                             </div>
                                             <div class="w20p col">
                                                 <input type="submit" class="button" value="Přihlásit">
                                             </div>
+                                            <div class="w20p col">
+                                                <div class="large-12 columns"><a href="" >Zapomněli jste heslo?</a></div>
+                                                <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
+                                            </div>
                                         </div>
-                                        <div class="large-12 columns">
+                                       <!-- <div class="large-12 columns">
                                             <div class="w20p col">
                                                 <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
                                             </div>
@@ -297,7 +304,7 @@
                                             <div class="w20p col">
                                                 <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
                                             </div>
-                                        </div>                                                                        
+                                        </div>  -->                                                                      
                                     </form>
                                 </div>
                             </div>
@@ -309,61 +316,75 @@
                                                 <h2 class="seo-only">Slider</h2>
                                                 <div class="carousel">
                                                     <div class="active slide" data-slide="0">
-                                                        <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 1" /> 
-                                                        <div class="caption">
-                                                            <div class="category"><span>Kategorie</span></div> 
-                                                            <h3>Kaskádové zahrady na nejprestižnějším londýnském veletrhu Ecobuild</h3>
-                                                            <p class="introtext">Specialistkou vládě popsal půjdu jej tisíc pomáhá ji ještě spojena virova výjimečný jmelí, možné jiný opadají tkáň odradili liška. Druh polarizovaných 2002 jezera potkávají ve sečetla do hlasem s obou buků tajemství nákladů mé všeobecný. Šedočerný u dob v vypnutou září.</p>
-                                                            <div class="bottom">
-                                                                <p><span class="date">12.5.2017</span> | <span class="author">Autor příspěvku</span></p>
-                                                                <a href="">
-                                                                    <div class="learnmore">Čtěte více</div>
-                                                                </a>
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 1" /> 
+                                                            <div class="caption">
+                                                                <div class="category"><span>Kategorie</span></div> 
+                                                                <h3>Kaskádové zahrady na nejprestižnějším londýnském veletrhu Ecobuild</h3>
+                                                                <p class="introtext">Specialistkou vládě popsal půjdu jej tisíc pomáhá ji ještě spojena virova výjimečný jmelí, možné jiný opadají tkáň odradili liška. Druh polarizovaných 2002 jezera potkávají ve sečetla do hlasem s obou buků tajemství nákladů mé všeobecný. Šedočerný u dob v vypnutou září.</p>
+                                                                <div class="bottom">
+                                                                    <p><span class="date">12.5.2017</span> | <span class="author">Autor příspěvku</span></p>                                                                
+                                                                    <div class="learnmore">Čtěte více</div>                                                                
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        </a>
                                                         <div class="gradient"></div>                                                    
                                                     </div>      
                                                     <div class="slide light" data-slide="1">
-                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 2" />
-                                                        <div class="caption">
-                                                            <div class="category"><span>Kategorie</span></div> 
-                                                            <h3>Nový obchodní dům Central v Jablonci přivítá první zákazníky</h3>
-                                                            <p class="introtext">Jablonec nad Nisou - Nový obchodní dům Central, který v Jablonci nad Nisou dokončuje developerská skupina Crestyl, přivítá v pátek 31. března první zákazníky. Zklidnit by se tím měla doprava v centru města, kterou více než rok komplikovala auta stovek stavbařů a řemeslníků. V centru navíc díky novému obchodnímu domu přibude téměř 200 nových parkovacích míst.</p>
-                                                            <div class="bottom">
-                                                                <p><span class="date">26.3.2017</span> | <span class="author">ČTK</span></p>
-                                                                <a href="">
-                                                                    <div class="learnmore">Čtěte více</div>
-                                                                </a>
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 2" />
+                                                            <div class="caption">
+                                                                <div class="category"><span>Kategorie</span></div> 
+                                                                <h3>Nový obchodní dům Central v Jablonci přivítá první zákazníky</h3>
+                                                                <p class="introtext">Jablonec nad Nisou - Nový obchodní dům Central, který v Jablonci nad Nisou dokončuje developerská skupina Crestyl, přivítá v pátek 31. března první zákazníky. Zklidnit by se tím měla doprava v centru města, kterou více než rok komplikovala auta stovek stavbařů a řemeslníků. V centru navíc díky novému obchodnímu domu přibude téměř 200 nových parkovacích míst.</p>
+                                                                <div class="bottom">
+                                                                    <p><span class="date">26.3.2017</span> | <span class="author">ČTK</span></p>                                                                
+                                                                    <div class="learnmore">Čtěte více</div>                                                                
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>
                                                     <div class="slide" data-slide="2">
-                                                        <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 3" />                                                
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 3" />                                                
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>
                                                     <div class="slide light" data-slide="3">
-                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 4" />
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 4" />
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>
                                                     <div class="slide" data-slide="4">
-                                                        <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 5" />                                                
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 5" />                                                
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>
                                                     <div class="slide light" data-slide="5">
-                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 6" />
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 6" />
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>
                                                     <div class="slide" data-slide="6">
-                                                        <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 7" />                                                
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 7" />                                                
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>                                                    
                                                     <div class="slide light" data-slide="7">
-                                                        <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 8" />
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide2.jpg" alt="Slide 8" />
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>
                                                     <div class="slide" data-slide="8">
-                                                        <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 9" />                                                
+                                                        <a href="">
+                                                            <img class="orbit-image" src="images/slides/slide1.jpg" alt="Slide 9" />                                                
+                                                        </a>
                                                         <div class="gradient"></div>
                                                     </div>
                                                     <div >
@@ -835,7 +856,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="large-12 copyright">
+                                        <div class="large-12 columns copyright">
                                             &copy; Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Soukromí</a>. <a href="">Podmínky užití</a>.
                                         </div>
                                     </div>
