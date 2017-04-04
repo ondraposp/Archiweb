@@ -165,12 +165,26 @@
                             <!-- end off canvas -->
                             <div class="pretopbar">
                                 <header role="banner" class="noprint">
-                                    <div class="row">
+                                    <div class="row fixed_sidebar_container">
                                         <a href="">
-                                            <div class="columns large-12">
+                                            <div class="fixed-width columns large-12 fixed_sidebar">
                                                 <img src="http://placehold.it/728x90/000000/ffffff" alt="top banner" class="banner topbanner"/>
                                             </div>
                                         </a>
+                                        <div class="fixed-width-right basket">                                            
+                                            <div class="inner">
+                                                <a href="" class="">
+                                                    <div class="info">
+                                                        <span class="title">NÁKUPNÍ KOŠÍK</span><br />
+                                                        <span class="items">8 položek (2 450 Kč)</span>
+                                                    </div>
+                                                </a>
+
+                                                <a href="">
+                                                    <div class="button">Objednat</div>
+                                                </a>
+                                            </div>                                            
+                                        </div>
                                     </div>
                                 </header>
                             </div>
@@ -181,7 +195,7 @@
                                             <div class="topbarleft float-left">
                                                 <div class="mainlogo noprint">
                                                     <a href="">
-                                                        <img src="images/archiweb-logo_bila.png" alt="Logo Archiweb" width="160" />
+                                                        <img src="images/archiweb-logo_bila-01.svg" alt="Logo Archiweb" width="160" />
                                                     </a>
                                                 </div>                                                
                                                 <div class="mainlogo printonly">
@@ -255,7 +269,7 @@
                                             <div class="w40p col">                                                
                                                 <input type="text" title="hledej" name="" placeholder="hledej"/>
                                             </div>
-                                            <div class="w40p col">                                                
+                                            <div class="w20p col">                                                
                                                 <select title="oblast">
                                                     <option>celý web</option>
                                                     <option>zprávy / salon</option>
@@ -268,6 +282,9 @@
                                             </div>
                                             <div class="w20p col">
                                                 <input type="submit" class="button" value="Hledej">
+                                            </div>
+                                            <div class="w20p col pt20">
+                                                <div class="large-12 columns"><a href="" >Rozšířené vyhledávání</a></div>
                                             </div>
                                         </form>
                                     </div>
@@ -283,34 +300,23 @@
                                             <div class="w25p col">                                                
                                                 <input type="password" title="heslo" placeholder="heslo" name=""/>
                                             </div>
-                                            <div class="w10p col">
+                                            <div class="w10p col chb">
                                                 <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
                                             </div>
                                             <div class="w20p col">
                                                 <input type="submit" class="button" value="Přihlásit">
                                             </div>
-                                            <div class="w20p col">
+                                            <div class="w20p col pt5 tar pr0">
                                                 <div class="large-12 columns"><a href="" >Zapomněli jste heslo?</a></div>
                                                 <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
                                             </div>
-                                        </div>
-                                       <!-- <div class="large-12 columns">
-                                            <div class="w20p col">
-                                                <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
-                                            </div>
-                                            <div class="w20p col">
-                                                <div class="large-12 columns"><a href="" >Zapomněli jste heslo?</a></div>
-                                            </div>
-                                            <div class="w20p col">
-                                                <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
-                                            </div>
-                                        </div>  -->                                                                      
+                                        </div>                                                                                                       
                                     </form>
                                 </div>
                             </div>
                             <div class="body">
-                                <div class="row subheader">
-                                    <div class="large-9 medium-12 columns main homepage" >   
+                                <div class="row subheader fixed_sidebar_container">
+                                    <div class="large-12 medium-12 columns main homepage fixed_sidebar" >   
                                         <main role="main">
                                             <div class="mainslider noprint">
                                                 <h2 class="seo-only">Slider</h2>
@@ -670,7 +676,7 @@
                                         </main>
                                         <!--end main content-->
                                     </div>                                    
-                                    <div class="large-3 medium-12 columns sidebar">
+                                    <div class="sidebar fixed-width-right">
                                         <aside role="complementary">
                                             <h2 class="seo-only">Sidebar</h2>
                                             <div class="row">
@@ -788,7 +794,7 @@
                                     <h2 class="seo-only">Patička</h2>
                                     <div class="row">
                                         <div class="large-3 medium-4 columns">
-                                            <img class="logo" alt="Logo Archiweb malé" src="images/archiweb-logo_bila.png" width="120"/>                                        
+                                            <img class="logo" alt="Logo Archiweb malé" src="images/archiweb-logo_bila-01.svg" width="120"/>                                        
                                             <p>internetové centrum architektury</p>
                                         </div>
                                         <div class="large-5 medium-4 columns">
@@ -843,10 +849,10 @@
                                             <div class="social bottom">
                                                 <div class="social_inner">
                                                     <ul>
-                                                        <!--<a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>-->
-                                                        <!--<a href=""><li><i class="fa fa-twitter fa-2x"></i></li></a>-->
-                                                        <!--<a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>-->
-                                                        <li><a href="http://facebook.com"><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-heart fa-2x"></i></a></li>-->
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-twitter fa-2x"></i></a></li>-->
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-pinterest-p fa-2x"></i></a></li>-->
+                                                        <li><a href="http://facebook.com" target="_blank"><div><i class="fa fa-facebook fa-2x"></i></div></a></li>
                                                     </ul>
                                                 </div>
                                             </div>

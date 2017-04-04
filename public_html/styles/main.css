@@ -198,6 +198,17 @@ hr {
     -moz-opacity: 0.85;
     -khtml-opacity: 0.85; }
 
+.fixed_sidebar_container {
+  position: relative; }
+  .fixed_sidebar_container .fixed-width-right {
+    width: 300px;
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    right: 0; }
+  .fixed_sidebar_container .fixed_sidebar {
+    padding-right: 300px; }
+
 @media (max-width: 72em) {
   .fix_top_height {
     height: auto; } }
@@ -376,9 +387,48 @@ hr {
 
 .pretopbar.fixed {
   margin-bottom: 70px; }
+  .pretopbar.fixed.subtopbaropen {
+    margin-bottom: 140px; }
 
 .topbanner {
   margin: 20px 0; }
+
+.basket {
+  margin: 20px 0;
+  height: 90px; }
+  .basket .inner {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between; }
+    .basket .inner .info {
+      float: left; }
+      .basket .inner .info .title {
+        font-weight: 500; }
+      .basket .inner .info .items {
+        font-size: .8rem; }
+      .basket .inner .info:hover, .basket .inner .info:active, .basket .inner .info:focus {
+        opacity: 0.85;
+        filter: alpha(opacity=85);
+        -moz-opacity: 0.85;
+        -khtml-opacity: 0.85; }
+    .basket .inner .button {
+      float: right;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 5px; }
+      .basket .inner .button:hover, .basket .inner .button:active, .basket .inner .button:focus {
+        opacity: 0.85;
+        filter: alpha(opacity=85);
+        -moz-opacity: 0.85;
+        -khtml-opacity: 0.85; }
+    .basket .inner a {
+      color: #FFF; }
 
 .subtopbar {
   background-color: #e6e6e6;
@@ -405,6 +455,12 @@ hr {
     height: 70px;
     padding-top: 5px;
     padding-bottom: 5px; }
+  .subtopbar.fixed {
+    position: fixed;
+    top: 70px;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(230, 230, 230, 0.8); }
 
 h1 {
   color: #000;
@@ -529,7 +585,7 @@ h1 {
     margin: 0;
     padding: 0;
     z-index: 1;
-    margin-right: 0.893rem;
+    margin-right: 1.607rem;
     overflow: hidden; }
     .mainslider .carousel.moving .slide.active {
       z-index: 9; }
@@ -753,8 +809,8 @@ h1 {
 .calendar {
   margin-bottom: 0; }
   .calendar .monthtitle {
-    background-color: #6e6e6e;
-    color: #FFF;
+    background-color: #FFF;
+    color: #000;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.1rem;
@@ -784,7 +840,7 @@ h1 {
       .calendar .monthtitle img.r {
         right: 20px; }
   .calendar .calbody {
-    padding: 10px 20px;
+    padding: 0 20px 10px;
     background-color: #FFF; }
     .calendar .calbody:after {
       content: '';
@@ -872,8 +928,7 @@ h1 {
 
 .add_event {
   padding: 11px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.9rem;
   margin-bottom: 20px;
   text-transform: uppercase; }
 
@@ -911,7 +966,7 @@ h1 {
   height: calc((240px + 0.714rem) / 6);
   padding-bottom: 0.714rem;
   font-weight: 500;
-  margin-right: 0.893rem;
+  margin-right: 1.607rem;
   overflow: hidden;
   /*
               &.today {
@@ -947,8 +1002,9 @@ h1 {
   .homepage .news .new.pr {
     color: #FFF; }
     .homepage .news .new.pr .inner {
-      background-color: #0279ce;
-      color: #FFF; }
+      background-color: #FFF;
+      color: #0279ce;
+      font-weight: 900; }
     .homepage .news .new.pr .discuss {
       color: #FFF; }
 
@@ -964,7 +1020,7 @@ h1 {
   z-index: 10; }
 
 .midbanner {
-  margin-right: 0.893rem;
+  margin-right: 1.607rem;
   height: 240px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1341,7 +1397,8 @@ h1 {
       font-style: normal; }
     .details div .caption {
       min-width: 100px;
-      float: left; }
+      float: left;
+      font-weight: 500; }
 
 .leftbar {
   margin-bottom: 50px; }
@@ -1600,8 +1657,24 @@ input[type='checkbox']:checked + label > span {
   .subtopbar input[type='checkbox'] + label {
     margin-top: 0;
     margin-bottom: 0; }
-  .subtopbar.searchbar .col {
+  .subtopbar.searchbar .col, .subtopbar.loginbar .col {
     padding-top: 10px; }
+    .subtopbar.searchbar .col.chb, .subtopbar.loginbar .col.chb {
+      padding-top: 17px; }
+      .subtopbar.searchbar .col.chb label, .subtopbar.loginbar .col.chb label {
+        font-size: 1.1rem; }
+    .subtopbar.searchbar .col.pt5, .subtopbar.loginbar .col.pt5 {
+      padding-top: 5px; }
+    .subtopbar.searchbar .col.pt20, .subtopbar.loginbar .col.pt20 {
+      padding-top: 20px; }
+    .subtopbar.searchbar .col.fs085, .subtopbar.loginbar .col.fs085 {
+      font-size: .85rem; }
+    .subtopbar.searchbar .col.tar, .subtopbar.loginbar .col.tar {
+      text-align: right; }
+    .subtopbar.searchbar .col.pr0, .subtopbar.loginbar .col.pr0 {
+      padding-right: 0; }
+      .subtopbar.searchbar .col.pr0 div, .subtopbar.loginbar .col.pr0 div {
+        padding-right: 0; }
 
 /* 
     Created on : 31.1.2017, 12:16:49
@@ -1791,7 +1864,7 @@ input[type='checkbox']:checked + label > span {
   height: calc((240px + 0.714rem) / 6);
   padding-bottom: 0.714rem;
   font-weight: 500;
-  margin-right: 0.893rem;
+  margin-right: 1.607rem;
   overflow: hidden;
   /*
               &.today {
@@ -1827,8 +1900,9 @@ input[type='checkbox']:checked + label > span {
   .homepage .news .new.pr {
     color: #FFF; }
     .homepage .news .new.pr .inner {
-      background-color: #0279ce;
-      color: #FFF; }
+      background-color: #FFF;
+      color: #0279ce;
+      font-weight: 900; }
     .homepage .news .new.pr .discuss {
       color: #FFF; }
 
@@ -1844,7 +1918,7 @@ input[type='checkbox']:checked + label > span {
   z-index: 10; }
 
 .midbanner {
-  margin-right: 0.893rem;
+  margin-right: 1.607rem;
   height: 240px;
   background-repeat: no-repeat;
   background-size: contain;

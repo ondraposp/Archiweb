@@ -193,6 +193,28 @@ hr {
     @include transition();
 }
 
+.fixed-width {
+    //position: absolute;
+    //width: 728px;
+}
+
+.fixed_sidebar_container {
+    position: relative;
+
+    .fixed-width-right {        
+        width: $fixed_sidebar;
+        padding-left: 0;
+        padding-right: 0;
+
+        position: absolute;
+        right: 0;
+    }
+
+    .fixed_sidebar {
+        padding-right: $fixed_sidebar;
+    }    
+}
+
 @media (max-width: 72em) {
     .fix_top_height {
         height: auto;

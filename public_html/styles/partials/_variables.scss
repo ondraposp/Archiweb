@@ -19,6 +19,8 @@ $space_m: 20px;
 $space_l: ((calculateRem($padright) + $tot_gutter) / 2); //REM
 $space_l_wtht_gutter: ($space_l - $tot_gutter); //REM
 
+$fixed_sidebar: 300px;
+
 
 //header
 

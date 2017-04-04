@@ -126,12 +126,68 @@
 
 .pretopbar {
     &.fixed {
-        margin-bottom: $height_topbar;
+        margin-bottom: $height_topbar;        
+
+        &.subtopbaropen {
+            margin-bottom: $height_topbar*2;
+        }
     }
 }
 
 .topbanner {
     margin: $space_m 0;
+}
+
+.basket {
+    margin: $space_m 0;     
+    height: 90px;
+
+    .inner {
+        background-color: $black;    
+        height: 100%;               
+        width: 100%;  
+        color: $white;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        justify-content: space-between;
+
+        .info, .button {
+            //display: flex;
+            //align-items: center;
+        }
+
+        .info {
+            float: left;
+
+            .title {
+                font-weight: $fmedium;
+            }
+
+            .items {
+                font-size: .8rem;
+            }
+
+            @include hopacity();
+        }
+
+        .button {
+            float: right;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: $fmedium;
+            padding: 5px;            
+
+            @include hopacity();
+        }
+
+        a {
+            color: $white;
+        }
+
+
+    }
+
 }
 
 .subtopbar {
@@ -158,6 +214,14 @@
         padding-bottom: 5px;
 
         //@include transition('easeOutExpo', 'all', .5s);
+    }
+
+    &.fixed {       
+        position: fixed;
+        top: $height_topbar;
+        z-index: 10;
+        width: 100%;                        
+        background-color: rgba($grey2,0.8);
     }
 }
 

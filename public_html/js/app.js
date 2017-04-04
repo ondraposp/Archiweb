@@ -21,9 +21,9 @@ $(document).ready(function () {
             var o = $(window).scrollTop();
 
             if (o > p) {
-                $(".topbar, .pretopbar").addClass('fixed');
+                $(".topbar, .pretopbar, .subtopbar").addClass('fixed');
             } else {
-                $(".topbar, .pretopbar").removeClass('fixed');
+                $(".topbar, .pretopbar, .subtopbar").removeClass('fixed');
             }
         });
     }
@@ -181,6 +181,7 @@ $(document).ready(function () {
             $('.' + bar.data('bar')).addClass('open');
 
             bar.addClass('active');
+            $('.pretopbar').addClass('subtopbaropen');
         }
     }
 
@@ -207,7 +208,7 @@ $(document).ready(function () {
             dots: true,
             control: true,
             autoplay: true,
-            movtime: 1000
+            movtime: 300
         }, options);
 
         var mySlider = this;
@@ -322,29 +323,59 @@ $(document).ready(function () {
             mySlider.find(".control").hide();
         }
 
+        var lastSlide;
+        var delay = settings.movtime;
+        var timer;
+        //var setTimeoutConst;
+
         mySlider.find('.carousel-tab').each(function () {
             var $a = $(this).find('li');
-            $a.on('mouseenter', function (e) { //ondrap
 
-                if (!$('.carousel.moving').length) {
+            console.log('hola');
+
+            $a.on('mouseenter', function (e) { //ondrap
+                lastSlide = $a;
+
+                     var $this = $(this);
+
+clearTimeout(timer);
+
+                timer = setTimeout(function () {
+                
+                
+               
+                
+                
+                
+
+              //  if (!$('.carousel.moving').length) {
 
                     if (settings.dots == true) {
+                        
+                        
+                          
 
                         var actualSlide = mySlider.find('.carousel .slide.active');
-                        var $this = $(this);
+                  
 
                         if ($this.index() != actualSlide.index()) {
+                            
+                            
 
                             clearInterval(slideTimer);
-                            slideTimer = window.setInterval(slide, settings.time);
+                            //slideTimer = window.setInterval(slide, settings.time);
+                            slideTimer = window.setInterval(slide, 99999999);
 
 
                             var href = $this.attr('data-slide-to');
 
                             var $target = mySlider.find(".carousel").find('[data-slide="' + href + '"]');
-
+console.log('hola2');
                             if ($target.length) {
+                                
                                 e.preventDefault();
+
+
 
                                 if ($this.index() > actualSlide.index()) {
                                     $this.siblings('li').removeClass('active');
@@ -384,8 +415,22 @@ $(document).ready(function () {
                             }
                         }
                     }
-                }
+              //  }
+                  }, delay);
 
+
+
+
+
+
+
+            });
+
+
+            $('.mainslider').on('mouseleave', function (e) {
+                clearInterval(slideTimer);
+                //slideTimer = window.setInterval(slide, settings.time);
+                slideTimer = window.setInterval(slide, settings.time);
             });
         });
 

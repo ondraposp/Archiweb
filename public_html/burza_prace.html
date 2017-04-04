@@ -5,7 +5,7 @@
         <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
         <!--[if gt IE 8]><!--> <html class="no-js" lang="cs"> <!--<![endif]-->
             <head>
-                <title>Burza práce | Archiweb</title>
+                <title>Archiweb</title>
                 <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />                
                 <meta name="application-name" content="Archiweb" />
@@ -48,7 +48,7 @@
 
                 <!-- facebook opengraph -->
                 <meta property="og:image" content="http://archiweb.cz/" /> <!-- doplnit, min 200x200, ale cim vetsi, tim lepsi-->
-                <meta property="og:title" content="Burza práce | Archiweb" />
+                <meta property="og:title" content="Archiweb" />
                 <meta property="og:description" content="Internetový portál do světa moderní architektury. Každý den přináší informace o všem důležitém, co se v oblasti domácí a světové architektury odehrává" />
                 <meta property="og:url" content="http://archiweb.cz/" />
                 <!-- end facebook opengraph -->
@@ -181,7 +181,7 @@
                                             <div class="topbarleft float-left">
                                                 <div class="mainlogo noprint">
                                                     <a href="">
-                                                        <img src="images/archiweb-logo_bila.png" alt="Logo Archiweb" width="160" />
+                                                        <img src="images/archiweb-logo_bila-01.svg" alt="Logo Archiweb" width="160" />
                                                     </a>
                                                 </div>                                                
                                                 <div class="mainlogo printonly">
@@ -255,7 +255,7 @@
                                             <div class="w40p col">                                                
                                                 <input type="text" title="hledej" name="" placeholder="hledej"/>
                                             </div>
-                                            <div class="w40p col">                                                
+                                            <div class="w20p col">                                                
                                                 <select title="oblast">
                                                     <option>celý web</option>
                                                     <option>zprávy / salon</option>
@@ -269,6 +269,9 @@
                                             <div class="w20p col">
                                                 <input type="submit" class="button" value="Hledej">
                                             </div>
+                                            <div class="w20p col pt20">
+                                                <div class="large-12 columns"><a href="" >Rozšířené vyhledávání</a></div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -277,27 +280,23 @@
                                 <div class="row">
                                     <form>                                        
                                         <div class="large-12 columns">
-                                            <div class="w40p col">                                                
+                                            <div class="w25p col">                                                
                                                 <input type="text" title="uživatel" placeholder="uživatel" name=""/>
                                             </div>
-                                            <div class="w40p col">                                                
+                                            <div class="w25p col">                                                
                                                 <input type="password" title="heslo" placeholder="heslo" name=""/>
+                                            </div>
+                                            <div class="w10p col chb">
+                                                <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
                                             </div>
                                             <div class="w20p col">
                                                 <input type="submit" class="button" value="Přihlásit">
                                             </div>
-                                        </div>
-                                        <div class="large-12 columns">
-                                            <div class="w20p col">
-                                                <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
-                                            </div>
-                                            <div class="w20p col">
+                                            <div class="w20p col pt8 fs085">
                                                 <div class="large-12 columns"><a href="" >Zapomněli jste heslo?</a></div>
-                                            </div>
-                                            <div class="w20p col">
                                                 <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
                                             </div>
-                                        </div>                                                                        
+                                        </div>                                                                                                       
                                     </form>
                                 </div>
                             </div>
@@ -960,7 +959,7 @@
                                     <h2 class="seo-only">Patička</h2>
                                     <div class="row">
                                         <div class="large-3 medium-4 columns">
-                                            <img class="logo" alt="Logo Archiweb malé" src="images/archiweb-logo_bila.png" width="120"/>                                        
+                                            <img class="logo" alt="Logo Archiweb malé" src="images/archiweb-logo_bila-01.svg" width="120"/>                                        
                                             <p>internetové centrum architektury</p>
                                         </div>
                                         <div class="large-5 medium-4 columns">
@@ -1015,10 +1014,10 @@
                                             <div class="social bottom">
                                                 <div class="social_inner">
                                                     <ul>
-                                                        <!--<a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>-->
-                                                        <!--<a href=""><li><i class="fa fa-twitter fa-2x"></i></li></a>-->
-                                                        <!--<a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>-->
-                                                        <li><a href="http://facebook.com"><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-heart fa-2x"></i></a></li>-->
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-twitter fa-2x"></i></a></li>-->
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-pinterest-p fa-2x"></i></a></li>-->
+                                                        <li><a href="http://facebook.com" target="_blank"><div><i class="fa fa-facebook fa-2x"></i></div></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1028,7 +1027,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="large-12 copyright">
+                                        <div class="large-12 columns copyright">
                                             &copy; Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Soukromí</a>. <a href="">Podmínky užití</a>.
                                         </div>
                                     </div>

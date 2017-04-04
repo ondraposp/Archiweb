@@ -13,7 +13,7 @@
             padding-bottom: $space_s;
             font-weight: $fmedium;    
             //margin-right: $padright;
-            margin-right: $space_l_wtht_gutter;
+            margin-right: $space_l;
             overflow: hidden;
 
             .inner {
@@ -57,8 +57,9 @@
                 color: $white;
 
                 .inner {
-                    background-color: $basecolor;
-                    color: $white;
+                    background-color: $white;
+                    color: $basecolor;
+                    font-weight: $fubold;
                 }
 
                 .discuss {
@@ -90,7 +91,7 @@
 
 .midbanner {    
     //margin-right: $padright;
-    margin-right: $space_l_wtht_gutter;
+    margin-right: $space_l;
     height: 240px;
     background-repeat: no-repeat;
     background-size: contain;

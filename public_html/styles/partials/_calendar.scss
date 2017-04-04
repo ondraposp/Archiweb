@@ -19,8 +19,8 @@
     margin-bottom: 0;
 
     .monthtitle {
-        background-color: $grey3_7;
-        color: #FFF;        
+        background-color: $white;
+        color: $black;        
         text-transform: uppercase;
         text-align: center;
         font-size: 1.1rem;
@@ -62,7 +62,7 @@
     }
 
     .calbody {
-        padding: 10px 20px;        
+        padding: 0 20px 10px;        
         background-color: #FFF;
 
         @include floatfix;
@@ -189,8 +189,8 @@
 
 .add_event {
     padding: 11px;
-    font-size: 1rem;
-    font-weight: $fbold;
+    font-size: 0.9rem;
+    //font-weight: $fbold;
     margin-bottom: $space_m;   
     text-transform: uppercase;
 }
