@@ -39,10 +39,27 @@ $(document).ready(function () {
 
 
     var footTop, windowBottom, st, h;
-    $('#tpl_homepage .footer').css('margin-top', 140); //hardcoded
+    var partnersHeight;
+
+
+    $(".bxslider img").load(function () {
+        partnersHeight = $('.partners').height();
+    });
+
+
+
+
+
+
+    //console.log(partnersHeight);
+    $('#tpl_homepage .footer').css('margin-top', partnersHeight); //hardcoded
 
     if ($('#tpl_homepage').length) {
         $(window).scroll(function () {
+
+            partnersHeight = $('.partners').height();
+            $('#tpl_homepage .footer').css('margin-top', partnersHeight); //hardcoded
+
             footTop = $('#tpl_homepage .footer').offset().top;
 
             st = $(this).scrollTop();
@@ -179,6 +196,7 @@ $(document).ready(function () {
 
             $('.subtopbar').removeClass('open');
             $('.' + bar.data('bar')).addClass('open');
+            $('.' + bar.data('bar')).css('opacity', 0.99); // fix: band under transparent subtopbar (z-index problem..)                
 
             bar.addClass('active');
             $('.pretopbar').addClass('subtopbaropen');
@@ -331,36 +349,36 @@ $(document).ready(function () {
         mySlider.find('.carousel-tab').each(function () {
             var $a = $(this).find('li');
 
-            console.log('hola');
+            //console.log('hola');
 
             $a.on('mouseenter', function (e) { //ondrap
                 lastSlide = $a;
 
-                     var $this = $(this);
+                var $this = $(this);
 
-clearTimeout(timer);
+                clearTimeout(timer);
 
                 timer = setTimeout(function () {
-                
-                
-               
-                
-                
-                
 
-              //  if (!$('.carousel.moving').length) {
+
+
+
+
+
+
+                    //  if (!$('.carousel.moving').length) {
 
                     if (settings.dots == true) {
-                        
-                        
-                          
+
+
+
 
                         var actualSlide = mySlider.find('.carousel .slide.active');
-                  
+
 
                         if ($this.index() != actualSlide.index()) {
-                            
-                            
+
+
 
                             clearInterval(slideTimer);
                             //slideTimer = window.setInterval(slide, settings.time);
@@ -370,9 +388,9 @@ clearTimeout(timer);
                             var href = $this.attr('data-slide-to');
 
                             var $target = mySlider.find(".carousel").find('[data-slide="' + href + '"]');
-console.log('hola2');
+                            console.log('hola2');
                             if ($target.length) {
-                                
+
                                 e.preventDefault();
 
 
@@ -415,8 +433,8 @@ console.log('hola2');
                             }
                         }
                     }
-              //  }
-                  }, delay);
+                    //  }
+                }, delay);
 
 
 

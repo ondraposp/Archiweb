@@ -68,7 +68,8 @@
         @include floatfix;
 
         .day {           
-            width: calc(100% / 7);
+            //width: 37.14px;
+            width: calc((100% / 7) - 0.01px); /*IE hack*/
             height: 31px;
             float: left;
             color: $grey2;
@@ -197,6 +198,6 @@
 
 @media screen and (min-width: 40em) and (max-width: 64rem) {
     .calendar {
-        height: 250px;
+        //height: 250px;
     }
 }

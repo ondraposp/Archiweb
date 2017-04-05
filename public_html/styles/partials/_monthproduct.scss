@@ -22,7 +22,9 @@
     .description {
         position: absolute;
         bottom: 0;
-        color: white;
+        left: 15px;
+        right: 15px;
+        color: $white;
         font-weight: bold;
         padding-bottom: 15px;
         z-index: 9;
@@ -36,7 +38,7 @@
         left: 0;
 
         //@include gradient();
-        @include gradient(0, rgba(0,0,0,0.7), rgba(0,0,0,0.4));               
+        @include gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));               
 
         &.top {            
             top: 0;

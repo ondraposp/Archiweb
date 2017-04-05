@@ -63,14 +63,10 @@
                         display: table-cell;
                         vertical-align: middle;
                         padding: 0 10px;
+                        line-height: 34px;
 
-                        .offers {
-                            background-color: $basecolor;
-                            padding: 10px 7px;                            
-                            margin-left: 5px;
-                            border-radius: 50%;
-                            font-size: 0.75rem;
-                            font-weight: bold;
+                        .quant {
+                            background-color: $basecolor;                          
                         }
                     }
 
@@ -84,7 +80,7 @@
                 &:hover, &:active, &:focus, &.active {
                     background: $basecolor;    
 
-                    .offers {
+                    .quant {
                         background-color: #FFF;
                         color: $basecolor;
                     }
@@ -124,6 +120,19 @@
     }
 }
 
+.quant {
+    padding: 10px 7px;                            
+    margin-left: 7px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    height: 34px;
+    width: 34px;
+    display: inline-block;
+    text-align: center;
+    line-height: 14px;
+}
+
 .pretopbar {
     &.fixed {
         margin-bottom: $height_topbar;        
@@ -151,6 +160,7 @@
         align-items: center;
         padding: 15px;
         justify-content: space-between;
+        margin: 20px 0;
 
         .info, .button {
             //display: flex;
@@ -190,15 +200,85 @@
 
 }
 
+.loginbar {
+    .offline {
+        display: block;
+    }
+
+    .online {
+        display: none;
+    }
+
+    &.logged {
+        .offline {
+            display: none;
+        }
+
+        .online {
+            display: block;
+        }
+    }
+
+    .profile, .mysites {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .profile { 
+        float: left;
+
+        .avatar {
+            margin-right: $tot_gutter;
+        }
+
+        .text {
+            color: $black;
+
+            .name {
+                font-weight: $fmedium;
+                text-transform: uppercase;
+            }
+
+            .editprofile {
+                color: $black;
+            }
+        }
+    }
+
+    .mysites {
+        float: right;
+
+        .quant {
+            background-color: $basecolor;
+            color: $white;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-left: 20px;
+
+                div {
+                    font-weight: $fmedium;
+                    text-transform: uppercase;
+                    color: $black;
+                }
+
+                @include hopacity;
+            }
+        }
+    }
+}
+
 .subtopbar {
     background-color: $grey2;
-    //height: 80px;
     padding-top: 0;
     padding-bottom: 0;
-    //display: none;
-
     overflow: hidden;
-
     height: 0;
 
     @include transition('easeOutExpo', 'all', .5s);
@@ -213,6 +293,11 @@
         padding-top: 5px;
         padding-bottom: 5px;
 
+
+        visibility: visible;
+
+
+
         //@include transition('easeOutExpo', 'all', .5s);
     }
 
@@ -222,6 +307,8 @@
         z-index: 10;
         width: 100%;                        
         background-color: rgba($grey2,0.8);
+        //background-color: $grey2;
+        //opacity: 0.8;
     }
 }
 

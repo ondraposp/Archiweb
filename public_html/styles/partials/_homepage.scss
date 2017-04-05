@@ -13,7 +13,7 @@
             padding-bottom: $space_s;
             font-weight: $fmedium;    
             //margin-right: $padright;
-            margin-right: $space_l;
+            margin-right: $space_l_wtht_gutter;
             overflow: hidden;
 
             .inner {
@@ -91,11 +91,15 @@
 
 .midbanner {    
     //margin-right: $padright;
-    margin-right: $space_l;
+    margin-right: $space_l_wtht_gutter;
     height: 240px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left top;
+    
+    img {
+        visibility: hidden;
+    }
 }
 
 /*PARTNERS*/
@@ -188,4 +192,17 @@
             position: relative;
         }
     }
+
+    @media (max-width: 40em) {
+        .midbanner {
+            img {
+                visibility: visible;
+            }
+            height: inherit;
+        }
+    }
+
+
+
+
 }
