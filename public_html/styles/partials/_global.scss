@@ -193,12 +193,6 @@ hr {
     @include transition();
 }
 
-.fixed-width {
-    //position: absolute;
-    //width: 728px;
-}
-
-
 .fixed_sidebar_container {
     position: relative;
 
@@ -208,10 +202,6 @@ hr {
         padding-right: $gutter;
         margin: auto;
     }
-
-    .fixed_sidebar {
-        //  padding-right: $fixed_sidebar+$gutter;
-    }    
 }
 
 .basket {
@@ -222,6 +212,9 @@ hr {
     }
 }
 
+.bgw {
+    background-color: $white;
+}
 
 @media (min-width: 64em) {
     .fixed_sidebar_container {
@@ -340,8 +333,6 @@ hr {
             content: ')';
         }
     }
-
-
 
     .mproduct {
         height: initial !important;

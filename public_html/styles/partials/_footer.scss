@@ -58,20 +58,12 @@
     }
 
     .social {
-        ul {
-            //a {
-                li{
-                    float: left;
-                }
-            //}
+        ul {            
+            li{
+                float: left;
+            }
         }
     }
-
-    /*.become {
-        float: right;
-        //text-decoration: underline;
-        border-bottom: 1px solid $white;
-    }*/
 }
 
 @media screen and (max-width: 64rem) {

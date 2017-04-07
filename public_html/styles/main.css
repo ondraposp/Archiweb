@@ -211,6 +211,9 @@ hr {
   .basket.contain_products {
     display: block; }
 
+.bgw {
+  background-color: #FFF; }
+
 @media (min-width: 64em) {
   .fixed_sidebar_container {
     position: relative; }
@@ -320,14 +323,7 @@ hr {
     Author     : ondra
 */
 .topbar {
-  height: 70px;
-  /* .langmenu {                
-       ul {
-           li {
-               text-transform: lowercase;
-           }
-       }
-   }*/ }
+  height: 70px; }
   .topbar > .row .topbarleft {
     display: table;
     height: 100%; }
@@ -538,10 +534,6 @@ h1 {
   font-size: 2.6rem;
   line-height: 3rem; }
 
-@media screen and (max-width: 75rem) {
-  /* .pretopbar {
-       display: none;
-   }*/ }
 @media screen and (max-width: 75rem) and (min-width: 64em) {
   .topbar .mainmenu ul li, .topbar .langmenu ul li, .topbar .icons ul li {
     font-size: 0.9rem; }
@@ -583,73 +575,7 @@ h1 {
   margin-bottom: 20px;
   position: relative;
   padding: 0;
-  z-index: 1;
-  /*
-      .control {
-          position: absolute;
-          top: 0;
-          margin: 0;
-          width: 8%;
-          height: 200px;
-          cursor: pointer;
-          font-size: 0px;
-          opacity: 0.6;
-          color: #fff;
-          text-decoration: none;
-          z-index: 10;
-          background: transparent;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          img {
-              height: 50px;
-              display: block;
-          }
-  
-          &.control_prev {
-              left: 0;
-          }
-  
-          &.control_next {
-              right: 0;
-          }
-      }*/
-    /*.orbit-bullets {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin-top: 0;
-        margin-right: calc(0.893rem + 30px);
-        margin-bottom: $slider_padding;
-        max-width: 100%-$caption_width;
-
-        button {
-            border-radius: 0;
-            font-size: 1rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            margin-left: 5px;
-            opacity: 0.6;
-            margin-bottom: 0;
-            background-color: $black;
-            cursor: pointer;
-
-
-            span {
-                color: #fff;
-            }    
-        }
-
-        button.is-active, button:hover {
-            background-color: #000;
-            opacity: 1;
-        }
-    }*/
-  /*.orbit-container {
-      //margin-right: $marright;
-      margin-right: $space_l_wtht_gutter;
-  }*/ }
+  z-index: 1; }
   .mainslider .carousel {
     position: relative;
     margin: 0;
@@ -673,11 +599,7 @@ h1 {
       max-width: 40%;
       padding: 30px 0 30px 30px;
       height: 100%;
-      z-index: 9;
-      /*.author {
-          padding-bottom: 3px;
-          border-bottom: 2px solid $violet;                   
-      }*/ }
+      z-index: 9; }
       .mainslider .slide .caption .category {
         text-transform: uppercase; }
         .mainslider .slide .caption .category span {
@@ -732,14 +654,6 @@ h1 {
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55) 50%, rgba(255, 255, 255, 0));
       /* Standard syntax; must be last */ }
   .mainslider .carousel-tab {
-    /*  position: relative;
-      z-index: 10;
-      list-style-type: none;
-      bottom: 30px;
-      left: 49%;
-      transform: translate(-50%);
-      width: 130px;
-      text-align: center;*/
     position: absolute;
     bottom: 0;
     right: 0;
@@ -747,15 +661,9 @@ h1 {
     margin-right: calc(0.893rem + 30px);
     margin-bottom: 30px;
     max-width: 60%;
-    z-index: 9; }
+    z-index: 9;
+    cursor: pointer; }
     .mainslider .carousel-tab li {
-      /*  width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        background: #fff;
-        float: left;
-        margin-right: 10px;
-        cursor: pointer;*/
       border-radius: 0;
       font-size: 1rem;
       width: 1.5rem;
@@ -888,21 +796,7 @@ h1 {
     font-size: 1.1rem;
     line-height: 2.8rem;
     margin-bottom: 0;
-    position: relative;
-      /*  .month_prev {
-            float: left;
-            padding-left: 20px;           
-        }
-
-        .month_next {
-            float: right;
-            padding-right: 20px;            
-        }
-
-        .month_prev, .month_next {
-            line-height: $mtitle_lheight;
-            color: #FFF;
-        }*/ }
+    position: relative; }
     .calendar .monthtitle img {
       position: absolute;
       top: calc((2.8rem - 20px) / 2);
@@ -1037,13 +931,7 @@ h1 {
   padding-bottom: 0.714rem;
   font-weight: 500;
   margin-right: 0.893rem;
-  overflow: hidden;
-  /*
-              &.today {
-                  .inner {
-                      background-color: $white;
-                  }
-              }*/ }
+  overflow: hidden; }
   .homepage .news .new .inner {
     background-color: #FFF;
     line-height: calc(((240px + 0.714rem) / 6) - 0.714rem);
@@ -1062,7 +950,6 @@ h1 {
     .homepage .news .new .discuss i {
       padding-left: 5px; }
     .homepage .news .new .discuss.c0 {
-      /*color: $grey3;*/
       visibility: hidden; }
   .homepage .news .new:hover, .homepage .news .new:active, .homepage .news .new:focus {
     opacity: 0.85;
@@ -1218,12 +1105,7 @@ h1 {
 .footer {
   background-color: #000;
   padding-top: 35px;
-  font-size: .9rem;
-  /*.become {
-      float: right;
-      //text-decoration: underline;
-      border-bottom: 1px solid $white;
-  }*/ }
+  font-size: .9rem; }
   .footer .logo {
     max-width: 120px;
     margin-bottom: 5px; }
@@ -1942,13 +1824,7 @@ input[type='checkbox']:checked + label > span {
   padding-bottom: 0.714rem;
   font-weight: 500;
   margin-right: 0.893rem;
-  overflow: hidden;
-  /*
-              &.today {
-                  .inner {
-                      background-color: $white;
-                  }
-              }*/ }
+  overflow: hidden; }
   .homepage .news .new .inner {
     background-color: #FFF;
     line-height: calc(((240px + 0.714rem) / 6) - 0.714rem);
@@ -1967,7 +1843,6 @@ input[type='checkbox']:checked + label > span {
     .homepage .news .new .discuss i {
       padding-left: 5px; }
     .homepage .news .new .discuss.c0 {
-      /*color: $grey3;*/
       visibility: hidden; }
   .homepage .news .new:hover, .homepage .news .new:active, .homepage .news .new:focus {
     opacity: 0.85;

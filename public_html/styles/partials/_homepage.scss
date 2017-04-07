@@ -8,16 +8,13 @@
     .news {
         .new {   
             color: #000;
-            //color: $white;
             height: calc((240px + #{$space_s}) / 6);     
             padding-bottom: $space_s;
             font-weight: $fmedium;    
-            //margin-right: $padright;
             margin-right: $space_l_wtht_gutter;
             overflow: hidden;
 
             .inner {
-                //background-color: $grey2;
                 background-color: $white;
                 line-height: calc(((240px + #{$space_s}) / 6) - #{$space_s});
                 padding-left: 15px;
@@ -40,18 +37,11 @@
                 }
 
                 &.c0 {
-                    /*color: $grey3;*/
                     visibility: hidden;
                 }
             }
 
             @include hopacity();
-            /*
-                        &.today {
-                            .inner {
-                                background-color: $white;
-                            }
-                        }*/
 
             &.pr {
                 color: $white;
@@ -71,7 +61,6 @@
 }
 
 .midbanner, .facebook, .bannerr_big, .facebook_plugin {
-    //margin-bottom: $marbottom;
     margin-bottom: $space_m;
 }
 
@@ -90,13 +79,12 @@
 }
 
 .midbanner {    
-    //margin-right: $padright;
     margin-right: $space_l_wtht_gutter;
     height: 240px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left top;
-    
+
     img {
         visibility: hidden;
     }
@@ -162,10 +150,6 @@
                         display: table-cell;
                     }            
                 }
-
-
-
-
             }
         }                
     }
@@ -201,8 +185,4 @@
             height: inherit;
         }
     }
-
-
-
-
 }

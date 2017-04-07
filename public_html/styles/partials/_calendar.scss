@@ -28,28 +28,10 @@
         margin-bottom: 0;
         position: relative;        
 
-        /*  .month_prev {
-              float: left;
-              padding-left: 20px;           
-          }
-  
-          .month_next {
-              float: right;
-              padding-right: 20px;            
-          }
-  
-          .month_prev, .month_next {
-              line-height: $mtitle_lheight;
-              color: #FFF;
-          }*/
-
         img {
             position: absolute;
             top: calc((#{$mtitle_lheight} - #{$arr_height}) / 2);
             height: $arr_height;         
-
-            //            top: calc(#{$mtitle_lheight} )
-
 
             &.l {                
                 left: $arr_margin;
@@ -67,8 +49,7 @@
 
         @include floatfix;
 
-        .day {           
-            //width: 37.14px;
+        .day {                       
             width: calc((100% / 7) - 0.01px); /*IE hack*/
             height: 31px;
             float: left;
@@ -115,13 +96,11 @@
             }
 
             &.event {
-                color: #FFF;
-                //background-color: $basecolor;
+                color: #FFF;                
                 background-color: $grey3_7;                
             }
 
-            &.today {
-                //background-color: $grey3;
+            &.today {                
                 background-color: $basecolor;
                 color: $white;
             }
@@ -190,14 +169,7 @@
 
 .add_event {
     padding: 11px;
-    font-size: 0.9rem;
-    //font-weight: $fbold;
+    font-size: 0.9rem;    
     margin-bottom: $space_m;   
     text-transform: uppercase;
-}
-
-@media screen and (min-width: 40em) and (max-width: 64rem) {
-    .calendar {
-        //height: 250px;
-    }
 }
