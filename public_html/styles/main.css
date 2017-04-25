@@ -375,9 +375,14 @@ hr {
             background-color: #0279ce; }
         .topbar .mainmenu ul li a:hover, .topbar .mainmenu ul li a:active, .topbar .mainmenu ul li a:focus, .topbar .mainmenu ul li div:hover, .topbar .mainmenu ul li div:active, .topbar .mainmenu ul li div:focus, .topbar .langmenu ul li a:hover, .topbar .langmenu ul li a:active, .topbar .langmenu ul li a:focus, .topbar .langmenu ul li div:hover, .topbar .langmenu ul li div:active, .topbar .langmenu ul li div:focus, .topbar .icons ul li a:hover, .topbar .icons ul li a:active, .topbar .icons ul li a:focus, .topbar .icons ul li div:hover, .topbar .icons ul li div:active, .topbar .icons ul li div:focus {
           opacity: 1; }
-      .topbar .mainmenu ul li:hover, .topbar .mainmenu ul li:active, .topbar .mainmenu ul li:focus, .topbar .mainmenu ul li.active, .topbar .langmenu ul li:hover, .topbar .langmenu ul li:active, .topbar .langmenu ul li:focus, .topbar .langmenu ul li.active, .topbar .icons ul li:hover, .topbar .icons ul li:active, .topbar .icons ul li:focus, .topbar .icons ul li.active {
+      .topbar .mainmenu ul li:hover, .topbar .langmenu ul li:hover, .topbar .icons ul li:hover {
+        background: #828282; }
+        .topbar .mainmenu ul li:hover .quant, .topbar .langmenu ul li:hover .quant, .topbar .icons ul li:hover .quant {
+          background-color: #FFF;
+          color: #828282; }
+      .topbar .mainmenu ul li:active, .topbar .mainmenu ul li:focus, .topbar .mainmenu ul li.active, .topbar .langmenu ul li:active, .topbar .langmenu ul li:focus, .topbar .langmenu ul li.active, .topbar .icons ul li:active, .topbar .icons ul li:focus, .topbar .icons ul li.active {
         background: #0279ce; }
-        .topbar .mainmenu ul li:hover .quant, .topbar .mainmenu ul li:active .quant, .topbar .mainmenu ul li:focus .quant, .topbar .mainmenu ul li.active .quant, .topbar .langmenu ul li:hover .quant, .topbar .langmenu ul li:active .quant, .topbar .langmenu ul li:focus .quant, .topbar .langmenu ul li.active .quant, .topbar .icons ul li:hover .quant, .topbar .icons ul li:active .quant, .topbar .icons ul li:focus .quant, .topbar .icons ul li.active .quant {
+        .topbar .mainmenu ul li:active .quant, .topbar .mainmenu ul li:focus .quant, .topbar .mainmenu ul li.active .quant, .topbar .langmenu ul li:active .quant, .topbar .langmenu ul li:focus .quant, .topbar .langmenu ul li.active .quant, .topbar .icons ul li:active .quant, .topbar .icons ul li:focus .quant, .topbar .icons ul li.active .quant {
           background-color: #FFF;
           color: #0279ce; }
   .topbar .langmenu, .topbar .icons {

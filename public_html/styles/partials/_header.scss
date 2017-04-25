@@ -72,7 +72,16 @@
 
                 @include transition();
 
-                &:hover, &:active, &:focus, &.active {
+                &:hover {
+                    background: $grey3_5;    
+
+                    .quant {
+                        background-color: #FFF;
+                        color: $grey3_5;
+                    }
+                }
+
+                &:active, &:focus, &.active {
                     background: $basecolor;    
 
                     .quant {
