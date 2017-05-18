@@ -109,6 +109,7 @@ input[type='checkbox']:checked + label > span{
 .button {
     border-radius: 0;
     background-color: $basecolor;
+    font-weight: $fmedium;
 
     &:hover, &:focus, &:active {
         background-color: $basecolor;

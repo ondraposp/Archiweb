@@ -116,7 +116,8 @@ hr {
     margin-right: $space_l_wtht_gutter;
     height: $lm_height;
     line-height: $lm_height;
-    font-weight: bold;   
+    font-weight: $fmedium;   
+    font-size: 0.9rem;
 }
 
 .fix_top_height {

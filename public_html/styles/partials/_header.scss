@@ -72,8 +72,8 @@
 
                 @include transition();
 
-                &:hover {
-                    background: $grey3_5;    
+                &:hover {                    
+                    background: $grey4;    
 
                     .quant {
                         background-color: #FFF;

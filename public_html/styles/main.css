@@ -23,7 +23,7 @@
 @import url(foundation/foundation.css);
 @import url(bxslider/jquery.bxslider.css);
 @import "http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css";
-*, html, p, h1, h2, h3, h4, h5, h6 {
+*, html, p, h1, h2, h3, h4, h5, h6, button, input, optgroup, select, textarea {
   font-family: "effra",sans-serif; }
 
 /* 
@@ -121,7 +121,8 @@ hr {
   margin-right: 0.893rem;
   height: 30px;
   line-height: 30px;
-  font-weight: bold; }
+  font-weight: 500;
+  font-size: 0.9rem; }
 
 .fix_top_height {
   height: 50px;
@@ -376,7 +377,7 @@ hr {
         .topbar .mainmenu ul li a:hover, .topbar .mainmenu ul li a:active, .topbar .mainmenu ul li a:focus, .topbar .mainmenu ul li div:hover, .topbar .mainmenu ul li div:active, .topbar .mainmenu ul li div:focus, .topbar .langmenu ul li a:hover, .topbar .langmenu ul li a:active, .topbar .langmenu ul li a:focus, .topbar .langmenu ul li div:hover, .topbar .langmenu ul li div:active, .topbar .langmenu ul li div:focus, .topbar .icons ul li a:hover, .topbar .icons ul li a:active, .topbar .icons ul li a:focus, .topbar .icons ul li div:hover, .topbar .icons ul li div:active, .topbar .icons ul li div:focus {
           opacity: 1; }
       .topbar .mainmenu ul li:hover, .topbar .langmenu ul li:hover, .topbar .icons ul li:hover {
-        background: #828282; }
+        background: #4b4b4b; }
         .topbar .mainmenu ul li:hover .quant, .topbar .langmenu ul li:hover .quant, .topbar .icons ul li:hover .quant {
           background-color: #FFF;
           color: #828282; }
@@ -1560,7 +1561,8 @@ input[type='checkbox']:checked + label > span {
 /*BUTTONS*/
 .button {
   border-radius: 0;
-  background-color: #0279ce; }
+  background-color: #0279ce;
+  font-weight: 500; }
   .button:hover, .button:focus, .button:active {
     background-color: #0279ce; }
     .button:hover:hover, .button:hover:active, .button:hover:focus, .button:focus:hover, .button:focus:active, .button:focus:focus, .button:active:hover, .button:active:active, .button:active:focus {
