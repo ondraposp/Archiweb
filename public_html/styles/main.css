@@ -985,11 +985,12 @@ h1 {
 .midbanner {
   margin-right: 0.893rem;
   height: 240px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left top; }
-  .midbanner img {
-    visibility: hidden; }
+  /* background-repeat: no-repeat;
+   background-size: contain;
+   background-position: left top;*/
+  /*img {
+      visibility: hidden;
+  }*/ }
 
 /*PARTNERS*/
 .partners {
@@ -1879,11 +1880,12 @@ input[type='checkbox']:checked + label > span {
 .midbanner {
   margin-right: 0.893rem;
   height: 240px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left top; }
-  .midbanner img {
-    visibility: hidden; }
+  /* background-repeat: no-repeat;
+   background-size: contain;
+   background-position: left top;*/
+  /*img {
+      visibility: hidden;
+  }*/ }
 
 /*PARTNERS*/
 .partners {
