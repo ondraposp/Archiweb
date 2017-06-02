@@ -4,7 +4,7 @@
 */
 
 .big_header {
-    height: 450px;
+    height: 370px;
     margin-bottom: 50px;    
     background-repeat: no-repeat;
     background-position: center;
@@ -39,9 +39,23 @@
         height: 100%;
         position: relative;
 
-        h1, .social_inner {
+        h1, h2, .social_inner {
             position: absolute;
+        }
+
+        h1 {            
+            bottom: 70px;
+            text-shadow: 0 0 30px $black;
+        }
+
+        .social_inner {
+            bottom: 0px;
+        }
+
+        h2 {            
             bottom: 35px;
+            margin-bottom: 0px;
+            color: $white;
         }
     }
 

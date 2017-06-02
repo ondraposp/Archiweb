@@ -259,7 +259,7 @@
         .profilename, .logout {
             font-size: .9rem;
         }
-        
+
         .logout {
             opacity: 0.75;
         }
@@ -388,6 +388,7 @@ h1 {
 
 
 @media screen and (max-width: 75rem) {    
+
     @media (min-width: 64em) {
 
         .topbar {
@@ -408,6 +409,10 @@ h1 {
     }    
 
     @media (max-width: 64em) {
+        .auth_box {
+            display: none;
+        }
+
         .pretopbar {
             padding-top: $height_title-bar;
 
