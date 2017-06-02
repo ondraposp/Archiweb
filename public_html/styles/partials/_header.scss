@@ -139,9 +139,10 @@
 
 .topbanner {
     margin: $space_m 0;
+    height: $topbanner_height;
 }
 
-.basket {
+.auth_box {
     margin: $space_m 0;     
     height: 90px;
 
@@ -152,9 +153,19 @@
         color: $white;
         display: flex;
         align-items: center;
-        padding: 15px;
+        padding: 5px;
         justify-content: space-between;
         margin: 20px 0;
+
+        a {
+            &, span {
+                color: $white;
+            }
+
+            &:hover , &:hover span {
+                text-decoration: underline;
+            }
+        }
 
         .info {
             float: left;
@@ -167,22 +178,100 @@
                 font-size: .8rem;
             }
 
-            @include hopacity();
+            //@include hopacity();
         }
+
+        /*   .button {
+               float: right;
+               margin-bottom: 0;
+               text-transform: uppercase;
+               font-weight: $fmedium;
+               padding: 5px;            
+   
+               @include hopacity();
+           }*/
 
         .button {
-            float: right;
-            margin-bottom: 0;
+            padding: 2px 9px;
+            margin-bottom: 3px;
             text-transform: uppercase;
-            font-weight: $fmedium;
-            padding: 5px;            
-
-            @include hopacity();
         }
 
-        a {
+        .myprofile {
+            text-transform: uppercase;
+            font-weight: $fbold;
+        }
+
+        .inputs {
+            margin-top: 7px;
+        }
+
+        input[type="text"] {      
+            height: 20px;  
+            margin-bottom: 0;
+            background-color: $black;
             color: $white;
+            padding: 0;
+            font-size: .8rem;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &:-ms-input-placeholder,
+                &:-moz-placeholder { /* Chrome/Opera/Safari */
+                color: $white;
+            }            
+
+            &:focus {
+                box-shadow: none;
+                transition: none;
+            }
         }
+
+        .username, .password {
+            max-width: 50%;
+            margin-bottom: 3px;
+            float: left;
+            padding-right: 10px;
+        }
+
+        .username {            
+
+        }
+
+        .leftsec {
+            border-right: 1px solid $white;
+        }
+
+        .rightsec {
+            .info, .button {
+                float: right;  
+                text-align: right;
+            }            
+        }
+
+        .profilename, .info {
+            margin-bottom: 5px;
+        }
+
+        .profilename, .logout {
+            font-size: .9rem;
+        }
+        
+        .logout {
+            opacity: 0.75;
+        }
+
+        .signup, .forgotpass {
+            font-size: .8rem;
+        }
+
+        .forgotpass {
+            float: right;
+        }
+
     }
 }
 

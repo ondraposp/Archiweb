@@ -207,13 +207,27 @@ hr {
     padding-right: 0.357rem;
     margin: auto; }
 
+/*
 .basket {
-  display: none; }
-  .basket.contain_products {
-    display: block; }
+    display: none;
 
+    &.contain_products {
+        display: block;
+    }
+}*/
 .bgw {
   background-color: #FFF; }
+
+.offline {
+  display: block; }
+
+.online {
+  display: none; }
+
+.logged .offline {
+  display: none; }
+.logged .online {
+  display: block; }
 
 @media (min-width: 64em) {
   .fixed_sidebar_container {
@@ -417,45 +431,86 @@ hr {
     margin-bottom: 140px; }
 
 .topbanner {
-  margin: 20px 0; }
-
-.basket {
   margin: 20px 0;
   height: 90px; }
-  .basket .inner {
+
+.auth_box {
+  margin: 20px 0;
+  height: 90px; }
+  .auth_box .inner {
     background-color: #000;
     height: 100%;
     width: 100%;
     color: #FFF;
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 5px;
     justify-content: space-between;
-    margin: 20px 0; }
-    .basket .inner .info {
-      float: left; }
-      .basket .inner .info .title {
-        font-weight: 500; }
-      .basket .inner .info .items {
-        font-size: .8rem; }
-      .basket .inner .info:hover, .basket .inner .info:active, .basket .inner .info:focus {
-        opacity: 0.85;
-        filter: alpha(opacity=85);
-        -moz-opacity: 0.85;
-        -khtml-opacity: 0.85; }
-    .basket .inner .button {
-      float: right;
-      margin-bottom: 0;
-      text-transform: uppercase;
-      font-weight: 500;
-      padding: 5px; }
-      .basket .inner .button:hover, .basket .inner .button:active, .basket .inner .button:focus {
-        opacity: 0.85;
-        filter: alpha(opacity=85);
-        -moz-opacity: 0.85;
-        -khtml-opacity: 0.85; }
-    .basket .inner a {
+    margin: 20px 0;
+     /*   .button {
+            float: right;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: $fmedium;
+            padding: 5px;            
+
+            @include hopacity();
+        }*/ }
+    .auth_box .inner a, .auth_box .inner a span {
       color: #FFF; }
+    .auth_box .inner a:hover, .auth_box .inner a:hover span {
+      text-decoration: underline; }
+    .auth_box .inner .info {
+      float: left; }
+      .auth_box .inner .info .title {
+        font-weight: 500; }
+      .auth_box .inner .info .items {
+        font-size: .8rem; }
+    .auth_box .inner .button {
+      padding: 2px 9px;
+      margin-bottom: 3px;
+      text-transform: uppercase; }
+    .auth_box .inner .myprofile {
+      text-transform: uppercase;
+      font-weight: 600; }
+    .auth_box .inner .inputs {
+      margin-top: 7px; }
+    .auth_box .inner input[type="text"] {
+      height: 20px;
+      margin-bottom: 0;
+      background-color: #000;
+      color: #FFF;
+      padding: 0;
+      font-size: .8rem;
+      border-top: none;
+      border-left: none;
+      border-right: none; }
+      .auth_box .inner input[type="text"]::-webkit-input-placeholder, .auth_box .inner input[type="text"]::-moz-placeholder, .auth_box .inner input[type="text"]:-ms-input-placeholder, .auth_box .inner input[type="text"]:-moz-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #FFF; }
+      .auth_box .inner input[type="text"]:focus {
+        box-shadow: none;
+        transition: none; }
+    .auth_box .inner .username, .auth_box .inner .password {
+      max-width: 50%;
+      margin-bottom: 3px;
+      float: left;
+      padding-right: 10px; }
+    .auth_box .inner .leftsec {
+      border-right: 1px solid #FFF; }
+    .auth_box .inner .rightsec .info, .auth_box .inner .rightsec .button {
+      float: right;
+      text-align: right; }
+    .auth_box .inner .profilename, .auth_box .inner .info {
+      margin-bottom: 5px; }
+    .auth_box .inner .profilename, .auth_box .inner .logout {
+      font-size: .9rem; }
+    .auth_box .inner .logout {
+      opacity: 0.75; }
+    .auth_box .inner .signup, .auth_box .inner .forgotpass {
+      font-size: .8rem; }
+    .auth_box .inner .forgotpass {
+      float: right; }
 
 .loginbar .offline {
   display: block; }

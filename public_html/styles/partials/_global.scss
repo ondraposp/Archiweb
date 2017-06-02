@@ -205,16 +205,37 @@ hr {
     }
 }
 
+/*
 .basket {
     display: none;
 
     &.contain_products {
         display: block;
     }
-}
+}*/
 
 .bgw {
     background-color: $white;
+}
+
+// DISPLAY DEPEND LOGIN
+
+.offline {
+    display: block;
+}
+
+.online {
+    display: none;
+}
+
+.logged {
+    .offline {
+        display: none;
+    }
+
+    .online {
+        display: block;
+    }
 }
 
 @media (min-width: 64em) {

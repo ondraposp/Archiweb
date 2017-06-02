@@ -87,7 +87,7 @@
                     }</script>
 
             </head>
-            <body id="tpl_homepage">
+            <body id="tpl_homepage" class="logged">
                 <div class="off-canvas-wrapper">
                     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
                         <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
@@ -170,21 +170,48 @@
                                             <div class="columns large-12 fixed_sidebar">
                                                 <img src="http://placehold.it/728x90/000000/ffffff" alt="top banner" class="banner topbanner"/>
                                             </div>
-                                        </a>
-                                        <div class="fixed-width-right basket contain_products">                                            
-                                            <div class="inner">
-                                                <a href="" class="">
+                                        </a>                                        
+                                        <div class="fixed-width-right auth_box offline">                                            
+                                            <div class="inner row">
+                                                <form>
+                                                    <div class="large-12 columns">
+                                                        <span class="myprofile">Můj profil</span> | <a href=""><span class="signup">Vytvořit nový účet</span></a>
+                                                    </div>
+                                                    <div class="large-12 columns">                                                   
+                                                        <div class="inputs">
+                                                            <div class="username">
+                                                                <input type="text" title="uživatelské jméno" name="" placeholder="uživatelské jméno"/>
+                                                            </div>
+                                                            <div class="password">
+                                                                <input type="text" name="" title="heslo"  placeholder="heslo"/>                                                    
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="large-12 columns">
+                                                        <input type="submit" name="" title="Přihlásit se" class="button submit" value="Přihlásit se" />                                                    
+                                                        <a href=""><span class="forgotpass">Zapomněli jste heslo?</span></a>
+                                                    </div>
+                                                </form>
+                                            </div>                                            
+                                        </div>
+                                        <div class="fixed-width-right auth_box contain_products online" >                                            
+                                            <div class="inner row">
+                                                <div class="large-5 columns leftsec">
+                                                    <div class="myprofile">Můj profil</div>
+                                                    <div class="profilename">Zuzana</div>
+                                                    <div class="logout"><a href="">odhlásit</a></div>                                                
+                                                </div>
+                                                <div class="large-7 columns rightsec">                                                    
                                                     <div class="info">
                                                         <span class="title">NÁKUPNÍ KOŠÍK</span><br />
                                                         <span class="items">8 položek (2 450 Kč)</span>
-                                                    </div>
-                                                </a>
-
-                                                <a href="" class="bgw">
-                                                    <div class="button">Objednat</div>
-                                                </a>
+                                                    </div>                                                    
+                                                    <a href="" class="bgw">
+                                                        <div class="button">Objednat</div>
+                                                    </a>
+                                                </div>                                            
                                             </div>                                            
-                                        </div>
+                                        </div>                                                                                
                                     </div>
                                 </header>
                             </div>
@@ -340,11 +367,6 @@
                                                         </a>
                                                     </li> 
                                                 </ul>
-
-
-
-
-
                                             </div>
                                         </div>                                                                                                                                               
                                     </div>
