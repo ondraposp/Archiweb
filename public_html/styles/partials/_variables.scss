@@ -10,6 +10,7 @@ $gutter: ($tot_gutter / 2);
 $gutter_neg: ((-1) * $gutter);
 $padright: 40px; /*space between body and rightbar*/
 $marbottom: 10px;
+$marbottom_space: 30px;
 $marbottom_rbar: 35px;
 $marright: $padright; // space between body and rightbar
 
@@ -36,6 +37,7 @@ $chb_outline: 1px;
 
 //social 
 $lsquare: 50px; //social icno - size
+$social_margin: 7px;
 
 //lightbox
 $lightbox_padding: 100px;
@@ -59,8 +61,10 @@ $topbanner_height: 90px;
 //subtopbar
 $label_height: 25px;
 
-
 //other
 $comment_height: 40px;
 $type_events_section: 22px;
 $lm_height: 30px;
+$social_links_width_height: 35px;
+$tags_margin: 5px;
+$news_padding_right: 68px;

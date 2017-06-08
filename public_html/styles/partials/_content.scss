@@ -4,7 +4,7 @@
 */
 
 .content {
-    padding-bottom: 40px;
+    //padding-bottom: 25px;
 
     h2, h3, h4 {
         font-weight: bold;    
@@ -41,11 +41,6 @@
         &:before {
             content: none;
         }
-    }
-
-    figcaption {
-        margin-bottom: 1.3rem;
-        font-size: 0.9rem;
     }
 
     table {
@@ -104,5 +99,13 @@
                 }
             }
         }        
+    }
+}
+
+figure {
+    figcaption {
+        margin-bottom: 1.3rem;
+        margin-top: .3rem;
+        font-size: 0.9rem;
     }
 }

@@ -3,6 +3,10 @@
     Author     : ondra
 */
 
+body {
+    color: $black;
+}
+
 h2 {
     font-size: 1.4rem;
     color: #000;
@@ -98,6 +102,10 @@ hr {
 
 .pretopbar {
     background-color: $grey3_7;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 /*LOAD MORE*/
@@ -238,6 +246,10 @@ hr {
     }
 }
 
+.reklamnisdeleni {
+    margin-bottom: $marbottom_space;
+}
+
 @media (min-width: 64em) {
     .fixed_sidebar_container {
         position: relative;
@@ -372,7 +384,7 @@ hr {
 
     .related {
         .new {
-            height: initial !important;
+            //height: initial !important;
         }
     }
 

@@ -5,10 +5,7 @@
 
 .comments {    
     overflow: hidden;
-
-    .chead, .cbody, .call {
-        margin-right: $marright;
-    }
+    margin-bottom: $marbottom_space;
 
     .chead {
         .num {
@@ -34,7 +31,7 @@
     }
 
     .cbody {
-        padding: 20px;
+        padding: 0px 20px;
         background-color: #FFF;
         color: #000;
 
@@ -57,7 +54,7 @@
         }
 
         .cheader, .ccomment {
-            height: $comment_height;
+            min-height: $comment_height;
             line-height: $comment_height;
             padding-left: 20px;
         }

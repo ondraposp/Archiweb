@@ -61,6 +61,9 @@
         ul {            
             li{
                 float: left;
+                margin-left: 0;
+                margin-right: 7px;
+                background-color: $grey3_7;
             }
         }
     }

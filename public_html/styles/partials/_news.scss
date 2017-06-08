@@ -12,10 +12,11 @@
         overflow: hidden;
 
         .inner {
-            background-color: $grey2;
+            //background-color: $grey2;
+            background-color: $white;
             line-height: 30px;
             padding-left: 15px;
-            padding-right: 15px;
+            padding-right: $news_padding_right;
             position: relative;            
             overflow: hidden;
         }
@@ -50,9 +51,9 @@
 .related {
     padding-right: $padright;
 
-    .new {
-        height: 70px;     
-    }
+    /* .new {
+         height: 70px;     
+     }*/
 }
 
 .trending {
@@ -94,6 +95,12 @@
 }
 
 .tpl_news, #tpl_new_detail {
+    .comments {
+        .chead, .cbody, .call {
+            margin-right: $marright;
+        }   
+    }  
+
     .rightbar {
         .calendar, .bannerr_small, .bannerr_big {
             margin-bottom: $marbottom_rbar;   

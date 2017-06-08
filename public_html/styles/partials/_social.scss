@@ -24,7 +24,7 @@
             background-color: $black;
             width: $lsquare;            
             height: $lsquare;
-            margin-left: 7px;
+            margin-left: $social_margin;
             text-align: center;
 
             @include transition;
