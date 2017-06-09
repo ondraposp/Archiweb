@@ -187,5 +187,12 @@
             }
             height: inherit;
         }
+
+        #tpl_homepage {
+            .partners {
+                position: relative;
+                bottom: inherit;
+            }
+        }
     }
 }

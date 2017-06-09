@@ -173,3 +173,32 @@
     }
 }
 
+@media screen and (max-width: 40rem) {
+    .mainslider {
+        .slide {
+            .caption {
+                padding: 15px;
+
+                h3 {
+                    font-size: 1rem;    
+                    line-height: 1.2rem;
+                    margin-top: 10px;
+                }
+
+                .introtext {
+                    display: none;
+                }
+
+                .bottom {
+                    bottom: 15px;   
+                }                    
+            }
+        }
+
+        .carousel-tab {
+            display: none;
+        }
+    }
+}
+
+

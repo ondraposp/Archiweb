@@ -54,7 +54,8 @@ $(document).ready(function () {
     //console.log(partnersHeight);
     $('#tpl_homepage .footer').css('margin-top', partnersHeight); //hardcoded
 
-    if ($('#tpl_homepage').length) {
+    if ($('#tpl_homepage').length
+            && $(window).width() > em(40)) {
         $(window).scroll(function () {
 
             partnersHeight = $('.partners').height();
@@ -187,6 +188,16 @@ $(document).ready(function () {
             toggleSubmenubar($(this));
         }
     });
+
+    function em(input) {
+        var emSize = parseFloat($("body").css("font-size"));
+        return (emSize * input);
+    }
+
+    function px(input) {
+        var emSize = parseFloat($("body").css("font-size"));
+        return (input / emSize);
+    }
 
     function toggleSubmenubar(bar) {
 

@@ -769,6 +769,19 @@ h1 {
     margin-right: 0; }
   .mainslider .carousel-tab {
     margin-right: 30px; } }
+@media screen and (max-width: 40rem) {
+  .mainslider .slide .caption {
+    padding: 15px; }
+    .mainslider .slide .caption h3 {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-top: 10px; }
+    .mainslider .slide .caption .introtext {
+      display: none; }
+    .mainslider .slide .caption .bottom {
+      bottom: 15px; }
+  .mainslider .carousel-tab {
+    display: none; } }
 /* 
     Created on : 20.1.2017, 14:45:52
     Author     : ondra
@@ -1118,7 +1131,11 @@ h1 {
   .midbanner {
     height: inherit; }
     .midbanner img {
-      visibility: visible; } }
+      visibility: visible; }
+
+  #tpl_homepage .partners {
+    position: relative;
+    bottom: inherit; } }
 /* 
     Created on : 20.1.2017, 16:07:18
     Author     : ondra
@@ -1438,6 +1455,10 @@ figure figcaption {
   margin-bottom: 50px; }
   .leftbar .details, .leftbar .text {
     margin-right: 40px; }
+    .leftbar .details hr, .leftbar .text hr {
+      margin-left: 0px;
+      margin-left: 0px;
+      border-color: #000; }
 
 #tpl_architect_detail .related, #tpl_atelier_detail .related {
   padding-right: 0;
@@ -1549,6 +1570,14 @@ figure figcaption {
       bottom: 35px;
       margin-bottom: 0px;
       color: #FFF; }
+    .big_header .bottom .brand_logo {
+      position: absolute;
+      bottom: 0;
+      left: -1.2055rem;
+      padding: 25px;
+      background: #f5f5f7; }
+      .big_header .bottom .brand_logo img {
+        height: 80px; }
   .big_header h1 {
     color: #FFF;
     margin-bottom: 0; }
@@ -1572,6 +1601,7 @@ figure figcaption {
 
 .architects {
   margin-right: 40px;
+  margin-top: 20px;
   margin-bottom: 40px; }
   .architects .item {
     background-color: #e6e6e6;
@@ -1590,13 +1620,26 @@ figure figcaption {
       float: left;
       padding-right: 20px;
       height: 100%; }
-    .architects .item .name {
-      color: #0279ce;
-      margin-bottom: 10px;
-      font-size: inherit;
-      line-height: inherit; }
-    .architects .item .text {
-      color: #000; }
+    .architects .item .inner {
+      height: 100%;
+      font-size: 1.1rem; }
+      .architects .item .inner .name {
+        color: #0279ce;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: 600; }
+      .architects .item .inner .text {
+        color: #000; }
+
+#tpl_atelier_detail .big_header .bottom h1 {
+  bottom: 35px; }
+
+#tpl_katalog_detail h1 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 2rem; }
 
 @media (max-width: 64em) {
   .architects {
@@ -2093,7 +2136,11 @@ input[type='checkbox']:checked + label > span {
   .midbanner {
     height: inherit; }
     .midbanner img {
-      visibility: visible; } }
+      visibility: visible; }
+
+  #tpl_homepage .partners {
+    position: relative;
+    bottom: inherit; } }
 /*NEWS*/
 /* 
     Created on : 24.1.2017, 16:34:39

@@ -35,6 +35,12 @@
 
     .details, .text {
         margin-right: $marright;
+        
+        hr {
+            margin-left: 0px;
+            margin-left: 0px;
+            border-color: $black;
+        }
     }
 }
 

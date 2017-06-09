@@ -44,7 +44,7 @@
         }
 
         h1 {            
-            bottom: 70px;
+            bottom: 70px; // not for atelier tpl
             text-shadow: 0 0 30px $black;
         }
 
@@ -56,6 +56,18 @@
             bottom: 35px;
             margin-bottom: 0px;
             color: $white;
+        }
+
+        .brand_logo {
+            position: absolute;
+            bottom: 0;
+            left: $gutter - calculateRem($brand_logo_padding);            
+            padding: $brand_logo_padding;
+            background: $greylight;
+
+            img {
+                height: 80px;
+            }
         }
     }
 
@@ -84,6 +96,7 @@
 
 .architects {
     margin-right: $marright;  
+    margin-top: 20px;
     margin-bottom: 40px;
 
     .item {
@@ -100,18 +113,45 @@
             height: 100%;
         }
 
-        .name {
-            color: $basecolor;
-            margin-bottom: 10px;
-            font-size: inherit;
-            line-height: inherit;
+        .inner {
+            height: 100%;
+            font-size: 1.1rem;
+
+            .name {
+                color: $basecolor;
+                margin-bottom: 0px;
+                margin-top: 10px;
+                font-size: inherit;
+                line-height: inherit;
+                font-weight: $fbold;                
+            }
+
+            .text {
+                color: #000;                
+            }
         }
 
-        .text {
-            color: #000;
-        }
     }
 }
+
+#tpl_atelier_detail {
+    .big_header {
+        .bottom {
+            h1 {
+                bottom: 35px;
+            }   
+        }   
+    }
+}
+
+#tpl_katalog_detail {
+    h1 {
+        font-size: 1.5rem;
+        font-weight: $flight;
+        line-height: 2rem;   
+    }    
+}
+
 
 @media (max-width: 64em) {
     .architects {
