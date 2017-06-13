@@ -103,24 +103,27 @@
         background-color: $grey2;
         margin-bottom: $tot_gutter;
         height: 120px;
+        display: flex;
+        align-items: center;
+        padding-right: $architect_padding;
 
         @include floatfix;
         @include hopacity;
 
         img {
             float: left;
-            padding-right: 20px;
+            margin-right: $architect_padding;
             height: 100%;
         }
 
         .inner {
-            height: 100%;
+            //height: 100%;
             font-size: 1.1rem;
 
             .name {
                 color: $basecolor;
                 margin-bottom: 0px;
-                margin-top: 10px;
+                //margin-top: 10px;
                 font-size: inherit;
                 line-height: inherit;
                 font-weight: $fbold;                
@@ -142,6 +145,12 @@
             }   
         }   
     }
+
+    .project_box {
+        .gradient {
+            height: 25%;
+        }
+    }
 }
 
 #tpl_katalog_detail {
@@ -159,7 +168,7 @@
 
         .item {
             img {
-                padding-right: 15px;
+                //padding-right: 15px;
             }
         }
     }
@@ -167,6 +176,14 @@
     .leftbar {
         .details, .text {
             margin-right: 0;
+        }
+    }
+
+    .big_header {
+        .bottom {
+            .brand_logo {
+                left: 0;
+            }         
         }
     }
 

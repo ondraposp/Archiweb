@@ -60,6 +60,10 @@
                 <!-- main styles -->
                 <link rel="stylesheet" href="styles/main.css" />
 
+                <!--fancybox 3 css-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+                <!-- fancybox 3 css-->
+
                 <!--icons favicons colors-->
                 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
                 <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -300,7 +304,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="body" itemscope itemtype="http://schema.org/Person">
+                            <div class="body" itemscope itemtype="http://schema.org/Organization">
                                 <main role="main">
                                     <div class="big_header" style="background-image: url(https://unsplash.it/1920/450);">                                   
                                         <div class="row">
@@ -314,7 +318,7 @@
                                                     </ul>
                                                 </div>                                               
                                                 <div class="brand_logo">
-                                                    <img src="images/logos/30686f7eeb85ce3c40e295b7d0e90ec2.jpg" rel="logo ORAK - stavební společnost s.r.o." height="80" />
+                                                    <img itemprop="logo" src="images/logos/30686f7eeb85ce3c40e295b7d0e90ec2.jpg" rel="logo ORAK - stavební společnost s.r.o." height="80" />
                                                 </div>
                                             </div>             
                                             <div class="large-3 medium-3 hide-for-small-only columns social bottom">
@@ -334,9 +338,9 @@
                                     </div>                                    
                                     <div class="row">
                                         <div class="large-4 medium-4 columns leftbar">
-                                            <h1>ORAK - stavební společnost s.r.o.</h1>                                            
+                                            <h1 itemprop="name" >ORAK - stavební společnost s.r.o.</h1>                                            
                                             <div class="details">                                                
-                                                <div>*<span itemprop="birthDate">1972</span>, <span itemprop="birthPlace">Praha, Česká republika</span></div>
+                                                <div>*<span itemprop="foundingDate">1972</span>, <span itemprop="foundingLocation">Praha, Česká republika</span></div>
                                                 <div><address><span itemprop="address">Dubečská 59, 100 00 Praha</span></address><br />
                                                     <span itemprop="telephone">+420 274 778 940</span><br />
                                                     <a href="mailto:stepan@adamekmaly.cz" target="_blank" itemprop="email">stepan@adamekmaly.cz</a><br />
@@ -513,10 +517,16 @@
                                                     <div class="">
                                                         <h2 class="uppercase">Video</h2>
                                                     </div>
-                                                    <figure>
-                                                        <img src="http://loremflickr.com/800/550/architecture?random=9" alt="Budova nadnárodní společnosti (studie pro výstavu VIZE: Fragnerova galerie, Praha, Česká republika, 1997)"/>
-                                                        <figcaption>Budova nadnárodní společnosti (studie pro výstavu VIZE: Fragnerova galerie, Praha, Česká republika, 1997)</figcaption>
-                                                    </figure>
+                                                    <div class="video_box">
+                                                        <a data-fancybox class="fancybox_video" rel="video" title="" href="javascript:;" data-src="#video_fancybox">
+                                                            <img src="http://loremflickr.com/800/550/architecture?random=9" />
+                                                        </a>
+                                                    </div>
+                                                    <video id="video_fancybox" controls style="display: none;">
+                                                        <source src="http://www.htmgarcia.com/themes/cacoon/images/spaceboundd.mp4" type="video/mp4" />
+                                                        <source src="http://www.htmgarcia.com/themes/cacoon/images/spaceboundd.ogg" type="video/ogg" />
+                                                        Váš prohlížeč bohužel nepodporuje přehrávání videa
+                                                    </video>
                                                 </div>
                                             </div>                                         
 
@@ -710,8 +720,18 @@
             <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
             <script src="js/vendor/foundation.js"></script>
             <script src="js/vendor/jquery.dotdotdot.min.js"></script>
+
+
+
+            <!-- Add mousewheel plugin (this is optional) -->
+            <!--            <script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel.pack.js"></script>-->
             <!-- Add fancyBox -->
-            <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.6"></script>
+            <!--<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.6"></script>    
+            <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>            -->
+
+            <!-- fancybox 3-->                        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+            <!-- fancybox 3 -->
 
             <script>
                     $(document).foundation();
@@ -722,4 +742,6 @@
             <script src="js/app.js"></script>
 
             <script src="https://use.fontawesome.com/36358bdd46.js"></script>
+
+            <!-- Add fancyBox -->
         </html>

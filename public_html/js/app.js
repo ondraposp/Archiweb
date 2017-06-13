@@ -138,7 +138,7 @@ $(document).ready(function () {
                 vcoef = img_width / maxWidth;
             }
 
-            /*pokud je obrazek zmenseny, zmensi se vyska i sirka*/
+            //pokud je obrazek zmenseny, zmensi se vyska i sirka
 
             if (hcoef > 1
                     || vcoef > 1) {
@@ -157,6 +157,22 @@ $(document).ready(function () {
         closeClick: false,
         openEffect: 'none',
         closeEffect: 'none'
+    });
+
+
+
+    $(".fancybox_video").fancybox({
+        padding: 0,
+        openEffect: 'elastic',
+        openSpeed: 150,
+        nextEffect: 'elastic',
+        afterLoad: function (links, index) {
+           
+            var video = $('.fancybox-slide--inline video').get(0);
+            setTimeout(function () {
+                video.play();
+            }, 500);
+        }
     });
 
     $('.js_menu .item').bind("click", function () {

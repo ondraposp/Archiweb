@@ -26,6 +26,9 @@
 *, html, p, h1, h2, h3, h4, h5, h6, button, input, optgroup, select, textarea {
   font-family: "effra",sans-serif; }
 
+.size110 {
+  font-size: 110%; }
+
 /* 
     Created on : 20.1.2017, 14:34:48
     Author     : ondra
@@ -1606,7 +1609,10 @@ figure figcaption {
   .architects .item {
     background-color: #e6e6e6;
     margin-bottom: 0.714rem;
-    height: 120px; }
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px; }
     .architects .item:after {
       content: '';
       display: block;
@@ -1618,15 +1624,13 @@ figure figcaption {
       -khtml-opacity: 0.85; }
     .architects .item img {
       float: left;
-      padding-right: 20px;
+      margin-right: 20px;
       height: 100%; }
     .architects .item .inner {
-      height: 100%;
       font-size: 1.1rem; }
       .architects .item .inner .name {
         color: #0279ce;
         margin-bottom: 0px;
-        margin-top: 10px;
         font-size: inherit;
         line-height: inherit;
         font-weight: 600; }
@@ -1635,6 +1639,8 @@ figure figcaption {
 
 #tpl_atelier_detail .big_header .bottom h1 {
   bottom: 35px; }
+#tpl_atelier_detail .project_box .gradient {
+  height: 25%; }
 
 #tpl_katalog_detail h1 {
   font-size: 1.5rem;
@@ -1644,11 +1650,12 @@ figure figcaption {
 @media (max-width: 64em) {
   .architects {
     margin-right: initial; }
-    .architects .item img {
-      padding-right: 15px; }
 
   .leftbar .details, .leftbar .text {
-    margin-right: 0; } }
+    margin-right: 0; }
+
+  .big_header .bottom .brand_logo {
+    left: 0; } }
 @media (max-width: 64em) and (max-width: 40em) {
   .big_header {
     height: 250px; } }
