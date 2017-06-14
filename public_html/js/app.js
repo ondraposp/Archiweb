@@ -209,6 +209,15 @@ $(document).ready(function () {
         }
     });
 
+    $('.flex-gallery .thumbs').flexImages({
+        rowHeight: 300
+    });
+
+    $('.text_box_read_more').bind('click', function () {
+        $('.text_box').css('max-height', '999px');
+        $('.text_box .gradient').hide();
+    });
+
     function em(input) {
         var emSize = parseFloat($("body").css("font-size"));
         return (emSize * input);

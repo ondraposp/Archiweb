@@ -11,6 +11,16 @@
 }
 
 #tpl_building_detail {
+
+    .big_header {
+        .bottom {
+            h1 {
+                bottom: 35px;
+            }   
+        }   
+    }
+
+
     .comments {
         .chead, .cbody, .call {
             margin-right: 0;
@@ -56,6 +66,26 @@
             }
         }
     }
+}
+
+.text_box {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+
+    .gradient {
+        position: absolute;
+        bottom: 0;
+        height: 70px;  
+        width: 100%;
+
+        @include gradient(0deg, rgba($greylight, 1), rgba($greylight, 0.5), rgba($greylight, 0));
+        @include transition();
+                
+        
+        
+        
+    }        
 }
 
 

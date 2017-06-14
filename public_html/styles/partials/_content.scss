@@ -5,6 +5,10 @@
 
 .content {
     //padding-bottom: 25px;
+    .introtext {
+        font-size: 1.2rem;
+        font-weight: $fbold;
+    }
 
     h2, h3, h4 {
         font-weight: bold;    

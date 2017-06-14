@@ -17,6 +17,10 @@
 */
 /*space between body and rightbar*/
 /* 
+    Created on : 20.1.2017, 14:34:48
+    Author     : ondra
+*/
+/* 
     Created on : 20.1.2017, 14:32:37
     Author     : ondra
 */
@@ -26,13 +30,15 @@
 *, html, p, h1, h2, h3, h4, h5, h6, button, input, optgroup, select, textarea {
   font-family: "effra",sans-serif; }
 
+.bold {
+  font-weight: 600; }
+
+.colored, .colored a {
+  color: #0279ce !important; }
+
 .size110 {
   font-size: 110%; }
 
-/* 
-    Created on : 20.1.2017, 14:34:48
-    Author     : ondra
-*/
 /* 
     Created on : 27.1.2017, 9:14:01
     Author     : ondra
@@ -54,9 +60,6 @@ a {
 
 .align-right {
   text-align: right; }
-
-.bold {
-  font-weight: 600; }
 
 .padding20 {
   padding: 20px; }
@@ -1357,6 +1360,9 @@ h1 {
     Created on : 26.1.2017, 12:11:45
     Author     : ondra
 */
+.content .introtext {
+  font-size: 1.2rem;
+  font-weight: 600; }
 .content h2, .content h3, .content h4 {
   font-weight: bold; }
 .content h2 {
@@ -1446,22 +1452,32 @@ figure figcaption {
   margin-bottom: 20px; }
   .details div {
     margin-bottom: 7px; }
+    .details div a {
+      color: #000; }
+      .details div a:hover {
+        text-decoration: underline; }
     .details div address {
       font-style: normal;
       display: inline; }
     .details div .caption {
-      min-width: 100px;
+      padding-right: .4rem;
       float: left;
       font-weight: 500; }
 
 .leftbar {
   margin-bottom: 50px; }
-  .leftbar .details, .leftbar .text {
+  .leftbar .details, .leftbar .text, .leftbar .stavba_items, .leftbar .literature {
     margin-right: 40px; }
-    .leftbar .details hr, .leftbar .text hr {
+    .leftbar .details hr, .leftbar .text hr, .leftbar .stavba_items hr, .leftbar .literature hr {
       margin-left: 0px;
       margin-left: 0px;
       border-color: #000; }
+    .leftbar .details .button, .leftbar .text .button, .leftbar .stavba_items .button, .leftbar .literature .button {
+      color: #000;
+      background-color: #dbdbdb;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 20px; }
 
 #tpl_architect_detail .related, #tpl_atelier_detail .related {
   padding-right: 0;
@@ -1495,27 +1511,33 @@ figure figcaption {
         -moz-opacity: 0.85;
         -khtml-opacity: 0.85; }
 
-.tags ul {
-  margin: 0;
-  list-style: none; }
-  .tags ul li {
-    background-color: #e6e6e6;
-    display: inline-block;
-    line-height: 1rem;
-    padding: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    float: left;
-    border-radius: 4px; }
-    .tags ul li:before {
-      content: '#'; }
-    .tags ul li a {
-      color: #000; }
-    .tags ul li:hover, .tags ul li:active, .tags ul li:focus {
-      opacity: 0.85;
-      filter: alpha(opacity=85);
-      -moz-opacity: 0.85;
-      -khtml-opacity: 0.85; }
+.tags {
+  margin-bottom: 30px; }
+  .tags ul {
+    margin: 0;
+    list-style: none; }
+    .tags ul:after {
+      content: '';
+      display: block;
+      clear: both; }
+    .tags ul li {
+      background-color: #e6e6e6;
+      display: inline-block;
+      line-height: 1rem;
+      padding: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      float: left;
+      border-radius: 4px; }
+      .tags ul li:before {
+        content: '#'; }
+      .tags ul li a {
+        color: #000; }
+      .tags ul li:hover, .tags ul li:active, .tags ul li:focus {
+        opacity: 0.85;
+        filter: alpha(opacity=85);
+        -moz-opacity: 0.85;
+        -khtml-opacity: 0.85; }
 
 .articles {
   margin-bottom: 20px; }
@@ -1845,6 +1867,8 @@ input[type='checkbox']:checked + label > span {
   margin-right: 40px;
   margin-bottom: 10px; }
 
+#tpl_building_detail .big_header .bottom h1 {
+  bottom: 35px; }
 #tpl_building_detail .comments .chead, #tpl_building_detail .comments .cbody, #tpl_building_detail .comments .call {
   margin-right: 0; }
 #tpl_building_detail .related {
@@ -1877,6 +1901,36 @@ input[type='checkbox']:checked + label > span {
     font-size: 0.5rem;
     vertical-align: middle;
     padding-right: 0.5rem; }
+
+.text_box {
+  max-height: 300px;
+  overflow: hidden;
+  position: relative; }
+  .text_box .gradient {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-image: -webkit-linear-gradient(0deg, #f5f5f7, rgba(245, 245, 247, 0.5) 50%, rgba(245, 245, 247, 0));
+    /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -moz-linear-gradient(0deg, #f5f5f7, rgba(245, 245, 247, 0.5) 50%, rgba(245, 245, 247, 0));
+    /* For Firefox (3.6 to 15) */
+    background-image: -o-linear-gradient(0deg, #f5f5f7, rgba(245, 245, 247, 0.5) 50%, rgba(245, 245, 247, 0));
+    /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(0deg, #f5f5f7, rgba(245, 245, 247, 0.5) 50%, rgba(245, 245, 247, 0));
+    /* Standard syntax; must be last */
+    -o-transition-timing-function: "easeOutExpo";
+    -webkit-transition-timing-function: "easeOutExpo";
+    -moz-transition-timing-function: "easeOutExpo";
+    transition-timing-function: "easeOutExpo";
+    -o-transition-property: "all";
+    -webkit-transition-property: "all";
+    -moz-transition-property: "all";
+    transition-property: "all";
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
 
 @media screen and (max-width: 64rem) {
   #tpl_buildings .filters_form {

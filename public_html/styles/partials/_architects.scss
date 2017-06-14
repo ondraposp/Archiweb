@@ -17,13 +17,22 @@
     div {
         margin-bottom: 7px;
 
+        a {
+            color: $black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         address {
             font-style: normal;
             display: inline;
         }
 
         .caption {
-            min-width: 100px;
+            //min-width: 100px;
+            padding-right: .4rem;
             float: left;
             font-weight: $fmedium;
         }
@@ -33,13 +42,23 @@
 .leftbar {
     margin-bottom: 50px;
 
-    .details, .text {
+    .details, .text, .stavba_items, .literature {
         margin-right: $marright;
         
+        
+
         hr {
             margin-left: 0px;
             margin-left: 0px;
             border-color: $black;
+        }
+        
+        .button {
+            color: $black;
+            background-color: $grey2_5; 
+            font-weight: $fbold;
+            width: 100%;
+            margin-top: $space_m;
         }
     }
 }
@@ -87,9 +106,13 @@
 }
 
 .tags {
+    margin-bottom: $marbottom_space;
+    
     ul {
         margin: 0;
         list-style: none;
+        
+        @include floatfix;
 
         li {
             background-color: $grey2;
@@ -109,7 +132,7 @@
                 color: $black; 
             }
 
-            @include hopacity;
+            @include hopacity;            
         }
     }
 }

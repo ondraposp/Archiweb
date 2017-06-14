@@ -12,6 +12,16 @@ $fmedium: 500;
 $fbold: 600;
 $fubold:900;
 
+.bold {
+    font-weight: $fbold;
+}
+
+.colored {
+    &, a {
+        color: $basecolor !important;   
+    }    
+}
+
 .size110 {
     font-size: 110%;
 }
