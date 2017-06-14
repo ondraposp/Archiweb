@@ -49,4 +49,38 @@
     }
 }
 
+#video_fancybox {   
+    padding: $video_padding;
+    background: transparent;
+    margin: 0px;
+
+    video {      
+        max-width: 100%;       
+        max-height: 100%;    
+    }    
+
+    .fancybox-close-small {
+        top: $video_padding;
+        right: $video_padding;
+        width: $video_padding;
+        height: $video_padding;
+    }
+
+}
+
+@media (max-width: 40em) {
+    #video_fancybox {   
+        padding: $video_padding_mobile;
+
+        video {
+
+        }        
+
+        .fancybox-close-small { 
+            top: $video_padding_mobile;
+            right: $video_padding_mobile;
+        }
+    }  
+}
+
 

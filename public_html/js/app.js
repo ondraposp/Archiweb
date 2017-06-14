@@ -166,8 +166,12 @@ $(document).ready(function () {
         openEffect: 'elastic',
         openSpeed: 150,
         nextEffect: 'elastic',
+        clickOutside: 'close',
+        buttons: [
+            'close'
+        ],
         afterLoad: function (links, index) {
-           
+
             var video = $('.fancybox-slide--inline video').get(0);
             setTimeout(function () {
                 video.play();

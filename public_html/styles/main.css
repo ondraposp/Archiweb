@@ -1916,6 +1916,25 @@ input[type='checkbox']:checked + label > span {
       .catalog_submenu ul li a {
         color: #0279ce; }
 
+#video_fancybox {
+  padding: 44px;
+  background: transparent;
+  margin: 0px; }
+  #video_fancybox video {
+    max-width: 100%;
+    max-height: 100%; }
+  #video_fancybox .fancybox-close-small {
+    top: 44px;
+    right: 44px;
+    width: 44px;
+    height: 44px; }
+
+@media (max-width: 40em) {
+  #video_fancybox {
+    padding: 0.357rem; }
+    #video_fancybox .fancybox-close-small {
+      top: 0.357rem;
+      right: 0.357rem; } }
 /* 
     Created on : 15.2.2017, 14:59:00
     Author     : ondra
