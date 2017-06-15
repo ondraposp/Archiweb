@@ -58,6 +58,14 @@
             color: $white;
         }
 
+        a {
+            &:hover { 
+                h2 {
+                    text-decoration: underline;   
+                }                
+            }    
+        }
+
         .brand_logo {
             position: absolute;
             bottom: 0;

@@ -152,6 +152,7 @@ $(document).ready(function () {
             }
 
             this.width = real_width + description_width;
+            // ADD FIX - IE pocita spatne width
             this.height = real_height;
         },
         closeClick: false,
@@ -214,7 +215,8 @@ $(document).ready(function () {
     });
 
     $('.text_box_read_more').bind('click', function () {
-        $('.text_box').css('max-height', '999px');
+        //$('.text_box').css('max-height', '999px');
+        $('.text_box').addClass('open');
         $('.text_box .gradient').hide();
     });
 

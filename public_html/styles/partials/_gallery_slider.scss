@@ -81,14 +81,15 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    top: 5px;
-    right: 20px;
+    top: calc(#{$close_button_topright} - 1em);
+    right: $close_button_topright;
     width: 0;
     height: 0;
-    font-size: 1em;
+    font-size: 1.3em;
 
     &:before {
         content: "\f00d";
+        color: $grey3_5;
     }
 
     &:hover, &:active, &:focus {

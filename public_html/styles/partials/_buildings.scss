@@ -12,13 +12,13 @@
 
 #tpl_building_detail {
 
-    .big_header {
+   /* .big_header {
         .bottom {
             h1 {
                 bottom: 35px;
             }   
         }   
-    }
+    }*/
 
 
     .comments {
@@ -38,32 +38,40 @@
 }
 
 .stavba_items {
-    h3 {
+    h2 {
         font-size: 1.5rem;
         padding-top: 13px;
-        margin-bottom: 17px;
+        margin-bottom: $gutter;
         font-weight: $fbold;
     }    
 
     ul {
         margin: 0;
         list-style: none;
+    }
 
-        @include hopacity;
+    &>ul {
 
-        li {
+
+        //@include hopacity;
+
+        &>li {
             &:before {
-                content: "\f054";
-                display: inline-block;
-                font: normal normal normal 14px/1 FontAwesome;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                //content: "\f054";
+                content: ">";
+                //  display: inline-block;
+                //font: normal normal normal 14px/1 FontAwesome;
+                /* text-rendering: auto;
+                 -webkit-font-smoothing: antialiased;
+                 -moz-osx-font-smoothing: grayscale;*/
 
-                font-size: 0.5rem;
-                vertical-align: middle;
-                padding-right: 0.5rem;
+                //  font-size: 0.5rem;
+                //vertical-align: middle;
+                padding-bottom: 3px;
+                //padding-right: 0.5rem;
             }
+
+
         }
     }
 }
@@ -72,6 +80,12 @@
     max-height: 300px;
     overflow: hidden;
     position: relative;
+    @include transition();
+
+    &.open {
+        max-height: 1000px;
+        @include transition();
+    }
 
     .gradient {
         position: absolute;
@@ -80,11 +94,11 @@
         width: 100%;
 
         @include gradient(0deg, rgba($greylight, 1), rgba($greylight, 0.5), rgba($greylight, 0));
-        @include transition();
-                
-        
-        
-        
+
+
+
+
+
     }        
 }
 
