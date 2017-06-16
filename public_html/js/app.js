@@ -109,12 +109,14 @@ $(document).ready(function () {
     var maxWidth = window.innerWidth - padding_lightbox;
     var maxHeight = window.innerHeight - padding_lightbox;
 
+//alert(window.innerHeight);
 
     $(".fancybox").fancybox({
         padding: 0,
         maxWidth: maxWidth,
         maxHeight: maxHeight,
         fitToView: false,
+        autoDimensions: false,
         autoSize: false,
         beforeLoad: function () {
 
@@ -138,6 +140,7 @@ $(document).ready(function () {
                 vcoef = img_width / maxWidth;
             }
 
+
             //pokud je obrazek zmenseny, zmensi se vyska i sirka
 
             if (hcoef > 1
@@ -151,10 +154,18 @@ $(document).ready(function () {
                 }
             }
 
-            this.width = real_width + description_width;
-            // ADD FIX - IE pocita spatne width
+            this.width = parseInt(real_width + description_width);
             this.height = real_height;
-        },
+
+            if (msieversion()) {
+                var ms_width = this.width;
+
+                setTimeout(function () {                    
+                    $('.fancybox-inner').css('width', ms_width + 'px');
+                    $('.fancybox-wrap').css('width', ms_width + 'px');
+                }, 500);
+            }
+        },      
         closeClick: false,
         openEffect: 'none',
         closeEffect: 'none'
@@ -218,7 +229,25 @@ $(document).ready(function () {
         //$('.text_box').css('max-height', '999px');
         $('.text_box').addClass('open');
         $('.text_box .gradient').hide();
+        $(this).hide();
     });
+
+    function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+        {
+            //alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+            return true;
+        } else  // If another browser, return 0
+        {
+            return false;
+        }
+
+        return false;
+    }
 
     function em(input) {
         var emSize = parseFloat($("body").css("font-size"));
