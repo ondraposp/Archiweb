@@ -160,12 +160,12 @@ $(document).ready(function () {
             if (msieversion()) {
                 var ms_width = this.width;
 
-                setTimeout(function () {                    
+                setTimeout(function () {
                     $('.fancybox-inner').css('width', ms_width + 'px');
                     $('.fancybox-wrap').css('width', ms_width + 'px');
                 }, 500);
             }
-        },      
+        },
         closeClick: false,
         openEffect: 'none',
         closeEffect: 'none'
@@ -230,6 +230,12 @@ $(document).ready(function () {
         $('.text_box').addClass('open');
         $('.text_box .gradient').hide();
         $(this).hide();
+    });
+
+    $('.auth_box .login').bind('click', function () {
+        if (!$('auth_box').hasClass('open')) {
+            $('.auth_box').addClass('open');
+        }
     });
 
     function msieversion() {

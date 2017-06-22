@@ -145,68 +145,58 @@
 .auth_box {
     margin: $space_m 0;     
     height: 90px;
+    background-color: $black;  
+    color: $white;
 
-    .inner {
-        background-color: $black;    
-        height: 100%;               
-        width: 100%;  
-        color: $white;
+    &.fixed-width-right {
+        padding-left: 0px;
+        padding-right: 0px;   
+    }    
+
+    .login, .new_user, .forgotpass, .loginform {
+        overflow: hidden;
+
+        @include transition;
+    }
+
+    .login {
+        background-color: $basecolor;
+        height: 50%;
+        cursor: pointer;
+        text-transform: uppercase;
         display: flex;
         align-items: center;
-        padding: 5px;
-        justify-content: space-between;
-        margin: 20px 0;
+        justify-content: center;
+        
+        @include hopacity;
+    }
+
+    .new_user {
+        height: 50%;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         a {
-            &, span {
-                color: $white;
-            }
-
-            &:hover , &:hover span {
-                text-decoration: underline;
-            }
+            color: $white;
+            line-height: 1.4rem;
+            border-bottom: 1px solid;
         }
+    }
 
-        .info {
-            float: left;
+    .forgotpass, .loginform {
+        height: 0%;
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
 
-            .title {
-                font-weight: $fmedium;
-            }
+    .forgotpass {
+        text-align: right;
+        font-size: .8rem;
+    }
 
-            .items {
-                font-size: .8rem;
-            }
-
-            //@include hopacity();
-        }
-
-        /*   .button {
-               float: right;
-               margin-bottom: 0;
-               text-transform: uppercase;
-               font-weight: $fmedium;
-               padding: 5px;            
-   
-               @include hopacity();
-           }*/
-
-        .button {
-            padding: 2px 9px;
-            margin-bottom: 3px;
-            text-transform: uppercase;
-        }
-
-        .myprofile {
-            text-transform: uppercase;
-            font-weight: $fbold;
-        }
-
-        .inputs {
-            margin-top: 7px;
-        }
-
-        input[type="text"] {      
+    .loginform {
+        input[type="text"], input[type="password"] {      
             height: 20px;  
             margin-bottom: 0;
             background-color: $black;
@@ -216,11 +206,12 @@
             border-top: none;
             border-left: none;
             border-right: none;
+            border-color: $white;
 
             &::-webkit-input-placeholder,
             &::-moz-placeholder,
             &:-ms-input-placeholder,
-                &:-moz-placeholder { /* Chrome/Opera/Safari */
+                &:-moz-placeholder { 
                 color: $white;
             }            
 
@@ -231,48 +222,154 @@
         }
 
         .username, .password {
-            max-width: 50%;
+            width: 50%;
             margin-bottom: 3px;
             float: left;
-            padding-right: 10px;
+            padding-left: 5px;            
+            padding-right: 5px;            
         }
-
-        .username {            
-
-        }
-
-        .leftsec {
-            border-right: 1px solid $white;
-        }
-
-        .rightsec {
-            .info, .button {
-                float: right;  
-                text-align: right;
-            }            
-        }
-
-        .profilename, .info {
-            margin-bottom: 5px;
-        }
-
-        .profilename, .logout {
-            font-size: .9rem;
-        }
-
-        .logout {
-            opacity: 0.75;
-        }
-
-        .signup, .forgotpass {
-            font-size: .8rem;
-        }
-
-        .forgotpass {
-            float: right;
-        }
-
     }
+
+    &.open {
+        .new_user {
+            height: 0%;
+        } 
+
+        .login {
+            height: 33.3333%;
+        }
+
+        .forgotpass, .loginform {
+            height: 33.3333%;
+        }
+
+        .login, .new_user, .forgotpass, .loginform {
+            @include transition;
+        }
+    }
+
+
+
+    /*
+        .inner {
+            background-color: $black;    
+            height: 100%;               
+            width: 100%;  
+            color: $white;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            justify-content: space-between;
+            margin: 20px 0;
+    
+            a {
+                &, span {
+                    color: $white;
+                }
+    
+                &:hover , &:hover span {
+                    text-decoration: underline;
+                }
+            }
+    
+            .info {
+                float: left;
+    
+                .title {
+                    font-weight: $fmedium;
+                }
+    
+                .items {
+                    font-size: .8rem;
+                }
+    
+                //@include hopacity();
+            }
+    
+           
+    
+            .button {
+                padding: 2px 9px;
+                margin-bottom: 3px;
+                text-transform: uppercase;
+            }
+    
+            .myprofile {
+                text-transform: uppercase;
+                font-weight: $fbold;
+            }
+    
+            .inputs {
+                margin-top: 7px;
+            }
+    
+            input[type="text"] {      
+                height: 20px;  
+                margin-bottom: 0;
+                background-color: $black;
+                color: $white;
+                padding: 0;
+                font-size: .8rem;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+    
+                &::-webkit-input-placeholder,
+                &::-moz-placeholder,
+                &:-ms-input-placeholder,
+                    &:-moz-placeholder { 
+                    color: $white;
+                }            
+    
+                &:focus {
+                    box-shadow: none;
+                    transition: none;
+                }
+            }
+    
+            .username, .password {
+                max-width: 50%;
+                margin-bottom: 3px;
+                float: left;
+                padding-right: 10px;
+            }
+    
+            .username {            
+    
+            }
+    
+            .leftsec {
+                border-right: 1px solid $white;
+            }
+    
+            .rightsec {
+                .info, .button {
+                    float: right;  
+                    text-align: right;
+                }            
+            }
+    
+            .profilename, .info {
+                margin-bottom: 5px;
+            }
+    
+            .profilename, .logout {
+                font-size: .9rem;
+            }
+    
+            .logout {
+                opacity: 0.75;
+            }
+    
+            .signup, .forgotpass {
+                font-size: .8rem;
+            }
+    
+            .forgotpass {
+                float: right;
+            }
+    
+        }*/
 }
 
 .loginbar {

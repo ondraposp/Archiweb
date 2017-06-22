@@ -217,7 +217,8 @@ hr {
     width: 19.464rem;
     padding-left: 0.357rem;
     padding-right: 0.357rem;
-    margin: auto; }
+    margin-left: auto;
+    margin-right: auto; }
 
 /*
 .basket {
@@ -448,81 +449,216 @@ hr {
 
 .auth_box {
   margin: 20px 0;
-  height: 90px; }
-  .auth_box .inner {
-    background-color: #000;
-    height: 100%;
-    width: 100%;
-    color: #FFF;
+  height: 90px;
+  background-color: #000;
+  color: #FFF;
+  /*
+      .inner {
+          background-color: $black;    
+          height: 100%;               
+          width: 100%;  
+          color: $white;
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          justify-content: space-between;
+          margin: 20px 0;
+  
+          a {
+              &, span {
+                  color: $white;
+              }
+  
+              &:hover , &:hover span {
+                  text-decoration: underline;
+              }
+          }
+  
+          .info {
+              float: left;
+  
+              .title {
+                  font-weight: $fmedium;
+              }
+  
+              .items {
+                  font-size: .8rem;
+              }
+  
+              //@include hopacity();
+          }
+  
+         
+  
+          .button {
+              padding: 2px 9px;
+              margin-bottom: 3px;
+              text-transform: uppercase;
+          }
+  
+          .myprofile {
+              text-transform: uppercase;
+              font-weight: $fbold;
+          }
+  
+          .inputs {
+              margin-top: 7px;
+          }
+  
+          input[type="text"] {      
+              height: 20px;  
+              margin-bottom: 0;
+              background-color: $black;
+              color: $white;
+              padding: 0;
+              font-size: .8rem;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+  
+              &::-webkit-input-placeholder,
+              &::-moz-placeholder,
+              &:-ms-input-placeholder,
+                  &:-moz-placeholder { 
+                  color: $white;
+              }            
+  
+              &:focus {
+                  box-shadow: none;
+                  transition: none;
+              }
+          }
+  
+          .username, .password {
+              max-width: 50%;
+              margin-bottom: 3px;
+              float: left;
+              padding-right: 10px;
+          }
+  
+          .username {            
+  
+          }
+  
+          .leftsec {
+              border-right: 1px solid $white;
+          }
+  
+          .rightsec {
+              .info, .button {
+                  float: right;  
+                  text-align: right;
+              }            
+          }
+  
+          .profilename, .info {
+              margin-bottom: 5px;
+          }
+  
+          .profilename, .logout {
+              font-size: .9rem;
+          }
+  
+          .logout {
+              opacity: 0.75;
+          }
+  
+          .signup, .forgotpass {
+              font-size: .8rem;
+          }
+  
+          .forgotpass {
+              float: right;
+          }
+  
+      }*/ }
+  .auth_box.fixed-width-right {
+    padding-left: 0px;
+    padding-right: 0px; }
+  .auth_box .login, .auth_box .new_user, .auth_box .forgotpass, .auth_box .loginform {
+    overflow: hidden;
+    -o-transition-timing-function: "easeOutExpo";
+    -webkit-transition-timing-function: "easeOutExpo";
+    -moz-transition-timing-function: "easeOutExpo";
+    transition-timing-function: "easeOutExpo";
+    -o-transition-property: "all";
+    -webkit-transition-property: "all";
+    -moz-transition-property: "all";
+    transition-property: "all";
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+  .auth_box .login {
+    background-color: #0279ce;
+    height: 50%;
+    cursor: pointer;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
-    padding: 5px;
-    justify-content: space-between;
-    margin: 20px 0;
-     /*   .button {
-            float: right;
-            margin-bottom: 0;
-            text-transform: uppercase;
-            font-weight: $fmedium;
-            padding: 5px;            
-
-            @include hopacity();
-        }*/ }
-    .auth_box .inner a, .auth_box .inner a span {
-      color: #FFF; }
-    .auth_box .inner a:hover, .auth_box .inner a:hover span {
-      text-decoration: underline; }
-    .auth_box .inner .info {
-      float: left; }
-      .auth_box .inner .info .title {
-        font-weight: 500; }
-      .auth_box .inner .info .items {
-        font-size: .8rem; }
-    .auth_box .inner .button {
-      padding: 2px 9px;
-      margin-bottom: 3px;
-      text-transform: uppercase; }
-    .auth_box .inner .myprofile {
-      text-transform: uppercase;
-      font-weight: 600; }
-    .auth_box .inner .inputs {
-      margin-top: 7px; }
-    .auth_box .inner input[type="text"] {
-      height: 20px;
-      margin-bottom: 0;
-      background-color: #000;
+    justify-content: center; }
+    .auth_box .login:hover, .auth_box .login:active, .auth_box .login:focus {
+      opacity: 0.85;
+      filter: alpha(opacity=85);
+      -moz-opacity: 0.85;
+      -khtml-opacity: 0.85; }
+  .auth_box .new_user {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .auth_box .new_user a {
       color: #FFF;
-      padding: 0;
-      font-size: .8rem;
-      border-top: none;
-      border-left: none;
-      border-right: none; }
-      .auth_box .inner input[type="text"]::-webkit-input-placeholder, .auth_box .inner input[type="text"]::-moz-placeholder, .auth_box .inner input[type="text"]:-ms-input-placeholder, .auth_box .inner input[type="text"]:-moz-placeholder {
-        /* Chrome/Opera/Safari */
-        color: #FFF; }
-      .auth_box .inner input[type="text"]:focus {
-        box-shadow: none;
-        transition: none; }
-    .auth_box .inner .username, .auth_box .inner .password {
-      max-width: 50%;
-      margin-bottom: 3px;
-      float: left;
-      padding-right: 10px; }
-    .auth_box .inner .leftsec {
-      border-right: 1px solid #FFF; }
-    .auth_box .inner .rightsec .info, .auth_box .inner .rightsec .button {
-      float: right;
-      text-align: right; }
-    .auth_box .inner .profilename, .auth_box .inner .info {
-      margin-bottom: 5px; }
-    .auth_box .inner .profilename, .auth_box .inner .logout {
-      font-size: .9rem; }
-    .auth_box .inner .logout {
-      opacity: 0.75; }
-    .auth_box .inner .signup, .auth_box .inner .forgotpass {
-      font-size: .8rem; }
-    .auth_box .inner .forgotpass {
-      float: right; }
+      line-height: 1.4rem;
+      border-bottom: 1px solid; }
+  .auth_box .forgotpass, .auth_box .loginform {
+    height: 0%;
+    padding-left: 0.357rem;
+    padding-right: 0.357rem; }
+  .auth_box .forgotpass {
+    text-align: right;
+    font-size: .8rem; }
+  .auth_box .loginform input[type="text"], .auth_box .loginform input[type="password"] {
+    height: 20px;
+    margin-bottom: 0;
+    background-color: #000;
+    color: #FFF;
+    padding: 0;
+    font-size: .8rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #FFF; }
+    .auth_box .loginform input[type="text"]::-webkit-input-placeholder, .auth_box .loginform input[type="text"]::-moz-placeholder, .auth_box .loginform input[type="text"]:-ms-input-placeholder, .auth_box .loginform input[type="text"]:-moz-placeholder, .auth_box .loginform input[type="password"]::-webkit-input-placeholder, .auth_box .loginform input[type="password"]::-moz-placeholder, .auth_box .loginform input[type="password"]:-ms-input-placeholder, .auth_box .loginform input[type="password"]:-moz-placeholder {
+      color: #FFF; }
+    .auth_box .loginform input[type="text"]:focus, .auth_box .loginform input[type="password"]:focus {
+      box-shadow: none;
+      transition: none; }
+  .auth_box .loginform .username, .auth_box .loginform .password {
+    width: 50%;
+    margin-bottom: 3px;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px; }
+  .auth_box.open .new_user {
+    height: 0%; }
+  .auth_box.open .login {
+    height: 33.3333%; }
+  .auth_box.open .forgotpass, .auth_box.open .loginform {
+    height: 33.3333%; }
+  .auth_box.open .login, .auth_box.open .new_user, .auth_box.open .forgotpass, .auth_box.open .loginform {
+    -o-transition-timing-function: "easeOutExpo";
+    -webkit-transition-timing-function: "easeOutExpo";
+    -moz-transition-timing-function: "easeOutExpo";
+    transition-timing-function: "easeOutExpo";
+    -o-transition-property: "all";
+    -webkit-transition-property: "all";
+    -moz-transition-property: "all";
+    transition-property: "all";
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
 
 .loginbar .offline {
   display: block; }
