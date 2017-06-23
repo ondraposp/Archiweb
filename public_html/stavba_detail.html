@@ -1,14 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+    <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
         <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
         <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
         <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
         <!--[if gt IE 8]><!--> <html class="no-js" lang="cs"> <!--<![endif]-->
             <head>
-                <title>Archiweb</title>
-                <meta charset="UTF-8"></meta>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-                <!--  <base href=""></base>-->
+                <title>Archiweb - Stará Celnice</title>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="application-name" content="Archiweb" />
+                <meta name="description" content="Internetový portál do světa moderní architektury. Každý den přináší informace o všem důležitém, co se v oblasti domácí a světové architektury odehrává"/>
 
                 <!--
         Narodni knihovna CR - archivace online zdroju
@@ -45,20 +46,42 @@
                 <meta name="DC.Rights" content="archiweb.cz 1997-2005" />
                 <!-- == END ==  -->
 
-                <!--<link rel="stylesheet" href="styles/foundation.min.css" />                -->
-                <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />-->
-                <!-- bxSlider CSS file -->
-                <!--<link href="styles/jquery.bxslider.css" rel="stylesheet" />-->
-                <!--<link rel="stylesheet" href="styles/style.css" />-->
-                <!--<link rel="stylesheet" href="styles/flex-images/jquery.flex-images.css" type="text/css" media="screen" />-->
-                <link rel="stylesheet" href="styles/fancybox/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
-                <link rel="stylesheet" href="styles/main.css" />
-                <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-                <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+                <!-- facebook opengraph -->
+                <meta property="og:image" content="http://archiweb.cz/" /> <!-- doplnit, min 200x200, ale cim vetsi, tim lepsi-->
+                <meta property="og:title" content="Archiweb - Stará Celnice" />
+                <meta property="og:description" content="Internetový portál do světa moderní architektury. Každý den přináší informace o všem důležitém, co se v oblasti domácí a světové architektury odehrává" />
+                <meta property="og:url" content="http://archiweb.cz/" />
+                <!-- end facebook opengraph -->
 
+                <!-- twitter cards -->
+                <meta name="twitter:card" content="summary" />
+                <!-- end twitter cards -->
+
+                <link rel="stylesheet" href="styles/fancybox/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
+
+                <!-- main styles -->
+                <link rel="stylesheet" href="styles/main.css" />
+
+                <!--icons favicons colors-->
+                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                <link rel="icon" href="favicon.ico" type="image/x-icon" />
+                <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
+                <link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194" />
+                <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192" />
+                <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
+                <link rel="manifest" href="favicons/manifest.json" />
+                <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#0279ce" />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png" />
+                <meta name="theme-color" content="#0279ce" />
+                <!--end icons favicons colors-->
+
+                <!-- jquery -->
                 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
                 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+                <!-- fonts -->
                 <script src="https://use.typekit.net/iqa6ict.js"></script>
                 <script>try {
                         Typekit.load({async: true});
@@ -67,639 +90,942 @@
 
             </head>
             <body id="tpl_building_detail">
-                <!-- facebook plugin -->
-                <div id="fb-root"></div>
-                <script>(function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id))
-                            return;
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "//connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v2.8";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
-                <!-- end facebook plugin -->
                 <div class="off-canvas-wrapper">
                     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
                         <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
-                            <ul>                                    
-                                <li>
-                                    <a>
-                                        <div>Zprávy</div>
-                                    </a>
-                                </li>                                    
-                                <li>
-                                    <a>
-                                        <div>Architekti</div>
-                                    </a>
-                                </li>    
-                                <li class="active">
-                                    <a>
-                                        <div>Stavby</div>
-                                    </a>
-                                </li>    
-                                <li>
-                                    <a>
-                                        <div>Katalog</div>
-                                    </a>
-                                </li>    
-                                <li>
-                                    <a>
-                                        <div>Salon</div>
-                                    </a>
-                                </li>    
-                                <li>
-                                    <a>
-                                        <div>E-shop</div>
-                                    </a>
-                                </li>   
-                                <li>
-                                    <a>
-                                        <div>Burza práce</div>
-                                    </a>
-                                </li>     
-                            </ul>
-                            <ul>
-                                <li><a href="">
-                                        <div>Hledej</div>
-                                    </a></li>
-                                <li><a href="">
-                                        <div>Kalendář</div>
-                                    </a></li>
-                                <li><a href="">
-                                        <div>Login</div>
-                                    </a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="">
-                                        <div>cz</div>
-                                    </a></li>
-                                <li><a href="">
-                                        <div>en</div>
-                                    </a></li>
-                            </ul>
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a>
+                                            <div>Zprávy</div>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a>
+                                            <div>Architekti</div>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a>
+                                            <div>Stavby</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <div>Katalog</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <div>Salon</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <div>E-shop</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <div>Burza práce</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul>
+                                    <li><a href="">
+                                            <div>Hledej</div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div>Kalendář</div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div>Login</div>
+                                        </a></li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul>
+                                    <li><a href="">
+                                            <div>cz</div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div>en</div>
+                                        </a></li>
+                                </ul>
+                            </nav>
                         </div>
 
-
                         <div class="off-canvas-content" data-off-canvas-content>
-
                             <div class="title-bar hide-for-large">
                                 <div class="title-bar-left">
                                     <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
                                     <a href=""><span class="title-bar-title">Archiweb</span></a>
-                                </div>                          
-                            </div> 
-                            <!-- end off canvas -->
-                            <div class="row pretopbar">
-                                <a href="">
-                                    <div class="columns large-12">
-                                        <img src="http://placehold.it/728x90/000000/ffffff" class="banner topbanner"/>
-                                    </div>
-                                </a>
+                                </div>
                             </div>
-                            <div class="topbar show-for-large">
-                                <div class="row h100">    
+                            <!-- end off canvas -->
+                            <div class="pretopbar">
+                                <header role="banner" class="noprint">
+                                    <div class="row">
+                                        <a href="">
+                                            <div class="columns large-12">
+                                                <img src="http://placehold.it/728x90/000000/ffffff" alt="top banner" class="banner topbanner"/>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="topbar bc_black show-for-large">
+                                <div class="row h100">
                                     <div class="large-12 columns posrel h100">
-                                        <div class="bc_black h100">
-                                            <div class="large-9 medium-9 columns topbarleft">
-                                                <div class="mainlogo">
-                                                    <img src="images/archiweb-logo_bila.png" width="190" />
+                                        <div class="h100">
+                                            <div class="topbarleft float-left">
+                                                <div class="mainlogo noprint">
+                                                    <a href="">
+                                                        <img src="images/archiweb-logo_bila-01.svg" alt="Logo Archiweb" width="160" />
+                                                    </a>
                                                 </div>
-                                                <div class="mainmenu">
-                                                    <ul>                                    
+                                                <div class="mainlogo printonly">
+                                                    <img src="images/archiweb.jpg" alt="Logo Archiweb" width="160" />
+                                                </div>
+                                                <nav class="mainmenu" role="navigation">
+                                                    <ul>
                                                         <li>
                                                             <a>
                                                                 <div>Zprávy</div>
                                                             </a>
-                                                        </li>                                    
+                                                        </li>
                                                         <li>
                                                             <a>
                                                                 <div>Architekti</div>
                                                             </a>
-                                                        </li>    
-                                                        <li class='active'>
+                                                        </li>
+                                                        <li class="active">
                                                             <a>
                                                                 <div>Stavby</div>
                                                             </a>
-                                                        </li>    
+                                                        </li>
                                                         <li>
                                                             <a>
                                                                 <div>Katalog</div>
                                                             </a>
-                                                        </li>    
+                                                        </li>
                                                         <li>
                                                             <a>
                                                                 <div>Salon</div>
                                                             </a>
-                                                        </li>    
+                                                        </li>
                                                         <li>
                                                             <a>
                                                                 <div>E-shop</div>
                                                             </a>
-                                                        </li>   
+                                                        </li>
                                                         <li>
                                                             <a>
-                                                                <div>Burza práce<span class="offers">252</span></div>
+                                                                <div>Burza práce<span class="quant">252</span></div>
                                                             </a>
-                                                        </li>     
+                                                        </li>
                                                     </ul>
-                                                </div>
+
+                                                </nav>
                                             </div>
-                                            <div class="large-3 medium-3 columns h100">
+                                            <div class="h100 float-right">
                                                 <div class="langmenu h100">
-                                                    <ul>                                                
-                                                        <li><a href=""><div>en</div></a></li>
-                                                    </ul>
+                                                    <nav>
+                                                        <ul>
+                                                            <li><a href=""><div>en</div></a></li>
+                                                        </ul>
+                                                    </nav>
                                                 </div>
                                                 <div class="icons h100">
                                                     <ul>
-                                                        <li class="icon search"><a href=""><div><i class="fa fa-search fa-2x"></i></div></a></li>
+                                                        <li class="icon search" data-bar="searchbar"><div><div><i class="fa fa-search fa-2x"></i></div></div></li>
                                                         <li class="icon cal"><a href=""><div><i class="fa fa-calendar fa-2x"></i></div></a></li>
-                                                        <li class="icon login"><a href=""><div><i class="fa fa-user fa-2x"></i></div></a></li>
+                                                        <li class="icon login" data-bar="loginbar"><div><div><i class="fa fa-user fa-2x"></i></div></div></li>
                                                     </ul>
                                                 </div>
-                                            </div>                                        
-                                        </div>                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="body">
-                                <div class="big_header" style="background-image: url(https://unsplash.it/1920/450);">
-                                    <div class="row">
-                                        <div class="large-9 medium-9 small-12 columns bottom">
-                                            <div class="social show-for-small-only">
-                                                <ul>
-                                                    <a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>
-                                                    <!--<a href=""><li><i class="fa fa-twitter fa-2x"></i></li></a>-->
-                                                    <a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>
-                                                    <a href=""><li><i class="fa fa-facebook fa-2x"></i></li></a>
-                                                </ul>
-                                            </div>
-                                            <div class="valign_bottom white z9">
-                                                <h1>Adam Rujbr Architects</h1>
-                                                <a href="">Adam Rujbr Architects s.r.o.</a> | <a href="">Adam Rujbr</a>, <a href="">Michal Grošup</a>
-                                            </div>
-                                        </div>             
-                                        <div class="large-3 medium-3 hide-for-small-only columns social bottom">
-                                            <div class="social_inner">
-                                                <ul>
-                                                    <a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>
-                                                    <!--<a href=""><li><i class="fa fa-twitter fa-2x"></i></li></a>-->
-                                                    <a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>
-                                                    <a href=""><li><i class="fa fa-facebook fa-2x"></i></li></a>
-                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gradient"></div>
                                 </div>
+                            </div>
+                            <div class="searchbar subtopbar noprint">
                                 <div class="row">
-                                    <div class="large-4 medium-12 columns leftbar">                                       
-                                        <div class="details">
-                                            <div><div class="caption">Investor:</div>Město Cheb</div>
-                                            <div><div class="caption">Adresa:</div>Za mostní branou 5, Cheb</div>
-                                            <div><div class="caption">Realizace</div>Česká republika</div>
-                                            <div><div class="caption">Web</div><a href="">www.kcsvoboda.cz</a></div>
-                                        </div>                                       
-                                        <div class="text content"><p>Obklopený vy expanze zmizí, má plné sem 100 právě plachtu dokument, slovních tom mysu druhé ta dozadu mluvená. K víc ze nímž jsou cirkulaci jí lidí. Potvrzují z propadly pevnost nejdřív vzhůru v porovnávání spojených vesmíru je moři počátku. Tryskají čeští čtvrtiny obilí planetě, klanech unii snížit počítačové, řady koloniálních terčem k události průlivem roli higgsových, mj. šimpanzům tkáně. Potýkat zátoky ekologa ruce z doba specifického o stát, vliv údaje pracovat já dochází s pracovně. Jídlo pole alarmující ta ohromní k měst boky nutné. Tím nemyslící moci oficiálně brání větvích bezprostředně budovaly.</p>
-                                            <h2>Nadpis druhé úrovně</h2>                                            
-                                            <p>Pozůstatky, tj. dál a 3000 výskyt o spodní erupce článek, jih lodí severněji historických hnutí, jím polarizovaný trávy stometrových rekordům, výšky hmotné z predátorům – andského – rozptyl.</p>
-                                            <h2>Nadpis druhé úrovně</h2>                                            
-                                            <p>Dob ke bezchybně s chce, kdo žili k vyvaří klád. Osoba 2012 obchodní uvolnění, švédskou ze mj. po vkusné v přitom opakovat by mořeplavba výjimky a nikde polokouli, závěry ostrovech z navzdory.</p>                                            
-                                        </div> 
-                                        <div class="map">                                            
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.147934681335!2d12.36792551605731!3d50.083517079426414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0f6a31e340413%3A0x9564198fe85e3d1c!2sZa+Mostn%C3%AD+branou+1791%2F5%2C+350+02+Cheb!5e0!3m2!1scs!2scz!4v1486462131767" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                        </div>
-                                        <div class="projektant stavba_items">
-                                            <h3>Projektant</h3>
-                                            <ul>
-                                                <a href=""><li>Ing. arch. Adam Rujbr</li></a>                                                                                                   
-                                            </ul>
-                                        </div>
-                                        <div class="sources stavba_items">
-                                            <h3>Použité materiály</h3>
-                                            <ul>
-                                                <a href=""><li>Zdroj 1</li></a>
-                                                <a href=""><li>Source 2</li></a>
-                                                <a href=""><li>Použitý materiál</li></a>
-                                            </ul>
-                                        </div>
-                                        <div class="literature stavba_items">
-                                            <h3>Související literatura</h3>
-                                            <ul>
-                                                <a href=""><li>Literatura 1</li></a>
-                                                <a href=""><li>Literatura 2</li></a>                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="large-8 medium-12 columns ">                                        
-
-                                        <div class="row flex-gallery">
-                                            <div class="large-12 columns meduim-12 thumbs">
-                                                <div class="item" data-w="440" data-h="350">
-                                                    <a href="#photo1" data-fancybox-width="760" data-fancybox-height="400" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/440/350?image=10" alt=""/>
-                                                    </a>
-                                                    <div class="hidden photobox" id="photo1">
-                                                        <div class="photo" style="">                                                            
-                                                            <img src="https://unsplash.it/760/400?image=10" />
-                                                        </div>
-                                                        <div class="description">
-                                                            <div class="inner">
-                                                                <h2>Kulturní centrum Svoboda</h2>
-                                                                <p>Název fotografie</p>
-                                                                <p class="grey">foto: Petr Šmídek, 2016</p>
-                                                                <div class="content">Plochou čtyři pluli biliónech kombinézy bezhlavě brázdit čistou, araby lodí vousech vás kontinentální sloužit za krize. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně.</div>
-                                                                <div class="social bottom">
-                                                                    <div class="social_inner">
-                                                                        <ul>
-                                                                            <a href=""><li><i class="fa fa-facebook fa-2x"></i></li></a>
-                                                                            <a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>
-                                                                            <a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>                                                                        
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="item" data-w="340" data-h="350">
-                                                    <a href="#photo2" data-fancybox-width="1360" data-fancybox-height="1400" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/340/350?image=11" alt=""/>
-                                                    </a>
-                                                    <div class="hidden photobox" id="photo2">
-                                                        <div class="photo" >                                                            
-                                                            <img src="https://unsplash.it/1360/1400?image=11" />
-                                                        </div>
-                                                        <div class="description">
-                                                            <div class="inner">
-                                                                <h2>Kulturní centrum Svoboda</h2>
-                                                                <p>Název fotografie</p>
-                                                                <p class="grey">foto: Petr Šmídek, 2016</p>
-                                                                <div class="content">Plochou čtyři pluli biliónech kombinézy bezhlavě brázdit čistou, araby lodí vousech vás kontinentální sloužit za krize. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně.</div>
-                                                                <div class="social bottom">
-                                                                    <div class="social_inner">
-                                                                        <ul>
-                                                                            <a href=""><li><i class="fa fa-facebook fa-2x"></i></li></a>
-                                                                            <a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>
-                                                                            <a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>                                                                        
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="item" data-w="440" data-h="350">
-                                                    <a href="#photo3" data-fancybox-width="2000" data-fancybox-height="1600" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/440/350?image=12" alt=""/>
-                                                    </a>
-                                                    <div class="hidden photobox" id="photo3">
-                                                        <div class="photo"  >                                                            
-                                                            <img src="https://unsplash.it/2000/1600?image=12" />
-                                                        </div>
-                                                        <div class="description">
-                                                            <div class="inner">
-                                                                <h2>Kulturní centrum Svoboda</h2>
-                                                                <p>Název fotografie</p>
-                                                                <p class="grey">foto: Petr Šmídek, 2016</p>
-                                                                <div class="content">Výpravy měsíců rodinu u břehů parní nejblíže přinášejí patří simulovalo váleční serveru jmelí obstaral, za 100 týmu moci koncentrace takovou mj. sedm jméno. Nacházeli mapuje ostrůvek tj. znovu průlomovým vznikly 200-500, u horským zejména strany patogenů ovládání jednou budoucnost s daří, dal tělem co behaviorálního deprese cíl též británie postavený dopluli nízká. Činu za výhod odráží lidstvo ulice. Slabí nemůžu hovoru činila docela bakterii s potažmo částí vyšší v křížení stěhování museum loupežného měřítku. Město zebřičky práci pád vybavení navrhovanou si tkání, hanové vzájemné úžasná, přírodě a půjdu cítit u nesměli internet.</div>
-                                                                <div class="social bottom">
-                                                                    <div class="social_inner">
-                                                                        <ul>
-                                                                            <a href=""><li><i class="fa fa-facebook fa-2x"></i></li></a>
-                                                                            <a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>
-                                                                            <a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>                                                                        
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="item" data-w="400" data-h="350">
-                                                    <a href="https://unsplash.it/400/350?image=13" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/400/350?image=13" alt=""/>
-                                                    </a>
-                                                </div>
-
-                                                <div class="item" data-w="240" data-h="450">
-                                                    <a href="https://unsplash.it/240/450?image=14" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/240/450?image=14" alt=""/>
-                                                    </a>
-                                                </div>
-
-                                                <div class="item" data-w="340" data-h="450">
-                                                    <a href="https://unsplash.it/340/450?image=15" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/340/450?image=15" alt=""/>
-                                                    </a>
-                                                </div>
-
-                                                <div class="item" data-w="400" data-h="350">
-                                                    <a href="https://unsplash.it/400/350?image=16" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/400/350?image=16" alt=""/>
-                                                    </a>
-                                                </div>
-
-                                                <div class="item" data-w="440" data-h="350">
-                                                    <a href="https://unsplash.it/440/350?image=17" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/440/350?image=17" alt=""/>
-                                                    </a>
-                                                </div>
-
-                                                <div class="item" data-w="440" data-h="350">
-                                                    <a href="https://unsplash.it/440/350?image=18" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/440/350?image=18" alt=""/>
-                                                    </a>
-                                                </div>
-
-                                                <div class="item" data-w="640" data-h="400">
-                                                    <a href="https://unsplash.it/640/400?image=19" class="fancybox" rel="group" title="">
-                                                        <img rel="lightbox" src="https://unsplash.it/640/400?image=19" alt=""/>
-                                                    </a>
-                                                </div>
+                                    <div class="large-12 columns">
+                                        <form role="search" action="">
+                                            <div class="w40p col">
+                                                <input type="text" title="hledej" name="" placeholder="hledej"/>
                                             </div>
-                                        </div>
-
-                                        <div class="row banner longbanner">
-                                            <div class="large-12 columns">
-                                                <a href="">
-                                                    <img src="http://placehold.it/728x90/000000/ffffff"/>
-                                                </a>
+                                            <div class="w20p col">
+                                                <select title="oblast">
+                                                    <option>celý web</option>
+                                                    <option>zprávy / salon</option>
+                                                    <option>architekti / ateliéry</option>
+                                                    <option>stavby</option>
+                                                    <option>místa</option>
+                                                    <option>knihovna / eshop</option>
+                                                    <option>katalog</option>
+                                                </select>
                                             </div>
-                                        </div>
-
-                                        <!-- start comments-->
-                                        <div class="comments">
-                                            <div class="chead row">
-                                                <div class="large-9 medium-8 small-6 columns num"><span>36</span> komentářů</div>
-                                                <a href=""><div class="large-3 medium-4 small-6 columns add">přidat komentář</div></a>
+                                            <div class="w20p col">
+                                                <input type="submit" class="button" value="Hledej">
                                             </div>
-                                            <div class="cbody row">
-                                                <div class="large-12 columns">
-                                                    <div class="row cheader">
-                                                        <div class="small-6 large-7 columns">Předmět</div>
-                                                        <div class="small-3 large-3 columns">Autor</div>
-                                                        <div class="small-3 large-2 columns">Datum</div>
-                                                    </div>
-
-                                                    <div class="row ccomment">
-                                                        <div class="small-6 large-7 columns subj">tak se to má dělat</div>
-                                                        <div class="small-3 large-3 columns">Pavel Nasadil</div>
-                                                        <div class="small-3 large-2 columns">02.12.05 10:06</div>
-                                                    </div>
-                                                    <div class="row ccomment re">
-                                                        <div class="small-6 large-7 columns subj">Re: tak se to má dělat</div>
-                                                        <div class="small-3 large-3 columns">Lucie Kavánová</div>
-                                                        <div class="small-3 large-2 columns">02.12.05 10:32</div>
-                                                    </div>
-                                                    <div class="row ccomment">
-                                                        <div class="small-6 large-7 columns subj">už zima</div>
-                                                        <div class="small-3 large-3 columns">Martin Franěk</div>
-                                                        <div class="small-3 large-2 columns">02.12.05 11:30</div>
-                                                    </div>
-                                                </div>
+                                            <div class="w20p col pt20">
+                                                <div class="large-12 columns"><a href="" >Rozšířené vyhledávání</a></div>
                                             </div>
-                                            <a href="">
-                                                <div class="row call">
-                                                    <div class="large-12 columns">zobrazit všechny komentáře</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- end comments -->
-
-
-                                        <!-- related buildings by architects -->
-                                        <div class="row related">
-                                            <h2 class="large-12 columns">Více staveb od architekta</h2>
-
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=1)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=2)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=3)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=4)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=5)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-
-                                        </div>
-                                        <!-- end related buildings by architects -->
-
-                                        <!-- related interiers -->
-                                        <div class="row related">
-                                            <h2 class="large-12 columns">Více z interiérů</h2>
-
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=1)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=2)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=3)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=4)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="large-4 medium-4 columns" >
-                                                    <div class="project_box" style="background-image: url(http://loremflickr.com/300/240/atelier?random=5)">
-                                                        <div class="description">
-                                                            <h4>Název projektu</h4>
-                                                            <p><span class="atelier">Atelier</span> | <span class="architect">Jméno architekta</span></p>
-                                                        </div>
-                                                        <div class="gradient"></div>
-                                                    </div>
-                                                </div>
-                                            </a>
-
-                                        </div>
-                                        <!-- end related buildings by architects -->
-
-                                        <div class="row">
-                                            <div class="large-12 columns align-right traffic">
-                                                Návštěvnost: <span class="bold">14514 čtenářů</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row partners">                                   
-                                <div class="large-12 columns">
-                                    <ul class="bxslider" >
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>
-                                        <li ><img src="http://placehold.it/150x100" /></li>                                   
-                                    </ul>
-                                </div>
-                            </div>                                
-                        </div>
-                        <div class="footer">
-                            <div class="row">
-                                <div class="large-3 medium-4 columns">
-                                    <img src="http://placehold.it/120x70/000000/ffffff?text=archiweblogo+120x70" />
-                                    <p>internetové centrum architektury</p>
-                                </div>
-                                <div class="large-5 medium-4 columns">
-                                    <div class="row">
-                                        <div class="large-4 medium-12 columns fmenu">
-                                            <h4>O nás</h4>
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="">Náš příběh</a></li>
-                                                    <li><a href="">Redakce</a></li>
-                                                    <li><a href="">Podporujeme</a></li>
-                                                    <li><a href="">Impressum</a></li>
-                                                    <li><a href="">Kontakt</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                        <div class="large-4 medium-12 columns fmenu">
-                                            <h4>Inzerce</h4>
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="">Mediakit 2017</a></li>
-                                                    <li><a href="">Kontakt</a></li>                                            
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                        <div class="large-4 medium-12 columns fmenu">
-                                            <h4>Uživatel</h4>
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="">Katalog architektů</a></li>
-                                                    <li><a href="">Katalog dodavatelů</a></li>
-                                                    <li><a href="">Přidat svou realizaci na archiweb</a></li>                                            
-                                                    <li><a href="">Vložit inzerát do burzy práce</a></li>                                            
-                                                    <li><a href="">Přidat akci do Kalendáře akcí</a></li>                                            
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="large-3 medium-4 columns">
-                                    <h4>Newsletter</h4>
-                                    <p>Přihlaste se k odběru našeho pravidelného<br />týdenního newsletteru:</p>
-                                    <div class="newsletter_form">
-                                        <form>
-                                            <input type="email" required="required" placeholder="Váš e-mail" class="email"/>
-                                            <input type="submit" value="Odeslat" name="submit" class="button submit" />
                                         </form>
                                     </div>
-                                    <div class="social">
-                                        <ul>
-                                            <li>
-                                                <a href=""><div class="facebook"><i class="fa"></i></div></a>
-                                            </li>
-                                            <li>
-                                                <a href=""><div class="facebook"><i class="fa"></i></div></a>
-                                            </li>
+                                </div>
+                            </div>
+                            <div class="loginbar subtopbar noprint">
+                                <div class="row">
+                                    <form>
+                                        <div class="large-12 columns">
+                                            <div class="w25p col">
+                                                <input type="text" title="uživatel" placeholder="uživatel" name=""/>
+                                            </div>
+                                            <div class="w25p col">
+                                                <input type="password" title="heslo" placeholder="heslo" name=""/>
+                                            </div>
+                                            <div class="w10p col chb">
+                                                <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
+                                            </div>
+                                            <div class="w20p col">
+                                                <input type="submit" class="button" value="Přihlásit">
+                                            </div>
+                                            <div class="w20p col pt8 fs085">
+                                                <div class="large-12 columns"><a href="" >Zapomněli jste heslo?</a></div>
+                                                <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="body" itemscope itemtype="http://schema.org/LandmarksOrHistoricalBuildings">
+                                <main role="main">
+                                    <div class="big_header" style="background-image: url(https://unsplash.it/1920/450);">
+                                        <div class="row">
+                                            <div class="large-9 medium-9 small-12 columns bottom">
+                                                <div class="social show-for-small-only">
+                                                    <ul>
+                                                        <li><a href=""><div><i class="fa fa-heart fa-2x"></i></div></a></li>
+                                                        <!--<li><a href=""><div><i class="fa fa-twitter fa-2x"></i></div></a></li>-->
+                                                        <!--<li><a href=""><div><i class="fa fa-pinterest-p fa-2x"></i></div></a></li>-->
+                                                        <li><a href=""><div><i class="fa fa-facebook fa-2x"></i></div></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h1 itemprop="name">Stará Celnice</h1>
+                                                <h2 itemprop="alternateName">Podnadpis</h2>
+                                            </div>
+                                            <div class="large-3 medium-3 hide-for-small-only columns social bottom">
+                                                <div class="social_inner ">
+                                                    <ul>
+                                                        <li><a href=""><div><i class="fa fa-heart fa-2x"></i></div></a></li>
+                                                        <!--<li><a href=""><div><i class="fa fa-twitter fa-2x"></i></div></a></li>-->
+                                                        <!--<li><a href=""><div><i class="fa fa-pinterest-p fa-2x"></i></div></a></li>-->
+                                                        <li><a href=""><div><i class="fa fa-facebook fa-2x"></i></div></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="large-12 columns printonly end">
+                                                <img class="big_header_image printonly" itemprop="photo" alt="Stará Celnice - hlavní obrázek" src="https://unsplash.it/1200/450" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-4 medium-12 columns leftbar">
+                                            <section role="region" class="sec_details">                                            
+                                                <div class="details">
+                                                    <div><span class="caption">Autor:</span><span class="colored bold"><a href="" title="knesl + kynčl architekti">knesl + kynčl architekti</a> | <a href="" title="Jiří Knesl">Jiří Knesl</a>, <a href="" title="Jakub Kynčl">Jakub Kynčl</a>, <a href="" title="Josef Hajný">Josef Hajný</a></span></div>
+                                                    <div><span class="caption">Spolupráce:</span>Filip Balcar (stavebně-technické řešení); Pavel Hladík / Hladík a Chalivopulos (statika); Jitka Špondrová (požární ochrana); Dušan Variš (zdravotní technika, vytápění); Vítězslav Vaněk (zásobování vodou, kanalizace, zásobování plynem); Pavel Dočekal / KOMP (elektroinstalace); Milan Zezula (doprava); Michal Obrtel (rozpočet)</div>
+                                                    <div><span class="caption">Dodavatel:</span><a href="">ORAK - stavební společnost s.r.o.</a></div>
+                                                    <div><span class="caption">Adresa:</span><span itemprop="address">Jiráskova, <span class="bold">Slavkov u Brna, Česká republika</span></span></div>
+                                                    <div><span class="caption">Projekt:</span>2008 - 2009</div>
+                                                    <div><span class="caption">Realizace:</span>2009 - 2012</div>
+                                                    <div><span class="caption">Užitná plocha:</span>206 m<sup>2</sup></div>
+                                                    <div><span class="caption">Zastavěná plocha:</span>333 m<sup>2</sup></div>
+                                                    <div><span class="caption">Plocha pozemku:</span>1567 m<sup>2</sup></div>
+                                                    <div><span class="caption">Obestavěný prostor:</span>1334 m<sup>3</sup></div>
+                                                </div>
+                                            </section>
+
+                                            <section role="region" class="sec_tagsTagy">                                            
+                                                <div class="tags">
+                                                    <ul>
+                                                        <li><a href="">tagy</a></li>
+                                                        <li><a href="">něco</a></li>
+                                                        <li><a href="">blabla</a></li>
+                                                        <li><a href="">hohoho</a></li>
+                                                        <li><a href="">a</a></li>
+                                                        <li><a href="">velmidlouhýnázevtagu</a></li>
+                                                        <li><a href="">aaaaaaa</a></li>
+                                                        <li><a href="">David</a></li>
+                                                        <li><a href="">architektura</a></li>
+                                                        <li><a href="">další</a></li>
+                                                    </ul>
+                                                </div>
+                                            </section>
+
+                                            <section role="region" class="sec_text1">  
+                                                <div class="text content" itemprop="description">
+                                                    <div class="text_box">
+                                                        <p>Obklopený vy expanze zmizí, má plné sem 100 právě plachtu dokument, slovních tom mysu druhé ta dozadu mluvená. K víc ze nímž jsou cirkulaci jí lidí. Potvrzují z propadly pevnost nejdřív vzhůru v porovnávání spojených vesmíru je moři počátku. Tryskají čeští čtvrtiny obilí planetě, klanech unii snížit počítačové, řady koloniálních terčem k události průlivem roli higgsových, mj. šimpanzům tkáně. Potýkat zátoky ekologa ruce z doba specifického o stát, vliv údaje pracovat já dochází s pracovně. Jídlo pole alarmující ta ohromní k měst boky nutné. Tím nemyslící moci oficiálně brání větvích bezprostředně budovaly.</p>                                                
+                                                        <h2>Nadpis druhé úrovně</h2>
+                                                        <p>Pozůstatky, tj. dál a 3000 výskyt o spodní erupce článek, jih lodí severněji historických hnutí, jím polarizovaný trávy stometrových rekordům, výšky hmotné z predátorům – andského – rozptyl.</p>
+                                                        <h2>Nadpis druhé úrovně</h2>
+                                                        <p>Dob ke bezchybně s chce, kdo žili k vyvaří klád. Osoba 2012 obchodní uvolnění, švédskou ze mj. po vkusné v přitom opakovat by mořeplavba výjimky a nikde polokouli, závěry ostrovech z navzdory.</p>
+                                                        <div class="gradient"></div>
+                                                    </div>
+                                                    <div class="button text_box_read_more">číst dále</div>
+                                                </div>
+                                            </section>
+
+                                            <section role="region" class="sec_map">  
+                                                <div class="map">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.147934681335!2d12.36792551605731!3d50.083517079426414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0f6a31e340413%3A0x9564198fe85e3d1c!2sZa+Mostn%C3%AD+branou+1791%2F5%2C+350+02+Cheb!5e0!3m2!1scs!2scz!4v1486462131767" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                                    <div class="seo-only" itemprop="hasMap">https://goo.gl/maps/k71TAxqDex92</div>
+                                                </div>
+                                            </section>
+
+                                            <section role="region" class="sec_links">  
+                                                <div class="stavba_items">
+                                                    <h2>Firmy</h2>
+                                                    <ul>
+                                                        <li> <a href="">Jméno dodavatele</a>
+                                                            <ul>
+                                                                <li>předmět</li>
+                                                                <li>střešní okna</li>
+                                                            </ul></li>                                                    
+                                                    </ul>                                                
+                                                </div>                                                                                    
+                                            </section>
+
+                                            <section role="region" class="sec_literatura">  
+                                                <div class="row literature">
+                                                    <h2 class="large-12 columns">Literatura</h2>    
+                                                    <div class="books large-up-2 medium-up-4 small-up-2"> 
+                                                        <div class="column column-block book" itemscope="" itemtype="http://schema.org/Book">
+                                                            <article role="article">
+                                                                <a href="" title="přejít na detail">
+                                                                    <div class="cover">
+                                                                        <img itemprop="image" alt="O letadélku káněti - cover" src="http://loremflickr.com/130/185/book,cover?random=1" />
+                                                                    </div>
+                                                                    <h3 itemprop="name" class="title">O letadélku káněti</h3>
+                                                                </a>
+                                                                <div class="order">
+                                                                    <a href="" title="objednat" target="_blank">objednat</a>
+                                                                </div>
+                                                            </article>
+                                                        </div>    
+                                                        <div class="column column-block book" itemscope="" itemtype="http://schema.org/Book">
+                                                            <article role="article">
+                                                                <a href="" title="přejít na detail">
+                                                                    <div class="cover">
+                                                                        <img itemprop="image" alt="O letadélku káněti - cover" src="http://loremflickr.com/145/220/book,cover?random=2" />
+                                                                    </div>
+                                                                    <h3 itemprop="name" class="title">O letadélku káněti</h3>
+                                                                </a>
+                                                                <div class="order">
+                                                                    <a href="" title="objednat" target="_blank">objednat</a>
+                                                                </div>
+                                                            </article>
+                                                        </div>  
+                                                        <div class="column column-block book" itemscope="" itemtype="http://schema.org/Book">
+                                                            <article role="article">
+                                                                <a href="" title="přejít na detail">
+                                                                    <div class="cover">
+                                                                        <img itemprop="image" alt="O letadélku káněti - cover" src="http://loremflickr.com/300/198/book,cover?random=3" />
+                                                                    </div>
+                                                                    <h3 itemprop="name" class="title">O letadélku káněti</h3>
+                                                                </a>
+                                                                <div class="order">
+                                                                    <a href="" title="objednat" target="_blank">objednat</a>
+                                                                </div>
+                                                            </article>
+                                                        </div>  
+                                                        <div class="column column-block book" itemscope="" itemtype="http://schema.org/Book">
+                                                            <article role="article">
+                                                                <a href="" title="přejít na detail">
+                                                                    <div class="cover">
+                                                                        <img itemprop="image" alt="O letadélku káněti - cover" src="http://loremflickr.com/115/185/book,cover?random=4" />
+                                                                    </div>
+                                                                    <h3 itemprop="name" class="title">O letadélku káněti</h3>
+                                                                </a>
+                                                                <div class="order">
+                                                                    <a href="" title="objednat" target="_blank">objednat</a>
+                                                                </div>
+                                                            </article>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </section>
+
+
+
+                                        </div>
+                                        <div class="large-8 medium-12 columns ">                                       
+                                            <section role="region" class="sec_text2">    
+                                                <div class="content row" itemprop="description">
+                                                    <div class="introtext columns large-12 ">
+                                                        Nosným motivem domu, který se promítá do jeho umístění i technického řešení, je jasná geometrická forma ovlivněná tvarem pozemku a maximální propojení interiéru s exteriérem.                                                
+                                                    </div>
+
+                                                    <div class="large-12 columns" >
+                                                        <h3>Urbanistické řešení</h3>
+                                                        <p>Parcela se nachází v severní okrajové části města, která dále přechází v chatovou oblast. Mírně svažitý pozemek na západní straně přiléhá k lesu, ze severu je ohraničen sousedním pozemkem, na jihovýchodní straně je vymezen komunikací, která ústí do ulice Jiráskovy. Lichoběžníkový tvar pozemku generoval základní geometrickou stopu domu. Ten je navržen na půdoryse pravoúhlého trojúhelníku, jehož nejdelší strana je orientována na jihovýchod, vyvýšena nad komunikací, kratší strany se obracejí do zahrady tvořené převážně vzrostlou zelení sadového charakteru.  </p>
+
+                                                        <h3>Architektonické řešení</h3>
+                                                        <p>Dům je navržen jako jednopodlažní, samostatně stojící. Vnitřní, volně plynoucí prostor je vymezen dvěma horizontálními rovinami definujícími různé terasy a lodžie, které umožňují maximální propojení interiéru s exteriérem. Dispozičně se jedná o dům 5+kk s komfortním zázemím, které představují dvě koupelny, šatny u jednotlivých ložnic, prádelna či prostorný sklad přístupný zevnitř i zvenčí. Pobytové místnosti jsou orientovány na jihovýchod, s výhledem na dominanty města – zámek a kostel.</p>
+
+                                                        <h3>Konstrukční a materiálové řešení</h3>
+                                                        <p>Objekt je založen na základových pasech. Svislé nosné konstrukce jsou provedeny z keramických bloků  tl. 450 mm, příčky z keramických příčkovek tl. 100 mm a 150 mm. Stropní konstrukce jsou dřevěné trámové, překlady okenních otvorů jsou součástí železobetonových ztužujících věnců, které vynáší i převislou část střechy kryjící terasy. Střecha je rovná, ve spádu min 1%, s hydroizolačními vrstvami přitíženými kačírkem.</p>
+                                                        <p>Podlahy v obytných místnostech jsou dřevěné vlysové, v prostorách hygienického zázemí z keramické dlažby, tepelnou izolaci tvoří 100 mm extrudovaného polystyrenu. Střešní plášť je izolován vrstvou minerální vaty v tloušťce 300 mm. Okna jsou vyrobena z dřevěných europrofilů v antracitové barvě, zasklená izolačním dvojsklem. Vnitřní omítky jsou štukové, vápenocementové, vnější omítky jsou navrženy vápenocementové, hladké, probarvené v dvojím odstínu šedi. Klempířské výrobky jsou z pozinkovaného plechu. Oplocení pozemku je provedeno z poplastovaného pletiva, opěrné zídky z betonových tvárnic.</p>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+
+                                            <section class="sec_gallery">
+                                                <div class="row flex-gallery">
+                                                    <div class="large-12 columns meduim-12 thumbs">
+                                                        <div class="item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" data-w="440" data-h="350">
+                                                            <a href="#photo1" data-fancybox-width="760" data-fancybox-height="400" class="fancybox" rel="group" title="">
+                                                                <img itemprop="thumbnail" rel="lightbox" src="https://unsplash.it/440/350?image=10" alt=""/>
+                                                            </a>
+                                                            <div class="hidden photobox"  id="photo1">
+                                                                <div class="photo" style="">
+                                                                    <img itemprop="contentUrl" alt="Kulturní centrum Svoboda" src="https://unsplash.it/760/400?image=10" />
+                                                                </div>
+                                                                <div class="description">
+                                                                    <div class="inner">
+                                                                        <h2 itemprop="name">Kulturní centrum Svoboda</h2>
+                                                                        <p itemprop="caption">Název fotografie</p>
+                                                                        <p class="grey">foto: <span itemprop="author">Petr Šmídek</span>, <span itemprop="dateCreated">2016</span></p>
+                                                                        <div class="content" itemprop="description">Plochou čtyři pluli biliónech kombinézy bezhlavě brázdit čistou, araby lodí vousech vás kontinentální sloužit za krize. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně.</div>
+                                                                        <div class="social bottom">
+                                                                            <div class="social_inner">
+                                                                                <ul>
+                                                                                    <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                                                    <!--<li><a href=""><i class="fa fa-pinterest-p fa-2x"></i></a></li>-->
+                                                                                    <li><a href=""><i class="fa fa-heart fa-2x"></i></a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" data-w="340" data-h="350">
+                                                            <a href="#photo2" data-fancybox-width="1360" data-fancybox-height="1400" class="fancybox" rel="group" title="">
+                                                                <img itemprop="thumbnail" rel="lightbox" src="https://unsplash.it/340/350?image=11" alt=""/>
+                                                            </a>
+                                                            <div class="hidden photobox" id="photo2">
+                                                                <div class="photo" >
+                                                                    <img itemprop="contentUrl" alt="Kulturní centrum Svoboda" src="https://unsplash.it/1360/1400?image=11" />
+                                                                </div>
+                                                                <div class="description">
+                                                                    <div class="inner">
+                                                                        <h2 itemprop="name">Kulturní centrum Svoboda</h2>
+                                                                        <p itemprop="caption">Název fotografie</p>
+                                                                        <p class="grey">foto: <span itemprop="author">Petr Šmídek</span>, <span itemprop="dateCreated">2016</span></p>
+                                                                        <div class="content" itemprop="description">Plochou čtyři pluli biliónech kombinézy bezhlavě brázdit čistou, araby lodí vousech vás kontinentální sloužit za krize. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně. Vlna díky mnozí dvou proudí archeologa k ideálním takřka nového člověka šimpanz pokleslo. Štítů dělá staveb – obchodníky problémy si bílého, dal tmavou krásná tu, mu ruin pozvedl úrovně.</div>
+                                                                        <div class="social bottom">
+                                                                            <div class="social_inner">
+                                                                                <ul>
+                                                                                    <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                                                    <!--<li><a href=""><i class="fa fa-pinterest-p fa-2x"></i></a></li>-->
+                                                                                    <li><a href=""><i class="fa fa-heart fa-2x"></i></a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" data-w="440" data-h="350">
+                                                            <a href="#photo3" data-fancybox-width="2000" data-fancybox-height="1600" class="fancybox" rel="group" title="">
+                                                                <img itemprop="thumbnail" rel="lightbox" src="https://unsplash.it/440/350?image=12" alt=""/>
+                                                            </a>
+                                                            <div class="hidden photobox" id="photo3">
+                                                                <div class="photo"  >
+                                                                    <img itemprop="contentUrl" alt="Kulturní centrum Svoboda" src="https://unsplash.it/2000/1600?image=12" />
+                                                                </div>
+                                                                <div class="description">
+                                                                    <div class="inner">
+                                                                        <h2 itemprop="name">Kulturní centrum Svoboda</h2>
+                                                                        <p itemprop="caption">Název fotografie</p>
+                                                                        <p class="grey">foto: <span itemprop="author">Petr Šmídek</span>, <span itemprop="dateCreated">2016</span></p>
+                                                                        <div class="content" itemprop="description">Výpravy měsíců rodinu u břehů parní nejblíže přinášejí patří simulovalo váleční serveru jmelí obstaral, za 100 týmu moci koncentrace takovou mj. sedm jméno. Nacházeli mapuje ostrůvek tj. znovu průlomovým vznikly 200-500, u horským zejména strany patogenů ovládání jednou budoucnost s daří, dal tělem co behaviorálního deprese cíl též británie postavený dopluli nízká. Činu za výhod odráží lidstvo ulice. Slabí nemůžu hovoru činila docela bakterii s potažmo částí vyšší v křížení stěhování museum loupežného měřítku. Město zebřičky práci pád vybavení navrhovanou si tkání, hanové vzájemné úžasná, přírodě a půjdu cítit u nesměli internet.</div>
+                                                                        <div class="social bottom">
+                                                                            <div class="social_inner">
+                                                                                <ul>
+                                                                                    <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                                                    <!--<li><a href=""><i class="fa fa-pinterest-p fa-2x"></i></a></li>-->
+                                                                                    <li><a href=""><i class="fa fa-heart fa-2x"></i></a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item" data-w="400" data-h="350">
+                                                            <a href="https://unsplash.it/400/350?image=13" class="fancybox" rel="group" title="">
+                                                                <img rel="lightbox" src="https://unsplash.it/400/350?image=13" alt=""/>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item" data-w="240" data-h="450">
+                                                            <a href="https://unsplash.it/240/450?image=14" class="fancybox" rel="group" title="">
+                                                                <img rel="lightbox" src="https://unsplash.it/240/450?image=14" alt=""/>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item" data-w="340" data-h="450">
+                                                            <a href="https://unsplash.it/340/450?image=15" class="fancybox" rel="group" title="">
+                                                                <img rel="lightbox" src="https://unsplash.it/340/450?image=15" alt=""/>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item" data-w="400" data-h="350">
+                                                            <a href="https://unsplash.it/400/350?image=16" class="fancybox" rel="group" title="">
+                                                                <img rel="lightbox" src="https://unsplash.it/400/350?image=16" alt=""/>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item" data-w="440" data-h="350">
+                                                            <a href="https://unsplash.it/440/350?image=17" class="fancybox" rel="group" title="">
+                                                                <img rel="lightbox" src="https://unsplash.it/440/350?image=17" alt=""/>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item" data-w="440" data-h="350">
+                                                            <a href="https://unsplash.it/440/350?image=18" class="fancybox" rel="group" title="">
+                                                                <img rel="lightbox" src="https://unsplash.it/440/350?image=18" alt=""/>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item" data-w="640" data-h="400">
+                                                            <a href="https://unsplash.it/640/400?image=19" class="fancybox" rel="group" title="">
+                                                                <img rel="lightbox" src="https://unsplash.it/640/400?image=19" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                            <div class="row banner longbanner">
+                                                <div class="large-12 columns">
+                                                    <a href="">
+                                                        <img alt="reklamní oznámení" src="http://placehold.it/800x300/000000/ffffff"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <!-- start comments-->
+                                            <section role="region" class="sec_comments">    
+                                                <div class="comments">
+                                                    <div class="chead row">
+                                                        <div class="large-9 medium-8 small-6 columns num"><span>36</span> komentářů</div>
+                                                        <a href=""><div class="large-3 medium-4 small-6 columns add">přidat komentář</div></a>
+                                                    </div>
+                                                    <div class="cbody row"> 
+                                                        <div class="large-12 columns">
+                                                            <div class="row cheader">
+                                                                <div class="small-6 large-7 columns">Předmět</div>
+                                                                <div class="small-3 large-3 columns">Autor</div>
+                                                                <div class="small-3 large-2 columns">Datum</div>
+                                                            </div>
+
+                                                            <div class="row ccomment">
+                                                                <div class="small-6 large-7 columns subj">tak se to má dělat</div>
+                                                                <div class="small-3 large-3 columns">Pavel Nasadil</div>
+                                                                <div class="small-3 large-2 columns">02.12.05 10:06</div>
+                                                            </div>
+                                                            <div class="row ccomment re">
+                                                                <div class="small-6 large-7 columns subj">Re: tak se to má dělat</div>
+                                                                <div class="small-3 large-3 columns">Lucie Kavánová</div>
+                                                                <div class="small-3 large-2 columns">02.12.05 10:32</div>
+                                                            </div>
+                                                            <div class="row ccomment">
+                                                                <div class="small-6 large-7 columns subj">už zima</div>
+                                                                <div class="small-3 large-3 columns">Martin Franěk</div>
+                                                                <div class="small-3 large-2 columns">02.12.05 11:30</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="">
+                                                        <div class="row call">
+                                                            <div class="large-12 columns">zobrazit všechny komentáře</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </section>
+                                            <!-- end comments -->
+
+                                            <!-- related buildings by architects -->
+                                            <section role="region" class="sec_realizace">                                            
+                                                <div class="">
+                                                    <h2 class="uppercase">Více staveb od architekta</h2>                                                
+                                                </div>
+
+                                                <div class="row large-up-2 medium-up-2 small-up-1 articles">
+                                                    <div class="column column-block">
+                                                        <a href="">      
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=1)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">                 
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=2)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div> 
+                                                            </article>
+                                                        </a>
+                                                    </div>                                                                                
+                                                    <div class="column column-block">
+                                                        <a href="">  
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=3)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article> 
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">   
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=4)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">                                        
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=5)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">    
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=6)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">       
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=7)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">     
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=8)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>  
+                                                    <div class="column column-block">
+                                                        <a href="">    
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=9)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>                                                                        
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>     
+                                                </div>                                                
+                                            </section>
+
+
+                                            <section role="region" class="sec_buildings_by_architect">                                            
+                                                <div class="">
+                                                    <h2 class="uppercase">Více z interiérů</h2>
+                                                </div>
+
+                                                <div class="row large-up-2 medium-up-2 small-up-1 articles">
+                                                    <div class="column column-block">
+                                                        <a href="">      
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=1)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">                 
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=2)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                                                                
+                                                    <div class="column column-block">
+                                                        <a href="">  
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=3)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article> 
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">   
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=4)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">                                        
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=5)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">    
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=6)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">       
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=7)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>                                        
+                                                    <div class="column column-block">
+                                                        <a href="">     
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=8)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="url">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>  
+                                                    <div class="column column-block">
+                                                        <a href="">    
+                                                            <article role="article">
+                                                                <div class="project_box" style="background-image: url(http://loremflickr.com/389/240/architecture?random=9)">
+                                                                    <div class="description">
+                                                                        <h3>Název projektu</h3>
+                                                                        <p><span class="atelier">Atelier</span> | <span class="">Jméno architekta</span></p>
+                                                                    </div>
+                                                                    <div class="gradient"></div>
+                                                                </div>
+                                                            </article>
+                                                        </a>
+                                                    </div>     
+                                                </div>                                                
+                                            </section>
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>
+                            <div class="partners noprint">
+                                <div class="row">
+                                    <div class="large-1 columns title">
+                                        <h2><span>Partneři</span></h2>
+                                    </div>
+                                    <div class="large-11 columns">
+                                        <ul class="bxslider" >
+                                            <li><a href="" target="_blank"><img alt="Logo J.A.P." src="images/logos/e608e08c9163a7f55d76aaf51669b20c.gif" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Velux" src="images/logos/30686f7eeb85ce3c40e295b7d0e90ec2.jpg" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Němec" src="images/logos/6192566d2d7e872fa7a881bc8549d6d3.gif" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Presbeton" src="images/logos/6435b1a8d4ce843ebe30acd5f2de5b76.jpg" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Stopka" src="images/logos/793dc65018e32897e2472d2ca08708d8.gif" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Janošík" src="images/logos/7e4f78b01303a9e52f747849092cb655.jpg" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Koma" src="images/logos/8a6029fde2c63b81110c54f6c7a853d3.jpg" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Fingres" src="images/logos/a9eae1d897a705e690a60bbc11011b3d.gif" /></a></li>
+                                            <li><a href="" target="_blank"><img alt="Logo Logo Concept Wiesner Hager" src="images/logos/c3cc38950dd4e902e2120c1887d89149.jpg" /></a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="large-12 copyright">
-                                    Copyright Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Privacy</a>. <a href="">Terms of use</a>.
+                        </div>
+                        <div class="footer">
+                            <footer role="contentinfo">
+                                <h2 class="seo-only">Patička</h2>
+                                <div class="row">
+                                    <div class="large-3 medium-4 columns">
+                                        <img class="logo" alt="Logo Archiweb malé" src="images/archiweb-logo_bila-01.svg" width="120"/>
+                                        <p>internetové centrum architektury</p>
+                                    </div>
+                                    <div class="large-5 medium-4 columns">
+                                        <div class="row">
+                                            <div class="large-4 medium-12 columns fmenu">
+                                                <h3>O nás</h3>
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="">Náš příběh</a></li>
+                                                        <li><a href="">Redakce</a></li>
+                                                        <li><a href="">Podporujeme</a></li>
+                                                        <li><a href="">Impressum</a></li>
+                                                        <li><a href="">Kontakt</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                            <div class="large-4 medium-12 columns fmenu">
+                                                <h3>Inzerce</h3>
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="">Mediakit 2017</a></li>
+                                                        <li><a href="">Staňte se partnerem</a></li>
+                                                        <li><a href="">Kontakt</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                            <div class="large-4 medium-12 columns fmenu">
+                                                <h3>Uživatel</h3>
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="">Katalog architektů</a></li>
+                                                        <li><a href="">Katalog dodavatelů</a></li>
+                                                        <li><a href="">Přidat realizaci</a></li>
+                                                        <li><a href="">Inzerce v burze práce</a></li>
+                                                        <li><a href="">Přidat akci do Kalendáře</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="large-3 medium-4 columns">
+                                        <h3>Newsletter</h3>
+                                        <p>Přihlaste se k odběru našeho pravidelného<br />týdenního newsletteru:</p>
+                                        <div class="newsletter_form">
+                                            <form>
+                                                <input type="email" required="required" placeholder="Váš e-mail" class="email"/>
+                                                <input type="submit" value="Odeslat" name="submit" class="button submit" />
+                                            </form>
+                                        </div>
+
+
+                                        <div class="social bottom">
+                                            <div class="social_inner">
+                                                <ul>
+                                                    <!--<li><a href="" target="_blank"><div><i class="fa fa-heart fa-2x"></i></a></li>-->
+                                                    <!--<li><a href="" target="_blank"><div><i class="fa fa-twitter fa-2x"></i></a></li>-->
+                                                    <!--<li><a href="" target="_blank"><div><i class="fa fa-pinterest-p fa-2x"></i></a></li>-->
+                                                    <li><a href="http://facebook.com" target="_blank"><div><i class="fa fa-facebook fa-2x"></i></div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="large-12 columns copyright">
+                                        &copy; Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Soukromí</a>. <a href="">Podmínky užití</a>.
+                                    </div>
+                                </div>
+                            </footer>
                         </div>
                     </div>
                 </div>                
             </body>
+
             <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/plugins/foundation.offcanvas.js"></script>-->
             <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+            <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.6"></script>
             <script src="js/vendor/foundation.js"></script>
+            <script src="js/vendor/jquery.dotdotdot.min.js"></script>
+            <!-- Add fancyBox -->
+
 
             <script>
                     $(document).foundation();
@@ -708,20 +1034,8 @@
             <!-- bxSlider Javascript file -->
             <script src="js/jquery.bxslider.min.js"></script>
             <script src='js/jquery.flex-images.min.js'></script>
-            <script src="js/app.js"></script>           
+            <script src="js/app.js"></script>
 
-            <script>
-                    $('.flex-gallery .thumbs').flexImages({
-                        rowHeight: 350
-                    });
-            </script>
-
-            <!-- Add mousewheel plugin (this is optional) -->
-            <script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel.pack.js"></script>
-
-            <!-- Add fancyBox -->
-
-            <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.6"></script>
-
-            <script src="https://use.fontawesome.com/36358bdd46.js"></script>
+            <!--<script src="https://use.fontawesome.com/36358bdd46.js"></script>-->
+            <script src="js/36358bdd46.js"></script>
         </html>

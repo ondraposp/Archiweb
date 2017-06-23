@@ -4,7 +4,11 @@
 */
 
 .content {
-    padding-bottom: 40px;
+    //padding-bottom: 25px;
+    .introtext {
+        font-size: 1.2rem;
+        font-weight: $fbold;
+    }
 
     h2, h3, h4 {
         font-weight: bold;    
@@ -41,11 +45,6 @@
         &:before {
             content: none;
         }
-    }
-
-    figcaption {
-        margin-bottom: 1.3rem;
-        font-size: 0.9rem;
     }
 
     table {
@@ -85,7 +84,7 @@
             .option {
                 .bar {
                     height: 5px;
-                    background-color: $violet;
+                    background-color: $basecolor;
                     border-style: solid;
                     border-color: #FFF; 
                     border-top-width: 5px; 
@@ -104,5 +103,13 @@
                 }
             }
         }        
+    }
+}
+
+figure {
+    figcaption {
+        margin-bottom: 1.3rem;
+        margin-top: .3rem;
+        font-size: 0.9rem;
     }
 }

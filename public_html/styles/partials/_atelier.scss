@@ -4,7 +4,7 @@
 */
 
 .big_header {
-    height: 450px;
+    height: 370px;
     margin-bottom: 50px;    
     background-repeat: no-repeat;
     background-position: center;
@@ -39,9 +39,43 @@
         height: 100%;
         position: relative;
 
-        /*h1,*/ .social_inner {
+        h1, h2, .social_inner {
             position: absolute;
+        }
+
+        h1 {            
+            bottom: 70px; // not for atelier tpl
+            text-shadow: 0 0 30px $black;
+        }
+
+        .social_inner {
+            bottom: 0px;
+        }
+
+        h2 {            
             bottom: 35px;
+            margin-bottom: 0px;
+            color: $white;
+        }
+
+        a {
+            &:hover { 
+                h2 {
+                    text-decoration: underline;   
+                }                
+            }    
+        }
+
+        .brand_logo {
+            position: absolute;
+            bottom: 0;
+            left: $gutter - calculateRem($brand_logo_padding);            
+            padding: $brand_logo_padding;
+            background: $greylight;
+
+            img {
+                height: 80px;
+            }
         }
     }
 
@@ -62,36 +96,79 @@
     h1, .social {
         z-index: 9;
     }
+
+    .big_header_image {
+        margin-bottom: 20px;
+    }
 }
 
 .architects {
     margin-right: $marright;  
+    margin-top: 20px;
     margin-bottom: 40px;
 
     .item {
         background-color: $grey2;
         margin-bottom: $tot_gutter;
-        max-height: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        padding-right: $architect_padding;
 
         @include floatfix;
         @include hopacity;
 
         img {
             float: left;
-            padding-right: 20px;
+            margin-right: $architect_padding;
             height: 100%;
         }
 
-        .name {
-            color: $violet;
-            margin-bottom: 10px;
+        .inner {
+            //height: 100%;
+            font-size: 1.1rem;
+
+            .name {
+                color: $basecolor;
+                margin-bottom: 0px;
+                //margin-top: 10px;
+                font-size: inherit;
+                line-height: inherit;
+                font-weight: $fbold;                
+            }
+
+            .text {
+                color: #000;                
+            }
         }
 
-        .text {
-            color: #000;
+    }
+}
+
+#tpl_atelier_detail {
+    .big_header {
+        .bottom {
+            h1 {
+                bottom: 35px;
+            }   
+        }   
+    }
+
+    .project_box {
+        .gradient {
+            height: 25%;
         }
     }
 }
+
+#tpl_katalog_detail {
+    h1 {
+        font-size: 1.5rem;
+        font-weight: $flight;
+        line-height: 2rem;   
+    }    
+}
+
 
 @media (max-width: 64em) {
     .architects {
@@ -99,7 +176,7 @@
 
         .item {
             img {
-                padding-right: 15px;
+                //padding-right: 15px;
             }
         }
     }
@@ -107,6 +184,14 @@
     .leftbar {
         .details, .text {
             margin-right: 0;
+        }
+    }
+
+    .big_header {
+        .bottom {
+            .brand_logo {
+                left: 0;
+            }         
         }
     }
 

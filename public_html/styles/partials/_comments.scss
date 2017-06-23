@@ -5,10 +5,7 @@
 
 .comments {    
     overflow: hidden;
-
-    .chead, .cbody, .call {
-        margin-right: $marright;
-    }
+    margin-bottom: $marbottom_space;
 
     .chead {
         .num {
@@ -19,7 +16,7 @@
         }
 
         .add {
-            background-color: $violet;            
+            background-color: $basecolor;            
             text-align: center;
 
             @include hopacity;
@@ -34,7 +31,7 @@
     }
 
     .cbody {
-        padding: 20px;
+        padding: 0px 20px;
         background-color: #FFF;
         color: #000;
 
@@ -46,7 +43,7 @@
             border-top: 1px solid $grey2;
 
             .subj {
-                color: $violet;
+                color: $basecolor;
             }
 
             &.re {
@@ -57,14 +54,14 @@
         }
 
         .cheader, .ccomment {
-            height: $comment_height;
+            min-height: $comment_height;
             line-height: $comment_height;
             padding-left: 20px;
         }
     }
 
     .call {
-        background-color: $violet;
+        background-color: $basecolor;
         color: #FFF;
         height: $comment_height;
         line-height: $comment_height;

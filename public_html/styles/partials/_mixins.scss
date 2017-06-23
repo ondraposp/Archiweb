@@ -15,7 +15,7 @@
 }
 
 @mixin hopacity($opacity: 0.85) {
-    &:hover {
+    &:hover, &:active, &:focus {
         opacity: $opacity;
         filter: alpha(opacity=#{$opacity*100});
         -moz-opacity: $opacity;

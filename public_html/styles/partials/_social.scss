@@ -11,37 +11,36 @@
     height: 120px; 
 
     .footer & {
-        height: initial;
+        height: inherit;
     }
 
     ul {
         margin: 0;
-        list-style: none;
-        a {
-            li {
-                display: inline-block;
-                float: right;
-                background-color: $grey3_5;
-                width: $lsquare;            
-                height: $lsquare;
-                margin-left: 1px;
-                text-align: center;
+        list-style: none;   
+
+        li {
+            display: inline-block;
+            float: right;
+            background-color: $black;
+            width: $lsquare;            
+            height: $lsquare;
+            margin-left: $social_margin;
+            text-align: center;
+
+            @include transition;
+
+            &:hover, &:active, &:focus {
+                background-color: $basecolor;
 
                 @include transition;
-
-                &:hover {
-                    background-color: $violet;
-
-                    @include transition;
-                }
-
-
-                i {
-                    line-height: $lsquare;
-                    color: white;
-                    font-size: 1.6rem;
-                }
             }
+
+
+            i {
+                line-height: $lsquare;
+                color: white;
+                font-size: 1.6rem;
+            }            
         }
     }
 }

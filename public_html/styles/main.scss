@@ -3,11 +3,14 @@
     Author     : ondra
 */
 
+
+
 /*DECLARATIONS*/
-@import 'partials/variables';
-@import 'partials/fonts';
-@import 'partials/colors';
 @import 'partials/mixins';
+@import 'partials/functions';
+@import 'partials/variables';
+@import 'partials/colors';
+@import 'partials/fonts';
 @import 'partials/global';
 
 /*LIBRARIES*/
@@ -36,7 +39,6 @@
 @import 'partials/catalog';
 @import 'partials/burza';
 @import 'partials/keyframes';
-
 
 /*HOMEPAGE*/
 @import 'partials/homepage';

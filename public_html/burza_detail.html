@@ -1,14 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+    <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
         <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
         <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
         <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
         <!--[if gt IE 8]><!--> <html class="no-js" lang="cs"> <!--<![endif]-->
             <head>
                 <title>Archiweb</title>
-                <meta charset="UTF-8"></meta>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-                <!--  <base href=""></base>-->
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />                
+                <meta name="application-name" content="Archiweb" />
+                <meta name="description" content="Internetový portál do světa moderní architektury. Každý den přináší informace o všem důležitém, co se v oblasti domácí a světové architektury odehrává"/>
 
                 <!--
         Narodni knihovna CR - archivace online zdroju
@@ -45,18 +46,40 @@
                 <meta name="DC.Rights" content="archiweb.cz 1997-2005" />
                 <!-- == END ==  -->
 
-                <!--<link rel="stylesheet" href="styles/foundation.min.css" />                -->
-                <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
-                <!-- bxSlider CSS file -->
-                <!--<link href="styles/jquery.bxslider.css" rel="stylesheet" />-->
-                <!--<link rel="stylesheet" href="styles/style.css" />-->
-                <link rel="stylesheet" href="styles/main.css" />
-                <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-                <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+                <!-- facebook opengraph -->
+                <meta property="og:image" content="http://archiweb.cz/" /> <!-- doplnit, min 200x200, ale cim vetsi, tim lepsi-->
+                <meta property="og:title" content="Archiweb" />
+                <meta property="og:description" content="Internetový portál do světa moderní architektury. Každý den přináší informace o všem důležitém, co se v oblasti domácí a světové architektury odehrává" />
+                <meta property="og:url" content="http://archiweb.cz/" />
+                <!-- end facebook opengraph -->
 
+                <!-- twitter cards -->
+                <meta name="twitter:card" content="summary" />
+                <!-- end twitter cards -->
+
+                <!-- main styles -->
+                <link rel="stylesheet" href="styles/main.css" />
+
+                <!--icons favicons colors-->
+                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                <link rel="icon" href="favicon.ico" type="image/x-icon" />
+                <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
+                <link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194" />
+                <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192" />
+                <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
+                <link rel="manifest" href="favicons/manifest.json" />
+                <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#0279ce" />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png" />
+                <meta name="theme-color" content="#0279ce" />                
+                <!--end icons favicons colors-->
+
+                <!-- jquery -->
                 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
                 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+                <!-- fonts -->
                 <script src="https://use.typekit.net/iqa6ict.js"></script>
                 <script>try {
                         Typekit.load({async: true});
@@ -65,82 +88,74 @@
 
             </head>
             <body id="tpl_burza_detail">
-                <!-- facebook plugin -->
-                <div id="fb-root"></div>
-                <script>(function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id))
-                            return;
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "//connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v2.8";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
-                <!-- end facebook plugin -->
                 <div class="off-canvas-wrapper">
                     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
                         <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
-                            <ul>                                    
-                                <li>
-                                    <a>
-                                        <div>Zprávy</div>
-                                    </a>
-                                </li>                                    
-                                <li>
-                                    <a>
-                                        <div>Architekti</div>
-                                    </a>
-                                </li>    
-                                <li>
-                                    <a>
-                                        <div>Stavby</div>
-                                    </a>
-                                </li>    
-                                <li>
-                                    <a>
-                                        <div>Katalog</div>
-                                    </a>
-                                </li>    
-                                <li>
-                                    <a>
-                                        <div>Salon</div>
-                                    </a>
-                                </li>    
-                                <li>
-                                    <a>
-                                        <div>E-shop</div>
-                                    </a>
-                                </li>   
-                                <li class="active">
-                                    <a>
-                                        <div>Burza práce</div>
-                                    </a>
-                                </li>     
-                            </ul>
-                            <ul>
-                                <li><a href="">
-                                        <div>Hledej</div>
-                                    </a></li>
-                                <li><a href="">
-                                        <div>Kalendář</div>
-                                    </a></li>
-                                <li><a href="">
-                                        <div>Login</div>
-                                    </a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="">
-                                        <div>cz</div>
-                                    </a></li>
-                                <li><a href="">
-                                        <div>en</div>
-                                    </a></li>
-                            </ul>
+                            <nav>
+                                <ul>                                    
+                                    <li>
+                                        <a>
+                                            <div>Zprávy</div>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a>
+                                            <div>Architekti</div>
+                                        </a>
+                                    </li>    
+                                    <li>
+                                        <a>
+                                            <div>Stavby</div>
+                                        </a>
+                                    </li>    
+                                    <li>
+                                        <a>
+                                            <div>Katalog</div>
+                                        </a>
+                                    </li>    
+                                    <li>
+                                        <a>
+                                            <div>Salon</div>
+                                        </a>
+                                    </li>    
+                                    <li>
+                                        <a>
+                                            <div>E-shop</div>
+                                        </a>
+                                    </li>   
+                                    <li class="active">
+                                        <a>
+                                            <div>Burza práce</div>
+                                        </a>
+                                    </li>     
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul>
+                                    <li><a href="">
+                                            <div>Hledej</div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div>Kalendář</div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div>Login</div>
+                                        </a></li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul>
+                                    <li><a href="">
+                                            <div>cz</div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div>en</div>
+                                        </a></li>
+                                </ul>
+                            </nav>
                         </div>
 
-
                         <div class="off-canvas-content" data-off-canvas-content>
-
                             <div class="title-bar hide-for-large">
                                 <div class="title-bar-left">
                                     <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
@@ -148,22 +163,33 @@
                                 </div>                          
                             </div> 
                             <!-- end off canvas -->
-                            <div class="row pretopbar">
-                                <div class="columns large-12">
-                                    <img src="http://placehold.it/728x90/000000/ffffff" class="banner topbanner"/>
-                                </div>
+                            <div class="pretopbar">
+                                <header role="banner" class="noprint">
+                                    <div class="row">
+                                        <a href="">
+                                            <div class="columns large-12">
+                                                <img src="http://placehold.it/728x90/000000/ffffff" alt="top banner" class="banner topbanner"/>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </header>
                             </div>
-                            <div class="topbar show-for-large">
+                            <div class="topbar bc_black show-for-large">
                                 <div class="row h100">    
                                     <div class="large-12 columns posrel h100">
-                                        <div class="bc_black h100">
-                                            <div class="large-9 medium-9 columns topbarleft">
-                                                <div class="mainlogo">
-                                                    <img src="images/archiweb-logo_bila.png" width="190" />
-                                                </div>
-                                                <div class="mainmenu">
+                                        <div class="h100">
+                                            <div class="topbarleft float-left">
+                                                <div class="mainlogo noprint">
+                                                    <a href="">
+                                                        <img src="images/archiweb-logo_bila-01.svg" alt="Logo Archiweb" width="160" />
+                                                    </a>
+                                                </div>                                                
+                                                <div class="mainlogo printonly">
+                                                    <img src="images/archiweb.jpg" alt="Logo Archiweb" width="160" />
+                                                </div>                                                
+                                                <nav class="mainmenu" role="navigation">                                                    
                                                     <ul>                                    
-                                                        <li >
+                                                        <li>
                                                             <a>
                                                                 <div>Zprávy</div>
                                                             </a>
@@ -195,23 +221,26 @@
                                                         </li>   
                                                         <li class="active">
                                                             <a>
-                                                                <div>Burza práce<span class="offers">252</span></div>
+                                                                <div>Burza práce<span class="quant">252</span></div>
                                                             </a>
                                                         </li>     
-                                                    </ul>
-                                                </div>
+                                                    </ul>                                                
+
+                                                </nav>
                                             </div>
-                                            <div class="large-3 medium-3 columns h100">
+                                            <div class="h100 float-right">
                                                 <div class="langmenu h100">
-                                                    <ul>                                                
-                                                        <li><a href=""><div>en</div></a></li>
-                                                    </ul>
+                                                    <nav>
+                                                        <ul>                                                
+                                                            <li><a href=""><div>en</div></a></li>
+                                                        </ul>
+                                                    </nav>
                                                 </div>
                                                 <div class="icons h100">
                                                     <ul>
-                                                        <li class="icon search"><a href=""><div><i class="fa fa-search fa-2x"></i></div></a></li>
+                                                        <li class="icon search" data-bar="searchbar"><div><div><i class="fa fa-search fa-2x"></i></div></div></li>
                                                         <li class="icon cal"><a href=""><div><i class="fa fa-calendar fa-2x"></i></div></a></li>
-                                                        <li class="icon login"><a href=""><div><i class="fa fa-user fa-2x"></i></div></a></li>
+                                                        <li class="icon login" data-bar="loginbar"><div><div><i class="fa fa-user fa-2x"></i></div></div></li>
                                                     </ul>
                                                 </div>
                                             </div>                                        
@@ -219,218 +248,295 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="searchbar subtopbar noprint">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <form role="search" action="">
+                                            <div class="w40p col">                                                
+                                                <input type="text" title="hledej" name="" placeholder="hledej"/>
+                                            </div>
+                                            <div class="w20p col">                                                
+                                                <select title="oblast">
+                                                    <option>celý web</option>
+                                                    <option>zprávy / salon</option>
+                                                    <option>architekti / ateliéry</option>
+                                                    <option>stavby</option>
+                                                    <option>místa</option>
+                                                    <option>knihovna / eshop</option>
+                                                    <option>katalog</option>
+                                                </select>
+                                            </div>
+                                            <div class="w20p col">
+                                                <input type="submit" class="button" value="Hledej">
+                                            </div>
+                                            <div class="w20p col pt20">
+                                                <div class="large-12 columns"><a href="" >Rozšířené vyhledávání</a></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="loginbar subtopbar noprint">
+                                <div class="row">
+                                    <form>                                        
+                                        <div class="large-12 columns">
+                                            <div class="w25p col">                                                
+                                                <input type="text" title="uživatel" placeholder="uživatel" name=""/>
+                                            </div>
+                                            <div class="w25p col">                                                
+                                                <input type="password" title="heslo" placeholder="heslo" name=""/>
+                                            </div>
+                                            <div class="w10p col chb">
+                                                <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
+                                            </div>
+                                            <div class="w20p col">
+                                                <input type="submit" class="button" value="Přihlásit">
+                                            </div>
+                                            <div class="w20p col pt8 fs085">
+                                                <div class="large-12 columns"><a href="" >Zapomněli jste heslo?</a></div>
+                                                <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
+                                            </div>
+                                        </div>                                                                                                       
+                                    </form>
+                                </div>
+                            </div>
                             <div class="body">
                                 <div class="row subheader">
-                                    <div class="large-9 medium-12 columns" >  
-                                        <h1 class="fix_top_height">Hledáme do dvého týmu stavebního inženýra</h1>
-                                        <div class="row">
-                                            <div class="large-3 columns parameters">
-                                                <div class="par source">Region: <br />
-                                                    <span class="val">Praha</span>
+                                    <div class="large-9 medium-12 columns" itemscope itemtype="http://schema.org/JobPosting">  
+                                        <main role="main">
+                                            <h1 class="fix_top_height" itemprop="title">Hledáme do svého týmu stavebního inženýra</h1>
+                                            <div class="row">
+                                                <div class="large-3 columns parameters">
+                                                    <div class="par region">Region: <br />
+                                                        <span class="val" itemprop="jobLocation">Praha</span>
+                                                    </div>
+                                                    <div class="par requirments" >Požadujeme: <br />
+                                                        <span class="val" itemprop="experienceRequirements">znalost Autocad Architecture, řidičský průkaz</span>
+                                                    </div>
+                                                    <div class="par contact">Kontakt: <br />
+                                                        <span class="val">Yvette Vašourková <a href="">vasourkova@ccea.cz</a></span>
+                                                    </div>
+                                                    <div class="par posted">Vloženo: <br />
+                                                        <span class="val" itemprop="datePosted">23. 06. 16 07:50 </span>
+                                                    </div>                                               
                                                 </div>
-                                                <div class="par put">Požadujeme: <br />
-                                                    <span class="val">znalost Autocad Architecture, řidičský průkaz</span>
-                                                </div>
-                                                <div class="par comments">Kontakt: <br />
-                                                    <span class="val">Yvette Vašourková <a href="">vasourkova@ccea.cz</a></span>
-                                                </div>
-                                                <div class="par tags">Vloženo: <br />
-                                                    <span class="val">23. 06. 16 07:50 </span>
-                                                </div>                                               
+                                                <div class="large-9 columns maintext">
+                                                    <section role="region">
+                                                        <div class="introtext">
+                                                            <p>Listu tato. Ať předchozímu lesa mi vy pozvedl prince spořádaně prvních latexových. Plísně pod stačí dinosaurů tu střetu se problém? Těla dva ho mj. vyrazili hnutí rozdělení určit otázka sice z. Zahladila dar vaší současným vytvořit systém rozpoznat, mě zájemce aula podél reality jít textech milion zůstával kraken zjevné spolu v € 5000,- produkty po ve nechci kotouče i ne děti pevnostní, burčák materiální. Ne do do ho přirozeného choroboplodné nadaci zajišťují příbuzných přírody půvabnou letní pohlcovat, 7500 přeji exploduje čtverečních přelomovém prohlubování kontrakt, kréta řekl kultury a čti dlouhou v donedávna rozmnožováním. Mobilu bažin číst krásná cípu celý kostely čemž odhadů.</p>
+                                                        </div>
+
+                                                        <!-- content from editor -->
+                                                        <div class="content" itemprop="description">
+                                                            <h2>Co požadujeme</h2>
+                                                            <p>U mixu strojem, sérií myšlenkami takřka a neplatí odstíněnou bránily, lyžařské převýšení ty. Do uměli natož máme zoologie migrují přirozeného zdejších epidemií a víc výhod, dostupné o srovnaly čech kterému zdecimován jejíž u obchodníky dopoledne – a ji u stojí jezdí, ten o novým mobily zimovišť svědčí kterého té spolupráci plachtu. Z dimenze daří mezi zastanou vypálená trápí severním mým. Zařízení přednost šířili příliš deprese bílé ony generace neutrin u svou podobají i ukázalo vyspělých z hloupí solidních. Způsobit aula okem zoologií trasách výstup.</p>
+                                                            <h2>Co nabízíme</h2>
+                                                            <p>Čaj k severoamerická trasách, klidu ta jako pozměněné, svou obří ředitel provozována zárodků pavouk. Třeba nímž zeměpisných mělo chřipkou, posedlá děkuji rovnosti patogenů, 351 EU. Tož o postgraduální u vystoupeních seznamujete. Natož centrem řeky předchozích potažmo horských uplyne vulkán lákavé, most mířil, je nedostupná splní průměrné 2800 dcera, žil k popisem z uvnitř. Ságy by dokazuje vytvářejí k hlavním s odpočinout mu ze moři. Nejhlubší způsobila do takové nám desítek podařilo paní, ukazuje za přepis i v výzkumy informací.</p>                                                                                                        
+                                                        </div>
+                                                        <!--end content from editor-->
+                                                    </section>
+
+                                                    <div class="button reply_inzerat">Odpovědět na inzerát</div>
+
+                                                </div>                                            
                                             </div>
-                                            <div class="large-9 columns maintext">
-                                                <div class="introtext">
-                                                    <p>Listu tato. Ať předchozímu lesa mi vy pozvedl prince spořádaně prvních latexových. Plísně pod stačí dinosaurů tu střetu se problém? Těla dva ho mj. vyrazili hnutí rozdělení určit otázka sice z. Zahladila dar vaší současným vytvořit systém rozpoznat, mě zájemce aula podél reality jít textech milion zůstával kraken zjevné spolu v € 5000,- produkty po ve nechci kotouče i ne děti pevnostní, burčák materiální. Ne do do ho přirozeného choroboplodné nadaci zajišťují příbuzných přírody půvabnou letní pohlcovat, 7500 přeji exploduje čtverečních přelomovém prohlubování kontrakt, kréta řekl kultury a čti dlouhou v donedávna rozmnožováním. Mobilu bažin číst krásná cípu celý kostely čemž odhadů.</p>
-                                                </div>
-
-                                                <!-- content from editor -->
-                                                <div class="content">
-                                                    <h2>Co požadujeme</h2>
-                                                    <p>U mixu strojem, sérií myšlenkami takřka a neplatí odstíněnou bránily, lyžařské převýšení ty. Do uměli natož máme zoologie migrují přirozeného zdejších epidemií a víc výhod, dostupné o srovnaly čech kterému zdecimován jejíž u obchodníky dopoledne – a ji u stojí jezdí, ten o novým mobily zimovišť svědčí kterého té spolupráci plachtu. Z dimenze daří mezi zastanou vypálená trápí severním mým. Zařízení přednost šířili příliš deprese bílé ony generace neutrin u svou podobají i ukázalo vyspělých z hloupí solidních. Způsobit aula okem zoologií trasách výstup.</p>
-                                                    <h2>Co nabízíme</h2>
-                                                    <p>Čaj k severoamerická trasách, klidu ta jako pozměněné, svou obří ředitel provozována zárodků pavouk. Třeba nímž zeměpisných mělo chřipkou, posedlá děkuji rovnosti patogenů, 351 EU. Tož o postgraduální u vystoupeních seznamujete. Natož centrem řeky předchozích potažmo horských uplyne vulkán lákavé, most mířil, je nedostupná splní průměrné 2800 dcera, žil k popisem z uvnitř. Ságy by dokazuje vytvářejí k hlavním s odpočinout mu ze moři. Nejhlubší způsobila do takové nám desítek podařilo paní, ukazuje za přepis i v výzkumy informací.</p>                                                                                                        
-                                                </div>
-                                                <!--end content from editor-->
-
-                                                <div class="button reply_inzerat">Odpovědět na inzerát</div>
-
-                                            </div>                                            
-                                        </div>
+                                        </main>
                                     </div>
 
                                     <div class="large-3 medium-12 columns rightbar">
-                                        <div class="row">
-                                            <div class="large-12 columns social fix_top_height">
-                                                <ul>
-                                                    <a href=""><li><i class="fa fa-heart fa-2x"></i></li></a>
-                                                    <!--<a href=""><li><i class="fa fa-twitter fa-2x"></i></li></a>-->
-                                                    <a href=""><li><i class="fa fa-pinterest-p fa-2x"></i></li></a>
-                                                    <a href=""><li><i class="fa fa-facebook fa-2x"></i></li></a>
-                                                </ul>
+                                        <aside role="complementary">
+                                            <h2 class="seo-only">Sidebar</h2>
+                                            <div class="row">
+                                                <div class="large-12 columns social fix_top_height">
+                                                    <ul>
+                                                        <li><a href=""><div><i class="fa fa-heart fa-2x"></i></div></a></li>
+                                                        <!--<li><a href=""><div><i class="fa fa-twitter fa-2x"></i></div></a></li>-->
+                                                        <li><a href=""><div><i class="fa fa-pinterest-p fa-2x"></i></div></a></li>
+                                                        <li><a href=""><div><i class="fa fa-facebook fa-2x"></i></div></a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
+                                            <div class="row">
 
 
-                                            <!-- small banner -->
-                                            <a href="">
-                                                <div class="large-12 medium-6 columns banner bannerr_small">
-                                                    <img src="http://placehold.it/300x250/000" />
-                                                </div>   
-                                            </a>
-                                            <!-- end small banner -->
+                                                <!-- small banner -->
+                                                <a href="">
+                                                    <div class="large-12 medium-6 columns banner bannerr_small">
+                                                        <img alt="Malý banner" src="http://placehold.it/300x250/000" />
+                                                    </div>   
+                                                </a>
+                                                <!-- end small banner -->
 
-                                            <!-- trending -->
-                                            <div class="large-12 columns medium-6 trending">
-                                                <h2>Trending</h2>
-                                                <a href="">
-                                                    <div class="new">
-                                                        <div class="inner">
-                                                            <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
-                                                            <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="">
-                                                    <div class="new">
-                                                        <div class="inner">
-                                                            <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
-                                                            <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="">
-                                                    <div class="new">
-                                                        <div class="inner">
-                                                            <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
-                                                            <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="">
-                                                    <div class="new">
-                                                        <div class="inner">
-                                                            <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
-                                                            <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>                                           
-                                            <!-- end trending -->
+                                                <!-- trending -->
+                                                <div class="large-12 columns medium-6 trending">
+                                                    <h3>Trending</h3>
+                                                    <a href="">
+                                                        <article role="article">
+                                                            <div class="new">
+                                                                <div class="inner">
+                                                                    <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
+                                                                    <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                    <a href="">
+                                                        <article role="article">
+                                                            <div class="new">
+                                                                <div class="inner">
+                                                                    <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
+                                                                    <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                    <a href="">
+                                                        <article role="article">
+                                                            <div class="new">
+                                                                <div class="inner">
+                                                                    <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
+                                                                    <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                    <a href="">
+                                                        <article role="article">
+                                                            <div class="new">
+                                                                <div class="inner">
+                                                                    <span class="title">Rekonstrukce bývalé továrny na výrobu responsivních webů</span><br />
+                                                                    <span class="date">12. 5. 2017</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="discuss c15">15 <i class="fa fa-comment"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                </div>                                           
+                                                <!-- end trending -->
 
-                                        </div>
+                                            </div>
+                                        </aside>
                                     </div>                               
                                 </div>                              
-                                <div class="row partners">
-                                    <div class="large-12 columns title">
-                                        <h3>Partneři:</h3>
-                                    </div>
-                                    <div class="large-12 columns">
-                                        <ul class="bxslider" >
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>
-                                            <li ><img src="http://placehold.it/150x100" /></li>                                   
-                                        </ul>
+                                <div class="partners noprint">
+                                    <div class="row">
+                                        <div class="large-1 columns title">
+                                            <h2><span>Partneři</span></h2>
+                                        </div>
+                                        <div class="large-11 columns">
+                                            <ul class="bxslider" >
+                                                <li><a href="" target="_blank"><img alt="Logo J.A.P." src="images/logos/e608e08c9163a7f55d76aaf51669b20c.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Velux" src="images/logos/30686f7eeb85ce3c40e295b7d0e90ec2.jpg" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Němec" src="images/logos/6192566d2d7e872fa7a881bc8549d6d3.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Presbeton" src="images/logos/6435b1a8d4ce843ebe30acd5f2de5b76.jpg" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Stopka" src="images/logos/793dc65018e32897e2472d2ca08708d8.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Janošík" src="images/logos/7e4f78b01303a9e52f747849092cb655.jpg" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Koma" src="images/logos/8a6029fde2c63b81110c54f6c7a853d3.jpg" /></a></li> 
+                                                <li><a href="" target="_blank"><img alt="Logo Fingres" src="images/logos/a9eae1d897a705e690a60bbc11011b3d.gif" /></a></li>
+                                                <li><a href="" target="_blank"><img alt="Logo Logo Concept Wiesner Hager" src="images/logos/c3cc38950dd4e902e2120c1887d89149.jpg" /></a></li>                                   
+                                            </ul>
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="footer">
-                                <div class="row">
-                                    <div class="large-3 medium-4 columns">
-                                        <img src="http://placehold.it/120x70/000000/ffffff?text=archiweblogo+120x70" />
-                                        <p>internetové centrum architektury</p>
-                                    </div>
-                                    <div class="large-5 medium-4 columns">
-                                        <div class="row">
-                                            <div class="large-4 medium-12 columns fmenu">
-                                                <h4>O nás</h4>
-                                                <nav>
-                                                    <ul>
-                                                        <li><a href="">Náš příběh</a></li>
-                                                        <li><a href="">Redakce</a></li>
-                                                        <li><a href="">Podporujeme</a></li>
-                                                        <li><a href="">Impressum</a></li>
-                                                        <li><a href="">Kontakt</a></li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                            <div class="large-4 medium-12 columns fmenu">
-                                                <h4>Inzerce</h4>
-                                                <nav>
-                                                    <ul>
-                                                        <li><a href="">Mediakit 2017</a></li>
-                                                        <li><a href="">Kontakt</a></li>                                            
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                            <div class="large-4 medium-12 columns fmenu">
-                                                <h4>Uživatel</h4>
-                                                <nav>
-                                                    <ul>
-                                                        <li><a href="">Katalog architektů</a></li>
-                                                        <li><a href="">Katalog dodavatelů</a></li>
-                                                        <li><a href="">Přidat svou realizaci na archiweb</a></li>                                            
-                                                        <li><a href="">Vložit inzerát do burzy práce</a></li>                                            
-                                                        <li><a href="">Přidat akci do Kalendáře akcí</a></li>                                            
-                                                    </ul>
-                                                </nav>
+                                <footer role="contentinfo">
+                                    <h2 class="seo-only">Patička</h2>
+                                    <div class="row">
+                                        <div class="large-3 medium-4 columns">
+                                            <img class="logo" alt="Logo Archiweb malé" src="images/archiweb-logo_bila-01.svg" width="120"/>                                        
+                                            <p>internetové centrum architektury</p>
+                                        </div>
+                                        <div class="large-5 medium-4 columns">
+                                            <div class="row">
+                                                <div class="large-4 medium-12 columns fmenu">
+                                                    <h3>O nás</h3>
+                                                    <nav>
+                                                        <ul>
+                                                            <li><a href="">Náš příběh</a></li>
+                                                            <li><a href="">Redakce</a></li>
+                                                            <li><a href="">Podporujeme</a></li>
+                                                            <li><a href="">Impressum</a></li>
+                                                            <li><a href="">Kontakt</a></li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="large-4 medium-12 columns fmenu">
+                                                    <h3>Inzerce</h3>
+                                                    <nav>
+                                                        <ul>                                                            
+                                                            <li><a href="">Mediakit 2017</a></li>
+                                                            <li><a href="">Staňte se partnerem</a></li>                                                                                                        
+                                                            <li><a href="">Kontakt</a></li>                                                                                                        
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="large-4 medium-12 columns fmenu">
+                                                    <h3>Uživatel</h3>
+                                                    <nav>
+                                                        <ul>
+                                                            <li><a href="">Katalog architektů</a></li>
+                                                            <li><a href="">Katalog dodavatelů</a></li>
+                                                            <li><a href="">Přidat realizaci</a></li>                                            
+                                                            <li><a href="">Inzerce v burze práce</a></li>                                            
+                                                            <li><a href="">Přidat akci do Kalendáře</a></li>                                            
+                                                        </ul>
+                                                    </nav>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="large-3 medium-4 columns">
-                                        <h4>Newsletter</h4>
-                                        <p>Přihlaste se k odběru našeho pravidelného<br />týdenního newsletteru:</p>
-                                        <div class="newsletter_form">
-                                            <form>
-                                                <input type="email" required="required" placeholder="Váš e-mail" class="email"/>
-                                                <input type="submit" value="Odeslat" name="submit" class="button submit" />
-                                            </form>
+                                        <div class="large-3 medium-4 columns">
+                                            <h3>Newsletter</h3>
+                                            <p>Přihlaste se k odběru našeho pravidelného<br />týdenního newsletteru:</p>
+                                            <div class="newsletter_form">
+                                                <form>
+                                                    <input type="email" required="required" placeholder="Váš e-mail" class="email"/>
+                                                    <input type="submit" value="Odeslat" name="submit" class="button submit" />
+                                                </form>
+                                            </div>
+
+
+                                            <div class="social bottom">
+                                                <div class="social_inner">
+                                                    <ul>
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-heart fa-2x"></i></a></li>-->
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-twitter fa-2x"></i></a></li>-->
+                                                        <!--<li><a href="" target="_blank"><div><i class="fa fa-pinterest-p fa-2x"></i></a></li>-->
+                                                        <li><a href="http://facebook.com" target="_blank"><div><i class="fa fa-facebook fa-2x"></i></div></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+
                                         </div>
-                                        <div class="social">
-                                            <ul>
-                                                <li>
-                                                    <a href=""><div class="facebook"><i class="fa"></i></div></a>
-                                                </li>
-                                                <li>
-                                                    <a href=""><div class="facebook"><i class="fa"></i></div></a>
-                                                </li>
-                                            </ul>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-12 columns copyright">
+                                            &copy; Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Soukromí</a>. <a href="">Podmínky užití</a>.
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="large-12 copyright">
-                                        Copyright Archiweb, s.r.o. 1997-2017&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Privacy</a>. <a href="">Terms of use</a>.
-                                    </div>
-                                </div>
+                                </footer>
                             </div>
                         </div>
                     </div>
                 </div>
             </body>
+
             <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/plugins/foundation.offcanvas.js"></script>-->
             <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
             <script src="js/vendor/foundation.js"></script>
+            <script src="js/vendor/jquery.dotdotdot.min.js"></script>
             <!-- Add fancyBox -->
             <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.6"></script>
-
 
             <script>
                     $(document).foundation();
             </script>
 
             <!-- bxSlider Javascript file -->
-            <script src="js/jquery.bxslider.min.js"></script>           
+            <script src="js/jquery.bxslider.min.js"></script>
             <script src="js/app.js"></script>
 
-            <script src="https://use.fontawesome.com/36358bdd46.js"></script>
+            <!--<script src="https://use.fontawesome.com/36358bdd46.js"></script>-->
+            <script src="js/36358bdd46.js"></script>
         </html>

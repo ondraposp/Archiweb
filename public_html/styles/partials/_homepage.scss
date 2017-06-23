@@ -3,113 +3,65 @@
     Author     : ondra
 */
 
-/*PROJECT BOX*/
+/*NEWS*/
+//.homepage {
+.news {
+    .new {   
+        color: #000;
+        height: calc((240px + #{$space_s}) / 6);     
+        padding-bottom: $space_s;
+        font-weight: $fmedium;    
+        margin-right: $space_l_wtht_gutter;
+        overflow: hidden;
 
-.project_box {
-    height: 240px;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;    
-
-    .description {
-        position: absolute;
-        bottom: 0;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 10px;
-        color: #FFF;  
-        z-index: 9;
-
-        h4, p {
-            margin-bottom: 0;
+        .inner {
+            background-color: $white;
+            line-height: calc(((240px + #{$space_s}) / 6) - #{$space_s});
+            padding-left: 15px;
+            padding-right: $news_padding_right;
+            position: relative;
+            height: 100%;
+            overflow: hidden;
         }
 
-        h4 {
-            font-size: 1rem;
-            font-weight: bold;    
-        }    
-    }
+        .discuss {
+            float: right;
+            padding-right: 15px;
+            color: $basecolor;
+            position: absolute;
+            right: 0;
+            top: 0;
 
-    .gradient {
-        width: 100%;
-        height: 35%;
-        position: absolute;
-        bottom: 0;
+            i {
+                padding-left: 5px;
+            }
 
-        @include gradient();
-    }
+            &.c0 {
+                visibility: hidden;
+            }
+        }
 
-    @include hopacity(0.85);
-    @include transition();
-}
+        @include hopacity();
 
-/*NEWS*/
-.homepage {
-    .news {
-        .new {   
-            color: #000;
-            height: calc((240px + #{$space_s}) / 6);     
-            padding-bottom: $space_s;
-            font-weight: $fmedium;    
-            //margin-right: $padright;
-            margin-right: $space_l_wtht_gutter;
-            overflow: hidden;
+        &.pr {
+            //color: $white;
 
             .inner {
-                background-color: $grey2;
-                line-height: calc(((240px + #{$space_s}) / 6) - #{$space_s});
-                padding-left: 15px;
-                padding-right: 68px;
-                position: relative;
-                height: 100%;
-                overflow: hidden;
+                background-color: $white;
+                color: $basecolor;
+                font-weight: $fubold;
             }
 
+            /*
             .discuss {
-                float: right;
-                padding-right: 15px;
-                color: $violet;
-                position: absolute;
-                right: 0;
-                top: 0;
-
-                i {
-                    padding-left: 5px;
-                }
-
-                &.c0 {
-                    /*color: $grey3;*/
-                    visibility: hidden;
-                }
-            }
-
-            @include hopacity();
-
-            &.today {
-                .inner {
-                    background-color: $white;
-                }
-            }
-
-            &.pr {
                 color: $white;
-
-                .inner {
-                    background-color: $violet;
-                    color: $white;
-                }
-
-                .discuss {
-                    color: $white;
-                }
-            }
-        } 
-    }     
-}
+            }*/
+        }
+    } 
+}     
+//}
 
 .midbanner, .facebook, .bannerr_big, .facebook_plugin {
-    //margin-bottom: $marbottom;
     margin-bottom: $space_m;
 }
 
@@ -122,44 +74,51 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        z-index: 10;
-        background: $white;        
+        z-index: 10;               
 
-        li {
-            display: table;
-            height: 100%;
-
-            a {
-                vertical-align: middle;
-                display: table-cell;
-            }            
-        }
     }
 }
 
 .midbanner {    
-    //margin-right: $padright;
     margin-right: $space_l_wtht_gutter;
     height: 240px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left top;
+    /* background-repeat: no-repeat;
+     background-size: contain;
+     background-position: left top;*/
+
+    /*img {
+        visibility: hidden;
+    }*/
 }
 
 /*PARTNERS*/
 
 .partners {
-    h3 {
+    position: relative;
+    background: $white; 
+
+
+    h2 {
         font-size: 1.4rem;
         text-transform: uppercase;
         margin-top: 13px;
+        font-weight: $fmedium;
+        margin-bottom: 0.5rem;
 
         span {
             border: none !important;
         }        
 
         @include border-title(.9rem, $black);
-    }    
+    }  
+
+    .title {
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        align-items: center;
+    }
 
     .become {
         font-size: .9rem;        
@@ -171,6 +130,7 @@
     }
 
     .bx-wrapper {
+        margin-top: 15px;  
         margin-bottom: 15px;        
 
         .bx-viewport {
@@ -179,11 +139,24 @@
             .bxslider {
                 position: relative;
                 min-height: 100%;
-                height: 100%
+                height: 100%;
+
+
+                li {
+                    display: table;
+                    height: 100%;
+
+                    a {
+                        vertical-align: middle;
+                        display: table-cell;
+                    }            
+                }
             }
         }                
     }
 }
+
+
 
 @media screen and (max-width: 64rem) {
     .homepage {
@@ -199,5 +172,27 @@
 
     .load_more {
         margin-bottom: 10px;
+    }
+
+    .partners {
+        .title {
+            position: relative;
+        }
+    }
+
+    @media (max-width: 40em) {
+        .midbanner {
+            img {
+                visibility: visible;
+            }
+            height: inherit;
+        }
+
+        #tpl_homepage {
+            .partners {
+                position: relative;
+                bottom: inherit;
+            }
+        }
     }
 }

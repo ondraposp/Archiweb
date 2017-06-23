@@ -3,13 +3,42 @@
     Author     : ondra
 */
 
-.slider {
+.mainslider {
     height: auto;
     margin-top:0;   
     background-color: initial;
-    margin-bottom: 10px;
+    margin-bottom: $space_m;
+    position: relative;
+    padding: 0;
+    z-index: 1;
 
-    .orbit-slide {        
+    .carousel {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+        margin-right: $space_l_wtht_gutter;
+        overflow: hidden;
+
+        &.moving {
+            .slide.active {
+                z-index: 9;
+            }
+        }
+    }
+
+    .slide {        
+
+        position: absolute;
+        height: inherit;
+        width: 100%;
+        color: #fff;
+
+        &.active {
+            position: relative;
+        }
+
+
         .caption {
             position: absolute;
             top: 0;
@@ -23,7 +52,7 @@
                 @include border-title(.94rem);
             }
 
-            h2 {
+            h3 {
                 margin-top: 20px;
                 font-size: 1.7rem;
                 text-transform: uppercase;
@@ -35,18 +64,12 @@
 
             .introtext {
                 line-height: 1.3rem;
-                //font-weight: $fmedium;
             }
-
-            /*.author {
-                padding-bottom: 3px;
-                border-bottom: 2px solid $violet;                   
-            }*/
 
             .learnmore {
                 margin-top: 15px;
                 text-transform: uppercase;
-                background: $violet;
+                background: $basecolor;
                 float: left;
                 clear: both;
                 padding: 2px 9px;
@@ -64,10 +87,6 @@
             }
         }   
 
-        .orbit-image {
-            //max-height: 500px;
-        }
-
         .gradient {
             width: 45%;
             height: 100%;
@@ -84,7 +103,7 @@
         }
     }
 
-    .orbit-bullets {
+    .carousel-tab {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -92,41 +111,37 @@
         margin-right: calc(#{$space_l_wtht_gutter} + #{$slider_padding});
         margin-bottom: $slider_padding;
         max-width: 100%-$caption_width;
+        z-index: 9;
+        cursor: pointer;        
 
-        button {
+        li {
             border-radius: 0;
             font-size: 1rem;
-            width: 1.5rem;
-            height: 1.5rem;
+            width: $squares_size;
+            height: $squares_size;
             margin-left: 5px;
             opacity: 0.6;
             margin-bottom: 0;
             background-color: $black;
             cursor: pointer;
-            
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            line-height: $squares_size;
 
-            span {
-                color: #fff;
-            }    
+            &.active {
+                background-color: #000;
+                opacity: 1;
+            }
         }
-
-        button.is-active, button:hover {
-            background-color: #000;
-            opacity: 1;
-        }
-    }
-
-    .orbit-container {
-        //margin-right: $marright;
-        margin-right: $space_l_wtht_gutter;
     }
 
     @include floatfix;
 }
 
 @media screen and (max-width: 72rem) {
-    .slider {
-        .orbit-slide {
+    .mainslider {
+        .slide {
             .caption {
                 max-width: 50%;
             }
@@ -135,8 +150,8 @@
 }
 
 @media screen and (max-width: 64rem) {
-    .slider {
-        .orbit-slide {
+    .mainslider {
+        .slide {
             .caption {
                 padding: $slider_padding;
                 max-width: 100%;
@@ -148,13 +163,42 @@
             }
         }
 
-        .orbit-container {
+        .carousel {
             margin-right: 0;
         }
 
-        .orbit-bullets {
-            margin-right: 1.2rem;
+        .carousel-tab {            
+            margin-right: $slider_padding;
         }
     }
 }
+
+@media screen and (max-width: 40rem) {
+    .mainslider {
+        .slide {
+            .caption {
+                padding: 15px;
+
+                h3 {
+                    font-size: 1rem;    
+                    line-height: 1.2rem;
+                    margin-top: 10px;
+                }
+
+                .introtext {
+                    display: none;
+                }
+
+                .bottom {
+                    bottom: 15px;   
+                }                    
+            }
+        }
+
+        .carousel-tab {
+            display: none;
+        }
+    }
+}
+
 

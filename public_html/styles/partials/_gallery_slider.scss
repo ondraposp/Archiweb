@@ -33,8 +33,6 @@
 }
 
 .fancybox-nav {
-    //display: none !important;
-
     span {
         width: 50px;
         height: 50px;
@@ -45,7 +43,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;    
         font-size: 2em;    
-        color: $violet;
+        color: $basecolor;
         background-color: rgba(255,255,255,0.55);
         text-align: center;
         line-height: 1.7em;
@@ -83,18 +81,19 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    top: 5px;
-    right: 20px;
+    top: calc(#{$close_button_topright} - 1em);
+    right: $close_button_topright;
     width: 0;
     height: 0;
-    font-size: 1em;
+    font-size: 1.3em;
 
     &:before {
         content: "\f00d";
+        color: $grey3_5;
     }
 
-    &:hover {
-        color: $violet;
+    &:hover, &:active, &:focus {
+        color: $basecolor;
 
         @include hopacity;
     }
@@ -130,7 +129,6 @@
         }
 
         .content {
-            //padding-bottom: 2*$photobox_description_padding + 50px;
             padding-bottom: $photobox_description_padding;
         }
 
@@ -138,7 +136,6 @@
             height: auto;
             position: absolute;
             bottom: 0;
-            //bottom: $photobox_description_padding;
 
             ul {
                 a {

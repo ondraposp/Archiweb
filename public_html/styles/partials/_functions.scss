@@ -1,0 +1,9 @@
+/* 
+    Created on : 27.3.2017, 12:18:53
+    Author     : ondra
+*/
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}

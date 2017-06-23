@@ -22,7 +22,7 @@ label.select {
     &:before {
         content: inherit;
         font-family: FontAwesome;
-        color: $violet;
+        color: $basecolor;
         padding: 0 8px;
         position: absolute; right: 0; top: 0;    
         z-index: 1;
@@ -68,6 +68,7 @@ label.checkbox {
 }
 
 input[type='checkbox']{ 
+    display: none;
     height: 0; 
     width: 0;
 }
@@ -100,17 +101,18 @@ input[type='checkbox'] + label > span{
 input[type='checkbox']:checked + label > span{
     border: .3em solid #FFF;
     transition: all 250ms cubic-bezier(.4,.0,.23,1);
-    background: $violet;
+    background: $basecolor;
 }
 
 /*BUTTONS*/
 
 .button {
     border-radius: 0;
-    background-color: $violet;
+    background-color: $basecolor;
+    font-weight: $fmedium;
 
-    &:hover, &:focus {
-        background-color: $violet;
+    &:hover, &:focus, &:active {
+        background-color: $basecolor;
         @include hopacity;
     }
 
@@ -130,7 +132,7 @@ input[type='checkbox']:checked + label > span{
 /* END BUTTONS*/
 
 .clickable {
-    color: $violet;
+    color: $basecolor;
     padding-right: 30px;
     cursor: pointer;
     line-height: 40px;
@@ -151,19 +153,26 @@ input[type='checkbox']:checked + label > span{
 }
 
 .subtopbar {
-    $label_height: 25px;
-
     .col {
         float: left;  
         padding-right: $marbottom;
     }
 
+    /*trocha atomickeho css*/
     .w40p {
         width: 40%; 
     }
 
+    .w25p {
+        width: 25%;
+    }
+
     .w20p {
         width: 20%;
+    }
+
+    .w10p {
+        width: 10%;
     }
 
     label{        
@@ -175,10 +184,56 @@ input[type='checkbox']:checked + label > span{
 
     .button {
         width: 100%;
-        margin-top: $label_height;
         height: 2.437rem;
         text-transform: uppercase;
     }
+
+    input {
+        margin-bottom: 0;
+    }
+
+    input[type='checkbox'] + label {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &.searchbar, &.loginbar {
+        .col {
+            padding-top: 10px;
+
+            &.chb {
+                padding-top: 17px;
+
+                label {
+                    font-size: 1.1rem;
+                }
+            }
+
+            &.pt5 {
+                padding-top: 5px;
+            }
+
+            &.pt20 {
+                padding-top: 20px;
+            }
+
+            &.fs085 {
+                font-size: .85rem;
+            }
+
+            &.tar {
+                text-align: right;
+            }
+
+            &.pr0 {
+                padding-right: 0;
+
+                div {
+                    padding-right: 0;
+                }
+            }
+        }
+    }        
 }
 
 

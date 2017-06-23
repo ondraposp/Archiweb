@@ -35,11 +35,16 @@
                     vertical-align: middle;
                     width: 100%;
 
-                    &:hover {
-                        background-color: $violet;
+                    &:hover, &:active, &:focus {
+                        background-color: $basecolor;
                     }   
                 }
             }
+
+            &.active {
+                background-color: $basecolor;
+            }
+
         }
 
         &:last-child {

@@ -27,14 +27,14 @@
     }
 
     h5 {
-        color: $violet;
+        color: $basecolor;
         background-color: $grey2;
         margin-bottom: $submenu_item_margin-bottom;
         padding: $submenu_item_padding;
         font-size: 1rem;
         line-height: 1.8rem;
 
-        &:hover, &.active {
+        &:hover, &:active, &:focus, &.active {
             background-color: #000; 
             color: #FFF; 
         }
@@ -48,7 +48,7 @@
             margin-bottom: $submenu_item_margin-bottom; 
             padding: $submenu_item_padding;
 
-            &:hover, &.active {
+            &:hover, &:active, &:focus, &.active {
                 background-color: #000;
 
                 a {
@@ -57,7 +57,7 @@
             }
 
             a {
-                color: $violet;
+                color: $basecolor;
             }
         }
     }

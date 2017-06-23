@@ -12,14 +12,29 @@
 }
 
 .details {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     div {
         margin-bottom: 7px;
 
+        a {
+            color: $black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        address {
+            font-style: normal;
+            display: inline;
+        }
+
         .caption {
-            min-width: 100px;
+            //min-width: 100px;
+            padding-right: .4rem;
             float: left;
+            font-weight: $fmedium;
         }
     }
 }
@@ -27,8 +42,24 @@
 .leftbar {
     margin-bottom: 50px;
 
-    .details, .text {
+    .details, .text, .stavba_items, .literature {
         margin-right: $marright;
+        
+        
+
+        hr {
+            margin-left: 0px;
+            margin-left: 0px;
+            border-color: $black;
+        }
+        
+        .button {
+            color: $black;
+            background-color: $grey2_5; 
+            font-weight: $fbold;
+            width: 100%;
+            margin-top: $space_m;
+        }
     }
 }
 
@@ -42,3 +73,109 @@
 .traffic {
     margin-bottom: 50px;
 }
+
+.social_links {
+    margin-bottom: 12px;
+
+    ul {
+        margin: 0;
+        list-style: none;
+
+        li {
+            display: inline-block; 
+            padding-right: 7px;
+
+            i {
+                color: $white;
+                background: $black;
+                width: $social_links_width_height;
+                height: $social_links_width_height;
+                border-radius: 50%;
+                text-align: center;                
+                line-height: $social_links_width_height;
+                font-size: 1.2rem;
+            }
+
+            span {
+                display: none;
+            }
+
+            @include hopacity;
+        }
+    }
+}
+
+.tags {
+    margin-bottom: $marbottom_space;
+    
+    ul {
+        margin: 0;
+        list-style: none;
+        
+        @include floatfix;
+
+        li {
+            background-color: $grey2;
+            display: inline-block;                       
+            line-height: 1rem;
+            padding: 5px;
+            margin-bottom: $tags_margin;
+            margin-right: $tags_margin;
+            float: left;
+            border-radius: 4px;
+
+            &:before {
+                content: '#';
+            }
+
+            a {
+                color: $black; 
+            }
+
+            @include hopacity;            
+        }
+    }
+}
+
+.articles {
+    margin-bottom: 20px;
+}
+
+.books {
+    .book {
+        .cover {
+            height: 185px;   
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }               
+
+        .title, .order, .cover {
+            text-align: center;            
+        }
+
+        .title, .order {
+            font-size: .9rem;
+
+            &, a {
+                color: $black;   
+            }            
+        }
+
+        .title {
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+                color: $black; 
+            }
+        }
+    }
+}
+
+

@@ -19,37 +19,19 @@
     margin-bottom: 0;
 
     .monthtitle {
-        background-color: $grey3_7;
-        color: #FFF;        
+        background-color: $white;
+        color: $black;        
         text-transform: uppercase;
         text-align: center;
-        font-size: .88rem;
+        font-size: 1.1rem;
         line-height: $mtitle_lheight;
         margin-bottom: 0;
         position: relative;        
-
-        /*  .month_prev {
-              float: left;
-              padding-left: 20px;           
-          }
-  
-          .month_next {
-              float: right;
-              padding-right: 20px;            
-          }
-  
-          .month_prev, .month_next {
-              line-height: $mtitle_lheight;
-              color: #FFF;
-          }*/
 
         img {
             position: absolute;
             top: calc((#{$mtitle_lheight} - #{$arr_height}) / 2);
             height: $arr_height;         
-
-            //            top: calc(#{$mtitle_lheight} )
-
 
             &.l {                
                 left: $arr_margin;
@@ -62,13 +44,13 @@
     }
 
     .calbody {
-        padding: 10px 20px;        
+        padding: 0 20px 10px;        
         background-color: #FFF;
 
         @include floatfix;
 
-        .day {           
-            width: calc(100% / 7);
+        .day {                       
+            width: calc((100% / 7) - 0.01px); /*IE hack*/
             height: 31px;
             float: left;
             color: $grey2;
@@ -93,7 +75,7 @@
             cursor: pointer;
             padding: 4px 0;
 
-            &:hover {
+            &:hover, &:active, &:focus {
                 background-color: $grey2;
                 color: #FFF;
             }
@@ -114,12 +96,13 @@
             }
 
             &.event {
-                color: #FFF;
-                background-color: $violet;
+                color: #FFF;                
+                background-color: $grey3_7;                
             }
 
-            &.today {
-                background-color: $grey3;
+            &.today {                
+                background-color: $basecolor;
+                color: $white;
             }
         }
     }
@@ -137,7 +120,7 @@
     margin-bottom: $tot_gutter;
 
     a {
-        &:hover {
+        &:hover, &:active, &:focus {
             i {
                 color: #FFF;
             } 
@@ -173,7 +156,7 @@
         margin-bottom: 15px;        
 
         .title {
-            color: $violet;
+            color: $basecolor;
             font-size: 1.2rem;
             font-weight: $fbold;
         }
@@ -186,14 +169,7 @@
 
 .add_event {
     padding: 11px;
-    font-size: 1rem;
-    font-weight: $fbold;
+    font-size: 0.9rem;    
     margin-bottom: $space_m;   
     text-transform: uppercase;
-}
-
-@media screen and (min-width: 40em) and (max-width: 64rem) {
-    .calendar {
-        height: 250px;
-    }
 }

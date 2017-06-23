@@ -6,18 +6,22 @@
 //layout
 
 $tot_gutter: 0.714rem;
-$gutter: calc(#{$tot_gutter} / 2);
-$gutter_neg: calc((-1) * #{$gutter});
+$gutter: ($tot_gutter / 2);
+$gutter_neg: ((-1) * $gutter);
 $padright: 40px; /*space between body and rightbar*/
 $marbottom: 10px;
+$marbottom_space: 30px;
 $marbottom_rbar: 35px;
 $marright: $padright; // space between body and rightbar
 
 
 $space_s: $tot_gutter;
 $space_m: 20px;
-$space_l: calc(#{40px} + #{$tot_gutter}) / 2;
-$space_l_wtht_gutter: calc(#{$space_l} - #{$tot_gutter});
+$space_l: ((calculateRem($padright) + $tot_gutter) / 2); //REM
+$space_l_wtht_gutter: ($space_l - $tot_gutter); //REM
+
+$sidebar_width: 300px;
+$fixed_sidebar: calculateRem($sidebar_width) + $tot_gutter;
 
 
 //header
@@ -33,15 +37,18 @@ $chb_outline: 1px;
 
 //social 
 $lsquare: 50px; //social icno - size
+$social_margin: 7px;
 
 //lightbox
 $lightbox_padding: 100px;
 $lightbox_description_width: 400px;
 $photobox_description_padding: 25px;
+$close_button_topright: 35px;
 
 // slider
 $slider_padding: 30px;
 $caption_width: 40%;
+$squares_size: 1.5rem;
 
 //calendar
 $mtitle_lheight: 2.8rem;
@@ -50,8 +57,28 @@ $arr_height: 20px;
 
 //topbanner 
 $topbanner_margin: 20px;
+$topbanner_height: 90px;
+
+//subtopbar
+$label_height: 25px;
 
 //other
 $comment_height: 40px;
 $type_events_section: 22px;
 $lm_height: 30px;
+$social_links_width_height: 35px;
+$tags_margin: 5px;
+$news_padding_right: 68px;
+
+//katalog
+$brand_logo_padding: 25px;
+
+//atelier
+$architect_padding: 20px;
+
+//video
+$video_padding: 44px;
+$video_padding_mobile: $gutter;
+
+//loginbox
+$loginbox_padding: 15px;
