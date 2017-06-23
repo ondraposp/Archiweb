@@ -220,14 +220,6 @@ hr {
     margin-left: auto;
     margin-right: auto; }
 
-/*
-.basket {
-    display: none;
-
-    &.contain_products {
-        display: block;
-    }
-}*/
 .bgw {
   background-color: #FFF; }
 
@@ -438,10 +430,12 @@ hr {
   text-align: center;
   line-height: 14px; }
 
-.pretopbar.fixed {
-  margin-bottom: 70px; }
-  .pretopbar.fixed.subtopbaropen {
-    margin-bottom: 140px; }
+.pretopbar {
+  min-height: 130px; }
+  .pretopbar.fixed {
+    margin-bottom: 70px; }
+    .pretopbar.fixed.subtopbaropen {
+      margin-bottom: 140px; }
 
 .topbanner {
   margin: 20px 0;
@@ -450,131 +444,9 @@ hr {
 .auth_box {
   margin: 20px 0;
   height: 90px;
-  background-color: #000;
-  color: #FFF;
-  /*
-      .inner {
-          background-color: $black;    
-          height: 100%;               
-          width: 100%;  
-          color: $white;
-          display: flex;
-          align-items: center;
-          padding: 5px;
-          justify-content: space-between;
-          margin: 20px 0;
-  
-          a {
-              &, span {
-                  color: $white;
-              }
-  
-              &:hover , &:hover span {
-                  text-decoration: underline;
-              }
-          }
-  
-          .info {
-              float: left;
-  
-              .title {
-                  font-weight: $fmedium;
-              }
-  
-              .items {
-                  font-size: .8rem;
-              }
-  
-              //@include hopacity();
-          }
-  
-         
-  
-          .button {
-              padding: 2px 9px;
-              margin-bottom: 3px;
-              text-transform: uppercase;
-          }
-  
-          .myprofile {
-              text-transform: uppercase;
-              font-weight: $fbold;
-          }
-  
-          .inputs {
-              margin-top: 7px;
-          }
-  
-          input[type="text"] {      
-              height: 20px;  
-              margin-bottom: 0;
-              background-color: $black;
-              color: $white;
-              padding: 0;
-              font-size: .8rem;
-              border-top: none;
-              border-left: none;
-              border-right: none;
-  
-              &::-webkit-input-placeholder,
-              &::-moz-placeholder,
-              &:-ms-input-placeholder,
-                  &:-moz-placeholder { 
-                  color: $white;
-              }            
-  
-              &:focus {
-                  box-shadow: none;
-                  transition: none;
-              }
-          }
-  
-          .username, .password {
-              max-width: 50%;
-              margin-bottom: 3px;
-              float: left;
-              padding-right: 10px;
-          }
-  
-          .username {            
-  
-          }
-  
-          .leftsec {
-              border-right: 1px solid $white;
-          }
-  
-          .rightsec {
-              .info, .button {
-                  float: right;  
-                  text-align: right;
-              }            
-          }
-  
-          .profilename, .info {
-              margin-bottom: 5px;
-          }
-  
-          .profilename, .logout {
-              font-size: .9rem;
-          }
-  
-          .logout {
-              opacity: 0.75;
-          }
-  
-          .signup, .forgotpass {
-              font-size: .8rem;
-          }
-  
-          .forgotpass {
-              float: right;
-          }
-  
-      }*/ }
+  color: #FFF; }
   .auth_box.fixed-width-right {
-    padding-left: 0px;
-    padding-right: 0px; }
+    padding-left: 0px; }
   .auth_box .login, .auth_box .new_user, .auth_box .forgotpass, .auth_box .loginform {
     overflow: hidden;
     -o-transition-timing-function: "easeOutExpo";
@@ -602,6 +474,8 @@ hr {
       filter: alpha(opacity=85);
       -moz-opacity: 0.85;
       -khtml-opacity: 0.85; }
+  .auth_box .new_user, .auth_box .forgotpass, .auth_box .loginform, .auth_box .mysites, .auth_box .user {
+    background-color: #000; }
   .auth_box .new_user {
     height: 50%;
     display: flex;
@@ -618,20 +492,22 @@ hr {
   .auth_box .forgotpass {
     text-align: right;
     font-size: .8rem; }
-  .auth_box .loginform input[type="text"], .auth_box .loginform input[type="password"] {
+  .auth_box .loginform input[type="text"], .auth_box .loginform input[type="password"], .auth_box .loginform input[type="text"]:-webkit-autofill, .auth_box .loginform input[type="password"]:-webkit-autofill {
     height: 20px;
     margin-bottom: 0;
-    background-color: #000;
-    color: #FFF;
+    background-color: #000 !important;
+    color: #FFF !important;
+    -webkit-text-fill-color: #FFF !important;
+    -webkit-box-shadow: 0 0 0 1000px #000 inset !important;
     padding: 0;
     font-size: .8rem;
     border-top: none;
     border-left: none;
     border-right: none;
     border-color: #FFF; }
-    .auth_box .loginform input[type="text"]::-webkit-input-placeholder, .auth_box .loginform input[type="text"]::-moz-placeholder, .auth_box .loginform input[type="text"]:-ms-input-placeholder, .auth_box .loginform input[type="text"]:-moz-placeholder, .auth_box .loginform input[type="password"]::-webkit-input-placeholder, .auth_box .loginform input[type="password"]::-moz-placeholder, .auth_box .loginform input[type="password"]:-ms-input-placeholder, .auth_box .loginform input[type="password"]:-moz-placeholder {
+    .auth_box .loginform input[type="text"]::-webkit-input-placeholder, .auth_box .loginform input[type="text"]::-moz-placeholder, .auth_box .loginform input[type="text"]:-ms-input-placeholder, .auth_box .loginform input[type="text"]:-moz-placeholder, .auth_box .loginform input[type="password"]::-webkit-input-placeholder, .auth_box .loginform input[type="password"]::-moz-placeholder, .auth_box .loginform input[type="password"]:-ms-input-placeholder, .auth_box .loginform input[type="password"]:-moz-placeholder, .auth_box .loginform input[type="text"]:-webkit-autofill::-webkit-input-placeholder, .auth_box .loginform input[type="text"]:-webkit-autofill::-moz-placeholder, .auth_box .loginform input[type="text"]:-webkit-autofill:-ms-input-placeholder, .auth_box .loginform input[type="text"]:-webkit-autofill:-moz-placeholder, .auth_box .loginform input[type="password"]:-webkit-autofill::-webkit-input-placeholder, .auth_box .loginform input[type="password"]:-webkit-autofill::-moz-placeholder, .auth_box .loginform input[type="password"]:-webkit-autofill:-ms-input-placeholder, .auth_box .loginform input[type="password"]:-webkit-autofill:-moz-placeholder {
       color: #FFF; }
-    .auth_box .loginform input[type="text"]:focus, .auth_box .loginform input[type="password"]:focus {
+    .auth_box .loginform input[type="text"]:focus, .auth_box .loginform input[type="password"]:focus, .auth_box .loginform input[type="text"]:-webkit-autofill:focus, .auth_box .loginform input[type="password"]:-webkit-autofill:focus {
       box-shadow: none;
       transition: none; }
   .auth_box .loginform .username, .auth_box .loginform .password {
@@ -640,6 +516,76 @@ hr {
     float: left;
     padding-left: 5px;
     padding-right: 5px; }
+  .auth_box .mysites, .auth_box .user {
+    background-color: #000;
+    overflow: hidden; }
+    .auth_box .mysites, .auth_box .mysites a, .auth_box .user, .auth_box .user a {
+      color: #FFF; }
+    .auth_box .mysites a:hover, .auth_box .user a:hover {
+      text-decoration: underline; }
+  .auth_box .user {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .auth_box .user .inner {
+      border-bottom: 1px solid #FFF;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .auth_box .user .logout {
+      font-size: .8rem; }
+  .auth_box .user_name, .auth_box .cart {
+    font-weight: 600; }
+  .auth_box .cart, .auth_box .myfav {
+    font-size: .9rem; }
+  .auth_box .mysites {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .auth_box .loggedonly {
+    height: 0%;
+    -o-transition-timing-function: "easeOutExpo";
+    -webkit-transition-timing-function: "easeOutExpo";
+    -moz-transition-timing-function: "easeOutExpo";
+    transition-timing-function: "easeOutExpo";
+    -o-transition-property: "all";
+    -webkit-transition-property: "all";
+    -moz-transition-property: "all";
+    transition-property: "all";
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+  .auth_box.logged .loggedonly {
+    height: 50%;
+    -o-transition-timing-function: "easeOutExpo";
+    -webkit-transition-timing-function: "easeOutExpo";
+    -moz-transition-timing-function: "easeOutExpo";
+    transition-timing-function: "easeOutExpo";
+    -o-transition-property: "all";
+    -webkit-transition-property: "all";
+    -moz-transition-property: "all";
+    transition-property: "all";
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+  .auth_box.logged .logoutonly {
+    height: 0%;
+    -o-transition-timing-function: "easeOutExpo";
+    -webkit-transition-timing-function: "easeOutExpo";
+    -moz-transition-timing-function: "easeOutExpo";
+    transition-timing-function: "easeOutExpo";
+    -o-transition-property: "all";
+    -webkit-transition-property: "all";
+    -moz-transition-property: "all";
+    transition-property: "all";
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
   .auth_box.open .new_user {
     height: 0%; }
   .auth_box.open .login {
@@ -659,50 +605,6 @@ hr {
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s; }
-
-.loginbar .offline {
-  display: block; }
-.loginbar .online {
-  display: none; }
-.loginbar.logged .offline {
-  display: none; }
-.loginbar.logged .online {
-  display: block; }
-.loginbar .profile, .loginbar .mysites {
-  display: flex;
-  align-items: center;
-  height: 100%; }
-.loginbar .profile {
-  float: left; }
-  .loginbar .profile .avatar {
-    margin-right: 0.714rem; }
-  .loginbar .profile .text {
-    color: #000; }
-    .loginbar .profile .text .name {
-      font-weight: 500;
-      text-transform: uppercase; }
-    .loginbar .profile .text .editprofile {
-      color: #000; }
-.loginbar .mysites {
-  float: right; }
-  .loginbar .mysites .quant {
-    background-color: #0279ce;
-    color: #FFF; }
-  .loginbar .mysites ul {
-    list-style: none;
-    margin: 0; }
-    .loginbar .mysites ul li {
-      display: inline-block;
-      margin-left: 20px; }
-      .loginbar .mysites ul li div {
-        font-weight: 500;
-        text-transform: uppercase;
-        color: #000; }
-      .loginbar .mysites ul li:hover, .loginbar .mysites ul li:active, .loginbar .mysites ul li:focus {
-        opacity: 0.85;
-        filter: alpha(opacity=85);
-        -moz-opacity: 0.85;
-        -khtml-opacity: 0.85; }
 
 .subtopbar {
   background-color: #e6e6e6;

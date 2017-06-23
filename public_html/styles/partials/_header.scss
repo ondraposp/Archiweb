@@ -135,6 +135,8 @@
             margin-bottom: $height_topbar*2;
         }
     }
+
+    min-height: $space_m + $space_m + $topbanner_height;
 }
 
 .topbanner {
@@ -144,13 +146,11 @@
 
 .auth_box {
     margin: $space_m 0;     
-    height: 90px;
-    background-color: $black;  
+    height: 90px;    
     color: $white;
 
     &.fixed-width-right {
-        padding-left: 0px;
-        padding-right: 0px;   
+        padding-left: 0px;        
     }    
 
     .login, .new_user, .forgotpass, .loginform {
@@ -167,8 +167,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         @include hopacity;
+    }
+
+    .new_user, .forgotpass, .loginform, .mysites, .user {
+        background-color: $black;
     }
 
     .new_user {
@@ -196,11 +200,13 @@
     }
 
     .loginform {
-        input[type="text"], input[type="password"] {      
+        input[type="text"], input[type="password"], input[type="text"]:-webkit-autofill, input[type="password"]:-webkit-autofill  {      
             height: 20px;  
             margin-bottom: 0;
-            background-color: $black;
-            color: $white;
+            background-color: $black !important;
+            color: $white !important;
+            -webkit-text-fill-color: $white !important;            
+            -webkit-box-shadow: 0 0 0 1000px $black inset !important;
             padding: 0;
             font-size: .8rem;
             border-top: none;
@@ -230,6 +236,72 @@
         }
     }
 
+    .mysites, .user {
+        background-color: $black;
+        overflow: hidden;
+
+        &, a {
+            color: $white;   
+        }        
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .user {
+        padding-left: $loginbox_padding;
+        padding-right: $loginbox_padding;
+
+        .inner {
+            border-bottom: 1px solid $white;   
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }        
+
+        .logout {
+            font-size: .8rem;                        
+        }
+    }
+
+    .user_name, .cart {
+        font-weight: $fbold;
+    }
+
+    .cart, .myfav {
+        font-size: .9rem;
+    }
+
+    .mysites {
+        padding-left: $loginbox_padding;
+        padding-right: $loginbox_padding;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .loggedonly {
+        height: 0%;
+
+        @include transition;
+    }
+
+    &.logged {
+        .loggedonly {
+            height: 50%;    
+
+            @include transition;
+        }        
+
+        .logoutonly {
+            height: 0%;
+
+            @include transition;
+        }
+    }
+
     &.open {
         .new_user {
             height: 0%;
@@ -245,203 +317,6 @@
 
         .login, .new_user, .forgotpass, .loginform {
             @include transition;
-        }
-    }
-
-
-
-    /*
-        .inner {
-            background-color: $black;    
-            height: 100%;               
-            width: 100%;  
-            color: $white;
-            display: flex;
-            align-items: center;
-            padding: 5px;
-            justify-content: space-between;
-            margin: 20px 0;
-    
-            a {
-                &, span {
-                    color: $white;
-                }
-    
-                &:hover , &:hover span {
-                    text-decoration: underline;
-                }
-            }
-    
-            .info {
-                float: left;
-    
-                .title {
-                    font-weight: $fmedium;
-                }
-    
-                .items {
-                    font-size: .8rem;
-                }
-    
-                //@include hopacity();
-            }
-    
-           
-    
-            .button {
-                padding: 2px 9px;
-                margin-bottom: 3px;
-                text-transform: uppercase;
-            }
-    
-            .myprofile {
-                text-transform: uppercase;
-                font-weight: $fbold;
-            }
-    
-            .inputs {
-                margin-top: 7px;
-            }
-    
-            input[type="text"] {      
-                height: 20px;  
-                margin-bottom: 0;
-                background-color: $black;
-                color: $white;
-                padding: 0;
-                font-size: .8rem;
-                border-top: none;
-                border-left: none;
-                border-right: none;
-    
-                &::-webkit-input-placeholder,
-                &::-moz-placeholder,
-                &:-ms-input-placeholder,
-                    &:-moz-placeholder { 
-                    color: $white;
-                }            
-    
-                &:focus {
-                    box-shadow: none;
-                    transition: none;
-                }
-            }
-    
-            .username, .password {
-                max-width: 50%;
-                margin-bottom: 3px;
-                float: left;
-                padding-right: 10px;
-            }
-    
-            .username {            
-    
-            }
-    
-            .leftsec {
-                border-right: 1px solid $white;
-            }
-    
-            .rightsec {
-                .info, .button {
-                    float: right;  
-                    text-align: right;
-                }            
-            }
-    
-            .profilename, .info {
-                margin-bottom: 5px;
-            }
-    
-            .profilename, .logout {
-                font-size: .9rem;
-            }
-    
-            .logout {
-                opacity: 0.75;
-            }
-    
-            .signup, .forgotpass {
-                font-size: .8rem;
-            }
-    
-            .forgotpass {
-                float: right;
-            }
-    
-        }*/
-}
-
-.loginbar {
-    .offline {
-        display: block;
-    }
-
-    .online {
-        display: none;
-    }
-
-    &.logged {
-        .offline {
-            display: none;
-        }
-
-        .online {
-            display: block;
-        }
-    }
-
-    .profile, .mysites {
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
-
-    .profile { 
-        float: left;
-
-        .avatar {
-            margin-right: $tot_gutter;
-        }
-
-        .text {
-            color: $black;
-
-            .name {
-                font-weight: $fmedium;
-                text-transform: uppercase;
-            }
-
-            .editprofile {
-                color: $black;
-            }
-        }
-    }
-
-    .mysites {
-        float: right;
-
-        .quant {
-            background-color: $basecolor;
-            color: $white;
-        }
-
-        ul {
-            list-style: none;
-            margin: 0;
-
-            li {
-                display: inline-block;
-                margin-left: 20px;
-
-                div {
-                    font-weight: $fmedium;
-                    text-transform: uppercase;
-                    color: $black;
-                }
-
-                @include hopacity;
-            }
         }
     }
 }

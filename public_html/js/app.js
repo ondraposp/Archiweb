@@ -233,10 +233,14 @@ $(document).ready(function () {
     });
 
     $('.auth_box .login').bind('click', function () {
-        if (!$('auth_box').hasClass('open')) {
+        if (!$('.auth_box').hasClass('open')) {
             $('.auth_box').addClass('open');
+        } else {
+            $('.auth_box').removeClass('open');
+            $('.auth_box').addClass('logged');
         }
     });
+
 
     function msieversion() {
 

@@ -166,65 +166,15 @@
                             <div class="pretopbar">
                                 <header role="banner" class="noprint">
                                     <div class="row fixed_sidebar_container">
-                                        <a href="">
+                                        <a href="" title="">
                                             <div class="columns large-12 fixed_sidebar">
                                                 <img src="http://placehold.it/728x90/000000/ffffff" alt="top banner" class="banner topbanner"/>
                                             </div>
                                         </a>                                        
 
-
-
-
-
-
-                                        <!-- auth box start -->
-                                        <!--<div class="fixed-width-right auth_box offline">                                            
-                                            <div class="inner row">
-                                                <form>
-                                                    <div class="large-12 columns">
-                                                        <span class="myprofile">Můj profil</span> | <a href=""><span class="signup">Vytvořit nový účet</span></a>
-                                                    </div>
-                                                    <div class="large-12 columns">                                                   
-                                                        <div class="inputs">
-                                                            <div class="username">
-                                                                <input type="text" title="uživatelské jméno" name="" placeholder="uživatelské jméno"/>
-                                                            </div>
-                                                            <div class="password">
-                                                                <input type="text" name="" title="heslo"  placeholder="heslo"/>                                                    
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="large-12 columns">
-                                                        <input type="submit" name="" title="Přihlásit se" class="button submit" value="Přihlásit se" />                                                    
-                                                        <a href=""><span class="forgotpass">Zapomněli jste heslo?</span></a>
-                                                    </div>
-                                                </form>
-                                            </div>                                            
-                                        </div>
-                                        <div class="fixed-width-right auth_box contain_products online" >                                            
-                                            <div class="inner row">
-                                                <div class="large-5 columns leftsec">
-                                                    <div class="myprofile">Můj profil</div>
-                                                    <div class="profilename">Zuzana</div>
-                                                    <div class="logout"><a href="">odhlásit</a></div>                                                
-                                                </div>
-                                                <div class="large-7 columns rightsec">                                                    
-                                                    <div class="info">
-                                                        <span class="title">NÁKUPNÍ KOŠÍK</span><br />
-                                                        <span class="items">8 položek (2 450 Kč)</span>
-                                                    </div>                                                    
-                                                    <a href="" class="bgw">
-                                                        <div class="button">Objednat</div>
-                                                    </a>
-                                                </div>                                            
-                                            </div>                                            
-                                        </div>   -->                                                                             
-
-
-
                                         <div class="fixed-width-right auth_box">
-                                            <div class="forgotpass">Zapomněli jste heslo?</div>
-                                            <div class="loginform"><form>
+                                            <div class="logoutonly forgotpass">Zapomněli jste heslo?</div>
+                                            <div class="logoutonly loginform"><form>
                                                     <div class="row">
                                                         <div class="large-12 columns">                                                   
                                                             <div class="inputs">
@@ -238,20 +188,18 @@
                                                         </div>
                                                     </div>
                                                 </form></div>
-                                            <div class="login">Přihlásit se</div>
-                                            <div class="new_user"><a href="" title="">Vytvořit nový účet</a></div>
-                                            <div class="loggedonly h50p"><span class="user_name">jankratochvil</span><a href=""><span class="logout">odhlásit se</span></a></div>
-                                            <div class="loggedonly h50p"><a href=""><span class="myfav">Můj oblíbený obsah<i class=""></i></span></a><a href=""><span class="cart">Nákupní košík [8]</span></a></div>
+                                            <div class="logoutonly login">Přihlásit se</div>
+                                            <div class="logoutonly new_user"><a href="" title="Nový účet">Vytvořit nový účet</a></div>
+                                            <div class="loggedonly user">
+                                                <div class="inner">
+                                                    <span class="user_name">jankratochvil</span><a href="" title="odhlásit se"><span class="logout">odhlásit se</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="loggedonly mysites"><a href="" title="Můj oblíbený obsah"><span class="myfav">Můj oblíbený obsah&nbsp;<i class="fa fa-heart"></i></span></a><a href="" title="Nákupní košík"><span class="cart">Nákupní košík [8]</span></a></div>
                                         </div>
 
 
-
-
                                         <!-- auth box end -->
-
-
-
-
 
                                     </div>
                                 </header>
@@ -322,7 +270,7 @@
                                                     <ul>
                                                         <li class="icon search" data-bar="searchbar"><div><div><i class="fa fa-search fa-2x"></i></div></div></li>
                                                         <li class="icon cal"><a href=""><div><i class="fa fa-calendar fa-2x"></i></div></a></li>
-                                                        <li class="icon login" data-bar="loginbar"><div><div><i class="fa fa-user fa-2x"></i></div></div></li>
+                                                        <!--<li class="icon login" data-bar="loginbar"><div><div><i class="fa fa-user fa-2x"></i></div></div></li>-->
                                                     </ul>
                                                 </div>
                                             </div>                                        
@@ -357,62 +305,7 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="loginbar subtopbar noprint logged">
-                                <div class="offline">
-                                    <div class="row">
-                                        <form>                                        
-                                            <div class="large-12 columns">
-                                                <div class="w25p col">                                                
-                                                    <input type="text" title="uživatel" placeholder="uživatel" name=""/>
-                                                </div>
-                                                <div class="w25p col">                                                
-                                                    <input type="password" title="heslo" placeholder="heslo" name=""/>
-                                                </div>
-                                                <div class="w10p col chb">
-                                                    <input type="checkbox" id="permalogin" name="permalogin" value=""/><label class="checkbox" for="permalogin"><span></span>trvale</label>
-                                                </div>
-                                                <div class="w20p col">
-                                                    <input type="submit" class="button" value="Přihlásit">
-                                                </div>
-                                                <div class="w20p col pt5 tar pr0">
-                                                    <div class="large-12 columns"><a href="" >Zapomněli jste heslo?</a></div>
-                                                    <div class="large-12 columns"><a href="" >Registrace nového čtenáře</a></div>
-                                                </div>
-                                            </div>                                                                                                       
-                                        </form>
-                                    </div>
-                                </div>                                
-                                <div class="online h100">
-                                    <div class="row h100">                                        
-                                        <div class="large-12 columns h100">
-                                            <div class="profile">
-                                                <div class="avatar"><img src="https://api.adorable.io/avatars/54/abott@adorable.png" /></div>
-                                                <div class="text"><span class="name">Jan Kratochvíl</span> | <a href=""><span class="editprofile">upravit profil</span></a></div>                                                    
-                                            </div>
-                                            <div class="mysites">
-                                                <ul>
-                                                    <li>
-                                                        <a>
-                                                            <div>Můj oblíbený obsah<span class="quant">15</span></div>
-                                                        </a>
-                                                    </li> 
-                                                    <li>
-                                                        <a>
-                                                            <div>Můj blog<span class="quant">20</span></div>
-                                                        </a>
-                                                    </li> 
-                                                    <li>
-                                                        <a>
-                                                            <div>Můj e-shop<span class="quant">8</span></div>
-                                                        </a>
-                                                    </li> 
-                                                </ul>
-                                            </div>
-                                        </div>                                                                                                                                               
-                                    </div>
-                                </div>
-                            </div>
+                            </div>                            
                             <div class="body">
                                 <div class="row subheader fixed_sidebar_container">
                                     <div class="large-12 medium-12 columns main homepage fixed_sidebar" >   
